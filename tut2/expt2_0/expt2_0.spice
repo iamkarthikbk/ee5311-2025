@@ -1,0 +1,28 @@
+** sch_path: /home/ee24s053/ee5311-2025/tut2/expt2_0/expt2_0.sch
+**.subckt expt2_0
+XM1 Vout Vin GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+Vin1 Vin GND 1.8
+XM2 Vout Vin VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+Vdd1 VDD GND 1.8
+**** begin user architecture code
+.lib /cad/share/pdk/sky130B/libs.tech/combined/sky130.lib.spice tt
+
+.control
+dc Vin1 0 1.8 0.01
+plot v(Vout) v(Vin)
+let deriv_vout = deriv(v(Vout))
+plot deriv_vout
+meas dc Vil when deriv_vout = -1 cross=1
+meas dc Vih when deriv_vout = -1 cross=2
+meas dc Vm when v(Vout) = 0.9
+let NMl=Vil
+let NMh=1.8-Vih
+echo NML: $&NMl NMH: $&NMh
+.endc
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end
