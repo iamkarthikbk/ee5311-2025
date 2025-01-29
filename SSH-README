@@ -1,0 +1,2 @@
+[karthik] 24-01-2025 1547hrs: looks like outgoing ssh is blocked. can't push to github from here :'(
+[karthik] 29-01-2025 1116hrs: spoke to srampr, looks like i had to vnc into the server, start netaccess and then try to ssh out of the machine, into git. i haven't tried that yet, but that sounds reasonable.
