@@ -6,11 +6,12 @@
 \usepackage[T1]{fontenc}
 %\usepackage{gentium}
 \usepackage{mathptmx} % Use Times Font
-\usepackage[siunitx]{circuitikz} % for circuit schematics
+% \usepackage[siunitx]{circuitikz} % for circuit schematics
+\usepackage{siunitx}
 \usepackage{amsmath} % for the equation* environment
 
 
-% \usepackage[pdftex]{graphicx} % Required for including pictures % clashes with circuitikz
+\usepackage[pdftex]{graphicx} % Required for including pictures % clashes with circuitikz
 % \usepackage[swedish]{babel} % Swedish translations
 \usepackage[pdftex,linkcolor=black,pdfborder={0 0 0}]{hyperref} % Format links for pdf
 \usepackage{calc} % To reset the counter in the document after title page
@@ -24,6 +25,7 @@
 \usepackage[all]{nowidow} % Tries to remove widows
 \usepackage[protrusion=true,expansion=true]{microtype} % Improves typography, load after fontpackage is selected
 
+\usepackage[inkscapelatex=false]{svg}
 \graphicspath{ {./media/} }
 
 
@@ -67,7 +69,7 @@ Since the minimum width of a 3-terminal pMOS transistor in the given sky130 stan
 \end{center}
 
 \subsection{Schematics}
-The following schematic was drawn using \emph{xschem}.
+We draw the following schematic using \emph{xschem}.
 \newline
 \begin{center}
 \includegraphics[scale=0.4]{tut2/reports/media/expt1.sch.png}
@@ -76,11 +78,48 @@ The following schematic was drawn using \emph{xschem}.
 
 \subsection{Measurements}
 
-Inverter Threshold Voltage: 1.06587
+We plot the voltage transfer charecteristics for the said inverter using a SPICE simulation and obtain the following plot:
+
+\begin{center}
+\includegraphics[scale=0.3]{tut2/reports/media/expt1_vtc.png}
+\end{center}
+
+We measure the inverter threshold voltage, defined as the magnitude of input voltage for which the output voltage is half of the supply voltage, as follows:
+
+\begin{verbatim}
+    meas dc Vtinv when v(Vout)=0.9 cross=1
+\end{verbatim}
+
+We observe that the inverter voltage is: $1.06587$ V.\newline
+We also plot the first-order derivative of the output voltage curve using a SPICE simulation and obtain the following plot:
+
+\begin{center}
+\includegraphics[scale=0.3]{tut2/reports/media/expt1_deriv_vout.png}
+\end{center}
+
+We measure the input voltage levels, $Vil, Vih$, as follows:
+
+\begin{verbatim}
+    let deriv_vout = deriv(v(Vout))
+    meas dc Vil when deriv_vout=-1 cross=1
+    meas dc Vih when deriv_vout=-1 cross=2
+\end{verbatim}
+
+We obtain the following values:
+
+\begin{verbatim}
 vil                 =  7.707750e-01
 vih                 =  1.202181e+00
+\end{verbatim}
+
+Using these values for $Vil, Vih$, we compute the noise margins, $NM_{L}$ and $NM_{H}$ to be:
+
+\begin{verbatim}
 NML: 0.770775
 NMH: 0.597819
+\end{verbatim}
+
+avg power is incomplete - need to figure out how to do that.
 
 \section*{Experiment 02}
 \subsection*{Calculations}
