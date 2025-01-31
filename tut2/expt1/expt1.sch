@@ -32,16 +32,34 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/corner.sym} 160 -70 0 0 {name=CORNER only_toplevel=false corner=tt}
+C {sky130_fd_pr/corner.sym} 250 -120 0 0 {name=CORNER only_toplevel=false corner=tt}
 C {lab_pin.sym} -100 -60 0 0 {name=p1 sig_type=std_logic lab=Vin}
 C {gnd.sym} 10 90 0 0 {name=l1 lab=GND}
 C {vsource.sym} -70 30 0 0 {name=Vin1 value=1.8 savecurrent=false}
-C {code_shown.sym} 180 120 0 0 {name=s1 only_toplevel=false value=".control
-echo no information here.
+C {code_shown.sym} 200 310 2 1 {name=s1 only_toplevel=false value=".control
+set filetype=ascii
+
+dc Vin1 0 1.8 0.01
+meas dc Vtinv when v(Vout)=0.9 cross=1
+echo Inverter Threshold Voltage: $&Vtinv
+
+let deriv_vout = deriv(v(Vout))
+meas dc Vil when deriv_vout=-1 cross=1
+meas dc Vih when deriv_vout=-1 cross=2
+let NMl=Vil
+let NMh=1.8-Vih
+echo NML: $&NMl
+echo NMH: $&NMh
+
+*meas tran avg_pwr AVG v(VDD)*i(Vout) FROM=0n TO=10n
+*echo Average Power over 10 ns: $&avg_pwr
+
+plot deriv_vout
+plot dc.v(Vin) dc.v(Vout)
 .endc"}
 C {sky130_fd_pr/pfet3_01v8.sym} -10 -110 0 0 {name=M2
-W=\{Width\}
-L=\{Length\}
+W=0.42
+L=0.26
 body=VDD
 nf=1
 mult=1
