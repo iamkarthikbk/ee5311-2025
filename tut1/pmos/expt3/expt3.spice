@@ -1,7 +1,7 @@
 ** sch_path: /home/ee24s053/ee5311-2025/tut1/pmos/expt3/expt3.sch
 **.subckt expt3
-Vin1 Vin GND 1.8
-Vdd1 net1 GND 1.8
+Vin1 Vin GND -1.8
+Vdd1 net1 GND 0
 XM1 GND Vin net1 VDD sky130_fd_pr__pfet_01v8 L={Length} W={Width} nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 **** begin user architecture code
@@ -10,7 +10,7 @@ XM1 GND Vin net1 VDD sky130_fd_pr__pfet_01v8 L={Length} W={Width} nf=1 ad='int((
 
 .param Width = 0.42
 .param Length = 0.15
-.dc Vdd1 0 1.8 0.01
+.dc Vdd1 0 -1.8 -0.01
 .control
   let index=1
   set cache=''

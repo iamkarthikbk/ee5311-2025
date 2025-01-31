@@ -13,9 +13,9 @@ N -70 60 10 60 {lab=GND}
 C {sky130_fd_pr/corner.sym} 160 -70 0 0 {name=CORNER only_toplevel=false corner=tt}
 C {lab_pin.sym} -70 -10 0 0 {name=p1 sig_type=std_logic lab=Vin}
 C {gnd.sym} 10 60 0 0 {name=l1 lab=GND}
-C {vsource.sym} -70 30 0 0 {name=Vin1 value=1.8 savecurrent=false}
+C {vsource.sym} -70 30 0 0 {name=Vin1 value=0 savecurrent=false}
 C {code_shown.sym} 180 120 0 0 {name=s1 only_toplevel=false value=".control
-dc Vin1 0 1.8 0.01
+dc Vin1 0 -1.8 -0.01
 let mu=0.009
 let WbyL=0.42/0.15
 let Cox=0.00816

@@ -15,12 +15,12 @@ N 10 60 10 70 {lab=GND}
 C {sky130_fd_pr/corner.sym} 160 -70 0 0 {name=CORNER only_toplevel=false corner=tt}
 C {lab_pin.sym} -70 -10 0 0 {name=p1 sig_type=std_logic lab=Vin}
 C {gnd.sym} 10 70 0 0 {name=l1 lab=GND}
-C {vsource.sym} -70 30 0 0 {name=Vin1 value=1.8 savecurrent=false}
+C {vsource.sym} -70 30 0 0 {name=Vin1 value=0 savecurrent=false}
 C {code_shown.sym} 180 120 0 0 {name=s1 only_toplevel=false value=".control
 let Vgs=0.6
 repeat 4
   alter Vin1 $&Vgs
-  dc Vdd1 0 1.8 0.02
+  dc Vdd1 0 -1.8 -0.02
   let Vgs=Vgs+0.4
 end
 plot dc1.I(Vdd1)*-1 dc2.I(Vdd1)*-1 dc3.I(Vdd1)*-1 dc4.I(Vdd1)*-1
