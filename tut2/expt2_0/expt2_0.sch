@@ -4,18 +4,19 @@ K {}
 V {}
 S {}
 E {}
-N -70 -10 -70 0 {lab=Vin}
 N 10 30 10 60 {lab=GND}
 N -70 60 10 60 {lab=GND}
-N -30 -110 -30 0 {lab=Vin}
-N -100 -60 -30 -60 {lab=Vin}
-N -70 -60 -70 -10 {lab=Vin}
+N -30 -60 -30 0 {lab=Vin}
+N -70 -60 -30 -60 {lab=Vin}
+N -70 -60 -70 0 {lab=Vin}
 N 10 -80 10 -30 {lab=Vout}
 N 10 -140 140 -140 {lab=VDD}
 N 10 60 140 60 {lab=GND}
 N 140 -80 140 60 {lab=GND}
 N 10 60 10 90 {lab=GND}
 N 140 -160 140 -140 {lab=VDD}
+N -30 -110 -30 -60 {lab=Vin}
+N -100 -60 -70 -60 {lab=Vin}
 C {sky130_fd_pr/nfet3_01v8.sym} -10 0 0 0 {name=M1
 W=0.42
 L=0.15
@@ -31,11 +32,11 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/corner.sym} 160 -70 0 0 {name=CORNER only_toplevel=false corner=tt}
+C {sky130_fd_pr/corner.sym} 610 -140 0 0 {name=CORNER only_toplevel=false corner=tt}
 C {lab_pin.sym} -100 -60 0 0 {name=p1 sig_type=std_logic lab=Vin}
 C {gnd.sym} 10 90 0 0 {name=l1 lab=GND}
 C {vsource.sym} -70 30 0 0 {name=Vin1 value=1.8 savecurrent=false}
-C {code_shown.sym} 180 120 0 0 {name=s1 only_toplevel=false value=".control
+C {code_shown.sym} 200 -140 0 0 {name=s1 only_toplevel=false value=".control
 dc Vin1 0 1.8 0.01
 plot v(Vout) v(Vin)
 let deriv_vout = deriv(v(Vout))
