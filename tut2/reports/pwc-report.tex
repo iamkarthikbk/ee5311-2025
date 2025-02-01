@@ -119,7 +119,16 @@ NML: 0.770775
 NMH: 0.597819
 \end{verbatim}
 
-avg power is incomplete - need to figure out how to do that.
+Given that $V_{in} = V_{dd}$, we can say that the average power consumed will be equal to the peak power consumed, which is $P_* = I_{out} * V_{dd}$. In order to compute this, we \emph{simply} fix the input voltage level to what is asked, $V_{dd}$ and measure the current that is coming out of the junction that connects the drains of both MOS devices, towards the output node $V_{out}$. We plot the output current throughout the DC sweep, and measure the value of current at the said input voltage level. We obtain the following plot and value for the output current:
+
+
+
+\begin{verbatim}
+    Iout = 3.781284e-05
+\end{verbatim}
+
+Hence, $P_* = 3.781 * 10^{-5} * 1.8 = 6.805 * 10^{-5}$
+The average power consumed when $V_{in} = V_{dd}$ is $P_* = 0.68 \mu W$
 
 \section*{Experiment 02}
 \subsection*{Calculations}
