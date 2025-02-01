@@ -1,7 +1,10 @@
 # EE5311 Digital IC Design
 
 This repo contains all my practical work from the ee5311 course at iitm in Jan-May 2025. Notes are on my onedrive.
-Course Instructor: Prof. Vinita Vasudevan <vinita@ee.iitm.ac.in>
+
+## Course Instructors
+1. Prof. Vinita Vasudevan <vinita@ee.iitm.ac.in>
+2. Prof. Ramprasath S <ramprasath@ee.iitm.ac.in>
 
 ## Course Contents:
 
