@@ -1,7 +1,8 @@
 %--------------------
 % Packages
 % -------------------
-\documentclass[10pt,letter]{article}
+\documentclass[10pt,a4paper]{article}
+% \usepackage[a4paper, left=15mm, right=15mm, top=15mm, bottom=15mm]{geometry}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 %\usepackage{gentium}
@@ -19,10 +20,9 @@
 
 \frenchspacing % No double spacing between sentences
 \linespread{1.2} % Set linespace
-\usepackage[a4paper, lmargin=0.1666\paperwidth, rmargin=0.1666\paperwidth, tmargin=0.1111\paperheight, bmargin=0.1111\paperheight]{geometry} %margins
+\usepackage[a4paper, lmargin=0.1\paperwidth, rmargin=0.1\paperwidth, tmargin=0.1\paperheight, bmargin=0.1\paperheight]{geometry} %margins
 %\usepackage{parskip}
-
-\usepackage[all]{nowidow} % Tries to remove widows
+% \usepackage[all]{nowidow} % Tries to remove widows
 \usepackage[protrusion=true,expansion=true]{microtype} % Improves typography, load after fontpackage is selected
 
 \usepackage[inkscapelatex=false]{svg}
@@ -56,20 +56,54 @@ In the given circuit schematic, we know from visual inspection that the pMOS's r
     $\frac{1}{2}\mu_{p}C_{ox}(\frac{W}{L})_{p}\frac{E_{C}(V_{gs}-V_{tp})^{2}}{V_{gs}-V_{tp}+E_{C}}(1+\lambda_{p} V_{ds}) = \frac{1}{2}\mu_{n}C_{ox}(\frac{W}{L})_{n}\frac{1}{1+(\frac{V_{ds}}{E_{C}})}(2(V_{gs}-V_{tn})V_{ds}-V_{ds}^2)(1+\lambda_{n} V_{ds})$
 \end{center}
 
-We use the values provided in the problem statement, and obtain:
+\noindent We use the values provided in the problem statement, and obtain:
 
 \begin{center}
     $(\frac{W}{L})_{p} = 1.610$
 \end{center}
 
-Since the minimum width of a 3-terminal pMOS transistor in the given sky130 standard cell library is $0.42 \mu m$, we want to increase the length of our pMOS device to meet this aspect ratio. Hence, we would size the pMOS transistor as follows:
+\noindent Since the minimum width of a 3-terminal pMOS transistor in the given sky130 standard cell library is $0.42 \mu m$, we want to increase the length of our pMOS device to meet this aspect ratio. Hence, we would size the pMOS transistor as follows:
 
 \begin{center}
     $W_{p} = 0.42 \mu m, L_{p} = 0.26 \mu m$
 \end{center}
 
+\noindent In order to compute the noise margins, we first compute $V_{IH}$ and $V_{IL}$ as follows:
+
+\begin{center}
+    $V_{IL} = V_{tn} + \frac{1}{R_L(2k_n\frac{W_n}{L_n})}$ \\
+    $V_{IH} = V_{tn} + \sqrt{\frac{4V_{DD}}{3K_nR_L\frac{W_n}{L_n}}} - \frac{1}{2K_nR_L\frac{W_n}{L_n}}$
+\end{center}
+
+\noindent We use the values provided in the problem statement, and obtain:
+
+\begin{center}
+    $V_{IL} = 0.765 mV$ \\
+    $V_{IH} = 1196 mV$ \\
+
+    thus, $NM_L = 0.765 V$ and $NM_H = 0.604 V$
+\end{center}
+
+\noindent In order to compute average power at a constant onput voltage level, $V+{in} = V_{DD}$, we can simply measure the current drawn from the voltage source $V_{DD}$ and multiply it with the maginitude of the supply voltage level, $1.8V$. In order to do so, we measure the drain currents through both MOS devices and apply KCL at the output node:
+
+\begin{center}
+    $I_{d,sat,p} = \frac{1}{2}\mu_{p}C_{ox}(\frac{W}{L})_{p}\frac{E_{C}(V_{gs}-V_{tp})^{2}}{V_{gs}-V_{tp}+E_{C}}(1+\lambda_{p} V_{ds})$ and \\
+    $I_{d,lin,n} = \frac{1}{2}\mu_{n}C_{ox}(\frac{W}{L})_{n}\frac{1}{1+(\frac{V_{ds}}{E_{C}})}(2(V_{gs}-V_{tn})V_{ds}-V_{ds}^2)(1+\lambda_{n} V_{ds})$
+\end{center}
+
+\noindent We use the values provided in the problem statement, and obtain:
+
+\begin{center}
+    $I_{d,sat,p} = -86.1 \mu A$ and \\
+    $I_{d,lin,n} = 291.9 \mu A$ \\
+    thus, $I_{out} = -291.1 \mu A$ \\
+    indicating $P_* = abs(I_{out}) * V_{DD} = 678.8 \mu W$
+\end{center}
+
+\noindent Since the output voltage level is expected to be low, a negative direction of the current at the output node would indicate that the load is discharging.
+
 \subsection{Schematics}
-We draw the following schematic using \emph{xschem}.
+\noindent We draw the following schematic using \emph{xschem}.
 \newline
 \begin{center}
 \includegraphics[scale=0.4]{tut2/reports/media/expt1.sch.png}
@@ -78,26 +112,26 @@ We draw the following schematic using \emph{xschem}.
 
 \subsection{Measurements}
 
-We plot the voltage transfer charecteristics for the said inverter using a SPICE simulation and obtain the following plot:
+\noindent We plot the voltage transfer charecteristics for the said inverter using a SPICE simulation and obtain the following plot:
 
 \begin{center}
 \includegraphics[scale=0.3]{tut2/reports/media/expt1_vtc.png}
 \end{center}
 
-We measure the inverter threshold voltage, defined as the magnitude of input voltage for which the output voltage is half of the supply voltage, as follows:
+\noindent We measure the inverter threshold voltage, defined as the magnitude of input voltage for which the output voltage is half of the supply voltage, as follows:
 
 \begin{verbatim}
     meas dc Vtinv when v(Vout)=0.9 cross=1
 \end{verbatim}
 
-We observe that the inverter voltage is: $1.06587$ V.\newline
+\noindent We observe that the inverter voltage is: $1.06587$ V.\newline
 We also plot the first-order derivative of the output voltage curve using a SPICE simulation and obtain the following plot:
 
 \begin{center}
 \includegraphics[scale=0.3]{tut2/reports/media/expt1_deriv_vout.png}
 \end{center}
 
-We measure the input voltage levels, $Vil, Vih$, as follows:
+\noindent We measure the input voltage levels, $Vil, Vih$, as follows:
 
 \begin{verbatim}
     let deriv_vout = deriv(v(Vout))
@@ -105,30 +139,40 @@ We measure the input voltage levels, $Vil, Vih$, as follows:
     meas dc Vih when deriv_vout=-1 cross=2
 \end{verbatim}
 
-We obtain the following values:
+\noindent We obtain the following values:
 
 \begin{verbatim}
-vil                 =  7.707750e-01
-vih                 =  1.202181e+00
+    vil = 7.707750e-01
+    vih = 1.202181e+00
 \end{verbatim}
 
-Using these values for $Vil, Vih$, we compute the noise margins, $NM_{L}$ and $NM_{H}$ to be:
+\noindent Using these values for $Vil, Vih$, we compute the noise margins, $NM_{L}$ and $NM_{H}$ to be:
 
 \begin{verbatim}
-NML: 0.770775
-NMH: 0.597819
+    NML: 0.770775
+    NMH: 0.597819
 \end{verbatim}
 
-Given that $V_{in} = V_{dd}$, we can say that the average power consumed will be equal to the peak power consumed, which is $P_* = I_{out} * V_{dd}$. In order to compute this, we \emph{simply} fix the input voltage level to what is asked, $V_{dd}$ and measure the current that is coming out of the junction that connects the drains of both MOS devices, towards the output node $V_{out}$. We plot the output current throughout the DC sweep, and measure the value of current at the said input voltage level. We obtain the following plot and value for the output current:
+\noindent Given that $V_{in} = V_{dd}$, we can say that the average power consumed will be equal to the peak power consumed, which is $P_* = I_{out} * V_{dd}$. In order to compute this, we \emph{simply} fix the input voltage level to what is asked, $V_{dd}$ and measure the current drawn from the supply voltage. We plot the output current throughout the DC sweep, and measure the value of current at the said input voltage level. We obtain the following plot:
 
+\begin{center}
+\includegraphics[scale=0.3]{tut2/reports/media/expt1_iout.png}
+\end{center}
 
+\noindent At $V_{in} = V_{dd}$, we obtain the following measurement for the current:
 
 \begin{verbatim}
     Iout = 3.781284e-05
 \end{verbatim}
 
-Hence, $P_* = 3.781 * 10^{-5} * 1.8 = 6.805 * 10^{-5}$
-The average power consumed when $V_{in} = V_{dd}$ is $P_* = 0.68 \mu W$
+\noindent Hence,
+\begin{center}
+    $P_* = 3.781 * 10^{-5} * 1.8 W = 6.805 * 10^{-5} W$
+\end{center}
+The average power consumed when $V_{in} = V_{dd}$ is:
+\begin{center}
+    $P_* = 68.05 \mu W$
+\end{center}
 
 \section*{Experiment 02}
 \subsection*{Calculations}
