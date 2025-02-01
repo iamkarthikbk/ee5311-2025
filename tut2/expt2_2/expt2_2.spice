@@ -1,0 +1,45 @@
+** sch_path: /home/ee24s053/ee5311-2025/tut2/expt2_2/expt2_2.sch
+**.subckt expt2_2
+XM1 Vout Vin GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+Vin1 Vin GND 1.8
+XM2 Vout Vin VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+Vdd1 VDD GND 1.8
+**** begin user architecture code
+.lib /cad/share/pdk/sky130B/libs.tech/combined/sky130.lib.spice tt
+
+.control
+let vds1 = 0.2
+let vds2 = 0.8
+let vds3 = 1.8
+let N = 3
+let imax = vector(N)
+
+alter Vdd1 $&vds1
+dc Vin1 0 $&vds1 0.01
+wrdata dc_sweep_$&index v(Vout) i(Vdd1)
+let imax[index - 1] = abs(vecmin(i(Vdd1)))
+let index = index + 1
+
+alter Vdd1 $&vds2
+dc Vin1 0 $&vds2 0.01
+wrdata dc_sweep_$&index v(Vout) i(Vdd1)
+let imax[index - 1] = abs(vecmin(i(Vdd1)))
+let index = index + 1
+
+alter Vdd1 $&vds3
+dc Vin1 0 $&vds3 0.01
+wrdata dc_sweep_$&index v(Vout) i(Vdd1)
+let imax[index - 1] = abs(vecmin(i(Vdd1)))
+
+plot dc1.v(Vout) dc2.v(Vout) dc3.v(Vout)
+plot dc1.i(Vdd1)
+plot dc2.i(Vdd1)
+plot dc3.i(Vdd1)
+.endc
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end
