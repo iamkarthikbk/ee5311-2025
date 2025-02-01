@@ -37,19 +37,18 @@ C {gnd.sym} 10 90 0 0 {name=l1 lab=GND}
 C {vsource.sym} -70 30 0 0 {name=Vin1 value=1.8 savecurrent=false}
 C {code_shown.sym} 180 120 0 0 {name=s1 only_toplevel=false value=".control
 let vds = 0.2
-set cache = ''
 let index = 1
 let N = 10
 let imax = vector(N)
 while index le N
   alter Vdd1 $&vds
   dc Vin1 0 $&vds 0.01
-  set cache = ( $cache dc($&index) .v(Vout) )
-  let imax[index - 1] = abs(vecmin(dc\{$&index\}.i(Vdd1)))
+  wrdata dc_sweep_$&index v(Vout) i(Vdd1)
+  let imax[index - 1] = abs(vecmin(i(Vdd1)))
   let vds = vds + 0.2
   let index = index + 1
 end
-plot $cache
+plot dc1.v(Vout) dc2.v(Vout) dc3.v(Vout) dc4.v(Vout) dc5.v(Vout) dc6.v(Vout) dc7.v(Vout) dc8.v(Vout) dc9.v(Vout) dc10.v(Vout)
 .endc"}
 C {sky130_fd_pr/pfet3_01v8.sym} -10 -110 0 0 {name=M2
 W=0.42

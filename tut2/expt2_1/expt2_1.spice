@@ -11,19 +11,18 @@ Vdd1 VDD GND 1.8
 
 .control
 let vds = 0.2
-set cache = ''
 let index = 1
 let N = 10
 let imax = vector(N)
 while index le N
   alter Vdd1 $&vds
   dc Vin1 0 $&vds 0.01
-  set cache = ( $cache dc($&index) .v(Vout) )
-  let imax[index - 1] = abs(vecmin(dc{$&index}.i(Vdd1)))
+  wrdata dc_sweep_$&index v(Vout) i(Vdd1)
+  let imax[index - 1] = abs(vecmin(i(Vdd1)))
   let vds = vds + 0.2
   let index = index + 1
 end
-plot $cache
+plot dc1.v(Vout) dc2.v(Vout) dc3.v(Vout) dc4.v(Vout) dc5.v(Vout) dc6.v(Vout) dc7.v(Vout) dc8.v(Vout) dc9.v(Vout) dc10.v(Vout)
 .endc
 
 **** end user architecture code
