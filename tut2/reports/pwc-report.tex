@@ -174,11 +174,57 @@ The average power consumed when $V_{in} = V_{dd}$ is:
     $P_* = 68.05 \mu W$
 \end{center}
 
-\section*{Experiment 02}
-\subsection*{Calculations}
-\subsection*{Schematics}
-\subsection*{Measurements}
+\section{Experiment 02}
+\subsection{Calculations}
+\noindent When the inverter threshold voltage level is made to be half that of the supply voltage, $V_{tinv} = V_{m} = \frac{V_{DD}}{2}$, the pull-up transistor would have $abs(V_{gs,p}) = \frac{V_{dd}}{2} = 0.9V$. This will drive both the transistors into an active state. That is, both transistors will be turned on. The pull-up transistor will operate in the \emph{saturation} since $V_{DS,p} > V_{d,sat,p}$. The pull-down transistor will operate in the \emph{linear} region, since $V_{DS,n} \leq V_{d,sat,n}$. We equate the expressions for drain current for both transistors in the aforementioned regions of operation:
 
-\section*{Declaration of AI Usage}
+\begin{center}
+    $I_{d,sat,p} = I_{d,lin,n}$ \\
+    $\frac{1}{2}\mu_{p}C_{ox}(\frac{W}{L})_{p}\frac{E_{C}(V_{gs}-V_{tp})^{2}}{V_{gs}-V_{tp}+E_{C}}(1+\lambda_{p} V_{ds}) = \frac{1}{2}\mu_{n}C_{ox}(\frac{W}{L})_{n}\frac{1}{1+(\frac{V_{ds}}{E_{C}})}(2(V_{gs}-V_{tn})V_{ds}-V_{ds}^2)(1+\lambda_{n} V_{ds})$
+\end{center}
+
+\noindent We use the values provided in the problem statement, and obtain:
+
+\begin{center}
+    $(\frac{W}{L})_{p} = 1.610$
+\end{center}
+
+\noindent In order to retain symmetricity in sizing, we will size the pMOS to be twice as large as the nMOS device. Hence, $W_p = 0.84 \mu m$ and $L_p = 0.15 \mu m$. The nMOS device remains to be a minimum-sized transistor.
+
+\subsection{Schematics}
+\noindent We draw the following schematic using \emph{xschem}:
+\begin{center}
+\includegraphics[scale=0.5]{tut2/reports/media/expt2_0.sch.png}
+\end{center}
+
+\subsection{Measurements}
+\noindent We obtain the following plot for voltage transfer charecteristics:
+\begin{center}
+\includegraphics[scale=0.5]{tut2/reports/media/expt2_0_vtc.png}
+\end{center}
+
+\noindent We obtain the following plot for the derivative of the output voltage level:
+\begin{center}
+\includegraphics[scale=0.5]{tut2/reports/media/expt2_0_deriv_vout.png}
+\end{center}
+
+\noindent We make the following measurements from the plotted curve:
+
+\begin{center}
+    $V_{IL} = 750.0234 mV$ \\
+    $V_{IH} = 999.1007 mV$ \\
+    $V_m = 881.4951 mV$ \\
+    thus, $NM_L = 750.023 mV$ and $NM_H = 800.899 mV$
+\end{center}
+
+\noindent We modify the simulation setup to sweep the supply voltage level from $0.2V$ to $1.8V$ in steps of $0.2V$. We obtain the following voltage transfer charecteristics:
+\begin{center}
+\includegraphics[scale=0.5]{tut2/reports/media/expt2_1_vtc.png}
+\end{center}
+
+\noindent We now analyze the current that charges the output at three distinct voltage levels; $0.2V$ (sub-threshold), $0.8V$ (near-threshold), and $1.2V$ (super-threshold):
+\begin{center}
+\includegraphics[scale=0.5]{tut2/reports/media/expt2_1_sub_near_super_vt.png}
+\end{center}
 
 \end{document}
