@@ -24,9 +24,9 @@ let NMh=1.8-Vih
 echo NML: $&NMl
 echo NMH: $&NMh
 
-*meas tran avg_pwr AVG v(VDD)*i(Vout) FROM=0n TO=10n
-*echo Average Power over 10 ns: $&avg_pwr
-
+let Iout_1_8 = abs(vecmin(dc.i(Vdd1)))
+print Iout_1_8
+plot dc.i(Vdd1)
 plot deriv_vout
 plot dc.v(Vin) dc.v(Vout)
 .endc

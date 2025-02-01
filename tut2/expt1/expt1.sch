@@ -32,7 +32,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/corner.sym} 250 -120 0 0 {name=CORNER only_toplevel=false corner=tt}
+C {sky130_fd_pr/corner.sym} 230 -180 0 0 {name=CORNER only_toplevel=false corner=tt}
 C {lab_pin.sym} -100 -60 0 0 {name=p1 sig_type=std_logic lab=Vin}
 C {gnd.sym} 10 90 0 0 {name=l1 lab=GND}
 C {vsource.sym} -70 30 0 0 {name=Vin1 value=1.8 savecurrent=false}
@@ -51,9 +51,9 @@ let NMh=1.8-Vih
 echo NML: $&NMl
 echo NMH: $&NMh
 
-*meas tran avg_pwr AVG v(VDD)*i(Vout) FROM=0n TO=10n
-*echo Average Power over 10 ns: $&avg_pwr
-
+let Iout_1_8 = abs(vecmin(dc.i(Vdd1)))
+print Iout_1_8
+plot dc.i(Vdd1)
 plot deriv_vout
 plot dc.v(Vin) dc.v(Vout)
 .endc"}
@@ -74,4 +74,4 @@ spiceprefix=X
 }
 C {vsource.sym} 140 -110 0 0 {name=Vdd1 value=1.8 savecurrent=false}
 C {lab_pin.sym} 140 -160 0 0 {name=p2 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 10 -50 0 0 {name=p3 sig_type=std_logic lab=Vout}
+C {lab_pin.sym} 10 -60 0 0 {name=p3 sig_type=std_logic lab=Vout}
