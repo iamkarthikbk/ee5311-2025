@@ -244,7 +244,7 @@ We also plot the first-order derivative of the output voltage curve using a SPIC
 
 \doublespacing
 \begin{center}
-    $I_{D,subvt} = I_S \cdot e^{\frac{V_{gs}-V_T}{nV_T}} \cdot (1-e^{\frac{-V_{DS}}{V_T}})$ \\
+    $I_{D,subvt,p} = I_S \cdot e^{\frac{V_{gs}-V_T}{nV_T}} \cdot (1-e^{\frac{-V_{DS}}{V_T}})$ \\
     using $V_T \approx 26 mV$, $I_S = 10.207 \mu A$ and $n=1$, we get
 \end{center}
 \singlespacing
@@ -254,17 +254,30 @@ We also plot the first-order derivative of the output voltage curve using a SPIC
     I_{D,max,subvt} = -1.71 pA
 \end{equation}
 
-\noindent Similarly, we calculate the maximum draincurrent when the supply voltage, $V_{DD} = 0.8 V$.
+\noindent Similarly, we calculate the maximum drain current when the supply voltage, $V_{DD} = 0.8 V$.
+
+\doublespacing
+\begin{center}
+    $I_{D,lin,p} = \frac{1}{2}\mu_{p}C_{ox_p}(\frac{W}{L})_{p}\frac{1}{1+(\frac{V_{ds_p}}{E_{C}})}(2(V_{gs_p}-V_{t_p})V_{ds_p}-V_{ds_p}^2)(1+\lambda_{p} V_{ds_p})$
+\end{center}
+\singlespacing
 
 \begin{equation}
     \label{eq:expt2-idmax-nearvt}
-    I_{D,max,nearvt} = ?A
+    I_{D,max,nearvt} = -3.1 nA
 \end{equation}
 
 \noindent Similarly for $V_{DD} = 1.8 V$.
+
+\doublespacing
+\begin{center}
+    $I_{d,sat,p} = \frac{1}{2}\mu_{p}C_{ox}(\frac{W}{L})_{p}\frac{E_{C}(V_{gs}-V_{tp})^{2}}{V_{gs}-V_{tp}+E_{C}}(1+\lambda_{p} V_{ds})$
+\end{center}
+\singlespacing
+
 \begin{equation}
     \label{eq:expt2-idmax-supervt}
-    I_{D,max,supervt} = ?A
+    I_{D,max,supervt} = 10.207 \mu A
 \end{equation}
 
 \subsection{Schematics}
@@ -303,7 +316,7 @@ We also plot the first-order derivative of the output voltage curve using a SPIC
 \begin{tabular}{cc}
 \includegraphics[width=0.49\linewidth]{tut2/reports/media/expt2_1_vtc.png} &
 \includegraphics[width=0.49\linewidth]{tut2/reports/media/expt2_2_vtc.png} \\
-Fig 8a: Output Voltages for a range of Supply Voltages & Fig 8b: Output Voltages for Selected Supply Voltages
+Fig 8a: Output Voltages for a range of $V_{DD}$ & Fig 8b: Output Voltages for Selected of $V_{DD}$
 \end{tabular}
 \end{center}
 
@@ -342,6 +355,12 @@ Fig 8a: Output Voltages for a range of Supply Voltages & Fig 8b: Output Voltages
     \item $I_{D,max} \approx -6.3 \mu A$ at $V_{DD} = 1.8 V$
 \end{enumerate}
 
-\noindent, The very first observation we make is that the $I_{D,max}$ is 3 orders of magnitude apart for the three given supply voltage levels. Upon comparing these values with (\ref{eq:expt2-idmax-subvt}), (\ref{eq:expt2-idmax-nearvt}), (\ref{eq:expt2-idmax-supervt}) we note that the values are comparable.
+\noindent The very first observation we make is that the $I_{D,max}$ is 3 orders of magnitude apart for the three given supply voltage levels. Upon comparing these values with (\ref{eq:expt2-idmax-subvt}), (\ref{eq:expt2-idmax-nearvt}), (\ref{eq:expt2-idmax-supervt}) we note that the values are comparable.
+
+\section{Declarations}
+\begin{enumerate}
+    \item I have used Perplexity AI for searching the web about some of the values used in the equations described in this report.
+    \item I have hosted this work publicly on github to assist reproducability of all my results. The same can be accessed through the following \href{https://github.com/iamkarthikbk/ee5311-2025}{\underline{link}}.
+\end{enumerate}
 
 \end{document}
