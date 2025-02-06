@@ -1,0 +1,43 @@
+** sch_path: /home/ee24s053/ee5311-2025/tut3/expt1_a.sch
+**.subckt expt1_a
+x1 Vout Vin inv
+x2 net1 Vout inv
+Vin1 Vin GND PULSE(0 1.8 10ps 5ps 5ps 100ps 250ps)
+V1 VDD GND 1.8
+**** begin user architecture code
+.lib /cad/share/pdk/sky130B/libs.tech/combined/sky130.lib.spice tt
+
+
+.param wp = 0.42
+.control
+foreach param_wp 0.42 0.84 1.26
+	alterparam wp = $param_wp
+	reset
+	tran 0.1p 250p
+	plot v(Vout) v(Vin)
+	meas tran thl trig v(Vin) val=0.9 rise=1 targ v(Vout) val=0.9 fall=1
+	meas tran tlh trig v(Vin) val=0.9 fall=1 targ v(Vout) val=0.9 rise=1
+	let the_delay = ($&tlh + $&thl)/2
+	echo val_wp: $param_wp delay: $&the_delay
+end
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  inv.sym # of pins=2
+** sym_path: /home/ee24s053/ee5311-2025/tut3/inv.sym
+** sch_path: /home/ee24s053/ee5311-2025/tut3/inv.sch
+.subckt inv out in
+*.ipin in
+*.opin out
+XM1 out in VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W={wp} nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 out in GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.GLOBAL VDD
+.end

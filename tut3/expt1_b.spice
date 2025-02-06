@@ -1,0 +1,57 @@
+** sch_path: /home/ee24s053/ee5311-2025/tut3/expt1_b.sch
+**.subckt expt1_b
+x1 Vout Vin net1 inv_nognd
+x2 net2 Vout GND inv_nognd
+Vin1 Vin GND PULSE(0 {vdd_val} 10ps 5ps 5ps 100ps 250ps)
+Vdd1 VDD GND {vdd_val}
+Vmeas net1 GND 0
+**** begin user architecture code
+.lib /cad/share/pdk/sky130B/libs.tech/combined/sky130.lib.spice tt
+
+
+.param wp = 0.42
+.param vdd_val = 1.8
+.control
+let lv_sim = 9
+let v_vdd = vector(lv_sim)
+let v_dly = vector(lv_sim)
+let v_edp = vector(lv_sim)
+let lv_index = 0
+while lv_index < lv_sim
+	let lv_vdd = 1.0 + (lv_index * 0.1)
+	let lv_vhalf = lv_vdd / 2
+ 	alterparam vdd_val = $&lv_vdd
+	reset
+	tran 1p 600p
+	meas tran thl trig v(Vin) val=$&lv_vhalf rise=1 targ v(Vout) val=$&lv_vhalf fall=1
+	meas tran tlh trig v(Vin) val=$&lv_vhalf fall=1 targ v(Vout) val=$&lv_vhalf rise=1
+	meas tran iinteg integ i(Vmeas)
+	let v_dly[lv_index] = ($&tlh + $&thl)/2
+	let v_vdd[lv_index] = lv_vdd
+	let v_edp[lv_index] = $&iinteg * lv_vdd * v_dly[lv_index]
+	let lv_index = lv_index + 1
+end
+plot v_dly vs v_vdd
+plot v_edp vs v_vdd
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  inv_nognd.sym # of pins=3
+** sym_path: /home/ee24s053/ee5311-2025/tut3/inv_nognd.sym
+** sch_path: /home/ee24s053/ee5311-2025/tut3/inv_nognd.sch
+.subckt inv_nognd out in supposed_gnd
+*.ipin in
+*.opin out
+*.iopin supposed_gnd
+XM1 out in VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W={wp} nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 out in supposed_gnd GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.GLOBAL VDD
+.end
