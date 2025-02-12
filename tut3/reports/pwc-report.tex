@@ -176,22 +176,46 @@ title={\textit{EDP and Delay vs $V_{DD}$}},
 \noindent We draw the following schematics for an inverter using \emph{xschem}.
 \begin{center}
 \begin{tabular}{cc}
-     \includegraphics[width=0.49\linewidth]{tut3/reports/media/expt1_a.sch.png} &
-     \includegraphics[width=0.49\linewidth]{tut3/reports/media/expt1_b.sch.png} \\
-     Fig 1a: A static CMOS inverter & Fig 1b: An inverter with it's ground pin exposed
+     \includegraphics[width=0.40\linewidth]{tut3/reports/media/inv.png} &
+     \includegraphics[width=0.40\linewidth]{tut3/reports/media/inv_nognd.png} \\
+     Fig 1a: A static CMOS inverter & Fig 1b: An inv with the ground pin exposed
 \end{tabular}
 \\
 \begin{tabular}{cc}
-     \includegraphics[width=0.49\linewidth]{tut3/reports/media/dut.sch.png} &
-     \\ Fig 9c: Simulation setup with two identical inverters
+     \includegraphics[width=0.40\linewidth]{tut3/reports/media/expt1_a.sch.png} &
+     \includegraphics[width=0.40\linewidth]{tut3/reports/media/expt1_b.sch.png} \\
+     Fig 1c: Simulation Setup 1 & Fig 1d: Simulation Setup 2
 \end{tabular}
 \end{center}
-\subsection{Measurements}
 
-% \section{Declarations}
-% \begin{enumerate}
-%     \item I have used Perplexity AI for searching the web about some of the values used in the equations described in this report.
-%     \item I have hosted this work publicly on github to assist reproducability of all my results. The same can be accessed through the following \href{https://github.com/iamkarthikbk/ee5311-2025}{\underline{link}}.
-% \end{enumerate}
+\subsection{Measurements}
+\noindent We perform a transient simulation for the simulation setup shown in Fig 1c,  for three sizes of pMOS, and obtain the following plots.
+\begin{center}
+\begin{tabular}{cc}
+     \includegraphics[width=0.40\linewidth]{tut3/reports/media/expt1a_dly_2.png} &
+     \includegraphics[width=0.40\linewidth]{tut3/reports/media/expt1a_dly_1.png} \\
+     Fig 1a: $W_p = 0.42 \mu m$ & Fig 1b: $W_p = 0.84 \mu m$
+\end{tabular}
+\\
+\begin{tabular}{cc}
+     \includegraphics[width=0.40\linewidth]{tut3/reports/media/expt1a_dly_0.png} \\
+     Fig 1c: $W_p = 1.26 \mu m$
+\end{tabular}
+\end{center}
+\noindent We then size the pMOS for minumum propagation delay and vary the supply voltage levels from 1V all the way to 1.8V with a step size of 0.1V. We obtain the following plots.
+\begin{center}
+\begin{tabular}{cc}
+     \includegraphics[width=0.49\linewidth]{tut3/reports/media/dly.png} &
+     \includegraphics[width=0.49\linewidth]{tut3/reports/media/edp.png} \\
+     Fig 1a: Delay & Fig 1b: EDP
+\end{tabular}
+\end{center}
+
+\noindent From visual inspection, we note that the value of $V_{DD}$ at which the EDP is minimized is 1.3 V. This is expected based on our calculations from earlier. The delay values are also comparable.
+
+\section{Declarations}
+\begin{enumerate}
+    \item I have hosted this work publicly on github to assist reproducability of all my results. The same can be accessed through the following \href{https://github.com/iamkarthikbk/ee5311-2025}{\underline{link}}.
+\end{enumerate}
 
 \end{document}
