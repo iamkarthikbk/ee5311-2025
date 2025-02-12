@@ -1,0 +1,257 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="604" version="1.1">
+<style type="text/css">
+.l0{
+  fill: #000000;
+  stroke: #000000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l1{
+  fill: #00ccee;
+  stroke: #00ccee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l2{
+  fill: #4f4f4f; fill-opacity: 0.2;
+  stroke: #4f4f4f;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l3{
+  fill: #cccccc; fill-opacity: 0.5;
+  stroke: #cccccc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l4{
+  fill: #88dd00;
+  stroke: #88dd00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l5{
+  fill: #bb2200;
+  stroke: #bb2200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l6{
+  fill: #00ccee; fill-opacity: 0.5;
+  stroke: #00ccee;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l7{
+  fill: #ff0000; fill-opacity: 0.5;
+  stroke: #ff0000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l8{
+  fill: #ffff00; fill-opacity: 0.5;
+  stroke: #ffff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l9{
+  fill: #ffffff; fill-opacity: 0.5;
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l10{
+  fill: #ff00ff;
+  stroke: #ff00ff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l11{
+  fill: #00ff00; fill-opacity: 0.5;
+  stroke: #00ff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l12{
+  fill: #0000ff; fill-opacity: 0.5;
+  stroke: #0000ff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l13{
+  fill: #aaaa00; fill-opacity: 0.5;
+  stroke: #aaaa00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l14{
+  fill: #aaccaa; fill-opacity: 0.2;
+  stroke: #aaccaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l15{
+  fill: #ff7777; fill-opacity: 0.5;
+  stroke: #ff7777;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l16{
+  fill: #bfff81; fill-opacity: 0.5;
+  stroke: #bfff81;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l17{
+  fill: #00ffcc; fill-opacity: 0.2;
+  stroke: #00ffcc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l18{
+  fill: #ce0097; fill-opacity: 0.5;
+  stroke: #ce0097;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l19{
+  fill: #d2d46b; fill-opacity: 0.2;
+  stroke: #d2d46b;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l20{
+  fill: #ef6158; fill-opacity: 0.2;
+  stroke: #ef6158;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+.l21{
+  fill: #fdb200; fill-opacity: 0.2;
+  stroke: #fdb200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.18248;
+}
+text {font-family: Sans-Serif;}
+</style>
+<rect class="l0" x="0" y="0" width="1280" height="604"/>
+<text fill="#00ccee"  xml:space="preserve" font-size="11.3868" transform="translate(43.8349, 198.471)" >GND</text>
+<text fill="#00ccee"  xml:space="preserve" font-size="18.7882" transform="translate(52.1559, 81.3327)" >Vin</text>
+<text fill="#00ccee"  xml:space="preserve" font-size="18.7882" transform="translate(247.184, 81.3327)" >Vout</text>
+<text fill="#00ccee"  xml:space="preserve" font-size="11.3868" transform="translate(240.914, 209.42)" >GND</text>
+<text fill="#00ccee"  xml:space="preserve" font-size="11.3868" transform="translate(219.017, 99.9315)" >VDD</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="11.3868" transform="translate(57.521, 95.8256)" >Vin1</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="11.3868" transform="translate(57.521, 123.198)" >PULSE(0 1.8 10ps 5ps 5ps 100ps 250ps)</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="11.3868" transform="translate(254.6, 150.57)" >V1</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="11.3868" transform="translate(254.6, 177.942)" >1.8</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="17.0802" transform="translate(325.768, 159.845)" >Corner: tt</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="17.0802" transform="translate(500.95, 263.859)" >s1</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="17.0802" style="font-family:Monospace;" transform="translate(511.898, 310.823)" >.param wp = 0.42</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="17.0802" style="font-family:Monospace;" transform="translate(511.898, 330.414)" >.control</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="17.0802" style="font-family:Monospace;" transform="translate(511.898, 350.005)" >foreach param_wp 0.42 0.84 1.26</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="17.0802" style="font-family:Monospace;" transform="translate(511.898, 369.596)" >        alterparam wp = $param_wp</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="17.0802" style="font-family:Monospace;" transform="translate(511.898, 389.187)" >        reset</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="17.0802" style="font-family:Monospace;" transform="translate(511.898, 408.778)" >        tran 0.1p 250p</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="17.0802" style="font-family:Monospace;" transform="translate(511.898, 428.369)" >        plot v(Vout) v(Vin)</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="17.0802" style="font-family:Monospace;" transform="translate(511.898, 447.96)" >        meas tran thl trig v(Vin) val=0.9 rise=1 targ v(Vout) val=0.9 fall=1</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="17.0802" style="font-family:Monospace;" transform="translate(511.898, 467.551)" >        meas tran tlh trig v(Vin) val=0.9 fall=1 targ v(Vout) val=0.9 rise=1</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="17.0802" style="font-family:Monospace;" transform="translate(511.898, 487.142)" >        let the_delay = ($&amp;tlh + $&amp;thl)/2</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="17.0802" style="font-family:Monospace;" transform="translate(511.898, 506.733)" >        echo val_wp: $param_wp delay: $&amp;the_delay</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="17.0802" style="font-family:Monospace;" transform="translate(511.898, 526.324)" >end </text>
+<text fill="#cccccc"  xml:space="preserve" font-size="17.0802" style="font-family:Monospace;" transform="translate(511.898, 545.915)" >.endc</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="17.0802" transform="translate(123.762, 125.904)" >inv</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="11.3868" transform="translate(172.484, 48.4718)" >x1</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="11.3868" transform="translate(153.484, 79.1286)" >out</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="11.3868" transform="translate(128.689, 79.1286)" >in</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="17.0802" transform="translate(331.79, 125.904)" >inv</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="11.3868" transform="translate(380.512, 48.4718)" >x2</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="11.3868" transform="translate(361.512, 79.1286)" >out</text>
+<text fill="#cccccc"  xml:space="preserve" font-size="11.3868" transform="translate(336.717, 79.1286)" >in</text>
+<path class="l4" d="M35.6233 182.657L35.6233 196.344"/>
+<path class="l4" d="M30.1489 196.344L41.0977 196.344"/>
+<path class="l4" d="M35.6233 201.818L41.0977 196.344"/>
+<path class="l4" d="M30.1489 196.344L35.6233 201.818"/>
+<path class="l4" d="M38.3605 81.3806L43.8349 81.3806"/>
+<path class="l4" d="M41.0977 78.6434L41.0977 84.1178"/>
+<path class="l4" d="M35.6233 73.169L35.6233 138.862"/>
+<circle class="l4" cx="35.6233" cy="106.016" r="16.4233" style="fill:none;" />
+<path class="l4" d="M235.44 136.125L240.914 136.125"/>
+<path class="l4" d="M238.177 133.388L238.177 138.862"/>
+<path class="l4" d="M232.703 127.913L232.703 193.606"/>
+<circle class="l4" cx="232.703" cy="160.76" r="16.4233" style="fill:none;" />
+<path class="l4" d="M232.703 193.606L232.703 207.292"/>
+<path class="l4" d="M227.228 207.292L238.177 207.292"/>
+<path class="l4" d="M232.703 212.767L238.177 207.292"/>
+<path class="l4" d="M227.228 207.292L232.703 212.767"/>
+<path class="l4" d="M232.703 106.016L232.703 127.913"/>
+<path class="l4" d="M221.754 106.016L243.651 106.016"/>
+<path class="l4" d="M342.191 204.555L385.987 204.555"/>
+<path class="l4" d="M342.191 215.504L364.089 215.504"/>
+<path class="l4" d="M342.191 226.453L385.987 226.453"/>
+<path class="l4" d="M342.191 237.402L375.038 237.402"/>
+<path class="l4" d="M342.191 248.351L375.038 248.351"/>
+<path class="l4" d="M342.191 259.299L418.833 259.299"/>
+<path class="l4" d="M342.191 270.248L364.089 270.248"/>
+<path class="l4" d="M342.191 193.606L396.935 193.606"/>
+<path class="l4" d="M342.191 182.657L364.089 182.657"/>
+<path class="l4" d="M429.782 182.657L440.731 182.657"/>
+<path class="l4" d="M440.731 182.657L440.731 292.146"/>
+<path class="l4" d="M342.191 292.146L440.731 292.146"/>
+<path class="l4" d="M342.191 281.197L342.191 292.146"/>
+<path class="l4" d="M429.782 171.709L429.782 281.197"/>
+<path class="l4" d="M331.242 281.197L429.782 281.197"/>
+<path class="l4" d="M331.242 171.709L331.242 281.197"/>
+<path class="l4" d="M331.242 171.709L429.782 171.709"/>
+<path class="l4" d="M495.475 270.248L572.117 270.248"/>
+<path class="l4" d="M495.475 270.248L495.475 292.146"/>
+<path class="l4" d="M123.214 40.3224L188.907 73.169"/>
+<path class="l4" d="M123.214 106.016L188.907 73.169"/>
+<path class="l4" d="M123.214 40.3224L123.214 106.016"/>
+<path class="l4" d="M221.754 73.169L243.651 73.169"/>
+<path class="l4" d="M101.316 73.169L123.214 73.169"/>
+<circle class="l4" cx="205.331" cy="73.169" r="12.2412" style="fill:none;" />
+<path class="l4" d="M331.242 40.3224L396.935 73.169"/>
+<path class="l4" d="M331.242 106.016L396.935 73.169"/>
+<path class="l4" d="M331.242 40.3224L331.242 106.016"/>
+<path class="l4" d="M429.782 73.169L451.68 73.169"/>
+<path class="l4" d="M309.345 73.169L331.242 73.169"/>
+<circle class="l4" cx="413.359" cy="73.169" r="12.2412" style="fill:none;" />
+<path class="l5" d="M32.8861 179.92L38.3605 179.92L38.3605 185.395L32.8861 185.395L32.8861 179.92z"/>
+<path class="l5" d="M32.8861 70.4317L38.3605 70.4317L38.3605 75.9062L32.8861 75.9062L32.8861 70.4317z"/>
+<path class="l5" d="M32.8861 136.125L38.3605 136.125L38.3605 141.599L32.8861 141.599L32.8861 136.125z"/>
+<path class="l5" d="M88.9989 71.8004L91.7362 71.8004L91.7362 74.5376L88.9989 74.5376L88.9989 71.8004z"/>
+<path class="l5" d="M297.027 71.8004L299.764 71.8004L299.764 74.5376L297.027 74.5376L297.027 71.8004z"/>
+<path class="l5" d="M229.965 125.176L235.44 125.176L235.44 130.65L229.965 130.65L229.965 125.176z"/>
+<path class="l5" d="M229.965 190.869L235.44 190.869L235.44 196.344L229.965 196.344L229.965 190.869z"/>
+<path class="l5" d="M229.965 190.869L235.44 190.869L235.44 196.344L229.965 196.344L229.965 190.869z"/>
+<path class="l5" d="M229.965 125.176L235.44 125.176L235.44 130.65L229.965 130.65L229.965 125.176z"/>
+<path class="l5" d="M240.914 70.4317L246.389 70.4317L246.389 75.9062L240.914 75.9062L240.914 70.4317z"/>
+<path class="l5" d="M98.5792 70.4317L104.054 70.4317L104.054 75.9062L98.5792 75.9062L98.5792 70.4317z"/>
+<path class="l5" d="M448.943 70.4317L454.417 70.4317L454.417 75.9062L448.943 75.9062L448.943 70.4317z"/>
+<path class="l5" d="M306.607 70.4317L312.082 70.4317L312.082 75.9062L306.607 75.9062L306.607 70.4317z"/>
+<path class="l1" d="M243.651 73.169L309.345 73.169"/>
+<path class="l1" d="M35.6233 138.862L35.6233 182.657"/>
+<path class="l1" d="M35.6233 73.169L101.316 73.169"/>
+</svg>

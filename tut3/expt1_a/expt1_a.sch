@@ -7,8 +7,6 @@ E {}
 N -30 0 30 0 {lab=Vout}
 N -220 60 -220 100 {lab=GND}
 N -220 -0 -160 -0 {lab=Vin}
-C {inv.sym} -10 0 0 0 {name=x1}
-C {inv.sym} 180 0 0 0 {name=x2}
 C {gnd.sym} -220 100 0 0 {name=l1 lab=GND}
 C {vsource.sym} -220 30 0 0 {name=Vin1 value="PULSE(0 1.8 10ps 5ps 5ps 100ps 250ps)" savecurrent=false}
 C {lab_pin.sym} -170 0 0 0 {name=p1 sig_type=std_logic lab=Vin}
@@ -32,3 +30,5 @@ foreach param_wp 0.42 0.84 1.26
 end 
 .endc
 "}
+C {/home/ee24s053/ee5311-2025/tut3/syms/inv.sym} -10 0 0 0 {name=x1}
+C {/home/ee24s053/ee5311-2025/tut3/syms/inv.sym} 180 0 0 0 {name=x2}
