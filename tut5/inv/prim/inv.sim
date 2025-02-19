@@ -1,0 +1,15 @@
+| units: 500000 tech: sky130A format: MIT
+x IN DVDD OUT DVDD s=10080,456 d=10080,456 l=30 w=168 x=-355 y=234 sky130_fd_pr__pfet_01v8
+x IN DGND OUT DGND s=5040,288 d=5040,288 l=30 w=84 x=-354 y=-38 sky130_fd_pr__nfet_01v8
+R OUT 877
+= OUT pfet$1_0/a_90_0#
+R DVDD 2475
+= DVDD tap_0/w_n291_184#
+= DVDD pfet$1_0/w_n63_n78#
+= DVDD pfet$1_0/a_0_0#
+R IN 866
+= IN pfet$1_0/a_60_n40#
+R DGND 551
+= DGND tap_0/a_n234_n14#
+= DGND VSUBS
+= DGND pfet$1_0/VSUBS
