@@ -16,7 +16,8 @@ N -70 -60 -70 40 {lab=vin}
 N -40 -90 -20 -90 {lab=vin}
 N -20 -90 -20 -60 {lab=vin}
 N 130 -60 130 -20 {lab=vout}
-C {/home/ee24s053/ee5311-2025/tut5/inv/cell/subcircuit/inv.sym} 170 -60 0 0 {name=x1}
+C {/home/ee24s053/ee5311-2025/tut5/inv/prim/inv.sym} 170 -60 0 0 {name=x1}
+C {/home/ee24s053/ee5311-2025/tut5/inv/prim/inv.sym} 320 -60 0 0 {name=x2}
 C {vdd.sym} 130 -120 0 0 {name=l1 lab=VDD}
 C {gnd.sym} 130 0 0 0 {name=l2 lab=GND}
 C {vsource.sym} -70 70 0 0 {name=V1 value="PULSE(0 1.8 10ps 5ps 5ps 100ps 250ps)" savecurrent=false}
@@ -37,4 +38,3 @@ let delay = ($&tlh + $&thl) /2
 echo delay: $&delay
 .endc
 "}
-C {/home/ee24s053/ee5311-2025/tut5/inv/cell/subcircuit/inv.sym} 320 -60 0 0 {name=x2}

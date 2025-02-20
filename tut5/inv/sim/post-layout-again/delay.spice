@@ -1,10 +1,10 @@
-** sch_path: /home/ee24s053/ee5311-2025/tut5/inv/sim/pre-layout/delay.sch
+** sch_path: /home/ee24s053/ee5311-2025/tut5/inv/sim/post-layout-again/delay.sch
 **.subckt delay inp outp del
 
 x1 VDD vout vin GND inv
+x2 VDD net1 vout GND inv
 V1 vin GND PULSE(0 1.8 10ps 5ps 5ps 100ps 250ps)
 V2 VDD GND 1.8
-x2 VDD net1 vout GND inv
 **** begin user architecture code
 .lib /cad/share/pdk/sky130B/libs.tech/combined/sky130.lib.spice tt
 
@@ -22,9 +22,9 @@ echo delay: $&delay
 **** end user architecture code
 **.ends
 
-* expanding   symbol:  /home/ee24s053/ee5311-2025/tut5/inv/cell/subcircuit/inv.sym # of pins=4
-** sym_path: /home/ee24s053/ee5311-2025/tut5/inv/cell/subcircuit/inv.sym
-** sch_path: /home/ee24s053/ee5311-2025/tut5/inv/cell/subcircuit/inv.sch
+* expanding   symbol:  /home/ee24s053/ee5311-2025/tut5/inv/prim/inv.sym # of pins=4
+** sym_path: /home/ee24s053/ee5311-2025/tut5/inv/prim/inv.sym
+** sch_path: /home/ee24s053/ee5311-2025/tut5/inv/prim/inv.sch
 .subckt inv DVDD OUT IN DGND
 *.iopin DVDD
 *.iopin DGND
