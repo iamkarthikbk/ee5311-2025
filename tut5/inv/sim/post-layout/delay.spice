@@ -9,7 +9,7 @@ x2 VDD net1 vout GND inv
 .lib /cad/share/pdk/sky130B/libs.tech/combined/sky130.lib.spice tt
 
 
-.include /home/ee24s053/ee5311-2025/tut5/inv/cell/primitive/inv_extracted.spice
+.include /home/ee24s053/ee5311-2025/tut5/inv/cell/subcircuit/inv_extracted.spice
 .control
 tran 0.01p 250p
 plot v(vout) v(vin)

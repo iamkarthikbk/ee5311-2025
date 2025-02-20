@@ -27,7 +27,7 @@ C {gnd.sym} 180 110 0 0 {name=l4 lab=GND}
 C {vdd.sym} 180 50 0 0 {name=l5 lab=VDD}
 C {sky130_fd_pr/corner.sym} -230 -130 0 0 {name=CORNER only_toplevel=false corner=tt}
 C {code_shown.sym} 300 -150 0 0 {name=s1 only_toplevel=false value="
-.include /home/ee24s053/ee5311-2025/tut5/inv/cell/primitive/inv_extracted.spice
+.include /home/ee24s053/ee5311-2025/tut5/inv/cell/subcircuit/inv_extracted.spice
 .control
 tran 0.01p 250p
 plot v(vout) v(vin)
