@@ -1,0 +1,115 @@
+%--------------------
+% Packages
+% -------------------
+\documentclass[12pt,a4paper]{article}
+% \usepackage[a4paper, left=15mm, right=15mm, top=15mm, bottom=15mm]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{gentium}
+\usepackage{mathptmx} % Use Times Font
+% \usepackage[siunitx]{circuitikz} % for circuit schematics
+\usepackage{siunitx}
+\usepackage{amsmath} % for the equation* environment
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.14}
+\usepackage{float}
+
+\usepackage{graphicx} % Required for including pictures % clashes with circuitikz
+% \usepackage[swedish]{babel} % Swedish translations
+\usepackage[pdftex,linkcolor=black,pdfborder={0 0 0}]{hyperref} % Format links for pdf
+\usepackage{calc} % To reset the counter in the document after title page
+\usepackage{enumitem} % Includes lists
+
+\frenchspacing % No double spacing between sentences
+\linespread{1.2} % Set linespace
+\usepackage[a4paper, lmargin=0.08\paperwidth, rmargin=0.08\paperwidth, tmargin=0.08\paperheight, bmargin=0.08\paperheight]{geometry} %margins
+%\usepackage{parskip}
+% \usepackage[all]{nowidow} % Tries to remove widows
+\usepackage[protrusion=true,expansion=true]{microtype} % Improves typography, load after fontpackage is selected
+
+\usepackage[inkscapelatex=false]{svg}
+\graphicspath{ {./media/} }
+
+% \pagecolor{black}
+% \color{white}
+
+\usepackage{setspace}
+
+
+%-----------------------
+% Set pdf information and add title, fill in the fields
+%-----------------------
+\hypersetup{ 	
+pdfsubject = {},
+pdftitle = {ee5311-2025-ee24s053-pwc-report-tut5},
+pdfauthor = {Karthik B K <ee24s053@smail.iitm.ac.in>}
+}
+
+%-----------------------
+% Begin document
+%-----------------------
+\begin{document}
+
+\title{EE5311 \\ Report of Practical Work Conducted for Tutorial 05}
+\author{Karthik B K ee24s053}
+\maketitle
+
+\section{Experiment 01}
+\subsection{Calculations}
+\noindent No manual calculations.
+
+\subsection{Schematics}
+\noindent We draw the following schematics for a seven-stage ring oscilator using \emph{xschem}.
+\begin{center}
+\includegraphics[width=0.99\linewidth]{tut4/expt1/ro7.sch.png}
+\end{center}
+
+\subsection{Measurements}
+\noindent We perform a transient simulation with the setup shown in Fig 1 and obtain the following plots.
+\begin{center}
+\begin{tabular}{cc}
+     \includegraphics[width=0.47\linewidth]{tut4/reports/media/expt1_freq.png} &
+     \includegraphics[width=0.47\linewidth]{tut4/reports/media/expt1_prd.png} \\
+     Fig 2a: Frequency of a 7-stage RO & Fig 2b: Period of a 7-stage RO
+\end{tabular}
+\end{center}
+\noindent We obtain the following values for period and frequency.
+\begin{verbatim}
+    When Vdd = 1.8 V,
+        period = 426 ps
+        freq = 1/period = 2.34 GHz
+\end{verbatim}
+
+\section{Experiment 02}
+\subsection{Calculations}
+\noindent No manual calculations.
+
+\subsection{Schematics}
+\noindent We draw the following schematics for a seven-stage ring oscilator using \emph{xschem}.
+\begin{center}
+\includegraphics[width=0.99\linewidth]{tut4/expt2/ro9.sch.png}
+\end{center}
+
+\subsection{Measurements}
+\noindent We perform a transient simulation with the setup shown in Fig 1 and obtain the following plots.
+\begin{center}
+\begin{tabular}{cc}
+     \includegraphics[width=0.47\linewidth]{tut4/reports/media/expt2_freq.png} &
+     \includegraphics[width=0.47\linewidth]{tut4/reports/media/expt2_prd.png} \\
+     Fig 2a: Frequency of a 7-stage RO & Fig 2b: Period of a 7-stage RO
+\end{tabular}
+\end{center}
+\noindent We obtain the following values for period and frequency.
+\begin{verbatim}
+    When Vdd = 1.8 V,
+        period = 547 ps
+        freq = 1/period = 1.82 GHz
+\end{verbatim}
+
+\section{Declarations}
+\begin{enumerate}
+    \item I have publicly hosted this work on GitHub to help reproduce all of my results. The same can be accessed through the following \href{https://github.com/iamkarthikbk/ee5311-2025}{\underline{link}}.
+\end{enumerate}
+
+\end{document}
