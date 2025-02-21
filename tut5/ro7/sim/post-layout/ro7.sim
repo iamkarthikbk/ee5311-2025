@@ -1,0 +1,25 @@
+| units: 500000 tech: sky130A format: MIT
+x a_n1822_n46# DGND a_n1524_n46# DGND s=5040,288 d=5040,288 l=30 w=84 x=-1553 y=-45 sky130_fd_pr__nfet_01v8
+x a_n630_n46# DGND a_n332_n46# DGND s=5040,288 d=5040,288 l=30 w=84 x=-361 y=-45 sky130_fd_pr__nfet_01v8
+x a_n1226_n46# DVDD a_n928_n46# DVDD s=10080,456 d=10080,456 l=30 w=168 x=-957 y=227 sky130_fd_pr__pfet_01v8
+x a_n332_n46# DGND vout DGND s=5040,288 d=5040,288 l=30 w=84 x=-63 y=-45 sky130_fd_pr__nfet_01v8
+x a_n1524_n46# DGND a_n1226_n46# DGND s=5040,288 d=5040,288 l=30 w=84 x=-1255 y=-45 sky130_fd_pr__nfet_01v8
+x vout DVDD a_n1822_n46# DVDD s=10080,456 d=10080,456 l=30 w=168 x=-1851 y=227 sky130_fd_pr__pfet_01v8
+x a_n928_n46# DVDD a_n630_n46# DVDD s=10080,456 d=10080,456 l=30 w=168 x=-659 y=227 sky130_fd_pr__pfet_01v8
+x a_n1822_n46# DVDD a_n1524_n46# DVDD s=10080,456 d=10080,456 l=30 w=168 x=-1553 y=227 sky130_fd_pr__pfet_01v8
+x a_n1226_n46# DGND a_n928_n46# DGND s=5040,288 d=5040,288 l=30 w=84 x=-957 y=-45 sky130_fd_pr__nfet_01v8
+x a_n630_n46# DVDD a_n332_n46# DVDD s=10080,456 d=10080,456 l=30 w=168 x=-361 y=227 sky130_fd_pr__pfet_01v8
+x a_n332_n46# DVDD vout DVDD s=10080,456 d=10080,456 l=30 w=168 x=-63 y=227 sky130_fd_pr__pfet_01v8
+x vout DGND a_n1822_n46# DGND s=5040,288 d=5040,288 l=30 w=84 x=-1851 y=-45 sky130_fd_pr__nfet_01v8
+x a_n1524_n46# DVDD a_n1226_n46# DVDD s=10080,456 d=10080,456 l=30 w=168 x=-1255 y=227 sky130_fd_pr__pfet_01v8
+x a_n928_n46# DGND a_n630_n46# DGND s=5040,288 d=5040,288 l=30 w=84 x=-659 y=-45 sky130_fd_pr__nfet_01v8
+R vout 1800
+C DVDD0 2.9
+R DVDD 14589
+R DGND 4213
+R a_n332_n46# 1816
+R a_n630_n46# 1816
+R a_n928_n46# 1816
+R a_n1226_n46# 1816
+R a_n1524_n46# 1816
+R a_n1822_n46# 1816

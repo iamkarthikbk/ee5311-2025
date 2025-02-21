@@ -1,131 +1,135 @@
-timestamp 1568628699
+timestamp 1568716434
 version 8.3
 tech sky130A
 style ngspice()
 scale 1000 1 500000
 resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
-use tap tap_0 1 0 89 0 1 -25
-use pfet$1 pfet$1_0 1 0 -415 0 1 234
-parameters sky130_fd_pr__nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
-parameters sky130_fd_pr__pfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
-port "DGND" 3 -386 -128 -386 -128 m1
-port "DGND" 3 -2174 -128 -2174 -128 m1
-port "DGND" 3 -1876 -128 -1876 -128 m1
-port "DGND" 3 -1578 -128 -1578 -128 m1
-port "DGND" 3 -982 -128 -982 -128 m1
-port "DGND" 3 -1280 -128 -1280 -128 m1
-port "DGND" 3 -684 -128 -684 -128 m1
-port "IN" 2 -372 108 -372 108 li
-port "OUT" 1 -603 113 -603 113 li
-port "DVDD" 4 -386 467 -386 467 m1
-port "DVDD" 4 -2174 467 -2174 467 m1
-port "DVDD" 4 -1876 467 -1876 467 m1
-port "DVDD" 4 -1578 467 -1578 467 m1
-port "DVDD" 4 -982 467 -982 467 m1
-port "DVDD" 4 -1280 467 -1280 467 m1
-port "DVDD" 4 -684 467 -684 467 m1
-port "OUT" 1 -901 113 -901 113 li
-port "IN" 2 -670 108 -670 108 li
-port "IN" 2 -968 108 -968 108 li
-port "OUT" 1 -1199 113 -1199 113 li
-port "OUT" 1 -1497 113 -1497 113 li
-port "IN" 2 -1266 108 -1266 108 li
-port "OUT" 1 -1795 113 -1795 113 li
-port "IN" 2 -1564 108 -1564 108 li
-port "OUT" 1 -2093 113 -2093 113 li
-port "IN" 2 -1862 108 -1862 108 li
-port "OUT" 1 -305 113 -305 113 li
-port "IN" 2 -2160 108 -2160 108 li
-node "DGND" 3907 988.402 -684 -128 m1 0 0 0 0 0 0 0 0 35280 2016 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 51996 3416 200256 4364 0 0 0 0 0 0 0 0 0 0
-node "IN" 1369 321.248 -372 108 li 0 0 0 0 0 0 0 0 5040 288 10080 456 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11322 722 0 0 26544 1360 0 0 0 0 0 0 0 0 0 0 0 0
-equiv "IN" "OUT"
-node "DVDD" 6482 752.831 -684 467 m1 0 0 0 0 0 0 0 0 0 0 60480 2736 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 60394 3910 200256 4364 0 0 0 0 0 0 0 0 0 0
-node "OUT" 1770 263.987 -901 113 li 0 0 0 0 0 0 0 0 5040 288 10080 456 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18762 1218 0 0 26544 1360 0 0 0 0 0 0 0 0 0 0 0 0
-equiv "OUT" "IN"
-node "IN" 1770 252.677 -968 108 li 0 0 0 0 0 0 0 0 5040 288 10080 456 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18762 1218 0 0 26544 1360 0 0 0 0 0 0 0 0 0 0 0 0
-equiv "IN" "OUT"
-node "OUT" 1770 252.623 -1497 113 li 0 0 0 0 0 0 0 0 5040 288 10080 456 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18762 1218 0 0 26544 1360 0 0 0 0 0 0 0 0 0 0 0 0
-equiv "OUT" "IN"
-node "OUT" 1770 252.805 -1795 113 li 0 0 0 0 0 0 0 0 5040 288 10080 456 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18762 1218 0 0 26544 1362 0 0 0 0 0 0 0 0 0 0 0 0
-equiv "OUT" "IN"
-node "OUT" 1770 271.814 -2093 113 li 0 0 0 0 0 0 0 0 5040 288 10080 456 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18762 1218 0 0 26544 1360 0 0 0 0 0 0 0 0 0 0 0 0
-equiv "OUT" "IN"
-node "OUT" 1232 1021.84 -305 113 li 0 0 0 0 0 0 0 0 5040 288 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18762 1218 0 0 20862 1226 6656 464 108420 4274 0 0 0 0 0 0 0 0
-equiv "OUT" "IN"
-node "w_n2266_156#" 5178 1716.55 -2266 156 nw 0 0 0 0 572184 4180 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+use inv_wo_tap inv_wo_tap_0 1 0 -1497 0 1 -7
+use inv_wo_tap inv_wo_tap_1 1 0 -1199 0 1 -7
+use inv_wo_tap inv_wo_tap_2 1 0 -901 0 1 -7
+use inv_wo_tap inv_wo_tap_3 1 0 -603 0 1 -7
+use inv_wo_tap inv_wo_tap_4 1 0 -305 0 1 -7
+use inv_wo_tap inv_wo_tap_5 1 0 -7 0 1 -7
+use inv_wo_tap inv_wo_tap_6 1 0 291 0 1 -7
+use tap tap_0 1 0 380 0 1 -32
+node "li_n285_87#" 67 79.8177 -285 87 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6086 426 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_n583_87#" 67 79.8177 -583 87 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6086 426 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_n881_87#" 67 79.8177 -881 87 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6086 426 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_n1179_87#" 67 79.8177 -1179 87 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6086 426 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_n1477_87#" 67 79.8177 -1477 87 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6086 426 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_n1775_87#" 67 79.153 -1775 87 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6086 426 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_n1906_81#" 81 921.265 -1906 81 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5336 416 92803 4048 0 0 0 0 0 0 0 0 0 0
+node "w_n209_149#" 13991 21.384 -209 149 nw 0 0 0 0 7128 692 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_n507_149#" 13991 21.384 -507 149 nw 0 0 0 0 7128 692 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_n805_149#" 13991 21.384 -805 149 nw 0 0 0 0 7128 692 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_n1103_149#" 13991 21.384 -1103 149 nw 0 0 0 0 7128 692 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_n1401_149#" 13991 21.384 -1401 149 nw 0 0 0 0 7128 692 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_n1699_149#" 13991 21.384 -1699 149 nw 0 0 0 0 7128 692 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "w_n2266_156#" "OUT" 114.16
-cap "OUT" "OUT" 73.3529
-cap "DVDD" "OUT" 109.923
-cap "w_n2266_156#" "OUT" 116.796
-cap "DVDD" "OUT" 109.923
-cap "OUT" "OUT" 73.4632
-cap "OUT" "IN" 79.8517
-cap "IN" "OUT" 73.3529
-cap "IN" "w_n2266_156#" 116.796
-cap "IN" "DVDD" 109.923
-cap "IN" "DGND" 81.3974
-cap "OUT" "OUT" 27.1743
-cap "OUT" "w_n2266_156#" 126.708
-cap "OUT" "DVDD" 113.512
-cap "OUT" "OUT" 26.8028
-cap "OUT" "DGND" 83.5612
-cap "w_n2266_156#" "DGND" 48.4155
-cap "DVDD" "DGND" 187.836
-cap "DGND" "OUT" 83.6368
-cap "OUT" "OUT" 88.8598
-cap "IN" "OUT" 73.3529
-cap "DGND" "OUT" 83.5612
-cap "OUT" "IN" 68.5768
-cap "w_n2266_156#" "IN" 25.4694
-cap "DVDD" "IN" 70.1237
-cap "OUT" "OUT" 26.3765
-cap "OUT" "IN" 26.4351
-cap "DGND" "OUT" 83.5612
-cap "w_n2266_156#" "OUT" 110.244
-cap "OUT" "DVDD" 110.362
-cap "IN" "DGND" 83.5612
-cap "w_n2266_156#" "DVDD" 296.461
-cap "w_n2266_156#" "OUT" 116.751
-cap "DVDD" "OUT" 109.901
-cap "OUT" "DGND" 223.776
-device msubckt sky130_fd_pr__nfet_01v8 -355 -39 -354 -38 l=30 w=84 "VSUBS" "IN" 60 0 "DGND" 84 5040,288 "OUT" 84 5040,288
-device msubckt sky130_fd_pr__nfet_01v8 -653 -39 -652 -38 l=30 w=84 "VSUBS" "OUT" 60 0 "DGND" 84 5040,288 "IN" 84 5040,288
-device msubckt sky130_fd_pr__nfet_01v8 -951 -39 -950 -38 l=30 w=84 "VSUBS" "IN" 60 0 "DGND" 84 5040,288 "OUT" 84 5040,288
-device msubckt sky130_fd_pr__nfet_01v8 -1249 -39 -1248 -38 l=30 w=84 "VSUBS" "OUT" 60 0 "DGND" 84 5040,288 "IN" 84 5040,288
-device msubckt sky130_fd_pr__nfet_01v8 -1547 -39 -1546 -38 l=30 w=84 "VSUBS" "OUT" 60 0 "DGND" 84 5040,288 "OUT" 84 5040,288
-device msubckt sky130_fd_pr__nfet_01v8 -1845 -39 -1844 -38 l=30 w=84 "VSUBS" "OUT" 60 0 "DGND" 84 5040,288 "OUT" 84 5040,288
-device msubckt sky130_fd_pr__nfet_01v8 -2143 -39 -2142 -38 l=30 w=84 "VSUBS" "OUT" 60 0 "DGND" 84 5040,288 "OUT" 84 5040,288
-device msubckt sky130_fd_pr__pfet_01v8 -653 234 -652 235 l=30 w=168 "w_n2266_156#" "OUT" 60 0 "DVDD" 168 10080,456 "IN" 168 10080,456
-device msubckt sky130_fd_pr__pfet_01v8 -951 234 -950 235 l=30 w=168 "w_n2266_156#" "IN" 60 0 "DVDD" 168 10080,456 "OUT" 168 10080,456
-device msubckt sky130_fd_pr__pfet_01v8 -1249 234 -1248 235 l=30 w=168 "w_n2266_156#" "OUT" 60 0 "DVDD" 168 10080,456 "IN" 168 10080,456
-device msubckt sky130_fd_pr__pfet_01v8 -1547 234 -1546 235 l=30 w=168 "w_n2266_156#" "OUT" 60 0 "DVDD" 168 10080,456 "OUT" 168 10080,456
-device msubckt sky130_fd_pr__pfet_01v8 -1845 234 -1844 235 l=30 w=168 "w_n2266_156#" "OUT" 60 0 "DVDD" 168 10080,456 "OUT" 168 10080,456
-device msubckt sky130_fd_pr__pfet_01v8 -2143 234 -2142 235 l=30 w=168 "w_n2266_156#" "OUT" 60 0 "DVDD" 168 10080,456 "OUT" 168 10080,456
-cap "IN" "pfet$1_0/a_0_0#" 7.10543e-14
-cap "OUT" "pfet$1_0/a_0_0#" 7.10543e-14
-cap "OUT" "pfet$1_0/a_0_0#" -2.84217e-14
-cap "OUT" "tap_0/a_n234_n14#" 3.55271e-15
-cap "OUT" "pfet$1_0/a_0_0#" 7.10543e-14
-cap "pfet$1_0/a_0_0#" "tap_0/a_n234_n14#" 4.9738e-14
-cap "OUT" "tap_0/a_n234_n14#" 1.42109e-14
-cap "OUT" "pfet$1_0/a_0_0#" 7.10543e-14
-cap "pfet$1_0/a_0_0#" "OUT" -3.55271e-15
-cap "pfet$1_0/a_90_0#" "pfet$1_0/a_0_0#" 67.5227
-cap "pfet$1_0/a_60_n40#" "tap_0/a_n234_n14#" 2.3394
-cap "pfet$1_0/a_90_0#" "tap_0/a_n234_n14#" 10.9297
-cap "pfet$1_0/a_0_0#" "tap_0/a_n234_n14#" 7.30075
-cap "pfet$1_0/a_60_n40#" "OUT" 4.77612
-cap "pfet$1_0/a_90_0#" "OUT" -0.0974431
-cap "pfet$1_0/a_0_0#" "OUT" 6.11202
-cap "pfet$1_0/a_90_0#" "pfet$1_0/a_60_n40#" 5.04865
-cap "pfet$1_0/a_60_n40#" "pfet$1_0/a_0_0#" 92.0877
-merge "pfet$1_0/a_90_0#" "OUT" -1317.13 0 0 0 0 0 0 0 0 -20160 -1152 -40320 -1824 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -92352 -6036 0 0 -108282 -5696 0 0 0 0 0 0 0 0 0 0 0 0
-merge "pfet$1_0/VSUBS" "tap_0/a_n234_n14#" -80.4874 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -192 0 0 0 0 0 0 0 0 0 0
-merge "tap_0/a_n234_n14#" "VSUBS"
-merge "VSUBS" "DGND"
-merge "pfet$1_0/a_0_0#" "pfet$1_0/w_n85_n78#" -282.158 0 0 0 0 0 -1290 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -68 0 -192 0 0 0 0 0 0 0 0 0 0
-merge "pfet$1_0/w_n85_n78#" "w_n2266_156#"
-merge "w_n2266_156#" "tap_0/w_n291_184#"
-merge "tap_0/w_n291_184#" "DVDD"
-merge "pfet$1_0/a_60_n40#" "IN" -351.876 0 0 0 0 0 0 0 0 -5040 -288 -10080 -456 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -18762 -1278 0 0 -26544 -1360 0 0 0 0 0 0 0 0 0 0 0 0
+cap "w_n1401_149#" "li_n1906_81#" 1.90831
+cap "w_n1699_149#" "li_n1775_87#" 2.31612
+cap "li_n583_87#" "li_n881_87#" 5.89796
+cap "li_n583_87#" "li_n285_87#" 5.89796
+cap "w_n1699_149#" "li_n1906_81#" 1.90831
+cap "li_n1906_81#" "w_n507_149#" 1.90831
+cap "li_n583_87#" "li_n1906_81#" 27.3382
+cap "li_n1477_87#" "li_n1179_87#" 5.89796
+cap "li_n1477_87#" "li_n1775_87#" 5.89796
+cap "li_n881_87#" "w_n805_149#" 2.31612
+cap "w_n209_149#" "li_n285_87#" 2.31612
+cap "w_n1103_149#" "li_n1179_87#" 2.31612
+cap "li_n881_87#" "li_n1179_87#" 5.89796
+cap "w_n209_149#" "li_n1906_81#" 1.90831
+cap "li_n1906_81#" "w_n805_149#" 1.90831
+cap "li_n1906_81#" "li_n1477_87#" 27.3382
+cap "li_n1906_81#" "li_n1179_87#" 27.3382
+cap "li_n1906_81#" "li_n1775_87#" 35.0156
+cap "w_n1103_149#" "li_n1906_81#" 1.90831
+cap "li_n881_87#" "li_n1906_81#" 27.3382
+cap "li_n285_87#" "li_n1906_81#" 33.2362
+cap "li_n583_87#" "w_n507_149#" 2.31612
+cap "w_n1401_149#" "li_n1477_87#" 2.31612
+cap "inv_wo_tap_2/IN" "inv_wo_tap_6/OUT" 37.5927
+cap "inv_wo_tap_3/IN" "inv_wo_tap_4/IN" 26.9643
+cap "inv_wo_tap_3/IN" "tap_0/a_n234_n14#" 7.08605
+cap "inv_wo_tap_6/OUT" "tap_0/w_n291_184#" 253.804
+cap "inv_wo_tap_1/IN" "inv_wo_tap_6/OUT" 48.7318
+cap "inv_wo_tap_4/IN" "inv_wo_tap_6/OUT" 37.5927
+cap "inv_wo_tap_6/OUT" "tap_0/a_n234_n14#" 319.5
+cap "inv_wo_tap_5/IN" "tap_0/w_n291_184#" 1.9645
+cap "inv_wo_tap_5/IN" "inv_wo_tap_4/IN" 21.4382
+cap "inv_wo_tap_5/IN" "tap_0/a_n234_n14#" -1.76677
+cap "inv_wo_tap_3/IN" "inv_wo_tap_6/OUT" 37.5927
+cap "inv_wo_tap_2/IN" "tap_0/w_n291_184#" 56.6379
+cap "inv_wo_tap_2/IN" "inv_wo_tap_1/IN" 26.9643
+cap "inv_wo_tap_1/IN" "tap_0/w_n291_184#" 54.002
+cap "inv_wo_tap_2/IN" "tap_0/a_n234_n14#" 7.08605
+cap "inv_wo_tap_4/IN" "tap_0/w_n291_184#" 56.205
+cap "inv_wo_tap_5/IN" "inv_wo_tap_6/OUT" 14.1364
+cap "tap_0/w_n291_184#" "tap_0/a_n234_n14#" -157.775
+cap "inv_wo_tap_1/IN" "tap_0/a_n234_n14#" 7.08605
+cap "inv_wo_tap_4/IN" "tap_0/a_n234_n14#" 6.70035
+cap "inv_wo_tap_3/IN" "inv_wo_tap_2/IN" 26.9643
+cap "inv_wo_tap_3/IN" "tap_0/w_n291_184#" 56.6379
+cap "tap_0/a_n234_n14#" "inv_wo_tap_6/IN" 7.26166
+cap "inv_wo_tap_4/IN" "tap_0/w_n291_184#" 0.432935
+cap "inv_wo_tap_4/IN" "inv_wo_tap_5/IN" 5.52607
+cap "tap_0/a_n234_n14#" "inv_wo_tap_4/IN" 0.385706
+cap "tap_0/w_n291_184#" "inv_wo_tap_6/OUT" 164.61
+cap "inv_wo_tap_5/IN" "inv_wo_tap_6/OUT" 23.4564
+cap "tap_0/a_n234_n14#" "inv_wo_tap_6/OUT" 170.437
+cap "inv_wo_tap_6/IN" "inv_wo_tap_6/OUT" 46.699
+cap "inv_wo_tap_5/IN" "tap_0/w_n291_184#" 54.6734
+cap "tap_0/a_n234_n14#" "tap_0/w_n291_184#" -80.8389
+cap "tap_0/a_n234_n14#" "inv_wo_tap_5/IN" 8.85282
+cap "inv_wo_tap_6/IN" "tap_0/w_n291_184#" 57.9562
+cap "inv_wo_tap_6/IN" "inv_wo_tap_5/IN" 26.9643
+merge "tap_0/w_n291_184#" "inv_wo_tap_6/DVDD" -792.828 0 0 0 0 0 -8418 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1344 0 0 0 0 0 0 0 0 0 0
+merge "inv_wo_tap_6/DVDD" "inv_wo_tap_5/DVDD"
+merge "inv_wo_tap_5/DVDD" "inv_wo_tap_4/DVDD"
+merge "inv_wo_tap_4/DVDD" "inv_wo_tap_3/DVDD"
+merge "inv_wo_tap_3/DVDD" "inv_wo_tap_2/DVDD"
+merge "inv_wo_tap_2/DVDD" "inv_wo_tap_1/DVDD"
+merge "inv_wo_tap_1/DVDD" "inv_wo_tap_0/DVDD"
+merge "inv_wo_tap_0/DVDD" "inv_wo_tap_6/pfet$1_0/w_n63_n78#"
+merge "inv_wo_tap_6/pfet$1_0/w_n63_n78#" "inv_wo_tap_5/pfet$1_0/w_n63_n78#"
+merge "inv_wo_tap_5/pfet$1_0/w_n63_n78#" "w_n209_149#"
+merge "w_n209_149#" "inv_wo_tap_4/pfet$1_0/w_n63_n78#"
+merge "inv_wo_tap_4/pfet$1_0/w_n63_n78#" "w_n507_149#"
+merge "w_n507_149#" "inv_wo_tap_3/pfet$1_0/w_n63_n78#"
+merge "inv_wo_tap_3/pfet$1_0/w_n63_n78#" "w_n805_149#"
+merge "w_n805_149#" "inv_wo_tap_2/pfet$1_0/w_n63_n78#"
+merge "inv_wo_tap_2/pfet$1_0/w_n63_n78#" "w_n1103_149#"
+merge "w_n1103_149#" "inv_wo_tap_1/pfet$1_0/w_n63_n78#"
+merge "inv_wo_tap_1/pfet$1_0/w_n63_n78#" "w_n1401_149#"
+merge "w_n1401_149#" "inv_wo_tap_0/pfet$1_0/w_n63_n78#"
+merge "inv_wo_tap_0/pfet$1_0/w_n63_n78#" "w_n1699_149#"
+merge "tap_0/a_n234_n14#" "inv_wo_tap_6/DGND" -541.98 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1344 0 0 0 0 0 0 0 0 0 0
+merge "inv_wo_tap_6/DGND" "inv_wo_tap_5/DGND"
+merge "inv_wo_tap_5/DGND" "inv_wo_tap_4/DGND"
+merge "inv_wo_tap_4/DGND" "inv_wo_tap_3/DGND"
+merge "inv_wo_tap_3/DGND" "inv_wo_tap_2/DGND"
+merge "inv_wo_tap_2/DGND" "inv_wo_tap_1/DGND"
+merge "inv_wo_tap_1/DGND" "inv_wo_tap_0/DGND"
+merge "inv_wo_tap_0/DGND" "inv_wo_tap_6/VSUBS"
+merge "inv_wo_tap_6/VSUBS" "inv_wo_tap_5/VSUBS"
+merge "inv_wo_tap_5/VSUBS" "inv_wo_tap_4/VSUBS"
+merge "inv_wo_tap_4/VSUBS" "inv_wo_tap_3/VSUBS"
+merge "inv_wo_tap_3/VSUBS" "inv_wo_tap_2/VSUBS"
+merge "inv_wo_tap_2/VSUBS" "inv_wo_tap_1/VSUBS"
+merge "inv_wo_tap_1/VSUBS" "inv_wo_tap_0/VSUBS"
+merge "inv_wo_tap_0/VSUBS" "VSUBS"
+merge "inv_wo_tap_5/IN" "inv_wo_tap_4/OUT" -163.686 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -544 -168 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inv_wo_tap_4/OUT" "li_n583_87#"
+merge "inv_wo_tap_3/IN" "inv_wo_tap_2/OUT" -163.686 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -544 -168 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inv_wo_tap_2/OUT" "li_n1179_87#"
+merge "inv_wo_tap_6/IN" "inv_wo_tap_5/OUT" -147.887 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -544 -168 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inv_wo_tap_5/OUT" "li_n285_87#"
+merge "inv_wo_tap_6/OUT" "inv_wo_tap_0/IN" -892.421 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2668 -300 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inv_wo_tap_0/IN" "li_n1906_81#"
+merge "inv_wo_tap_2/IN" "inv_wo_tap_1/OUT" -163.686 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -544 -168 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inv_wo_tap_1/OUT" "li_n1477_87#"
+merge "inv_wo_tap_4/IN" "inv_wo_tap_3/OUT" -163.686 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -544 -168 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inv_wo_tap_3/OUT" "li_n881_87#"
+merge "inv_wo_tap_1/IN" "inv_wo_tap_0/OUT" -143.884 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -544 -168 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inv_wo_tap_0/OUT" "li_n1775_87#"

@@ -1,29 +1,102 @@
 | units: 500000 tech: sky130A format: MIT
-x IN DVDD IN DVDD s=10080,456 d=10080,456 l=30 w=168 x=-355 y=234 sky130_fd_pr__pfet_01v8
-x IN DVDD IN DVDD s=10080,456 d=10080,456 l=30 w=168 x=-1546 y=234 sky130_fd_pr__pfet_01v8
-x IN DGND IN DGND s=5040,288 d=5040,288 l=30 w=84 x=-1546 y=-38 sky130_fd_pr__nfet_01v8
-x IN DGND IN DGND s=5040,288 d=5040,288 l=30 w=84 x=-354 y=-38 sky130_fd_pr__nfet_01v8
-x IN DVDD IN DVDD s=10080,456 d=10080,456 l=30 w=168 x=-2142 y=234 sky130_fd_pr__pfet_01v8
-x IN DVDD IN DVDD s=10080,456 d=10080,456 l=30 w=168 x=-1248 y=234 sky130_fd_pr__pfet_01v8
-x IN DGND IN DGND s=5040,288 d=5040,288 l=30 w=84 x=-2142 y=-38 sky130_fd_pr__nfet_01v8
-x IN DGND IN DGND s=5040,288 d=5040,288 l=30 w=84 x=-1248 y=-38 sky130_fd_pr__nfet_01v8
-x IN DVDD IN DVDD s=10080,456 d=10080,456 l=30 w=168 x=-950 y=234 sky130_fd_pr__pfet_01v8
-x IN DGND IN DGND s=5040,288 d=5040,288 l=30 w=84 x=-950 y=-38 sky130_fd_pr__nfet_01v8
-x IN DVDD IN DVDD s=10080,456 d=10080,456 l=30 w=168 x=-1844 y=234 sky130_fd_pr__pfet_01v8
-x IN DVDD IN DVDD s=10080,456 d=10080,456 l=30 w=168 x=-652 y=234 sky130_fd_pr__pfet_01v8
-x IN DGND IN DGND s=5040,288 d=5040,288 l=30 w=84 x=-1844 y=-38 sky130_fd_pr__nfet_01v8
-x IN DGND IN DGND s=5040,288 d=5040,288 l=30 w=84 x=-652 y=-38 sky130_fd_pr__nfet_01v8
-R DGND 4213
-= DGND pfet$1_0/VSUBS
-= DGND tap_0/a_n234_n14#
-= DGND VSUBS
-R IN 3664
-= IN pfet$1_0/a_90_0#
-= IN OUT
-= IN pfet$1_0/a_60_n40#
-C DVDD0 3.2
-R DVDD 14593
-= DVDD pfet$1_0/a_0_0#
-= DVDD pfet$1_0/w_n85_n78#
-= DVDD w_n2266_156#
-= DVDD tap_0/w_n291_184#
+x inv_wo_tap_0/IN inv_wo_tap_6/DVDD inv_wo_tap_1/IN inv_wo_tap_6/DVDD s=10080,456 d=10080,456 l=30 w=168 x=-1852 y=227 sky130_fd_pr__pfet_01v8
+x inv_wo_tap_0/IN VSUBS inv_wo_tap_1/IN VSUBS s=5040,288 d=5040,288 l=30 w=84 x=-1851 y=-45 sky130_fd_pr__nfet_01v8
+x inv_wo_tap_1/IN inv_wo_tap_6/DVDD inv_wo_tap_2/IN inv_wo_tap_6/DVDD s=10080,456 d=10080,456 l=30 w=168 x=-1554 y=227 sky130_fd_pr__pfet_01v8
+x inv_wo_tap_1/IN VSUBS inv_wo_tap_2/IN VSUBS s=5040,288 d=5040,288 l=30 w=84 x=-1553 y=-45 sky130_fd_pr__nfet_01v8
+x inv_wo_tap_2/IN inv_wo_tap_6/DVDD inv_wo_tap_3/IN inv_wo_tap_6/DVDD s=10080,456 d=10080,456 l=30 w=168 x=-1256 y=227 sky130_fd_pr__pfet_01v8
+x inv_wo_tap_2/IN VSUBS inv_wo_tap_3/IN VSUBS s=5040,288 d=5040,288 l=30 w=84 x=-1255 y=-45 sky130_fd_pr__nfet_01v8
+x inv_wo_tap_4/IN inv_wo_tap_6/DVDD inv_wo_tap_5/IN inv_wo_tap_6/DVDD s=10080,456 d=10080,456 l=30 w=168 x=-660 y=227 sky130_fd_pr__pfet_01v8
+x inv_wo_tap_4/IN VSUBS inv_wo_tap_5/IN VSUBS s=5040,288 d=5040,288 l=30 w=84 x=-659 y=-45 sky130_fd_pr__nfet_01v8
+x inv_wo_tap_3/IN inv_wo_tap_6/DVDD inv_wo_tap_4/IN inv_wo_tap_6/DVDD s=10080,456 d=10080,456 l=30 w=168 x=-958 y=227 sky130_fd_pr__pfet_01v8
+x inv_wo_tap_3/IN VSUBS inv_wo_tap_4/IN VSUBS s=5040,288 d=5040,288 l=30 w=84 x=-957 y=-45 sky130_fd_pr__nfet_01v8
+x inv_wo_tap_5/IN inv_wo_tap_6/DVDD inv_wo_tap_6/IN inv_wo_tap_6/DVDD s=10080,456 d=10080,456 l=30 w=168 x=-362 y=227 sky130_fd_pr__pfet_01v8
+x inv_wo_tap_5/IN VSUBS inv_wo_tap_6/IN VSUBS s=5040,288 d=5040,288 l=30 w=84 x=-361 y=-45 sky130_fd_pr__nfet_01v8
+x inv_wo_tap_6/IN inv_wo_tap_6/DVDD inv_wo_tap_0/IN inv_wo_tap_6/DVDD s=10080,456 d=10080,456 l=30 w=168 x=-64 y=227 sky130_fd_pr__pfet_01v8
+x inv_wo_tap_6/IN VSUBS inv_wo_tap_0/IN VSUBS s=5040,288 d=5040,288 l=30 w=84 x=-63 y=-45 sky130_fd_pr__nfet_01v8
+R inv_wo_tap_6/IN 1819
+= inv_wo_tap_6/IN inv_wo_tap_6/pfet$1_0/a_60_n40#
+= inv_wo_tap_6/IN inv_wo_tap_5/OUT
+= inv_wo_tap_6/IN li_n285_87#
+= inv_wo_tap_6/IN inv_wo_tap_5/pfet$1_0/a_90_0#
+R inv_wo_tap_4/IN 1819
+= inv_wo_tap_4/IN inv_wo_tap_4/pfet$1_0/a_60_n40#
+= inv_wo_tap_4/IN inv_wo_tap_3/OUT
+= inv_wo_tap_4/IN li_n881_87#
+= inv_wo_tap_4/IN inv_wo_tap_3/pfet$1_0/a_90_0#
+R inv_wo_tap_5/IN 1819
+= inv_wo_tap_5/IN inv_wo_tap_5/pfet$1_0/a_60_n40#
+= inv_wo_tap_5/IN inv_wo_tap_4/OUT
+= inv_wo_tap_5/IN li_n583_87#
+= inv_wo_tap_5/IN inv_wo_tap_4/pfet$1_0/a_90_0#
+R inv_wo_tap_3/IN 1819
+= inv_wo_tap_3/IN inv_wo_tap_3/pfet$1_0/a_60_n40#
+= inv_wo_tap_3/IN inv_wo_tap_2/OUT
+= inv_wo_tap_3/IN li_n1179_87#
+= inv_wo_tap_3/IN inv_wo_tap_2/pfet$1_0/a_90_0#
+R inv_wo_tap_2/IN 1819
+= inv_wo_tap_2/IN inv_wo_tap_2/pfet$1_0/a_60_n40#
+= inv_wo_tap_2/IN inv_wo_tap_1/OUT
+= inv_wo_tap_2/IN li_n1477_87#
+= inv_wo_tap_2/IN inv_wo_tap_1/pfet$1_0/a_90_0#
+R inv_wo_tap_1/IN 1819
+= inv_wo_tap_1/IN inv_wo_tap_1/pfet$1_0/a_60_n40#
+= inv_wo_tap_1/IN inv_wo_tap_0/OUT
+= inv_wo_tap_1/IN li_n1775_87#
+= inv_wo_tap_1/IN inv_wo_tap_0/pfet$1_0/a_90_0#
+R inv_wo_tap_0/IN 1803
+= inv_wo_tap_0/IN inv_wo_tap_6/OUT
+= inv_wo_tap_0/IN inv_wo_tap_6/pfet$1_0/a_90_0#
+= inv_wo_tap_0/IN li_n1906_81#
+= inv_wo_tap_0/IN inv_wo_tap_0/pfet$1_0/a_60_n40#
+C inv_wo_tap_6/DVDD0 2.9
+R inv_wo_tap_6/DVDD 14595
+= inv_wo_tap_6/DVDD tap_0/w_n291_184#
+= inv_wo_tap_6/DVDD inv_wo_tap_6/pfet$1_0/a_0_0#
+= inv_wo_tap_6/DVDD inv_wo_tap_5/DVDD
+= inv_wo_tap_6/DVDD inv_wo_tap_5/pfet$1_0/a_0_0#
+= inv_wo_tap_6/DVDD inv_wo_tap_4/DVDD
+= inv_wo_tap_6/DVDD inv_wo_tap_4/pfet$1_0/a_0_0#
+= inv_wo_tap_6/DVDD inv_wo_tap_3/DVDD
+= inv_wo_tap_6/DVDD inv_wo_tap_3/pfet$1_0/a_0_0#
+= inv_wo_tap_6/DVDD inv_wo_tap_2/DVDD
+= inv_wo_tap_6/DVDD inv_wo_tap_2/pfet$1_0/a_0_0#
+= inv_wo_tap_6/DVDD inv_wo_tap_1/DVDD
+= inv_wo_tap_6/DVDD inv_wo_tap_1/pfet$1_0/a_0_0#
+= inv_wo_tap_6/DVDD inv_wo_tap_0/DVDD
+= inv_wo_tap_6/DVDD inv_wo_tap_0/pfet$1_0/a_0_0#
+= inv_wo_tap_6/DVDD w_n805_149#
+= inv_wo_tap_6/DVDD inv_wo_tap_6/pfet$1_0/w_n63_n78#
+= inv_wo_tap_6/DVDD inv_wo_tap_5/pfet$1_0/w_n63_n78#
+= inv_wo_tap_6/DVDD w_n209_149#
+= inv_wo_tap_6/DVDD inv_wo_tap_4/pfet$1_0/w_n63_n78#
+= inv_wo_tap_6/DVDD w_n507_149#
+= inv_wo_tap_6/DVDD inv_wo_tap_3/pfet$1_0/w_n63_n78#
+= inv_wo_tap_6/DVDD w_n1699_149#
+= inv_wo_tap_6/DVDD inv_wo_tap_2/pfet$1_0/w_n63_n78#
+= inv_wo_tap_6/DVDD w_n1103_149#
+= inv_wo_tap_6/DVDD inv_wo_tap_1/pfet$1_0/w_n63_n78#
+= inv_wo_tap_6/DVDD w_n1401_149#
+= inv_wo_tap_6/DVDD inv_wo_tap_0/pfet$1_0/w_n63_n78#
+R VSUBS 4213
+= VSUBS tap_0/a_n234_n14#
+= VSUBS inv_wo_tap_6/DGND
+= VSUBS inv_wo_tap_5/DGND
+= VSUBS inv_wo_tap_4/DGND
+= VSUBS inv_wo_tap_3/DGND
+= VSUBS inv_wo_tap_2/DGND
+= VSUBS inv_wo_tap_1/DGND
+= VSUBS inv_wo_tap_0/DGND
+= VSUBS inv_wo_tap_6/VSUBS
+= VSUBS inv_wo_tap_6/pfet$1_0/VSUBS
+= VSUBS inv_wo_tap_5/VSUBS
+= VSUBS inv_wo_tap_5/pfet$1_0/VSUBS
+= VSUBS inv_wo_tap_4/VSUBS
+= VSUBS inv_wo_tap_4/pfet$1_0/VSUBS
+= VSUBS inv_wo_tap_3/VSUBS
+= VSUBS inv_wo_tap_3/pfet$1_0/VSUBS
+= VSUBS inv_wo_tap_2/VSUBS
+= VSUBS inv_wo_tap_2/pfet$1_0/VSUBS
+= VSUBS inv_wo_tap_1/VSUBS
+= VSUBS inv_wo_tap_1/pfet$1_0/VSUBS
+= VSUBS inv_wo_tap_0/VSUBS
+= VSUBS inv_wo_tap_0/pfet$1_0/VSUBS

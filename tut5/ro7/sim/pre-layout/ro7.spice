@@ -1,4 +1,4 @@
-** sch_path: /home/ee24s053/ee5311-2025/tut5/ro7/cell/ro7.sch
+** sch_path: /home/ee24s053/ee5311-2025/tut5/ro7/sim/pre-layout/ro7.sch
 **.subckt ro7
 Vdd1 VDD GND {vdd_val}
 x1 VDD net1 vout GND inv

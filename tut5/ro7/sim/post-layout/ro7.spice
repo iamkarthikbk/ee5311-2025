@@ -1,0 +1,22 @@
+** sch_path: /home/ee24s053/ee5311-2025/tut5/ro7/sim/post-layout/ro7.sch
+.subckt ro7 DVDD vout DGND
+*.PININFO DVDD:B DGND:B vout:O
+x1 DVDD net1 vout DGND inv
+x2 DVDD net2 net1 DGND inv
+x3 DVDD net3 net2 DGND inv
+x4 DVDD net4 net3 DGND inv
+x5 DVDD net5 net4 DGND inv
+x6 DVDD net6 net5 DGND inv
+x7 DVDD vout net6 DGND inv
+.ends
+
+* expanding   symbol:  /home/ee24s053/ee5311-2025/tut5/inv/cell/subcircuit/inv.sym # of pins=4
+** sym_path: /home/ee24s053/ee5311-2025/tut5/inv/cell/subcircuit/inv.sym
+** sch_path: /home/ee24s053/ee5311-2025/tut5/inv/cell/subcircuit/inv.sch
+.subckt inv DVDD OUT IN DGND
+*.PININFO DVDD:B DGND:B OUT:O IN:I
+XM1 OUT IN DVDD DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=1
+XM2 OUT IN DGND DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+.ends
+
+.end
