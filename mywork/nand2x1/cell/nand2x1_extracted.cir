@@ -1,0 +1,25 @@
+* Extracted by KLayout with SKY130 LVS runset on : 26/02/2025 18:03
+
+* cell nand2x1
+* pin F
+* pin A
+* pin B
+* pin DGND
+* pin DVDD
+.SUBCKT nand2x1 F A B DGND DVDD
+* device instance $1 r0 *1 -1.065,1.45 sky130_fd_pr__pfet_01v8
+XM$1 \$9 B F DVDD sky130_fd_pr__pfet_01v8 L=150000 W=840000 AS=357000000000
++ AD=210000000000 PS=2530000 PD=1340000
+* device instance $2 r0 *1 -0.415,1.45 sky130_fd_pr__pfet_01v8
+XM$2 F B DVDD DVDD sky130_fd_pr__pfet_01v8 L=150000 W=840000 AS=210000000000
++ AD=252000000000 PS=1340000 PD=2280000
+* device instance $3 r0 *1 -3.095,1.45 sky130_fd_pr__pfet_01v8
+XM$3 DVDD A F DVDD sky130_fd_pr__pfet_01v8 L=150000 W=1680000 AS=462000000000
++ AD=567000000000 PS=3620000 PD=3870000
+* device instance $5 r0 *1 -3.095,-0.285 sky130_fd_pr__nfet_01v8
+XM$5 DGND A F DGND sky130_fd_pr__nfet_01v8 L=150000 W=1680000 AS=462000000000
++ AD=462000000000 PS=3620000 PD=3620000
+* device instance $7 r0 *1 -1.065,-0.285 sky130_fd_pr__nfet_01v8
+XM$7 DGND B DGND DGND sky130_fd_pr__nfet_01v8 L=150000 W=1680000
++ AS=462000000000 AD=462000000000 PS=3620000 PD=3620000
+.ENDS nand2x1

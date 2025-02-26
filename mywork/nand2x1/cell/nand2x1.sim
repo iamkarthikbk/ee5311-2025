@@ -25,12 +25,12 @@ R DGND 3581
 = DGND nfet_0/a_220_0#
 = DGND li_n697_n181#
 = DGND nfet_0/a_0_0#
-R B 2104
+R B 2120
 = B pfet_1/a_190_n40#
 = B nfet_1/a_190_n40#
 = B a_n228_67#
 = B nfet_1/a_60_n40#
-= B a_n198_384#
+= B a_n228_414#
 = B pfet_1/a_60_n40#
 R DVDD 5811
 = DVDD tap_0/w_n291_184#
@@ -42,10 +42,10 @@ R DVDD 5811
 = DVDD pfet_0/a_220_0#
 = DVDD li_n693_413#
 = DVDD pfet_0/a_0_0#
-R A 2104
+R A 2120
 = A pfet_0/a_190_n40#
 = A nfet_0/a_190_n40#
 = A a_n504_67#
 = A nfet_0/a_60_n40#
-= A a_n604_384#
+= A a_n634_414#
 = A pfet_0/a_60_n40#
