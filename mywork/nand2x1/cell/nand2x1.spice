@@ -1,0 +1,9 @@
+** sch_path: /home/ee24s053/ee5311-2025/mywork/nand2x1/nand2x1.sch
+.subckt nand2x1 DVDD DGND A B F
+*.PININFO DVDD:B DGND:B A:I B:I F:O
+XM1 F A net1 DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.84 nf=2 m=1
+XM2 net1 B DGND DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.84 nf=2 m=1
+XM3 F A DVDD DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=2 m=1
+XM4 F B DVDD DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=2 m=1
+.ends
+.end

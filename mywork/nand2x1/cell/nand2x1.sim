@@ -1,0 +1,51 @@
+| units: 500000 tech: sky130A format: MIT
+x A DVDD F DVDD s=10080,456 d=8400,268 l=30 w=168 x=-634 y=206 sky130_fd_pr__pfet_01v8
+x A F DVDD DVDD s=8400,268 d=10080,456 l=30 w=168 x=-504 y=206 sky130_fd_pr__pfet_01v8
+x B DVDD F DVDD s=10080,456 d=8400,268 l=30 w=168 x=-228 y=206 sky130_fd_pr__pfet_01v8
+x B F DVDD DVDD s=8400,268 d=10080,456 l=30 w=168 x=-98 y=206 sky130_fd_pr__pfet_01v8
+x A DGND F DGND s=10080,456 d=8400,268 l=30 w=168 x=-634 y=-141 sky130_fd_pr__nfet_01v8
+x A F DGND DGND s=8400,268 d=10080,456 l=30 w=168 x=-504 y=-141 sky130_fd_pr__nfet_01v8
+x B DGND DGND DGND s=10080,456 d=8400,268 l=30 w=168 x=-228 y=-141 sky130_fd_pr__nfet_01v8
+x B DGND DGND DGND s=8400,268 d=10080,456 l=30 w=168 x=-98 y=-141 sky130_fd_pr__nfet_01v8
+R F 1862
+= F pfet_1/a_90_0#
+= F pfet_0/a_90_0#
+= F nfet_0/a_90_0#
+R DGND 3581
+= DGND tap_0/a_n234_n14#
+= DGND pfet_1/VSUBS
+= DGND pfet_0/VSUBS
+= DGND nfet_1/VSUBS
+= DGND nfet_0/VSUBS
+= DGND VSUBS
+= DGND li_n461_12#
+= DGND nfet_1/a_220_0#
+= DGND nfet_1/a_90_0#
+= DGND nfet_1/a_0_0#
+= DGND nfet_0/a_220_0#
+= DGND li_n697_n181#
+= DGND nfet_0/a_0_0#
+R B 2104
+= B pfet_1/a_190_n40#
+= B nfet_1/a_190_n40#
+= B a_n228_67#
+= B nfet_1/a_60_n40#
+= B a_n198_384#
+= B pfet_1/a_60_n40#
+R DVDD 5811
+= DVDD tap_0/w_n291_184#
+= DVDD a_n414_206#
+= DVDD pfet_1/w_n63_n78#
+= DVDD pfet_0/w_n63_n78#
+= DVDD pfet_1/a_220_0#
+= DVDD pfet_1/a_0_0#
+= DVDD pfet_0/a_220_0#
+= DVDD li_n693_413#
+= DVDD pfet_0/a_0_0#
+R A 2104
+= A pfet_0/a_190_n40#
+= A nfet_0/a_190_n40#
+= A a_n504_67#
+= A nfet_0/a_60_n40#
+= A a_n604_384#
+= A pfet_0/a_60_n40#
