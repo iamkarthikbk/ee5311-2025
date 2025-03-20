@@ -1590,17 +1590,5 @@
   </cell>
  </cells>
  <items>
-  <item>
-   <tags/>
-   <category>'npc.2'</category>
-   <cell>fa</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>edge-pair: (-3.425,0.24;-3.425,0.61)|(-3.615,0.61;-3.615,0.24)</value>
-   </values>
-  </item>
  </items>
 </report-database>
