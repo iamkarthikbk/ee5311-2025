@@ -137,7 +137,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -120 150 0 0 {name=M7
-W=0.42
+W=0.84
 L=0.15
 nf=1 
 mult=1
@@ -165,7 +165,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 60 250 0 0 {name=M9
-W=0.84
+W=0.42
 L=0.15
 nf=1 
 mult=1
@@ -179,7 +179,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 170 250 0 0 {name=M10
-W=0.84
+W=0.42
 L=0.15
 nf=1 
 mult=1
@@ -235,7 +235,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 430 150 0 0 {name=M14
-W=1.26
+W=0.42
 L=0.15
 nf=1 
 mult=1
@@ -249,7 +249,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 430 250 0 0 {name=M15
-W=1.26
+W=0.42
 L=0.15
 nf=1 
 mult=1
@@ -291,7 +291,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} -120 -160 0 0 {name=M22
-W=0.84
+W=1.68
 L=0.15
 nf=1
 mult=1
@@ -319,7 +319,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 430 -60 0 0 {name=M25
-W=0.84
+W=0.42
 L=0.15
 nf=1
 mult=1
@@ -333,7 +333,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 430 -160 0 0 {name=M26
-W=2.52
+W=0.42
 L=0.15
 nf=1
 mult=1
@@ -347,7 +347,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 430 -260 0 0 {name=M27
-W=2.52
+W=0.42
 L=0.15
 nf=1
 mult=1
@@ -403,7 +403,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 60 -260 0 0 {name=M5
-W=1.68
+W=0.42
 L=0.15
 nf=1
 mult=1
@@ -417,7 +417,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 180 -260 0 0 {name=M6
-W=1.68
+W=0.42
 L=0.15
 nf=1
 mult=1
@@ -431,7 +431,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 300 -260 0 0 {name=M17
-W=0.84
+W=0.42
 L=0.15
 nf=1
 mult=1
@@ -445,7 +445,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 60 -160 0 0 {name=M19
-W=0.84
+W=0.42
 L=0.15
 nf=1
 mult=1

@@ -1,0 +1,19 @@
+* NGSPICE file created from msym-fa-sum-pdn.ext - technology: sky130A
+
+.subckt msym-fa-sum-pdn bot a b c1 out c2
+X0 a_n843_275# a w_n996_197# w_n996_197# sky130_fd_pr__pfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X1 a_n193_n105# b a_n323_n105# bot sky130_fd_pr__nfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X2 a_n843_n105# c1 bot bot sky130_fd_pr__nfet_01v8 ad=0.105 pd=0.92 as=0.126 ps=1.44 w=0.42 l=0.15
+X3 bot b a_n843_n105# bot sky130_fd_pr__nfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X4 bot a a_n193_n105# bot sky130_fd_pr__nfet_01v8 ad=0.126 pd=1.44 as=0.105 ps=0.92 w=0.42 l=0.15
+X5 a_n843_n105# a bot bot sky130_fd_pr__nfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X6 w_n996_197# a a_n193_275# w_n996_197# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.105 ps=0.92 w=0.42 l=0.15
+X7 out c2 a_n843_275# w_n996_197# sky130_fd_pr__pfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X8 out c2 a_n843_n105# bot sky130_fd_pr__nfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X9 a_n843_275# c1 w_n996_197# w_n996_197# sky130_fd_pr__pfet_01v8 ad=0.105 pd=0.92 as=0.126 ps=1.44 w=0.42 l=0.15
+X10 a_n323_275# c1 out w_n996_197# sky130_fd_pr__pfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X11 w_n996_197# b a_n843_275# w_n996_197# sky130_fd_pr__pfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X12 a_n193_275# b a_n323_275# w_n996_197# sky130_fd_pr__pfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X13 a_n323_n105# c1 out bot sky130_fd_pr__nfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+.ends
+
