@@ -1,0 +1,10 @@
+| units: 500000 tech: sky130A format: MIT
+x b a_n160_n64# DGND DGND s=4200,184 d=4200,184 l=30 w=84 x=-59 y=-63 sky130_fd_pr__nfet_01v8
+x a DGND a_n160_n64# DGND s=5040,288 d=4200,184 l=30 w=84 x=-189 y=-63 sky130_fd_pr__nfet_01v8
+x cin DGND a_n160_n64# DGND s=4200,184 d=5040,288 l=30 w=84 x=70 y=-63 sky130_fd_pr__nfet_01v8
+R cin 555
+R b 555
+R a 555
+R DGND 1166
+R a_n160_n64# 878
+R w_223_136# 1849

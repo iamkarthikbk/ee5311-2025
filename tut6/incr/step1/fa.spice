@@ -1,0 +1,8 @@
+** sch_path: /home/ee24s053/ee5311-2025/tut6/incr/fa.sch
+.subckt fa a b cin DGND
+*.PININFO a:I b:I cin:I DGND:B
+XM1 net1 a DGND DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM2 net1 b DGND DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM3 net1 cin DGND DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+.ends
+.end

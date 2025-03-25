@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
  <description>SKY130 DRC runset</description>
- <original-file>/home/ee24s053/ee5311-2025/tut6/sim/post_layout/fa.gds</original-file>
+ <original-file>/home/ee24s053/ee5311-2025/tut6/incr/step1/fa.gds</original-file>
  <generator>drc: script='/home/ee24s053/.klayout/macros/run_drc_full.lydrc'</generator>
  <top-cell>fa</top-cell>
  <tags>

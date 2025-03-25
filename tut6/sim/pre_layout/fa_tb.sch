@@ -25,9 +25,9 @@ N -100 -220 10 -220 {lab=#net2}
 C {fa.sym} -160 -60 0 0 {name=x1}
 C {fa.sym} 160 -210 0 0 {name=x2}
 C {/home/ee24s053/ee5311-2025/tut5/inv/cell/subcircuit/inv.sym} 380 -70 0 0 {name=x3}
-C {vsource.sym} -560 0 0 0 {name=V1 value="PULSE(0 1.8 0ps 5ps 5ps 1ns 2ns)" savecurrent=false}
-C {vsource.sym} -520 60 0 0 {name=V2 value="PULSE(0 1.8 0ps 5ps 5ps 500ps 1ns)" savecurrent=false}
-C {vsource.sym} -480 120 0 0 {name=V3 value="PULSE(0 1.8 0ps 5ps 5ps 250ps 500ps)" savecurrent=false}
+C {vsource.sym} -560 0 0 0 {name=V1 value=1.8 savecurrent=false}
+C {vsource.sym} -520 60 0 0 {name=V2 value=1.8 savecurrent=false}
+C {vsource.sym} -480 120 0 0 {name=V3 value="PULSE(0 1.8 0ps 5ps 5ps 2500ps 5ns)" savecurrent=false}
 C {vsource.sym} -410 40 0 0 {name=V4 value=1.8 savecurrent=false}
 C {gnd.sym} -410 70 0 0 {name=l1 lab=GND}
 C {gnd.sym} 270 -30 0 0 {name=l2 lab=GND}
@@ -36,7 +36,7 @@ C {gnd.sym} -520 90 0 0 {name=l4 lab=GND}
 C {gnd.sym} -480 150 0 0 {name=l5 lab=GND}
 C {code_shown.sym} -80 90 0 0 {name=s1 only_toplevel=false value="
 .control
-tran 1p 5n
+tran 1p 50n
 plot v(a_tap) v(b_tap) v(cin_tap)
 plot v(sum_n1_tap) v(cout_n1_tap)
 * a = PULSE(1.8 0 0ps 5ps 5ps 250ps 500ps)
