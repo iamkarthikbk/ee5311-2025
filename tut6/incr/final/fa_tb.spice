@@ -1,0 +1,52 @@
+** sch_path: /home/ee24s053/ee5311-2025/tut6/incr/final/fa_tb.sch
+**.subckt fa_tb sum
+*.opin sum
+x1 VDD a_tap b_tap cin_tap sum_n1_tap cout_n1_tap GND fa
+x2 VDD net1 net2 cout_n1_tap net3 net4 GND fa
+x3 VDD sum sum_n1_tap GND inv
+V1 a_tap GND 1.8
+V2 b_tap GND 0
+V3 cin_tap GND PULSE(0 1.8 0ps 5ps 5ps 2500ps 5ns)
+V4 VDD GND 1.8
+V5 net1 GND 0
+V6 net2 GND 0
+**** begin user architecture code
+
+
+.include /home/ee24s053/ee5311-2025/tut6/incr/final/fa_extracted.spice
+.control
+tran 1p 50n
+plot v(a_tap) v(b_tap) v(cin_tap)
+plot v(sum_n1_tap) v(cout_n1_tap)
+meas tran tlh_carry trig v(cin_tap) val=0.9 rise=1 targ v(cout_n1_tap) val=0.9 rise=1
+meas tran thl_carry trig v(cin_tap) val=0.9 fall=1 targ v(cout_n1_tap) val=0.9 fall=1
+let carry_delay = ($&tlh_carry + $&thl_carry)/2
+echo carry delay: $&carry_delay
+meas tran tlh_sum trig v(cin_tap) val=0.9 rise=1 targ v(sum_n1_tap) val=0.9 rise=1
+meas tran thl_sum trig v(cin_tap) val=0.9 fall=1 targ v(sum_n1_tap) val=0.9 fall=1
+let sum_delay = ($&tlh_sum + $&thl_sum)/2
+echo sum delay: $&sum_delay
+.endc
+
+
+.lib /cad/share/pdk/sky130B/libs.tech/combined/sky130.lib.spice tt
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /home/ee24s053/ee5311-2025/tut5/inv/cell/subcircuit/inv.sym # of pins=4
+** sym_path: /home/ee24s053/ee5311-2025/tut5/inv/cell/subcircuit/inv.sym
+** sch_path: /home/ee24s053/ee5311-2025/tut5/inv/cell/subcircuit/inv.sch
+.subckt inv DVDD OUT IN DGND
+*.iopin DVDD
+*.iopin DGND
+*.opin OUT
+*.ipin IN
+XM1 OUT IN DVDD DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 OUT IN DGND DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.GLOBAL VDD
+.end

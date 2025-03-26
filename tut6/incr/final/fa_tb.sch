@@ -35,6 +35,7 @@ C {gnd.sym} -560 30 0 0 {name=l3 lab=GND}
 C {gnd.sym} -520 90 0 0 {name=l4 lab=GND}
 C {gnd.sym} -480 150 0 0 {name=l5 lab=GND}
 C {code_shown.sym} -80 90 0 0 {name=s1 only_toplevel=false value="
+.include /home/ee24s053/ee5311-2025/tut6/incr/final/fa_extracted.spice
 .control
 tran 1p 50n
 plot v(a_tap) v(b_tap) v(cin_tap)
