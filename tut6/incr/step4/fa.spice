@@ -1,0 +1,29 @@
+** sch_path: /home/ee24s053/ee5311-2025/tut6/incr/step4/fa.sch
+.subckt fa a b cin DGND DVDD sum_n cout_n
+*.PININFO a:I b:I cin:I DGND:B DVDD:B sum_n:O cout_n:O
+XM1 net1 a DGND DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM2 net1 b DGND DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM3 net1 cin DGND DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM4 net3 a DGND DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM5 net2 b net3 DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM6 sum_n cin net2 DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM7 sum_n cout_n net1 DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM8 sum_n cout_n net4 DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM9 sum_n cin net6 DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM10 net6 b net5 DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM11 net5 a DVDD DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM12 net4 cin DVDD DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM13 net4 b DVDD DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM14 net4 a DVDD DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM15 cout_n cin net7 DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=1.68 nf=1 m=1
+XM16 net7 b DVDD DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=3.36 nf=1 m=1
+XM17 net7 a DVDD DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=3.36 nf=1 m=1
+XM18 cout_n cin net8 DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.84 nf=1 m=1
+XM19 net8 b DGND DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM20 net8 a DGND DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM21 net10 a DVDD DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=1.68 nf=1 m=1
+XM22 cout_n b net10 DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=1.68 nf=1 m=1
+XM23 cout_n b net9 DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.84 nf=1 m=1
+XM24 net9 a DGND DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.84 nf=1 m=1
+.ends
+.end
