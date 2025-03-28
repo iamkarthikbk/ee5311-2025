@@ -1,0 +1,23 @@
+* NGSPICE file created from sum_n.ext - technology: sky130A
+
+.subckt sum_n DVDD DGND an bn sum_n cin cout_in
+X0 a_n1232_n64# bn DGND DGND sky130_fd_pr__nfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X1 a_n956_n64# an DGND DGND sky130_fd_pr__nfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X2 a_n30_n64# a_n1232_n64# a_n160_n64# DGND sky130_fd_pr__nfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X3 a_n160_n64# cin sum_n DGND sky130_fd_pr__nfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X4 DGND a_n1232_n64# a_n680_n64# DGND sky130_fd_pr__nfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X5 a_n680_n64# a_n956_n64# DGND DGND sky130_fd_pr__nfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X6 a_n30_274# a_n1232_n64# a_n160_274# DVDD sky130_fd_pr__pfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X7 sum_n cout_in a_n680_n64# DGND sky130_fd_pr__nfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X8 a_n680_n64# cin DGND DGND sky130_fd_pr__nfet_01v8 ad=0.105 pd=0.92 as=0.126 ps=1.44 w=0.42 l=0.15
+X9 DGND a_n956_n64# a_n30_n64# DGND sky130_fd_pr__nfet_01v8 ad=0.126 pd=1.44 as=0.105 ps=0.92 w=0.42 l=0.15
+X10 a_n160_274# cin sum_n DVDD sky130_fd_pr__pfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X11 a_n1232_n64# bn DVDD DVDD sky130_fd_pr__pfet_01v8 ad=0.252 pd=2.28 as=0.252 ps=2.28 w=0.84 l=0.15
+X12 DVDD a_n1232_n64# a_n680_274# DVDD sky130_fd_pr__pfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X13 a_n680_274# a_n956_n64# DVDD DVDD sky130_fd_pr__pfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X14 sum_n cout_in a_n680_274# DVDD sky130_fd_pr__pfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X15 a_n956_n64# an DVDD DVDD sky130_fd_pr__pfet_01v8 ad=0.252 pd=2.28 as=0.252 ps=2.28 w=0.84 l=0.15
+X16 a_n680_274# cin DVDD DVDD sky130_fd_pr__pfet_01v8 ad=0.105 pd=0.92 as=0.126 ps=1.44 w=0.42 l=0.15
+X17 DVDD a_n956_n64# a_n30_274# DVDD sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.105 ps=0.92 w=0.42 l=0.15
+.ends
+

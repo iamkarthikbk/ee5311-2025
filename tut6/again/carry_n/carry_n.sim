@@ -1,0 +1,33 @@
+| units: 500000 tech: sky130A format: MIT
+x b a_81_n27# DGND DGND s=8400,268 d=8400,268 l=30 w=168 x=181 y=-26 sky130_fd_pr__nfet_01v8
+x a DGND a_n179_n27# DGND s=10080,456 d=8400,268 l=30 w=168 x=-208 y=-26 sky130_fd_pr__nfet_01v8
+x a DGND a_81_n27# DGND s=8400,268 d=10080,456 l=30 w=168 x=571 y=-26 sky130_fd_pr__nfet_01v8
+x b a_n179_267# cout_n DVDD s=8400,268 d=8400,268 l=30 w=168 x=-78 y=267 sky130_fd_pr__pfet_01v8
+x a a_81_n27# DGND DGND s=8400,268 d=8400,268 l=30 w=168 x=441 y=-26 sky130_fd_pr__nfet_01v8
+x b DGND a_81_n27# DGND s=8400,268 d=8400,268 l=30 w=168 x=311 y=-26 sky130_fd_pr__nfet_01v8
+x b a_81_267# DVDD DVDD s=8400,268 d=8400,268 l=30 w=168 x=181 y=267 sky130_fd_pr__pfet_01v8
+x a DVDD a_n179_267# DVDD s=10080,456 d=8400,268 l=30 w=168 x=-208 y=267 sky130_fd_pr__pfet_01v8
+x a DVDD a_81_267# DVDD s=8400,268 d=8400,268 l=30 w=168 x=571 y=267 sky130_fd_pr__pfet_01v8
+x cin cout_n a_81_n27# DGND s=8400,268 d=8400,268 l=30 w=168 x=51 y=-26 sky130_fd_pr__nfet_01v8
+x a a_81_267# DVDD DVDD s=8400,268 d=8400,268 l=30 w=168 x=441 y=267 sky130_fd_pr__pfet_01v8
+x b a_81_267# DVDD DVDD s=8400,268 d=8400,268 l=30 w=168 x=961 y=267 sky130_fd_pr__pfet_01v8
+x b DVDD a_81_267# DVDD s=8400,268 d=8400,268 l=30 w=168 x=1091 y=267 sky130_fd_pr__pfet_01v8
+x b DVDD a_81_267# DVDD s=8400,268 d=8400,268 l=30 w=168 x=311 y=267 sky130_fd_pr__pfet_01v8
+x a DVDD a_81_267# DVDD s=8400,268 d=8400,268 l=30 w=168 x=831 y=267 sky130_fd_pr__pfet_01v8
+x a a_n179_267# DVDD DVDD s=8400,268 d=10080,456 l=30 w=168 x=1481 y=267 sky130_fd_pr__pfet_01v8
+x a a_81_267# DVDD DVDD s=8400,268 d=8400,268 l=30 w=168 x=701 y=267 sky130_fd_pr__pfet_01v8
+x b cout_n a_n179_267# DVDD s=8400,268 d=8400,268 l=30 w=168 x=1351 y=267 sky130_fd_pr__pfet_01v8
+x cin a_81_267# cout_n DVDD s=8400,268 d=8400,268 l=30 w=168 x=1221 y=267 sky130_fd_pr__pfet_01v8
+x b a_n179_n27# cout_n DGND s=8400,268 d=8400,268 l=30 w=168 x=-78 y=-26 sky130_fd_pr__nfet_01v8
+x cin cout_n a_81_267# DVDD s=8400,268 d=8400,268 l=30 w=168 x=51 y=267 sky130_fd_pr__pfet_01v8
+R cout_n 1646
+R cin 1531
+R b 4426
+R a 4448
+C DVDD0 2.7
+R DVDD 13333
+R DGND 1978
+R a_81_n27# 1560
+R a_n179_n27# 202
+R a_81_267# 4223
+R a_n179_267# 1348

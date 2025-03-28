@@ -1,0 +1,8 @@
+prof updated the problem statement to:
+Instead of creating a single standard cell that generates both Cout and Sum using A_i, B_i, C_in as inputs, create separate layouts for the sum and carry parts. Try and implement two versions of the carry logic. 
+
+First with inputs A_i, B_i and C_in and generates (C_out complement)
+Second one takes A_i, B_i and (C_in complement) as input and complements both A_i and B_i inside the layout and generates C_out
+These two layouts are due next Thursday(April 3).
+
+Generate separate layouts for Sum logic similarly. Use the carry layouts to construct the layout of the ripple carry adder critical path. The complete layout is due on April 10.

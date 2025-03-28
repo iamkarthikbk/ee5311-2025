@@ -1,0 +1,143 @@
+* NGSPICE file created from sum_n.ext - technology: sky130A
+.subckt sum_n a b cin DGND cout_in DVDD sum_n
+X0 a_n30_n64# b.t0 a_n160_n64# DGND.t6 sky130_fd_pr__nfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X1 a_n160_n64# cin.t0 sum_n.t3 DGND.t8 sky130_fd_pr__nfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X2 DGND.t5 b.t1 a_n680_n64# DGND.t4 sky130_fd_pr__nfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X3 a_n680_n64# a.t0 DGND.t10 DGND.t9 sky130_fd_pr__nfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X4 a_n30_274# b.t2 a_n160_274# DVDD.t7 sky130_fd_pr__pfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X5 sum_n.t1 cout_in.t0 a_n680_n64# DGND.t7 sky130_fd_pr__nfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X6 a_n680_n64# cin.t1 DGND.t1 DGND.t0 sky130_fd_pr__nfet_01v8 ad=0.105 pd=0.92 as=0.126 ps=1.44 w=0.42 l=0.15
+X7 DGND.t3 a.t1 a_n30_n64# DGND.t2 sky130_fd_pr__nfet_01v8 ad=0.126 pd=1.44 as=0.105 ps=0.92 w=0.42 l=0.15
+X8 a_n160_274# cin.t2 sum_n.t2 DVDD.t10 sky130_fd_pr__pfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X9 DVDD.t6 b.t3 a_n680_274# DVDD.t5 sky130_fd_pr__pfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X10 a_n680_274# a.t2 DVDD.t4 DVDD.t3 sky130_fd_pr__pfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X11 sum_n.t0 cout_in.t1 a_n680_274# DVDD.t0 sky130_fd_pr__pfet_01v8 ad=0.105 pd=0.92 as=0.105 ps=0.92 w=0.42 l=0.15
+X12 a_n680_274# cin.t3 DVDD.t9 DVDD.t8 sky130_fd_pr__pfet_01v8 ad=0.105 pd=0.92 as=0.126 ps=1.44 w=0.42 l=0.15
+X13 DVDD.t2 a.t3 a_n30_274# DVDD.t1 sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.105 ps=0.92 w=0.42 l=0.15
+R0 b.n0 b.t0 345.969
+R1 b.n1 b.t1 341.762
+R2 b.n2 b.n0 173.075
+R3 b.n2 b.n1 161.3
+R4 b.n0 b.t2 149.957
+R5 b.n1 b.t3 145.749
+R6 b b.n2 0.864305
+R7 DGND.n0 DGND.t2 4314.59
+R8 DGND.t2 DGND.t6 1550.14
+R9 DGND.t6 DGND.t8 1550.14
+R10 DGND.t8 DGND.t7 1550.14
+R11 DGND.t7 DGND.t9 1550.14
+R12 DGND.t9 DGND.t4 1550.14
+R13 DGND.t4 DGND.t0 1550.14
+R14 DGND.n0 DGND.t3 272.351
+R15 DGND.n2 DGND.t1 272.288
+R16 DGND.n2 DGND.n1 229.494
+R17 DGND.n1 DGND.t10 71.4291
+R18 DGND.n1 DGND.t5 71.4291
+R19 DGND DGND.n0 0.655448
+R20 DGND DGND.n2 0.165865
+R21 cin.n0 cin.t0 348.647
+R22 cin.n1 cin.t1 344.58
+R23 cin.n2 cin.n0 163.995
+R24 cin.n2 cin.n1 161.3
+R25 cin.n0 cin.t2 146.208
+R26 cin.n1 cin.t3 142.141
+R27 cin cin.n2 0.181269
+R28 sum_n.n2 sum_n.n0 709.288
+R29 sum_n.n2 sum_n.n1 185
+R30 sum_n.n0 sum_n.t2 117.263
+R31 sum_n.n0 sum_n.t0 117.263
+R32 sum_n.n1 sum_n.t3 71.4291
+R33 sum_n.n1 sum_n.t1 71.4291
+R34 sum_n sum_n.n2 12.0299
+R35 a.n0 a.t3 291.342
+R36 a.n1 a.t2 287.135
+R37 a.n0 a.t1 204.583
+R38 a.n1 a.t0 200.375
+R39 a.n2 a.n0 172.636
+R40 a.n2 a.n1 161.689
+R41 a a.n2 1.42234
+R42 DVDD.n0 DVDD.t1 1189.16
+R43 DVDD.n0 DVDD.t2 699.851
+R44 DVDD.n2 DVDD.t9 699.788
+R45 DVDD.n2 DVDD.n1 629.495
+R46 DVDD.t1 DVDD.t7 514.583
+R47 DVDD.t7 DVDD.t10 514.583
+R48 DVDD.t10 DVDD.t0 514.583
+R49 DVDD.t0 DVDD.t3 514.583
+R50 DVDD.t3 DVDD.t5 514.583
+R51 DVDD.t5 DVDD.t8 514.583
+R52 DVDD.n1 DVDD.t4 117.263
+R53 DVDD.n1 DVDD.t6 117.263
+R54 DVDD DVDD.n0 0.655448
+R55 DVDD DVDD.n2 0.165865
+R56 cout_in.n0 cout_in.t1 287.135
+R57 cout_in.n0 cout_in.t0 200.375
+R58 cout_in cout_in.n0 182.332
+C0 a_n680_n64# cin 0.003803f
+C1 a_n160_274# a_n30_274# 0.014951f
+C2 b DVDD 0.177216f
+C3 sum_n a_n680_n64# 0.036478f
+C4 a_n680_n64# a 0.007977f
+C5 DVDD cout_in 0.059149f
+C6 cin a_n30_274# 1.16e-19
+C7 b cout_in 0.01287f
+C8 a a_n30_274# 0.003088f
+C9 sum_n a_n30_274# 0.003213f
+C10 a_n680_n64# DVDD 0.001235f
+C11 a_n160_274# a_n160_n64# 0.00304f
+C12 sum_n a_n30_n64# 0.013147f
+C13 a a_n30_n64# 0.005094f
+C14 a_n680_n64# b 0.00944f
+C15 a_n160_n64# cin 0.002088f
+C16 a_n680_n64# cout_in 0.184253f
+C17 DVDD a_n30_274# 0.029282f
+C18 a_n160_n64# a 0.004082f
+C19 sum_n a_n160_n64# 0.029885f
+C20 b a_n30_274# 0.003817f
+C21 DVDD a_n30_n64# 7.55e-19
+C22 b a_n30_n64# 0.002293f
+C23 a_n30_n64# cout_in 1.16e-19
+C24 DVDD a_n160_n64# 7.55e-19
+C25 a_n680_274# a_n160_274# 0.001304f
+C26 b a_n160_n64# 0.001573f
+C27 a_n160_n64# cout_in 1.58e-19
+C28 a_n680_274# cin 0.182972f
+C29 sum_n a_n680_274# 0.024086f
+C30 a_n680_274# a 0.007155f
+C31 a_n160_274# cin 0.004139f
+C32 a_n30_n64# a_n30_274# 0.00304f
+C33 sum_n a_n160_274# 0.017065f
+C34 a_n160_274# a 4.01e-19
+C35 a_n680_274# DVDD 0.272042f
+C36 sum_n cin 0.082859f
+C37 a cin 0.020042f
+C38 a_n680_274# b 0.014229f
+C39 sum_n a 0.206372f
+C40 a_n680_274# cout_in 0.011085f
+C41 a_n160_274# DVDD 0.01177f
+C42 a_n160_n64# a_n30_n64# 0.014951f
+C43 a_n160_274# b 0.004485f
+C44 DVDD cin 0.304338f
+C45 a_n680_274# a_n680_n64# 0.004969f
+C46 sum_n DVDD 0.079512f
+C47 b cin 0.554883f
+C48 DVDD a 0.165193f
+C49 cin cout_in 0.068343f
+C50 sum_n b 0.04922f
+C51 b a 0.57443f
+C52 a_n680_274# a_n30_274# 7.59e-19
+C53 sum_n cout_in 0.059621f
+C54 a cout_in 0.391165f
+C55 sum_n DGND 0.429491f
+C56 cout_in DGND 0.291045f
+C57 a DGND 0.465941f
+C58 b DGND 0.363832f
+C59 cin DGND 0.404064f
+C60 DVDD DGND 1.43079f
+C61 a_n30_n64# DGND 0.033443f
+C62 a_n160_n64# DGND 0.01612f
+C63 a_n680_n64# DGND 0.292655f
+C64 a_n30_274# DGND 0.010285f
+C65 a_n160_274# DGND 0.010581f
+C66 a_n680_274# DGND 0.022973f
+.ends

@@ -6,7 +6,7 @@ x2 VDD net1 net2 cout_n1_tap net3 net4 GND fa
 x3 VDD sum sum_n1_tap GND inv
 V1 a_tap GND 1.8
 V2 b_tap GND 0
-V3 cin_tap GND PULSE(0 1.8 0ps 5ps 5ps 2500ps 5ns)
+V3 cin_tap GND PULSE(0 1.8 0ps 50ns 50ns 1us 2us)
 V4 VDD GND 1.8
 V5 net1 GND 0
 V6 net2 GND 0
@@ -14,7 +14,7 @@ V6 net2 GND 0
 
 
 .control
-tran 1p 50n
+tran 1n 20u
 plot v(a_tap) v(b_tap) v(cin_tap)
 plot v(sum_n1_tap) v(cout_n1_tap)
 meas tran tlh_carry trig v(cin_tap) val=0.9 rise=1 targ v(cout_n1_tap) val=0.9 rise=1
