@@ -4,46 +4,95 @@ K {}
 V {}
 S {}
 E {}
-N -340 -170 -300 -170 {lab=#net1}
-N -0 -170 40 -170 {lab=#net2}
-N 340 -170 380 -170 {lab=#net3}
-N 680 -170 700 -170 {lab=#net4}
-N 700 -170 700 -60 {lab=#net4}
-N 680 -60 700 -60 {lab=#net4}
-N 340 -60 380 -60 {lab=#net5}
-N -0 -60 40 -60 {lab=#net6}
-N -340 -60 -300 -60 {lab=#net7}
-N -670 -60 -640 -60 {lab=#net8}
-N -670 -60 -670 70 {lab=#net8}
-C {/home/ee24s053/ee5311-2025/tut6/incr/final/fa.sym} -490 -180 0 0 {name=x1}
-C {/home/ee24s053/ee5311-2025/tut6/incr/final/fa.sym} -150 -180 0 0 {name=x2}
-C {/home/ee24s053/ee5311-2025/tut6/incr/final/fa.sym} 190 -180 0 0 {name=x3}
-C {/home/ee24s053/ee5311-2025/tut6/incr/final/fa.sym} 530 -180 0 0 {name=x4}
-C {/home/ee24s053/ee5311-2025/tut6/incr/final/fa.sym} -490 -70 0 1 {name=x5}
-C {/home/ee24s053/ee5311-2025/tut6/incr/final/fa.sym} -150 -70 0 1 {name=x6}
-C {/home/ee24s053/ee5311-2025/tut6/incr/final/fa.sym} 190 -70 0 1 {name=x7}
-C {/home/ee24s053/ee5311-2025/tut6/incr/final/fa.sym} 530 -70 0 1 {name=x8}
-C {lab_pin.sym} -640 -40 0 0 {name=p1 sig_type=std_logic lab=DGND}
-C {lab_pin.sym} -300 -40 0 0 {name=p2 sig_type=std_logic lab=DGND}
-C {lab_pin.sym} 40 -40 0 0 {name=p3 sig_type=std_logic lab=DGND}
-C {lab_pin.sym} 380 -40 0 0 {name=p4 sig_type=std_logic lab=DGND}
-C {lab_pin.sym} 680 -150 0 1 {name=p6 sig_type=std_logic lab=DGND}
-C {lab_pin.sym} 340 -150 0 1 {name=p7 sig_type=std_logic lab=DGND}
-C {lab_pin.sym} 0 -150 0 1 {name=p8 sig_type=std_logic lab=DGND}
-C {lab_pin.sym} -340 -150 0 1 {name=p9 sig_type=std_logic lab=DGND}
-C {lab_pin.sym} -340 -210 0 1 {name=p10 sig_type=std_logic lab=DVDD}
-C {lab_pin.sym} 0 -210 0 1 {name=p11 sig_type=std_logic lab=DVDD}
-C {lab_pin.sym} 340 -210 0 1 {name=p12 sig_type=std_logic lab=DVDD}
-C {lab_pin.sym} 680 -210 0 1 {name=p13 sig_type=std_logic lab=DVDD}
-C {lab_pin.sym} 380 -100 0 0 {name=p14 sig_type=std_logic lab=DVDD}
-C {lab_pin.sym} 40 -100 0 0 {name=p15 sig_type=std_logic lab=DVDD}
-C {lab_pin.sym} -300 -100 0 0 {name=p16 sig_type=std_logic lab=DVDD}
-C {lab_pin.sym} -640 -100 0 0 {name=p17 sig_type=std_logic lab=DVDD}
-C {lab_pin.sym} -340 -190 0 1 {name=p18 sig_type=std_logic lab=s1}
-C {lab_pin.sym} 0 -190 0 1 {name=p19 sig_type=std_logic lab=s2}
-C {lab_pin.sym} 340 -190 0 1 {name=p20 sig_type=std_logic lab=s3}
-C {lab_pin.sym} 680 -190 0 1 {name=p21 sig_type=std_logic lab=s4}
-C {lab_pin.sym} 380 -80 0 0 {name=p5 sig_type=std_logic lab=s5}
-C {lab_pin.sym} 40 -80 0 0 {name=p23 sig_type=std_logic lab=s6}
-C {lab_pin.sym} -300 -80 0 0 {name=p24 sig_type=std_logic lab=s1}
-C {lab_pin.sym} -640 -80 0 0 {name=p25 sig_type=std_logic lab=s1}
+N -170 120 -120 60 {lab=#net1}
+N -170 120 -120 140 {lab=#net1}
+N 180 120 230 60 {lab=#net2}
+N 180 120 230 140 {lab=#net2}
+N 530 120 580 60 {lab=#net3}
+N 530 120 580 140 {lab=#net3}
+N 880 120 930 60 {lab=#net4}
+N 880 120 940 140 {lab=#net4}
+N 1240 120 1290 60 {lab=#net5}
+N 1240 120 1290 140 {lab=#net5}
+N 1590 120 1640 60 {lab=#net6}
+N 1590 120 1640 140 {lab=#net6}
+N 1940 120 1990 60 {lab=#net7}
+N 1940 120 1990 140 {lab=#net7}
+N 2290 120 2340 60 {lab=#net8}
+N 2290 120 2340 120 {lab=#net8}
+N 180 40 200 40 {lab=#net9}
+N -170 140 -170 170 {lab=#net9}
+N -170 170 2640 170 {lab=#net9}
+N 2640 40 2640 170 {lab=#net9}
+N 2290 140 2290 170 {lab=#net9}
+N 1940 140 1940 170 {lab=#net9}
+N 1590 140 1590 170 {lab=#net9}
+N 1240 140 1240 170 {lab=#net9}
+N 880 140 880 170 {lab=#net9}
+N 530 140 530 170 {lab=#net9}
+N 180 140 180 170 {lab=#net9}
+N 200 40 200 170 {lab=#net9}
+N 530 40 550 40 {lab=#net9}
+N 550 40 550 170 {lab=#net9}
+N 880 40 900 40 {lab=#net9}
+N 900 40 900 170 {lab=#net9}
+N 1590 40 1610 40 {lab=#net9}
+N 1230 40 1260 40 {lab=#net9}
+N 1260 40 1260 170 {lab=#net9}
+N 1610 40 1610 170 {lab=#net9}
+N 1940 40 1960 40 {lab=#net9}
+N 1960 40 1960 170 {lab=#net9}
+N 2290 40 2310 40 {lab=#net9}
+N 2310 40 2310 170 {lab=#net9}
+N -170 -30 -170 100 {lab=#net10}
+N -170 -30 2640 -30 {lab=#net10}
+N 2640 -30 2640 10 {lab=#net10}
+N 180 -30 180 -0 {lab=#net10}
+N 530 -30 530 -0 {lab=#net10}
+N 880 -30 880 -0 {lab=#net10}
+N 1230 -30 1230 -0 {lab=#net10}
+N 1590 -30 1590 -0 {lab=#net10}
+N 1940 -30 1940 -0 {lab=#net10}
+N 2290 -30 2290 -0 {lab=#net10}
+N 180 100 190 100 {lab=#net10}
+N 190 -30 190 100 {lab=#net10}
+N 530 100 540 100 {lab=#net10}
+N 540 -30 540 100 {lab=#net10}
+N 880 100 890 100 {lab=#net10}
+N 890 -30 890 100 {lab=#net10}
+N 1240 100 1250 100 {lab=#net10}
+N 1250 -30 1250 100 {lab=#net10}
+N 1590 100 1600 100 {lab=#net10}
+N 1600 -30 1600 100 {lab=#net10}
+N 1940 100 1950 100 {lab=#net10}
+N 1950 -30 1950 100 {lab=#net10}
+N 2290 100 2300 100 {lab=#net10}
+N 2300 -30 2300 100 {lab=#net10}
+N 2340 120 2340 410 {lab=#net8}
+N -470 -60 -470 100 {lab=#net11}
+N -120 -60 -120 -0 {lab=#net12}
+N 230 -60 230 0 {lab=#net13}
+N 580 -60 580 0 {lab=#net14}
+N 930 -60 930 0 {lab=#net15}
+N 1290 -60 1290 0 {lab=#net16}
+N 1640 -60 1640 -0 {lab=#net17}
+N 1990 -60 1990 -0 {lab=#net18}
+N 2340 -60 2340 -0 {lab=#net19}
+N -470 120 -460 120 {lab=#net20}
+N -460 -60 -460 120 {lab=#net20}
+C {/home/ee24s053/ee5311-2025/tut6/again/carry_n/carry_n.sym} -320 120 0 0 {name=x5}
+C {/home/ee24s053/ee5311-2025/tut6/again/carry/carry.sym} 30 120 0 0 {name=x6}
+C {/home/ee24s053/ee5311-2025/tut6/again/carry_n/carry_n.sym} 380 120 0 0 {name=x7}
+C {/home/ee24s053/ee5311-2025/tut6/again/carry/carry.sym} 730 120 0 0 {name=x8}
+C {/home/ee24s053/ee5311-2025/tut6/again/carry_n/carry_n.sym} 1090 120 0 0 {name=x9}
+C {/home/ee24s053/ee5311-2025/tut6/again/carry/carry.sym} 1440 120 0 0 {name=x10}
+C {/home/ee24s053/ee5311-2025/tut6/again/carry_n/carry_n.sym} 1790 120 0 0 {name=x11}
+C {/home/ee24s053/ee5311-2025/tut6/again/carry/carry.sym} 2140 120 0 0 {name=x12}
+C {/home/ee24s053/ee5311-2025/tut6/again/sum_n/sum_n.sym} 30 30 0 0 {name=x13}
+C {/home/ee24s053/ee5311-2025/tut6/again/sum/sum.sym} 380 30 0 0 {name=x14}
+C {/home/ee24s053/ee5311-2025/tut6/again/sum_n/sum_n.sym} 730 30 0 0 {name=x15}
+C {/home/ee24s053/ee5311-2025/tut6/again/sum/sum.sym} 1080 30 0 0 {name=x16}
+C {/home/ee24s053/ee5311-2025/tut6/again/sum_n/sum_n.sym} 1440 30 0 0 {name=x17}
+C {/home/ee24s053/ee5311-2025/tut6/again/sum/sum.sym} 1790 30 0 0 {name=x18}
+C {/home/ee24s053/ee5311-2025/tut6/again/sum_n/sum_n.sym} 2140 30 0 0 {name=x19}
+C {/home/ee24s053/ee5311-2025/tut6/again/sum/sum.sym} 2490 30 0 0 {name=x20}
