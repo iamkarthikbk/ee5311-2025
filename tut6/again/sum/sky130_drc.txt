@@ -3,7 +3,7 @@
  <description>SKY130 DRC runset</description>
  <original-file>sum.gds</original-file>
  <generator>drc: script='/home/ee24s053/.klayout/macros/run_drc_full.lydrc'</generator>
- <top-cell>sum_n</top-cell>
+ <top-cell>sum</top-cell>
  <tags>
  </tags>
  <categories>
@@ -1582,7 +1582,7 @@
  </categories>
  <cells>
   <cell>
-   <name>sum_n</name>
+   <name>sum</name>
    <variant/>
    <layout-name/>
    <references>

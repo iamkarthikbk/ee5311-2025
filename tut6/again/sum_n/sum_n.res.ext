@@ -6,33 +6,33 @@ rnode "cout_in" 0 0 -805 -2 0
 resist "cout_in" "cout_in.n0" 182.331
 resist "cout_in.n0" "cout_in.t0" 200.374
 resist "cout_in.n0" "cout_in.t1" 287.134
-rnode "DVDD.t8" 0 0 -695 316 0
-rnode "DVDD.t5" 0 0 -565 316 0
+rnode "DVDD.t5" 0 0 -695 316 0
+rnode "DVDD.t8" 0 0 -565 316 0
 rnode "DVDD.t3" 0 0 -435 316 0
 rnode "DVDD.t0" 0 0 -305 316 0
-rnode "DVDD.t10" 0 0 -175 316 0
-rnode "DVDD.t7" 0 0 -45 316 0
+rnode "DVDD.t7" 0 0 -175 316 0
+rnode "DVDD.t10" 0 0 -45 316 0
 rnode "DVDD.t1" 0 0 85 316 0
 rnode "DVDD.t2" 0 0 100 316 0
 rnode "DVDD.n0" 0 0 130 419 0
-rnode "DVDD.t9" 0 0 -710 316 0
+rnode "DVDD.t6" 0 0 -710 316 0
 rnode "DVDD.t4" 0 0 -450 316 0
-rnode "DVDD.t6" 0 0 -550 316 0
+rnode "DVDD.t9" 0 0 -550 316 0
 rnode "DVDD.n1" 0 0 -500 316 0
 rnode "DVDD.n2" 0 0 -500 419 0
 rnode "DVDD" 0 0 -373 425 0
 resist "DVDD" "DVDD.n2" 0.165365
 resist "DVDD" "DVDD.n0" 0.654948
-resist "DVDD.n1" "DVDD.t6" 117.262
+resist "DVDD.n1" "DVDD.t9" 117.262
 resist "DVDD.n1" "DVDD.t4" 117.262
-resist "DVDD.t5" "DVDD.t8" 514.583
-resist "DVDD.t3" "DVDD.t5" 514.583
+resist "DVDD.t8" "DVDD.t5" 514.583
+resist "DVDD.t3" "DVDD.t8" 514.583
 resist "DVDD.t0" "DVDD.t3" 514.583
-resist "DVDD.t10" "DVDD.t0" 514.583
-resist "DVDD.t7" "DVDD.t10" 514.583
-resist "DVDD.t1" "DVDD.t7" 514.583
+resist "DVDD.t7" "DVDD.t0" 514.583
+resist "DVDD.t10" "DVDD.t7" 514.583
+resist "DVDD.t1" "DVDD.t10" 514.583
 resist "DVDD.n2" "DVDD.n1" 629.494
-resist "DVDD.n2" "DVDD.t9" 699.787
+resist "DVDD.n2" "DVDD.t6" 699.787
 resist "DVDD.n0" "DVDD.t2" 699.851
 resist "DVDD.n0" "DVDD.t1" 1189.16
 rnode "a.t3" 0 0 85 316 0
@@ -50,11 +50,11 @@ resist "a.n1" "a.t0" 200.374
 resist "a.n0" "a.t1" 204.582
 resist "a.n1" "a.t2" 287.134
 resist "a.n0" "a.t3" 291.342
-rnode "sum_n.t2" 0 0 -190 316 0
+rnode "sum_n.t1" 0 0 -190 316 0
 rnode "sum_n.t0" 0 0 -290 316 0
 rnode "sum_n.n0" 0 0 -240 316 0
-rnode "sum_n.t3" 0 0 -190 -22 0
-rnode "sum_n.t1" 0 0 -290 -22 0
+rnode "sum_n.t2" 0 0 -190 -22 0
+rnode "sum_n.t3" 0 0 -290 -22 0
 rnode "sum_n.n1" 0 0 -240 -22 0
 rnode "sum_n.n2" 0 0 -240 -22 0
 rnode "sum_n" 0 0 180 -17 0
@@ -63,10 +63,10 @@ rnode "sum_n" 0 0 174 307 0
 resist "sum_n" "sum_n" 0.611607
 resist "sum_n" "sum_n" 0.834821
 resist "sum_n" "sum_n.n2" 12.0294
-resist "sum_n.n1" "sum_n.t1" 71.4286
 resist "sum_n.n1" "sum_n.t3" 71.4286
+resist "sum_n.n1" "sum_n.t2" 71.4286
 resist "sum_n.n0" "sum_n.t0" 117.262
-resist "sum_n.n0" "sum_n.t2" 117.262
+resist "sum_n.n0" "sum_n.t1" 117.262
 resist "sum_n.n2" "sum_n.n1" 185
 resist "sum_n.n2" "sum_n.n0" 709.287
 rnode "cin.t2" 0 0 -175 316 0
@@ -135,16 +135,16 @@ resist "b.n2" "b.n0" 173.074
 resist "b.n1" "b.t1" 341.761
 resist "b.n0" "b.t0" 345.969
 device msubckt sky130_fd_pr__pfet_01v8 70 274 71 275  "DVDD.t1" "a.t3" 60 0 "a_n30_274#" 84 4200,184 "DVDD.t2" 84 5040,288
-device msubckt sky130_fd_pr__pfet_01v8 -710 274 -709 275  "DVDD.t8" "cin.t3" 60 0 "DVDD.t9" 84 5040,288 "a_n680_274#" 84 4200,184
+device msubckt sky130_fd_pr__pfet_01v8 -710 274 -709 275  "DVDD.t5" "cin.t3" 60 0 "DVDD.t6" 84 5040,288 "a_n680_274#" 84 4200,184
 device msubckt sky130_fd_pr__pfet_01v8 -320 274 -319 275  "DVDD.t0" "cout_in.t1" 60 0 "a_n680_274#" 84 4200,184 "sum_n.t0" 84 4200,184
 device msubckt sky130_fd_pr__pfet_01v8 -450 274 -449 275  "DVDD.t3" "a.t2" 60 0 "DVDD.t4" 84 4200,184 "a_n680_274#" 84 4200,184
-device msubckt sky130_fd_pr__pfet_01v8 -580 274 -579 275  "DVDD.t5" "b.t3" 60 0 "a_n680_274#" 84 4200,184 "DVDD.t6" 84 4200,184
-device msubckt sky130_fd_pr__pfet_01v8 -190 274 -189 275  "DVDD.t10" "cin.t2" 60 0 "sum_n.t2" 84 4200,184 "a_n160_274#" 84 4200,184
+device msubckt sky130_fd_pr__pfet_01v8 -580 274 -579 275  "DVDD.t8" "b.t3" 60 0 "a_n680_274#" 84 4200,184 "DVDD.t9" 84 4200,184
+device msubckt sky130_fd_pr__pfet_01v8 -190 274 -189 275  "DVDD.t7" "cin.t2" 60 0 "sum_n.t1" 84 4200,184 "a_n160_274#" 84 4200,184
 device msubckt sky130_fd_pr__nfet_01v8 70 -64 71 -63  "DGND.t2" "a.t1" 60 0 "a_n30_n64#" 84 4200,184 "DGND.t3" 84 5040,288
 device msubckt sky130_fd_pr__nfet_01v8 -710 -64 -709 -63  "DGND.t0" "cin.t1" 60 0 "DGND.t1" 84 5040,288 "a_n680_n64#" 84 4200,184
-device msubckt sky130_fd_pr__nfet_01v8 -320 -64 -319 -63  "DGND.t7" "cout_in.t0" 60 0 "a_n680_n64#" 84 4200,184 "sum_n.t1" 84 4200,184
-device msubckt sky130_fd_pr__pfet_01v8 -60 274 -59 275  "DVDD.t7" "b.t2" 60 0 "a_n160_274#" 84 4200,184 "a_n30_274#" 84 4200,184
+device msubckt sky130_fd_pr__nfet_01v8 -320 -64 -319 -63  "DGND.t7" "cout_in.t0" 60 0 "a_n680_n64#" 84 4200,184 "sum_n.t3" 84 4200,184
+device msubckt sky130_fd_pr__pfet_01v8 -60 274 -59 275  "DVDD.t10" "b.t2" 60 0 "a_n160_274#" 84 4200,184 "a_n30_274#" 84 4200,184
 device msubckt sky130_fd_pr__nfet_01v8 -450 -64 -449 -63  "DGND.t9" "a.t0" 60 0 "DGND.t10" 84 4200,184 "a_n680_n64#" 84 4200,184
 device msubckt sky130_fd_pr__nfet_01v8 -580 -64 -579 -63  "DGND.t4" "b.t1" 60 0 "a_n680_n64#" 84 4200,184 "DGND.t5" 84 4200,184
-device msubckt sky130_fd_pr__nfet_01v8 -190 -64 -189 -63  "DGND.t8" "cin.t0" 60 0 "sum_n.t3" 84 4200,184 "a_n160_n64#" 84 4200,184
+device msubckt sky130_fd_pr__nfet_01v8 -190 -64 -189 -63  "DGND.t8" "cin.t0" 60 0 "sum_n.t2" 84 4200,184 "a_n160_n64#" 84 4200,184
 device msubckt sky130_fd_pr__nfet_01v8 -60 -64 -59 -63  "DGND.t6" "b.t0" 60 0 "a_n160_n64#" 84 4200,184 "a_n30_n64#" 84 4200,184

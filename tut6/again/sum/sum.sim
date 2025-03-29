@@ -18,10 +18,10 @@ x an DVDD a_n956_n64# DVDD s=10080,456 d=10080,456 l=30 w=168 x=-985 y=190 sky13
 x cin DVDD a_n680_274# DVDD s=5040,288 d=4200,184 l=30 w=84 x=-709 y=274 sky130_fd_pr__pfet_01v8
 x a_n956_n64# a_n30_274# DVDD DVDD s=4200,184 d=5040,288 l=30 w=84 x=70 y=274 sky130_fd_pr__pfet_01v8
 R sum_n 539
-R cout_in 834
-R cin 1771
-R an 853
-R bn 845
+R cout_in 789
+R cin 1681
+R an 808
+R bn 800
 C DVDD0 2.1
 R DVDD 12222
 R DGND 2926
@@ -31,5 +31,5 @@ R a_n680_n64# 798
 R a_n30_274# 259
 R a_n160_274# 259
 R a_n680_274# 1252
-R a_n956_n64# 2675
-R a_n1232_n64# 2677
+R a_n956_n64# 2585
+R a_n1232_n64# 2587

@@ -14,15 +14,15 @@ x cout_in a_n680_274# sum_n DVDD s=4200,184 d=4200,184 l=30 w=84 x=-319 y=274 sk
 x cin DVDD a_n680_274# DVDD s=5040,288 d=4200,184 l=30 w=84 x=-709 y=274 sky130_fd_pr__pfet_01v8
 x a a_n30_274# DVDD DVDD s=4200,184 d=5040,288 l=30 w=84 x=70 y=274 sky130_fd_pr__pfet_01v8
 R sum_n 539
-R cout_in 834
-R a 1776
-R b 1777
-R cin 1771
+R cout_in 789
+R a 1686
+R b 1687
+R cin 1681
 R DVDD 7973
 R DGND 1754
-R a_n30_n64# 168
-R a_n160_n64# 168
+R a_n30_n64# 143
+R a_n160_n64# 143
 R a_n680_n64# 798
-R a_n30_274# 259
-R a_n160_274# 259
+R a_n30_274# 235
+R a_n160_274# 235
 R a_n680_274# 1252
