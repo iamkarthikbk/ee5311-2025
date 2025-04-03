@@ -1,0 +1,21 @@
+** sch_path: /home/ee24s053/ee5311-2025/tut6/again/carry_n/carry_n_tb.sch
+**.subckt carry_n_tb
+x1 VDD VDD GND cout_n_tap cin_tap GND carry_n
+V1 cin_tap GND PULSE(0 1.8 0ps 50ns 50ns 1us 2us)
+V2 VDD GND 1.8
+**** begin user architecture code
+.lib /cad/share/pdk/sky130B/libs.tech/combined/sky130.lib.spice tt
+
+
+.include /home/ee24s053/ee5311-2025/tut6/again/carry_n/carry_n_extracted.spice
+.control
+tran 1n 20u
+plot v(cin_tap) v(cout_n_tap)
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL VDD
+.GLOBAL GND
+.end

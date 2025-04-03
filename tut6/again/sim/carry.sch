@@ -316,7 +316,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 200 -230 0 0 {name=M7
-W=0.42
+W=1.68
 L=0.15
 nf=1
 mult=1

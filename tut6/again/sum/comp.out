@@ -37,25 +37,7 @@ sky130_fd_pr__pfet_01v8 (9)                |sky130_fd_pr__pfet_01v8 (9)
 Number of devices: 18                      |Number of devices: 18                      
 Number of nets: 15                         |Number of nets: 15                         
 ---------------------------------------------------------------------------------------
-Netlists match uniquely with property errors.
-sky130_fd_pr__pfet_01v8:M10 vs. sky130_fd_pr__pfet_01v8:6:
- W circuit1: 1   circuit2: 0.42   (delta=81.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:M9 vs. sky130_fd_pr__pfet_01v8:10:
- W circuit1: 1   circuit2: 0.42   (delta=81.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:M14 vs. sky130_fd_pr__pfet_01v8:13:
- W circuit1: 1   circuit2: 0.42   (delta=81.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:M13 vs. sky130_fd_pr__pfet_01v8:12:
- W circuit1: 1   circuit2: 0.42   (delta=81.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:M8 vs. sky130_fd_pr__pfet_01v8:14:
- W circuit1: 1   circuit2: 0.42   (delta=81.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:M17 vs. sky130_fd_pr__pfet_01v8:11:
- W circuit1: 1   circuit2: 0.84   (delta=17.4%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:M15 vs. sky130_fd_pr__pfet_01v8:15:
- W circuit1: 1   circuit2: 0.84   (delta=17.4%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:M12 vs. sky130_fd_pr__pfet_01v8:16:
- W circuit1: 1   circuit2: 0.42   (delta=81.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:M11 vs. sky130_fd_pr__pfet_01v8:17:
- W circuit1: 1   circuit2: 0.42   (delta=81.7%, cutoff=1%)
+Netlists match uniquely.
 
 Subcircuit pins:
 Circuit 1: sum                             |Circuit 2: sum                             
@@ -72,7 +54,4 @@ Cell pin lists are equivalent.
 Device classes sum and sum are equivalent.
 
 Final result: Circuits match uniquely.
-Property errors were found.
-
-The following cells had property errors:
- sum
+.

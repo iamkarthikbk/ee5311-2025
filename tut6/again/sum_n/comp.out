@@ -37,21 +37,7 @@ sky130_fd_pr__pfet_01v8 (7)                |sky130_fd_pr__pfet_01v8 (7)
 Number of devices: 14                      |Number of devices: 14                      
 Number of nets: 13                         |Number of nets: 13                         
 ---------------------------------------------------------------------------------------
-Netlists match uniquely with property errors.
-sky130_fd_pr__pfet_01v8:M10 vs. sky130_fd_pr__pfet_01v8:4:
- W circuit1: 1   circuit2: 0.42   (delta=81.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:M9 vs. sky130_fd_pr__pfet_01v8:8:
- W circuit1: 1   circuit2: 0.42   (delta=81.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:M8 vs. sky130_fd_pr__pfet_01v8:11:
- W circuit1: 1   circuit2: 0.42   (delta=81.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:M14 vs. sky130_fd_pr__pfet_01v8:10:
- W circuit1: 1   circuit2: 0.42   (delta=81.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:M13 vs. sky130_fd_pr__pfet_01v8:9:
- W circuit1: 1   circuit2: 0.42   (delta=81.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:M12 vs. sky130_fd_pr__pfet_01v8:12:
- W circuit1: 1   circuit2: 0.42   (delta=81.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:M11 vs. sky130_fd_pr__pfet_01v8:13:
- W circuit1: 1   circuit2: 0.42   (delta=81.7%, cutoff=1%)
+Netlists match uniquely.
 
 Subcircuit pins:
 Circuit 1: sum_n                           |Circuit 2: sum_n                           
@@ -68,7 +54,4 @@ Cell pin lists are equivalent.
 Device classes sum_n and sum_n are equivalent.
 
 Final result: Circuits match uniquely.
-Property errors were found.
-
-The following cells had property errors:
- sum_n
+.
