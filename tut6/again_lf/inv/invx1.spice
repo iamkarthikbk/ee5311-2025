@@ -1,0 +1,7 @@
+** sch_path: /home/ee24s053/ee5311-2025/tut6/again/inv/invx1.sch
+.subckt invx1 in out DVDD DGND
+*.PININFO in:I out:O DVDD:B DGND:B
+XM2 out in DVDD DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=1
+XM1 out in DGND DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+.ends
+.end

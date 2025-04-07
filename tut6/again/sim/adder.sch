@@ -63,7 +63,7 @@ C {gnd.sym} 440 -40 0 0 {name=l6 lab=GND}
 C {/home/ee24s053/ee5311-2025/tut6/again/sum/sum.sym} 640 50 0 0 {name=x4}
 C {vsource.sym} -360 90 0 0 {name=V1 value=0 savecurrent=false}
 C {vsource.sym} -300 100 0 0 {name=V2 value=1.8 savecurrent=false}
-C {vsource.sym} -240 110 0 0 {name=V3 value="PULSE(0 1.8 0 50ns 50ns 1us 2us)" savecurrent=false}
+C {vsource.sym} -240 110 0 0 {name=V3 value="PULSE(0 1.8 0 5ps 5ps 1ns 2ns)" savecurrent=false}
 C {vsource.sym} -140 -200 0 0 {name=V4 value=0 savecurrent=false}
 C {vsource.sym} -80 -190 0 0 {name=V5 value=1.8 savecurrent=false}
 C {gnd.sym} -140 -170 0 0 {name=l7 lab=GND}
@@ -75,7 +75,7 @@ C {vdd.sym} 790 20 0 0 {name=l9 lab=VDD}
 C {gnd.sym} 790 60 0 0 {name=l13 lab=GND}
 C {code_shown.sym} 60 170 0 0 {name=s1 only_toplevel=false value="
 .control
-tran 1n 20u
+tran 1p 20n
 plot v(a_tap) v(b_tap) v(cin_tap)
 plot v(sum_n_tap) v(cout_n_tap)
 meas tran tlh_carry trig v(cin_tap) val=0.9 rise=1 targ v(cout_n_tap) val=0.9 rise=1
