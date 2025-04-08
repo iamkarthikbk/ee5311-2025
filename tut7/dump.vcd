@@ -1,0 +1,183 @@
+$date
+	Tue Apr  8 13:21:36 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module rca16_tb $end
+$var reg 1 ! a1 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 " a2 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 # a3 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 $ a4 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 % a5 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 & a6 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 ' a7 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 ( a8 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 ) a9 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 * a10 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 + a11 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 , a12 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 - a13 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 . a14 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 / a15 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 0 a16 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 1 b1 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 2 b2 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 3 b3 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 4 b4 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 5 b5 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 6 b6 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 7 b7 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 8 b8 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 9 b9 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 : b10 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 ; b11 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 < b12 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 = b13 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 > b14 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 ? b15 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 @ b16 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 A cin $end
+$upscope $end
+$scope module rca16_tb $end
+$var wire 1 B cout $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#10
+00
+0@
+0/
+0?
+0.
+0>
+0-
+0=
+0,
+0<
+0+
+0;
+0*
+0:
+0)
+09
+0(
+08
+0'
+07
+0&
+06
+0%
+05
+0$
+04
+0#
+0A
+03
+0"
+02
+0!
+#20

@@ -1,0 +1,369 @@
+$date
+	Tue Apr  8 13:32:35 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module rca16_tb $end
+$var reg 1 ! a1 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 " a2 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 # a3 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 $ a4 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 % a5 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 & a6 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 ' a7 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 ( a8 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 ) a9 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 * a10 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 + a11 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 , a12 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 - a13 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 . a14 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 / a15 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 0 a16 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 1 b1 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 2 b2 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 3 b3 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 4 b4 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 5 b5 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 6 b6 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 7 b7 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 8 b8 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 9 b9 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 : b10 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 ; b11 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 < b12 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 = b13 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 > b14 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 ? b15 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 @ b16 $end
+$upscope $end
+$scope module rca16_tb $end
+$var wire 1 A s1 $end
+$upscope $end
+$scope module rca16_tb $end
+$var wire 1 B s2 $end
+$upscope $end
+$scope module rca16_tb $end
+$var wire 1 C s3 $end
+$upscope $end
+$scope module rca16_tb $end
+$var wire 1 D s4 $end
+$upscope $end
+$scope module rca16_tb $end
+$var wire 1 E s5 $end
+$upscope $end
+$scope module rca16_tb $end
+$var wire 1 F s6 $end
+$upscope $end
+$scope module rca16_tb $end
+$var wire 1 G s7 $end
+$upscope $end
+$scope module rca16_tb $end
+$var wire 1 H s8 $end
+$upscope $end
+$scope module rca16_tb $end
+$var wire 1 I s9 $end
+$upscope $end
+$scope module rca16_tb $end
+$var wire 1 J s10 $end
+$upscope $end
+$scope module rca16_tb $end
+$var wire 1 K s11 $end
+$upscope $end
+$scope module rca16_tb $end
+$var wire 1 L s12 $end
+$upscope $end
+$scope module rca16_tb $end
+$var wire 1 M s13 $end
+$upscope $end
+$scope module rca16_tb $end
+$var wire 1 N s14 $end
+$upscope $end
+$scope module rca16_tb $end
+$var wire 1 O s15 $end
+$upscope $end
+$scope module rca16_tb $end
+$var wire 1 P s16 $end
+$upscope $end
+$scope module rca16_tb $end
+$var reg 1 Q cin $end
+$upscope $end
+$scope module rca16_tb $end
+$var wire 1 R cout $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0R
+0Q
+0P
+0O
+0N
+0M
+0L
+0K
+0J
+0I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#1
+1C
+1Q
+12
+1!
+#2
+0D
+1B
+1C
+0Q
+13
+02
+1"
+0!
+#3
+1D
+0B
+1A
+1Q
+14
+03
+1#
+0"
+#4
+1E
+0C
+0A
+0Q
+15
+04
+1$
+0#
+#5
+1F
+0D
+1A
+1Q
+16
+05
+1%
+0$
+#6
+1G
+0E
+0A
+0Q
+17
+06
+1&
+0%
+#7
+1H
+0F
+1A
+1Q
+18
+07
+1'
+0&
+#8
+1I
+0G
+0A
+0Q
+19
+08
+1(
+0'
+#9
+1J
+0H
+1A
+1Q
+1:
+09
+1)
+0(
+#10
+1K
+0I
+0A
+0Q
+1;
+0:
+1*
+0)
+#11
+1L
+0J
+1A
+1Q
+1<
+0;
+1+
+0*
+#12
+1M
+0K
+0A
+0Q
+1=
+0<
+1,
+0+
+#13
+1N
+0L
+1A
+1Q
+1>
+0=
+1-
+0,
+#14
+1O
+0M
+0A
+0Q
+1?
+0>
+1.
+0-
+#15
+1P
+0N
+1A
+1Q
+1@
+0?
+1/
+0.
+#16
+0O
+0A
+0Q
+0@
+10
+0/
+#17
+0P
+1A
+1Q
+00
+#18
+0A
+0Q
+#19
+1A
+1Q
+#20
+0A
+0Q
+#21
+1A
+1Q
+#31
