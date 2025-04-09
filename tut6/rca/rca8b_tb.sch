@@ -35,7 +35,7 @@ C {gnd.sym} 570 -150 0 0 {name=l10 lab=GND}
 C {gnd.sym} 570 -60 0 0 {name=l11 lab=GND}
 C {sky130_fd_pr/corner.sym} 170 110 0 0 {name=CORNER only_toplevel=false corner=tt}
 C {code_shown.sym} 320 50 0 0 {name=s1 only_toplevel=false value="
-*.include /home/ee24s053/ee5311-2025/tut6/rca/rca8b_extracted.spice
+.include /home/ee24s053/ee5311-2025/tut6/rca/rca8b_extracted.spice
 .control
 tran 1p 20n
 plot v(s7_tap) v(cout_tap)
