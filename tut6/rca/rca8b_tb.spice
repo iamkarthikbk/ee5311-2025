@@ -2,7 +2,7 @@
 **.subckt rca8b_tb
 x1 GND GND GND GND GND GND GND GND VDD VDD VDD VDD VDD VDD VDD VDD VDD cout_tap cin_tap GND s7_tap net1 net2 net3 net4 net5 net6
 + net7 rca8b
-V1 cin_tap GND PULSE(0 1.8 0 5ns 5ns 100ns 200ns)
+V1 cin_tap GND PULSE(0 1.8 0 5ps 5ps 1ns 2ns)
 V2 VDD GND 1.8
 x2 VDD cout_tap net8 GND invx1
 x3 VDD s7_tap net9 GND invx1
@@ -12,7 +12,7 @@ x3 VDD s7_tap net9 GND invx1
 
 *.include /home/ee24s053/ee5311-2025/tut6/rca/rca8b_extracted.spice
 .control
-tran 1n 2000n
+tran 1p 20n
 plot v(s7_tap) v(cout_tap)
 meas tran tlh_carry trig v(cin_tap) val=0.9 rise=1 targ v(cout_tap) val=0.9 rise=1
 meas tran thl_carry trig v(cin_tap) val=0.9 fall=1 targ v(cout_tap) val=0.9 fall=1
