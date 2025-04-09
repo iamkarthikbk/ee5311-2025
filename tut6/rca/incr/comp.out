@@ -28,10 +28,9 @@ Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
-Flattening unmatched subcell carry in circuit rca8b (0)(4 instances)
-Flattening unmatched subcell carry_n in circuit rca8b (0)(4 instances)
-Flattening unmatched subcell sum in circuit rca8b (0)(4 instances)
-Flattening unmatched subcell sum_n in circuit rca8b (0)(4 instances)
+Flattening unmatched subcell carry_n in circuit rca8b (0)(8 instances)
+Flattening unmatched subcell sum_n in circuit rca8b (0)(8 instances)
+Flattening unmatched subcell invx1 in circuit rca8b (0)(16 instances)
 
 Class rca8b (0):  Merged 88 parallel devices.
 Class rca8b (1):  Merged 88 parallel devices.
@@ -44,170 +43,186 @@ Number of devices: 224                     |Number of devices: 224
 Number of nets: 131                        |Number of nets: 131                        
 ---------------------------------------------------------------------------------------
 Netlists match uniquely with property errors.
-carry:13/sky130_fd_pr__nfet_01v8:M27 vs. sky130_fd_pr__nfet_01v8:23:
+carry_n:31/sky130_fd_pr__nfet_01v8:M27 vs. sky130_fd_pr__nfet_01v8:23:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:13/sky130_fd_pr__nfet_01v8:M25 vs. sky130_fd_pr__nfet_01v8:83:
+carry_n:31/sky130_fd_pr__nfet_01v8:M25 vs. sky130_fd_pr__nfet_01v8:83:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:5/sky130_fd_pr__nfet_01v8:M25 vs. sky130_fd_pr__nfet_01v8:51:
+carry_n:15/sky130_fd_pr__nfet_01v8:M25 vs. sky130_fd_pr__nfet_01v8:51:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:9/sky130_fd_pr__nfet_01v8:M25 vs. sky130_fd_pr__nfet_01v8:68:
+carry_n:23/sky130_fd_pr__nfet_01v8:M25 vs. sky130_fd_pr__nfet_01v8:68:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:1/sky130_fd_pr__nfet_01v8:M25 vs. sky130_fd_pr__nfet_01v8:204:
+carry_n:7/sky130_fd_pr__nfet_01v8:M25 vs. sky130_fd_pr__nfet_01v8:204:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
 carry_n:2/sky130_fd_pr__nfet_01v8:M27 vs. sky130_fd_pr__nfet_01v8:210:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:13/sky130_fd_pr__nfet_01v8:M30 vs. sky130_fd_pr__nfet_01v8:64:
+carry_n:31/sky130_fd_pr__nfet_01v8:M30 vs. sky130_fd_pr__nfet_01v8:64:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:13/sky130_fd_pr__nfet_01v8:M28 vs. sky130_fd_pr__nfet_01v8:232:
+carry_n:31/sky130_fd_pr__nfet_01v8:M28 vs. sky130_fd_pr__nfet_01v8:232:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:1/sky130_fd_pr__nfet_01v8:M30 vs. sky130_fd_pr__nfet_01v8:183:
+carry_n:7/sky130_fd_pr__nfet_01v8:M30 vs. sky130_fd_pr__nfet_01v8:183:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:9/sky130_fd_pr__nfet_01v8:M30 vs. sky130_fd_pr__nfet_01v8:247:
+carry_n:23/sky130_fd_pr__nfet_01v8:M30 vs. sky130_fd_pr__nfet_01v8:247:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:5/sky130_fd_pr__nfet_01v8:M30 vs. sky130_fd_pr__nfet_01v8:33:
+carry_n:15/sky130_fd_pr__nfet_01v8:M30 vs. sky130_fd_pr__nfet_01v8:33:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:1/sky130_fd_pr__nfet_01v8:M28 vs. sky130_fd_pr__nfet_01v8:13:
+carry_n:7/sky130_fd_pr__nfet_01v8:M28 vs. sky130_fd_pr__nfet_01v8:13:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:9/sky130_fd_pr__nfet_01v8:M28 vs. sky130_fd_pr__nfet_01v8:31:
+carry_n:23/sky130_fd_pr__nfet_01v8:M28 vs. sky130_fd_pr__nfet_01v8:31:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:5/sky130_fd_pr__nfet_01v8:M28 vs. sky130_fd_pr__nfet_01v8:113:
+carry_n:15/sky130_fd_pr__nfet_01v8:M28 vs. sky130_fd_pr__nfet_01v8:113:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:14/sky130_fd_pr__nfet_01v8:M30 vs. sky130_fd_pr__nfet_01v8:157:
+carry_n:25/sky130_fd_pr__nfet_01v8:M30 vs. sky130_fd_pr__nfet_01v8:157:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:10/sky130_fd_pr__nfet_01v8:M30 vs. sky130_fd_pr__nfet_01v8:244:
+carry_n:17/sky130_fd_pr__nfet_01v8:M30 vs. sky130_fd_pr__nfet_01v8:244:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:6/sky130_fd_pr__nfet_01v8:M30 vs. sky130_fd_pr__nfet_01v8:255:
+carry_n:9/sky130_fd_pr__nfet_01v8:M30 vs. sky130_fd_pr__nfet_01v8:255:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:10/sky130_fd_pr__nfet_01v8:M28 vs. sky130_fd_pr__nfet_01v8:25:
+carry_n:17/sky130_fd_pr__nfet_01v8:M28 vs. sky130_fd_pr__nfet_01v8:25:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:6/sky130_fd_pr__nfet_01v8:M28 vs. sky130_fd_pr__nfet_01v8:30:
+carry_n:9/sky130_fd_pr__nfet_01v8:M28 vs. sky130_fd_pr__nfet_01v8:30:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:14/sky130_fd_pr__nfet_01v8:M28 vs. sky130_fd_pr__nfet_01v8:253:
+carry_n:25/sky130_fd_pr__nfet_01v8:M28 vs. sky130_fd_pr__nfet_01v8:253:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
 carry_n:2/sky130_fd_pr__nfet_01v8:M30 vs. sky130_fd_pr__nfet_01v8:179:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
 carry_n:2/sky130_fd_pr__nfet_01v8:M28 vs. sky130_fd_pr__nfet_01v8:114:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:13/sky130_fd_pr__nfet_01v8:M26 vs. sky130_fd_pr__nfet_01v8:276:
+carry_n:31/sky130_fd_pr__nfet_01v8:M26 vs. sky130_fd_pr__nfet_01v8:276:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:9/sky130_fd_pr__nfet_01v8:M26 vs. sky130_fd_pr__nfet_01v8:230:
+carry_n:23/sky130_fd_pr__nfet_01v8:M26 vs. sky130_fd_pr__nfet_01v8:230:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:5/sky130_fd_pr__nfet_01v8:M26 vs. sky130_fd_pr__nfet_01v8:215:
+carry_n:15/sky130_fd_pr__nfet_01v8:M26 vs. sky130_fd_pr__nfet_01v8:215:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:1/sky130_fd_pr__nfet_01v8:M26 vs. sky130_fd_pr__nfet_01v8:53:
+carry_n:7/sky130_fd_pr__nfet_01v8:M26 vs. sky130_fd_pr__nfet_01v8:53:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:14/sky130_fd_pr__nfet_01v8:M25 vs. sky130_fd_pr__nfet_01v8:293:
+carry_n:25/sky130_fd_pr__nfet_01v8:M25 vs. sky130_fd_pr__nfet_01v8:293:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:10/sky130_fd_pr__nfet_01v8:M25 vs. sky130_fd_pr__nfet_01v8:61:
+carry_n:17/sky130_fd_pr__nfet_01v8:M25 vs. sky130_fd_pr__nfet_01v8:61:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:6/sky130_fd_pr__nfet_01v8:M25 vs. sky130_fd_pr__nfet_01v8:281:
+carry_n:9/sky130_fd_pr__nfet_01v8:M25 vs. sky130_fd_pr__nfet_01v8:281:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
 carry_n:2/sky130_fd_pr__nfet_01v8:M25 vs. sky130_fd_pr__nfet_01v8:194:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:14/sky130_fd_pr__nfet_01v8:M26 vs. sky130_fd_pr__nfet_01v8:141:
+carry_n:25/sky130_fd_pr__nfet_01v8:M26 vs. sky130_fd_pr__nfet_01v8:141:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:6/sky130_fd_pr__nfet_01v8:M26 vs. sky130_fd_pr__nfet_01v8:129:
+carry_n:9/sky130_fd_pr__nfet_01v8:M26 vs. sky130_fd_pr__nfet_01v8:129:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:10/sky130_fd_pr__nfet_01v8:M26 vs. sky130_fd_pr__nfet_01v8:225:
+carry_n:17/sky130_fd_pr__nfet_01v8:M26 vs. sky130_fd_pr__nfet_01v8:225:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
 carry_n:2/sky130_fd_pr__nfet_01v8:M26 vs. sky130_fd_pr__nfet_01v8:248:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:14/sky130_fd_pr__nfet_01v8:M27 vs. sky130_fd_pr__nfet_01v8:274:
+carry_n:25/sky130_fd_pr__nfet_01v8:M27 vs. sky130_fd_pr__nfet_01v8:274:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:10/sky130_fd_pr__nfet_01v8:M27 vs. sky130_fd_pr__nfet_01v8:45:
+carry_n:23/sky130_fd_pr__nfet_01v8:M27 vs. sky130_fd_pr__nfet_01v8:49:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:6/sky130_fd_pr__nfet_01v8:M27 vs. sky130_fd_pr__nfet_01v8:220:
+carry_n:15/sky130_fd_pr__nfet_01v8:M27 vs. sky130_fd_pr__nfet_01v8:311:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:9/sky130_fd_pr__nfet_01v8:M27 vs. sky130_fd_pr__nfet_01v8:49:
+carry_n:17/sky130_fd_pr__nfet_01v8:M27 vs. sky130_fd_pr__nfet_01v8:45:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:5/sky130_fd_pr__nfet_01v8:M27 vs. sky130_fd_pr__nfet_01v8:311:
+carry_n:9/sky130_fd_pr__nfet_01v8:M27 vs. sky130_fd_pr__nfet_01v8:220:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:1/sky130_fd_pr__nfet_01v8:M27 vs. sky130_fd_pr__nfet_01v8:149:
+carry_n:7/sky130_fd_pr__nfet_01v8:M27 vs. sky130_fd_pr__nfet_01v8:149:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:13/sky130_fd_pr__pfet_01v8:M11 vs. sky130_fd_pr__pfet_01v8:18:
+carry_n:31/sky130_fd_pr__pfet_01v8:M11 vs. sky130_fd_pr__pfet_01v8:18:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:13/sky130_fd_pr__pfet_01v8:M13 vs. sky130_fd_pr__pfet_01v8:75:
+carry_n:31/sky130_fd_pr__pfet_01v8:M13 vs. sky130_fd_pr__pfet_01v8:75:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:13/sky130_fd_pr__pfet_01v8:M7 vs. sky130_fd_pr__pfet_01v8:115:
+carry_n:31/sky130_fd_pr__pfet_01v8:M7 vs. sky130_fd_pr__pfet_01v8:115:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:13/sky130_fd_pr__pfet_01v8:M3 vs. sky130_fd_pr__pfet_01v8:16:
+carry_n:31/sky130_fd_pr__pfet_01v8:M3 vs. sky130_fd_pr__pfet_01v8:16:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:9/sky130_fd_pr__pfet_01v8:M7 vs. sky130_fd_pr__pfet_01v8:8:
+carry_n:23/sky130_fd_pr__pfet_01v8:M7 vs. sky130_fd_pr__pfet_01v8:8:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:5/sky130_fd_pr__pfet_01v8:M7 vs. sky130_fd_pr__pfet_01v8:4:
+carry_n:15/sky130_fd_pr__pfet_01v8:M7 vs. sky130_fd_pr__pfet_01v8:4:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:1/sky130_fd_pr__pfet_01v8:M7 vs. sky130_fd_pr__pfet_01v8:77:
+carry_n:7/sky130_fd_pr__pfet_01v8:M7 vs. sky130_fd_pr__pfet_01v8:77:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:1/sky130_fd_pr__pfet_01v8:M3 vs. sky130_fd_pr__pfet_01v8:19:
+carry_n:7/sky130_fd_pr__pfet_01v8:M3 vs. sky130_fd_pr__pfet_01v8:19:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:9/sky130_fd_pr__pfet_01v8:M3 vs. sky130_fd_pr__pfet_01v8:47:
+carry_n:23/sky130_fd_pr__pfet_01v8:M3 vs. sky130_fd_pr__pfet_01v8:47:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:5/sky130_fd_pr__pfet_01v8:M3 vs. sky130_fd_pr__pfet_01v8:42:
+carry_n:15/sky130_fd_pr__pfet_01v8:M3 vs. sky130_fd_pr__pfet_01v8:42:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:10/sky130_fd_pr__pfet_01v8:M7 vs. sky130_fd_pr__pfet_01v8:41:
+carry_n:17/sky130_fd_pr__pfet_01v8:M7 vs. sky130_fd_pr__pfet_01v8:41:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:6/sky130_fd_pr__pfet_01v8:M7 vs. sky130_fd_pr__pfet_01v8:80:
+carry_n:9/sky130_fd_pr__pfet_01v8:M7 vs. sky130_fd_pr__pfet_01v8:80:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:14/sky130_fd_pr__pfet_01v8:M7 vs. sky130_fd_pr__pfet_01v8:116:
+carry_n:25/sky130_fd_pr__pfet_01v8:M7 vs. sky130_fd_pr__pfet_01v8:116:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:10/sky130_fd_pr__pfet_01v8:M3 vs. sky130_fd_pr__pfet_01v8:21:
+carry_n:17/sky130_fd_pr__pfet_01v8:M3 vs. sky130_fd_pr__pfet_01v8:21:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:6/sky130_fd_pr__pfet_01v8:M3 vs. sky130_fd_pr__pfet_01v8:132:
+carry_n:9/sky130_fd_pr__pfet_01v8:M3 vs. sky130_fd_pr__pfet_01v8:132:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:14/sky130_fd_pr__pfet_01v8:M3 vs. sky130_fd_pr__pfet_01v8:153:
+carry_n:25/sky130_fd_pr__pfet_01v8:M3 vs. sky130_fd_pr__pfet_01v8:153:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
 carry_n:2/sky130_fd_pr__pfet_01v8:M7 vs. sky130_fd_pr__pfet_01v8:144:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
 carry_n:2/sky130_fd_pr__pfet_01v8:M3 vs. sky130_fd_pr__pfet_01v8:130:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:14/sky130_fd_pr__pfet_01v8:M11 vs. sky130_fd_pr__pfet_01v8:12:
+carry_n:25/sky130_fd_pr__pfet_01v8:M11 vs. sky130_fd_pr__pfet_01v8:12:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:10/sky130_fd_pr__pfet_01v8:M11 vs. sky130_fd_pr__pfet_01v8:112:
+carry_n:17/sky130_fd_pr__pfet_01v8:M11 vs. sky130_fd_pr__pfet_01v8:112:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:6/sky130_fd_pr__pfet_01v8:M11 vs. sky130_fd_pr__pfet_01v8:92:
+carry_n:9/sky130_fd_pr__pfet_01v8:M11 vs. sky130_fd_pr__pfet_01v8:92:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
 carry_n:2/sky130_fd_pr__pfet_01v8:M11 vs. sky130_fd_pr__pfet_01v8:213:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:9/sky130_fd_pr__pfet_01v8:M11 vs. sky130_fd_pr__pfet_01v8:34:
+carry_n:23/sky130_fd_pr__pfet_01v8:M11 vs. sky130_fd_pr__pfet_01v8:34:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:5/sky130_fd_pr__pfet_01v8:M11 vs. sky130_fd_pr__pfet_01v8:163:
+carry_n:15/sky130_fd_pr__pfet_01v8:M11 vs. sky130_fd_pr__pfet_01v8:163:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:1/sky130_fd_pr__pfet_01v8:M11 vs. sky130_fd_pr__pfet_01v8:216:
+carry_n:7/sky130_fd_pr__pfet_01v8:M11 vs. sky130_fd_pr__pfet_01v8:216:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:14/sky130_fd_pr__pfet_01v8:M1 vs. sky130_fd_pr__pfet_01v8:98:
+carry_n:25/sky130_fd_pr__pfet_01v8:M1 vs. sky130_fd_pr__pfet_01v8:98:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:10/sky130_fd_pr__pfet_01v8:M1 vs. sky130_fd_pr__pfet_01v8:133:
+carry_n:17/sky130_fd_pr__pfet_01v8:M1 vs. sky130_fd_pr__pfet_01v8:133:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:6/sky130_fd_pr__pfet_01v8:M1 vs. sky130_fd_pr__pfet_01v8:146:
+carry_n:9/sky130_fd_pr__pfet_01v8:M1 vs. sky130_fd_pr__pfet_01v8:146:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
 carry_n:2/sky130_fd_pr__pfet_01v8:M1 vs. sky130_fd_pr__pfet_01v8:193:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
 carry_n:2/sky130_fd_pr__pfet_01v8:M13 vs. sky130_fd_pr__pfet_01v8:231:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:14/sky130_fd_pr__pfet_01v8:M13 vs. sky130_fd_pr__pfet_01v8:66:
+carry_n:25/sky130_fd_pr__pfet_01v8:M13 vs. sky130_fd_pr__pfet_01v8:66:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:6/sky130_fd_pr__pfet_01v8:M13 vs. sky130_fd_pr__pfet_01v8:38:
+carry_n:23/sky130_fd_pr__pfet_01v8:M13 vs. sky130_fd_pr__pfet_01v8:7:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry_n:10/sky130_fd_pr__pfet_01v8:M13 vs. sky130_fd_pr__pfet_01v8:95:
+carry_n:15/sky130_fd_pr__pfet_01v8:M13 vs. sky130_fd_pr__pfet_01v8:104:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:9/sky130_fd_pr__pfet_01v8:M13 vs. sky130_fd_pr__pfet_01v8:7:
+carry_n:9/sky130_fd_pr__pfet_01v8:M13 vs. sky130_fd_pr__pfet_01v8:38:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:5/sky130_fd_pr__pfet_01v8:M13 vs. sky130_fd_pr__pfet_01v8:104:
+carry_n:17/sky130_fd_pr__pfet_01v8:M13 vs. sky130_fd_pr__pfet_01v8:95:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:1/sky130_fd_pr__pfet_01v8:M13 vs. sky130_fd_pr__pfet_01v8:261:
+carry_n:7/sky130_fd_pr__pfet_01v8:M13 vs. sky130_fd_pr__pfet_01v8:261:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:13/sky130_fd_pr__pfet_01v8:M1 vs. sky130_fd_pr__pfet_01v8:17:
+carry_n:31/sky130_fd_pr__pfet_01v8:M1 vs. sky130_fd_pr__pfet_01v8:17:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:9/sky130_fd_pr__pfet_01v8:M1 vs. sky130_fd_pr__pfet_01v8:46:
+carry_n:23/sky130_fd_pr__pfet_01v8:M1 vs. sky130_fd_pr__pfet_01v8:46:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:5/sky130_fd_pr__pfet_01v8:M1 vs. sky130_fd_pr__pfet_01v8:26:
+carry_n:15/sky130_fd_pr__pfet_01v8:M1 vs. sky130_fd_pr__pfet_01v8:26:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
-carry:1/sky130_fd_pr__pfet_01v8:M1 vs. sky130_fd_pr__pfet_01v8:101:
+carry_n:7/sky130_fd_pr__pfet_01v8:M1 vs. sky130_fd_pr__pfet_01v8:101:
  W circuit1: 0.42   circuit2: 0.84   (delta=66.7%, cutoff=1%)
 
 Subcircuit pins:
 Circuit 1: rca8b                           |Circuit 2: rca8b                           
 -------------------------------------------|-------------------------------------------
+s8                                         |s8                                         
+s1                                         |s1                                         
+s7                                         |s7                                         
+s6                                         |s6                                         
+s4                                         |s4                                         
+s5                                         |s5                                         
+s3                                         |s3                                         
+s2                                         |s2                                         
+b8                                         |b8                                         
+b6                                         |b6                                         
+b4                                         |b4                                         
+b2                                         |b2                                         
+a8                                         |a8                                         
+a6                                         |a6                                         
+a4                                         |a4                                         
+a2                                         |a2                                         
 cin                                        |cin                                        
 cout                                       |cout                                       
 b7                                         |b7                                         
@@ -218,22 +233,6 @@ a5                                         |a5
 a3                                         |a3                                         
 a7                                         |a7                                         
 a1                                         |a1                                         
-s8                                         |s8                                         
-s1                                         |s1                                         
-s7                                         |s7                                         
-s5                                         |s5                                         
-s3                                         |s3                                         
-s6                                         |s6                                         
-s4                                         |s4                                         
-s2                                         |s2                                         
-b8                                         |b8                                         
-b6                                         |b6                                         
-b4                                         |b4                                         
-b2                                         |b2                                         
-a8                                         |a8                                         
-a6                                         |a6                                         
-a4                                         |a4                                         
-a2                                         |a2                                         
 DGND                                       |DGND                                       
 DVDD                                       |DVDD                                       
 ---------------------------------------------------------------------------------------
