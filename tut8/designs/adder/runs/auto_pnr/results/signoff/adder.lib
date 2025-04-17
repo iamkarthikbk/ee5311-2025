@@ -52,7 +52,7 @@ library (adder) {
   }
 
   cell ("adder") {
-    area : 2122.029 
+    area : 2214.617 
     is_macro_cell : true;
     pin("cin") {
       direction : input;

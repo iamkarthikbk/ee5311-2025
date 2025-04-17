@@ -1017,20 +1017,25 @@ Using 1e-06 for distance...
 [INFO]: Reading ODB at '/openlane/designs/adder/runs/auto_pnr/results/cts/adder.odb'…
 Reading design constraints file at '/openlane/designs/adder/src/adder.sdc'…
 [INFO]: Setting RC values...
+[INFO RSZ-0094] Found 14 endpoints with setup violations.
+[INFO RSZ-0040] Inserted 9 buffers.
+[INFO RSZ-0041] Resized 6 instances.
+[INFO RSZ-0043] Swapped pins on 12 instances.
+[WARNING RSZ-0062] Unable to repair all setup violations.
 [INFO RSZ-0033] No hold violations found.
 Placement Analysis
 ---------------------------------
-total displacement          0.0 u
-average displacement        0.0 u
-max displacement            0.0 u
-original HPWL            3390.5 u
-legalized HPWL           3675.3 u
-delta HPWL                    8 %
+total displacement         48.3 u
+average displacement        0.2 u
+max displacement            6.2 u
+original HPWL            3430.2 u
+legalized HPWL           3748.1 u
+delta HPWL                    9 %
 
-[INFO DPL-0020] Mirrored 95 instances
-[INFO DPL-0021] HPWL before            3675.3 u
-[INFO DPL-0022] HPWL after             3390.5 u
-[INFO DPL-0023] HPWL delta               -7.7 %
+[INFO DPL-0020] Mirrored 102 instances
+[INFO DPL-0021] HPWL before            3748.1 u
+[INFO DPL-0022] HPWL after             3434.2 u
+[INFO DPL-0023] HPWL delta               -8.4 %
 Setting global connections for newly added cells…
 Writing OpenROAD database to '/openlane/designs/adder/runs/auto_pnr/tmp/cts/14-adder.resized.odb'…
 Writing netlist to '/openlane/designs/adder/runs/auto_pnr/tmp/cts/14-adder.resized.nl.v'…
@@ -1042,5 +1047,5 @@ area_report
 ===========================================================================
 report_design_area
 ============================================================================
-Design area 2017 u^2 54% utilization.
+Design area 2110 u^2 57% utilization.
 area_report_end

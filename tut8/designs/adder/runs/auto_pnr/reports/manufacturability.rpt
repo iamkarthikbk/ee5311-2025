@@ -9,7 +9,7 @@ Total Magic DRC violations is 0
 
 LVS Summary:
 Source: /openlane/designs/adder/runs/auto_pnr/logs/signoff/38-adder.lef.lvs.log
-Number of nets: 236                        |Number of nets: 236                        
+Number of nets: 245                        |Number of nets: 245                        
 Design is LVS clean.
 ----------------------------------------
 

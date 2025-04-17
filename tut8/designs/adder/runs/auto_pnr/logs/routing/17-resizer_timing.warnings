@@ -999,3 +999,6 @@
 [WARNING STA-1256] /volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib line 13576, table template ccsn_ovrf not found.
 [WARNING STA-1256] /volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib line 13582, table template ccsn_ovrf not found.
 [WARNING STA-1256] message limit reached, this message will no longer print
+[WARNING RSZ-0073] driver pin _076_/Y not found in global routes
+[WARNING RSZ-0075] makeBufferedNet failed for driver _076_/Y
+[WARNING RSZ-0062] Unable to repair all setup violations.

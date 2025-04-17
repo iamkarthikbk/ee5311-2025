@@ -59,20 +59,22 @@ Cell sky130_fd_sc_hd__a21bo_1 read from path /volare/sky130A/libs.ref/sky130_fd_
 Cell sky130_fd_sc_hd__a21boi_2 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__xor2_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__nor2_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
-Cell sky130_fd_sc_hd__and2_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and2_4 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor2_2 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__o21a_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__and2b_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__inv_2 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__o211a_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__o31a_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and2_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__a22o_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__o21ai_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__o221a_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__or2b_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__a211o_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
-Cell sky130_fd_sc_hd__o31ai_2 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o31ai_4 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__a21o_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
-Cell sky130_fd_sc_hd__a211oi_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a211oi_2 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__dfxtp_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__clkbuf_16 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__bufinv_16 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
@@ -80,12 +82,14 @@ Cell sky130_fd_sc_hd__clkinv_4 read from path /volare/sky130A/libs.ref/sky130_fd
 Cell sky130_fd_sc_hd__inv_6 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__clkbuf_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__buf_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dlygate4sd1_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dlymetal6s2s_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_2 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
   Processed 519 subcell instances total.
   Processed 53 pins total.
   Processed 2 special nets total.
-  Processed 231 nets total.
-DEF read: Processed 3739 lines.
-Moving label "_066_" from metal1 to via1 in cell adder.
+  Processed 240 nets total.
+DEF read: Processed 3800 lines.
 Moving label "clknet_0_clk" from metal2 to via2 in cell adder.
 Moving label "net11" from metal1 to via1 in cell adder.
 Moving label "net16" from metal1 to via1 in cell adder.
@@ -95,7 +99,6 @@ Moving label "net24" from metal1 to via1 in cell adder.
 Moving label "net3" from metal1 to via1 in cell adder.
 Moving label "net5" from metal1 to viali in cell adder.
 Moving label "sum_d\[0\]" from metal1 to via1 in cell adder.
-Moving label "sum_d\[2\]" from metal1 to via1 in cell adder.
 Moving label "sum_d\[4\]" from metal1 to via1 in cell adder.
 [INFO]: Writing abstract LEF
 Generating LEF output /openlane/designs/adder/runs/auto_pnr/results/signoff/adder.lef for cell adder:

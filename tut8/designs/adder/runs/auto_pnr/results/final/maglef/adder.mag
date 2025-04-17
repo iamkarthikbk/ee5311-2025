@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1744883589
+timestamp 1744888429
 << nwell >>
 rect 1066 2159 13562 14161
 << obsli1 >>
@@ -290,8 +290,8 @@ port 53 nsew signal output
 string FIXED_BBOX 0 0 14644 16788
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 678106
+string GDS_END 723128
 string GDS_FILE /openlane/designs/adder/runs/auto_pnr/results/signoff/adder.magic.gds
-string GDS_START 203792
+string GDS_START 239976
 << end >>
 

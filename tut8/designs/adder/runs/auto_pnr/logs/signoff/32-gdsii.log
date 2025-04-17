@@ -59,20 +59,22 @@ Cell sky130_fd_sc_hd__a21bo_1 read from path /volare/sky130A/libs.ref/sky130_fd_
 Cell sky130_fd_sc_hd__a21boi_2 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__xor2_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__nor2_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
-Cell sky130_fd_sc_hd__and2_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and2_4 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor2_2 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__o21a_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__and2b_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__inv_2 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__o211a_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__o31a_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and2_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__a22o_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__o21ai_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__o221a_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__or2b_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__a211o_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
-Cell sky130_fd_sc_hd__o31ai_2 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o31ai_4 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__a21o_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
-Cell sky130_fd_sc_hd__a211oi_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a211oi_2 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__dfxtp_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__clkbuf_16 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__bufinv_16 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
@@ -80,12 +82,14 @@ Cell sky130_fd_sc_hd__clkinv_4 read from path /volare/sky130A/libs.ref/sky130_fd
 Cell sky130_fd_sc_hd__inv_6 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__clkbuf_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__buf_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dlygate4sd1_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dlymetal6s2s_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_2 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/mag
   Processed 519 subcell instances total.
   Processed 53 pins total.
   Processed 2 special nets total.
-  Processed 231 nets total.
-DEF read: Processed 3739 lines.
-Moving label "_066_" from metal1 to via1 in cell adder.
+  Processed 240 nets total.
+DEF read: Processed 3800 lines.
 Moving label "clknet_0_clk" from metal2 to via2 in cell adder.
 Moving label "net11" from metal1 to via1 in cell adder.
 Moving label "net16" from metal1 to via1 in cell adder.
@@ -95,7 +99,6 @@ Moving label "net24" from metal1 to via1 in cell adder.
 Moving label "net3" from metal1 to via1 in cell adder.
 Moving label "net5" from metal1 to viali in cell adder.
 Moving label "sum_d\[0\]" from metal1 to via1 in cell adder.
-Moving label "sum_d\[2\]" from metal1 to via1 in cell adder.
 Moving label "sum_d\[4\]" from metal1 to via1 in cell adder.
 Root cell box:
            width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
@@ -114,15 +117,17 @@ internal:  14644 x 16788   (     0,  0    ), ( 14644,  16788)  245843472
    Copying output for cell sky130_fd_sc_hd__decap_4 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_fd_sc_hd__decap_8 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_ef_sc_hd__decap_12 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
+   Copying output for cell sky130_fd_sc_hd__nor2_2 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_fd_sc_hd__nor2_1 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_fd_sc_hd__nand2_1 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_fd_sc_hd__and2b_1 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_fd_sc_hd__a22o_1 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_fd_sc_hd__or2_1 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
-   Copying output for cell sky130_fd_sc_hd__and2_1 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
+   Copying output for cell sky130_fd_sc_hd__and2_4 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_fd_sc_hd__o211a_1 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_fd_sc_hd__xor2_1 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_fd_sc_hd__xnor2_1 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
+   Copying output for cell sky130_fd_sc_hd__dlygate4sd1_1 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_fd_sc_hd__inv_2 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_fd_sc_hd__o31a_1 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_fd_sc_hd__clkbuf_16 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
@@ -132,11 +137,14 @@ internal:  14644 x 16788   (     0,  0    ), ( 14644,  16788)  245843472
    Copying output for cell sky130_fd_sc_hd__clkinv_4 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_fd_sc_hd__a21boi_2 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_fd_sc_hd__o221a_1 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
+   Copying output for cell sky130_fd_sc_hd__and2_1 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_fd_sc_hd__a211o_1 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_fd_sc_hd__a21bo_1 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_fd_sc_hd__or2b_1 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
-   Copying output for cell sky130_fd_sc_hd__o31ai_2 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
-   Copying output for cell sky130_fd_sc_hd__a211oi_1 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
+   Copying output for cell sky130_fd_sc_hd__o31ai_4 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
+   Copying output for cell sky130_fd_sc_hd__dlymetal6s2s_1 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
+   Copying output for cell sky130_fd_sc_hd__a211oi_2 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
+   Copying output for cell sky130_fd_sc_hd__buf_2 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_fd_sc_hd__a21o_1 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Copying output for cell sky130_fd_sc_hd__inv_6 from $PDKPATH/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
    Generating output for cell adder

@@ -6,9 +6,9 @@ Components of this program may be licensed under more restrictive licenses which
 [INFO ODB-0127] Reading DEF file: /openlane/designs/adder/runs/auto_pnr/results/routing/adder.def
 [INFO ODB-0128] Design: adder
 [INFO ODB-0130]     Created 53 pins.
-[INFO ODB-0131]     Created 519 components and 2556 component-terminals.
+[INFO ODB-0131]     Created 519 components and 2574 component-terminals.
 [INFO ODB-0132]     Created 2 special nets and 1980 connections.
-[INFO ODB-0133]     Created 231 nets and 573 connections.
+[INFO ODB-0133]     Created 240 nets and 591 connections.
 [INFO ODB-0134] Finished DEF file: /openlane/designs/adder/runs/auto_pnr/results/routing/adder.def
 Top-level design name: adder
 Found default power net 'VPWR'

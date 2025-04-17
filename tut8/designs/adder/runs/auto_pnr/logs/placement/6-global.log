@@ -50,39 +50,39 @@ Reading design constraints file at '/openlane/designs/adder/src/adder.sdc'…
 [INFO GPL-0029] BinSize: (  7.763  7.480 )
 [INFO GPL-0030] NumBins: 64
 [NesterovSolve] Iter:    1 overflow: 0.306 HPWL: 2847031
-[INFO GPL-0100] worst slack 2.58e-09
+[INFO GPL-0100] worst slack 1.82e-10
 [INFO GPL-0103] Weighted 17 nets.
 [NesterovSolve] Snapshot saved at iter = 0
-[NesterovSolve] Iter:   10 overflow: 0.319 HPWL: 2869846
-[NesterovSolve] Iter:   20 overflow: 0.339 HPWL: 2960239
-[NesterovSolve] Iter:   30 overflow: 0.347 HPWL: 2999346
-[NesterovSolve] Iter:   40 overflow: 0.345 HPWL: 3002393
-[NesterovSolve] Iter:   50 overflow: 0.344 HPWL: 2993287
-[NesterovSolve] Iter:   60 overflow: 0.342 HPWL: 2984337
-[NesterovSolve] Iter:   70 overflow: 0.341 HPWL: 2980753
+[NesterovSolve] Iter:   10 overflow: 0.319 HPWL: 2869845
+[NesterovSolve] Iter:   20 overflow: 0.339 HPWL: 2960252
+[NesterovSolve] Iter:   30 overflow: 0.347 HPWL: 2999354
+[NesterovSolve] Iter:   40 overflow: 0.345 HPWL: 3002378
+[NesterovSolve] Iter:   50 overflow: 0.344 HPWL: 2993266
+[NesterovSolve] Iter:   60 overflow: 0.342 HPWL: 2984350
+[NesterovSolve] Iter:   70 overflow: 0.341 HPWL: 2980772
 [NesterovSolve] Iter:   80 overflow: 0.341 HPWL: 2982551
-[NesterovSolve] Iter:   90 overflow: 0.341 HPWL: 2984736
-[NesterovSolve] Iter:  100 overflow: 0.342 HPWL: 2984506
-[NesterovSolve] Iter:  110 overflow: 0.341 HPWL: 2982918
-[NesterovSolve] Iter:  120 overflow: 0.340 HPWL: 2981703
-[NesterovSolve] Iter:  130 overflow: 0.339 HPWL: 2980538
-[NesterovSolve] Iter:  140 overflow: 0.338 HPWL: 2978435
-[NesterovSolve] Iter:  150 overflow: 0.336 HPWL: 2973154
-[NesterovSolve] Iter:  160 overflow: 0.333 HPWL: 2966407
-[NesterovSolve] Iter:  170 overflow: 0.328 HPWL: 2957182
-[NesterovSolve] Iter:  180 overflow: 0.326 HPWL: 2942631
-[NesterovSolve] Iter:  190 overflow: 0.321 HPWL: 2932422
-[NesterovSolve] Iter:  200 overflow: 0.313 HPWL: 2918952
-[NesterovSolve] Iter:  210 overflow: 0.299 HPWL: 2897409
-[INFO GPL-0100] worst slack 2.61e-09
+[NesterovSolve] Iter:   90 overflow: 0.341 HPWL: 2984748
+[NesterovSolve] Iter:  100 overflow: 0.342 HPWL: 2984518
+[NesterovSolve] Iter:  110 overflow: 0.341 HPWL: 2982916
+[NesterovSolve] Iter:  120 overflow: 0.340 HPWL: 2981714
+[NesterovSolve] Iter:  130 overflow: 0.339 HPWL: 2980544
+[NesterovSolve] Iter:  140 overflow: 0.338 HPWL: 2978437
+[NesterovSolve] Iter:  150 overflow: 0.336 HPWL: 2973161
+[NesterovSolve] Iter:  160 overflow: 0.333 HPWL: 2966388
+[NesterovSolve] Iter:  170 overflow: 0.328 HPWL: 2957173
+[NesterovSolve] Iter:  180 overflow: 0.326 HPWL: 2942642
+[NesterovSolve] Iter:  190 overflow: 0.321 HPWL: 2932416
+[NesterovSolve] Iter:  200 overflow: 0.313 HPWL: 2918967
+[NesterovSolve] Iter:  210 overflow: 0.299 HPWL: 2897441
+[INFO GPL-0100] worst slack 2.11e-10
 [INFO GPL-0103] Weighted 17 nets.
-[NesterovSolve] Iter:  220 overflow: 0.282 HPWL: 2871649
-[NesterovSolve] Iter:  230 overflow: 0.267 HPWL: 2856950
-[NesterovSolve] Iter:  240 overflow: 0.255 HPWL: 2853751
-[NesterovSolve] Iter:  250 overflow: 0.228 HPWL: 2855802
-[INFO GPL-0100] worst slack 2.57e-09
+[NesterovSolve] Iter:  220 overflow: 0.282 HPWL: 2871659
+[NesterovSolve] Iter:  230 overflow: 0.267 HPWL: 2856944
+[NesterovSolve] Iter:  240 overflow: 0.255 HPWL: 2853740
+[NesterovSolve] Iter:  250 overflow: 0.228 HPWL: 2855803
+[INFO GPL-0100] worst slack 1.75e-10
 [INFO GPL-0103] Weighted 17 nets.
-[NesterovSolve] Iter:  260 overflow: 0.197 HPWL: 2862939
+[NesterovSolve] Iter:  260 overflow: 0.197 HPWL: 2862946
 [INFO GPL-0075] Routability numCall: 1 inflationIterCnt: 1 bloatIterCnt: 0
 [INFO GPL-0036] TileBBox: (    0    0 ) ( 6900 6900 ) DBU
 [INFO GPL-0038] TileCnt:      10   12
@@ -101,14 +101,14 @@ Reading design constraints file at '/openlane/designs/adder/src/adder.sdc'…
 [INFO GPL-0073] 5.0rcK: 0
 [INFO GPL-0074] FinalRC: 0.9688
 [INFO GPL-0077] FinalRC lower than targetRC(1), routability not needed.
-[NesterovSolve] Iter:  270 overflow: 0.171 HPWL: 2865797
-[NesterovSolve] Iter:  280 overflow: 0.158 HPWL: 2887075
-[INFO GPL-0100] worst slack 2.59e-09
+[NesterovSolve] Iter:  270 overflow: 0.171 HPWL: 2865828
+[NesterovSolve] Iter:  280 overflow: 0.158 HPWL: 2887066
+[INFO GPL-0100] worst slack 1.91e-10
 [INFO GPL-0103] Weighted 17 nets.
-[NesterovSolve] Iter:  290 overflow: 0.141 HPWL: 2899672
-[NesterovSolve] Iter:  300 overflow: 0.128 HPWL: 2924588
-[NesterovSolve] Iter:  310 overflow: 0.111 HPWL: 2932111
-[NesterovSolve] Finished with Overflow: 0.098776
+[NesterovSolve] Iter:  290 overflow: 0.141 HPWL: 2899718
+[NesterovSolve] Iter:  300 overflow: 0.128 HPWL: 2924600
+[NesterovSolve] Iter:  310 overflow: 0.111 HPWL: 2932071
+[NesterovSolve] Finished with Overflow: 0.098790
 Setting global connections for newly added cells…
 Writing OpenROAD database to '/openlane/designs/adder/runs/auto_pnr/tmp/placement/7-global.odb'…
 Writing netlist to '/openlane/designs/adder/runs/auto_pnr/tmp/placement/7-global.nl.v'…
