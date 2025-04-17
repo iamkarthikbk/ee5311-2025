@@ -118,8 +118,6 @@ wire net72 ;
 wire net73 ;
 wire net74 ;
 wire net75 ;
-wire net76 ;
-wire net77 ;
 wire net1 ;
 wire net2 ;
 wire net3 ;
@@ -130,10 +128,21 @@ wire net7 ;
 wire net8 ;
 wire net9 ;
 
+dot
+x1 ( 
+ .g1( net2 ),
+ .G( net36 ),
+ .p1( net1 ),
+ .P( net35 ),
+ .g2( net4 ),
+ .p2( net3 )
+);
+
+
 G
 x2 ( 
  .A( a1 ),
- .G( net4 ),
+ .G( net2 ),
  .B( b1 )
 );
 
@@ -141,7 +150,7 @@ x2 (
 P
 x3 ( 
  .A( a1 ),
- .P( net3 ),
+ .P( net1 ),
  .B( b1 )
 );
 
@@ -149,7 +158,7 @@ x3 (
 G
 x4 ( 
  .A( a2 ),
- .G( net2 ),
+ .G( net4 ),
  .B( b2 )
 );
 
@@ -157,7 +166,7 @@ x4 (
 P
 x5 ( 
  .A( a2 ),
- .P( net1 ),
+ .P( net3 ),
  .B( b2 )
 );
 
@@ -165,7 +174,7 @@ x5 (
 G
 x6 ( 
  .A( a3 ),
- .G( net8 ),
+ .G( net6 ),
  .B( b3 )
 );
 
@@ -173,7 +182,7 @@ x6 (
 P
 x7 ( 
  .A( a3 ),
- .P( net7 ),
+ .P( net5 ),
  .B( b3 )
 );
 
@@ -181,7 +190,7 @@ x7 (
 G
 x8 ( 
  .A( a4 ),
- .G( net6 ),
+ .G( net8 ),
  .B( b4 )
 );
 
@@ -189,7 +198,7 @@ x8 (
 P
 x9 ( 
  .A( a4 ),
- .P( net5 ),
+ .P( net7 ),
  .B( b4 )
 );
 
@@ -197,7 +206,7 @@ x9 (
 G
 x10 ( 
  .A( a5 ),
- .G( net12 ),
+ .G( net10 ),
  .B( b5 )
 );
 
@@ -205,7 +214,7 @@ x10 (
 P
 x11 ( 
  .A( a5 ),
- .P( net11 ),
+ .P( net9 ),
  .B( b5 )
 );
 
@@ -213,7 +222,7 @@ x11 (
 G
 x12 ( 
  .A( a6 ),
- .G( net10 ),
+ .G( net12 ),
  .B( b6 )
 );
 
@@ -221,7 +230,7 @@ x12 (
 P
 x13 ( 
  .A( a6 ),
- .P( net9 ),
+ .P( net11 ),
  .B( b6 )
 );
 
@@ -229,7 +238,7 @@ x13 (
 G
 x14 ( 
  .A( a7 ),
- .G( net16 ),
+ .G( net14 ),
  .B( b7 )
 );
 
@@ -237,7 +246,7 @@ x14 (
 P
 x15 ( 
  .A( a7 ),
- .P( net15 ),
+ .P( net13 ),
  .B( b7 )
 );
 
@@ -245,7 +254,7 @@ x15 (
 G
 x16 ( 
  .A( a8 ),
- .G( net14 ),
+ .G( net16 ),
  .B( b8 )
 );
 
@@ -253,7 +262,7 @@ x16 (
 P
 x17 ( 
  .A( a8 ),
- .P( net13 ),
+ .P( net15 ),
  .B( b8 )
 );
 
@@ -261,7 +270,7 @@ x17 (
 G
 x18 ( 
  .A( a9 ),
- .G( net20 ),
+ .G( net18 ),
  .B( b9 )
 );
 
@@ -269,7 +278,7 @@ x18 (
 P
 x19 ( 
  .A( a9 ),
- .P( net19 ),
+ .P( net17 ),
  .B( b9 )
 );
 
@@ -277,7 +286,7 @@ x19 (
 G
 x20 ( 
  .A( a10 ),
- .G( net18 ),
+ .G( net20 ),
  .B( b10 )
 );
 
@@ -285,7 +294,7 @@ x20 (
 P
 x21 ( 
  .A( a10 ),
- .P( net17 ),
+ .P( net19 ),
  .B( b10 )
 );
 
@@ -293,7 +302,7 @@ x21 (
 G
 x22 ( 
  .A( a11 ),
- .G( net24 ),
+ .G( net22 ),
  .B( b11 )
 );
 
@@ -301,7 +310,7 @@ x22 (
 P
 x23 ( 
  .A( a11 ),
- .P( net23 ),
+ .P( net21 ),
  .B( b11 )
 );
 
@@ -309,7 +318,7 @@ x23 (
 G
 x24 ( 
  .A( a12 ),
- .G( net22 ),
+ .G( net24 ),
  .B( b12 )
 );
 
@@ -317,7 +326,7 @@ x24 (
 P
 x25 ( 
  .A( a12 ),
- .P( net21 ),
+ .P( net23 ),
  .B( b12 )
 );
 
@@ -325,7 +334,7 @@ x25 (
 G
 x26 ( 
  .A( a13 ),
- .G( net28 ),
+ .G( net26 ),
  .B( b13 )
 );
 
@@ -333,7 +342,7 @@ x26 (
 P
 x27 ( 
  .A( a13 ),
- .P( net27 ),
+ .P( net25 ),
  .B( b13 )
 );
 
@@ -341,7 +350,7 @@ x27 (
 G
 x28 ( 
  .A( a14 ),
- .G( net26 ),
+ .G( net28 ),
  .B( b14 )
 );
 
@@ -349,7 +358,7 @@ x28 (
 P
 x29 ( 
  .A( a14 ),
- .P( net25 ),
+ .P( net27 ),
  .B( b14 )
 );
 
@@ -357,7 +366,7 @@ x29 (
 G
 x30 ( 
  .A( a15 ),
- .G( net32 ),
+ .G( net30 ),
  .B( b15 )
 );
 
@@ -365,7 +374,7 @@ x30 (
 P
 x31 ( 
  .A( a15 ),
- .P( net31 ),
+ .P( net29 ),
  .B( b15 )
 );
 
@@ -373,7 +382,7 @@ x31 (
 G
 x32 ( 
  .A( a16 ),
- .G( net30 ),
+ .G( net32 ),
  .B( b16 )
 );
 
@@ -381,297 +390,138 @@ x32 (
 P
 x33 ( 
  .A( a16 ),
- .P( net29 ),
- .B( b16 )
-);
-
-
-sum
-x63 ( 
- .P( net3 ),
- .S( s1 ),
- .C( net77 )
-);
-
-
-sum
-x64 ( 
- .P( net35 ),
- .S( s2 ),
- .C( net61 )
-);
-
-
-sum
-x65 ( 
- .P( net7 ),
- .S( s3 ),
- .C( net76 )
-);
-
-
-sum
-x66 ( 
- .P( net51 ),
- .S( s4 ),
- .C( net62 )
-);
-
-
-sum
-x67 ( 
- .P( net11 ),
- .S( s5 ),
- .C( net75 )
-);
-
-
-sum
-x68 ( 
- .P( net39 ),
- .S( s6 ),
- .C( net63 )
-);
-
-
-sum
-x69 ( 
- .P( net15 ),
- .S( s7 ),
- .C( net74 )
-);
-
-
-sum
-x70 ( 
- .P( net59 ),
- .S( s8 ),
- .C( net64 )
-);
-
-
-sum
-x71 ( 
- .P( net19 ),
- .S( s9 ),
- .C( net73 )
-);
-
-
-sum
-x72 ( 
- .P( net43 ),
- .S( s10 ),
- .C( net65 )
-);
-
-
-sum
-x73 ( 
- .P( net23 ),
- .S( s11 ),
- .C( net72 )
-);
-
-
-sum
-x74 ( 
- .P( net55 ),
- .S( s12 ),
- .C( net66 )
-);
-
-
-sum
-x75 ( 
- .P( net27 ),
- .S( s13 ),
- .C( net71 )
-);
-
-
-sum
-x76 ( 
- .P( net47 ),
- .S( s14 ),
- .C( net67 )
-);
-
-
-sum
-x77 ( 
  .P( net31 ),
- .S( s15 ),
- .C( net70 )
-);
-
-
-sum
-x78 ( 
- .P( net68 ),
- .S( s16 ),
- .C( cout )
-);
-
-
-dot
-x79 ( 
- .g1( net4 ),
- .G( net36 ),
- .p1( net3 ),
- .P( net35 ),
- .g2( net2 ),
- .p2( net1 )
-);
-
-
-carry
-x80 ( 
- .g( net4 ),
- .C( net77 ),
- .p( net3 ),
- .c( cin )
-);
-
-
-dot
-x1 ( 
- .g1( net8 ),
- .G( net34 ),
- .p1( net7 ),
- .P( net33 ),
- .g2( net6 ),
- .p2( net5 )
+ .B( b16 )
 );
 
 
 dot
 x34 ( 
- .g1( net12 ),
- .G( net40 ),
- .p1( net11 ),
- .P( net39 ),
- .g2( net10 ),
- .p2( net9 )
+ .g1( net6 ),
+ .G( net34 ),
+ .p1( net5 ),
+ .P( net33 ),
+ .g2( net8 ),
+ .p2( net7 )
 );
 
 
 dot
 x35 ( 
- .g1( net16 ),
- .G( net38 ),
- .p1( net15 ),
- .P( net37 ),
- .g2( net14 ),
- .p2( net13 )
+ .g1( net10 ),
+ .G( net40 ),
+ .p1( net9 ),
+ .P( net39 ),
+ .g2( net12 ),
+ .p2( net11 )
 );
 
 
 dot
 x36 ( 
- .g1( net20 ),
- .G( net44 ),
- .p1( net19 ),
- .P( net43 ),
- .g2( net18 ),
- .p2( net17 )
+ .g1( net14 ),
+ .G( net38 ),
+ .p1( net13 ),
+ .P( net37 ),
+ .g2( net16 ),
+ .p2( net15 )
 );
 
 
 dot
 x37 ( 
- .g1( net24 ),
- .G( net42 ),
- .p1( net23 ),
- .P( net41 ),
- .g2( net22 ),
- .p2( net21 )
+ .g1( net18 ),
+ .G( net44 ),
+ .p1( net17 ),
+ .P( net43 ),
+ .g2( net20 ),
+ .p2( net19 )
 );
 
 
 dot
 x38 ( 
- .g1( net28 ),
- .G( net48 ),
- .p1( net27 ),
- .P( net47 ),
- .g2( net26 ),
- .p2( net25 )
+ .g1( net22 ),
+ .G( net42 ),
+ .p1( net21 ),
+ .P( net41 ),
+ .g2( net24 ),
+ .p2( net23 )
 );
 
 
 dot
 x39 ( 
- .g1( net32 ),
- .G( net46 ),
- .p1( net31 ),
- .P( net45 ),
- .g2( net30 ),
- .p2( net29 )
+ .g1( net26 ),
+ .G( net48 ),
+ .p1( net25 ),
+ .P( net47 ),
+ .g2( net28 ),
+ .p2( net27 )
 );
 
 
 dot
 x40 ( 
+ .g1( net30 ),
+ .G( net46 ),
+ .p1( net29 ),
+ .P( net45 ),
+ .g2( net32 ),
+ .p2( net31 )
+);
+
+
+dot
+x41 ( 
  .g1( net36 ),
- .G( net52 ),
+ .G( net56 ),
  .p1( net35 ),
- .P( net51 ),
+ .P( net55 ),
  .g2( net34 ),
  .p2( net33 )
 );
 
 
 dot
-x41 ( 
+x42 ( 
  .g1( net40 ),
- .G( net50 ),
+ .G( net54 ),
  .p1( net39 ),
- .P( net49 ),
+ .P( net53 ),
  .g2( net38 ),
  .p2( net37 )
 );
 
 
 dot
-x42 ( 
+x43 ( 
  .g1( net44 ),
- .G( net56 ),
+ .G( net52 ),
  .p1( net43 ),
- .P( net55 ),
+ .P( net51 ),
  .g2( net42 ),
  .p2( net41 )
 );
 
 
 dot
-x43 ( 
+x44 ( 
  .g1( net48 ),
- .G( net54 ),
+ .G( net50 ),
  .p1( net47 ),
- .P( net53 ),
+ .P( net49 ),
  .g2( net46 ),
  .p2( net45 )
 );
 
 
 dot
-x44 ( 
- .g1( net52 ),
- .G( net60 ),
- .p1( net51 ),
- .P( net59 ),
- .g2( net50 ),
- .p2( net49 )
-);
-
-
-dot
 x45 ( 
  .g1( net56 ),
- .G( net58 ),
+ .G( net66 ),
  .p1( net55 ),
- .P( net57 ),
+ .P( net65 ),
  .g2( net54 ),
  .p2( net53 )
 );
@@ -679,148 +529,308 @@ x45 (
 
 dot
 x46 ( 
- .g1( net60 ),
- .G( net69 ),
- .p1( net59 ),
+ .g1( net52 ),
+ .G( net67 ),
+ .p1( net51 ),
  .P( net68 ),
- .g2( net58 ),
- .p2( net57 )
+ .g2( net50 ),
+ .p2( net49 )
 );
 
 
 carry
 x47 ( 
- .g( net36 ),
- .C( net61 ),
- .p( net35 ),
+ .g( net2 ),
+ .C( net57 ),
+ .p( net1 ),
  .c( cin )
 );
 
 
 carry
 x48 ( 
- .g( net8 ),
- .C( net76 ),
- .p( net7 ),
- .c( net61 )
+ .g( net36 ),
+ .C( net58 ),
+ .p( net35 ),
+ .c( net57 )
 );
 
 
 carry
 x49 ( 
- .g( net52 ),
- .C( net62 ),
- .p( net51 ),
- .c( cin )
+ .g( net6 ),
+ .C( net75 ),
+ .p( net5 ),
+ .c( net58 )
 );
 
 
 carry
 x50 ( 
- .g( net12 ),
- .C( net75 ),
- .p( net11 ),
- .c( net62 )
-);
-
-
-carry
-x51 ( 
- .g( net40 ),
- .C( net63 ),
- .p( net39 ),
- .c( net62 )
-);
-
-
-carry
-x52 ( 
- .g( net16 ),
- .C( net74 ),
- .p( net15 ),
- .c( net63 )
-);
-
-
-carry
-x53 ( 
- .g( net60 ),
- .C( net64 ),
- .p( net59 ),
+ .g( net56 ),
+ .C( net59 ),
+ .p( net55 ),
  .c( cin )
 );
 
 
 carry
-x54 ( 
- .g( net20 ),
+x51 ( 
+ .g( net10 ),
+ .C( net74 ),
+ .p( net9 ),
+ .c( net59 )
+);
+
+
+carry
+x52 ( 
+ .g( net40 ),
+ .C( net60 ),
+ .p( net39 ),
+ .c( net59 )
+);
+
+
+carry
+x53 ( 
+ .g( net14 ),
  .C( net73 ),
- .p( net19 ),
- .c( net64 )
+ .p( net13 ),
+ .c( net60 )
+);
+
+
+carry
+x54 ( 
+ .g( net66 ),
+ .C( net61 ),
+ .p( net65 ),
+ .c( cin )
 );
 
 
 carry
 x55 ( 
- .g( net44 ),
- .C( net65 ),
- .p( net43 ),
- .c( net64 )
+ .g( net18 ),
+ .C( net72 ),
+ .p( net17 ),
+ .c( net61 )
 );
 
 
 carry
 x56 ( 
- .g( net24 ),
- .C( net72 ),
- .p( net23 ),
- .c( net65 )
+ .g( net44 ),
+ .C( net62 ),
+ .p( net43 ),
+ .c( net61 )
 );
 
 
 carry
 x57 ( 
- .g( net56 ),
- .C( net66 ),
- .p( net55 ),
- .c( net64 )
+ .g( net22 ),
+ .C( net71 ),
+ .p( net21 ),
+ .c( net62 )
 );
 
 
 carry
 x58 ( 
- .g( net69 ),
- .C( cout ),
- .p( net68 ),
- .c( net64 )
+ .g( net52 ),
+ .C( net63 ),
+ .p( net51 ),
+ .c( net61 )
 );
 
 
 carry
 x59 ( 
- .g( net28 ),
- .C( net71 ),
- .p( net27 ),
- .c( net66 )
+ .g( net26 ),
+ .C( net70 ),
+ .p( net25 ),
+ .c( net63 )
 );
 
 
 carry
 x60 ( 
  .g( net48 ),
- .C( net67 ),
+ .C( net64 ),
  .p( net47 ),
- .c( net66 )
+ .c( net63 )
 );
 
 
 carry
 x61 ( 
- .g( net32 ),
- .C( net70 ),
- .p( net31 ),
- .c( net67 )
+ .g( net30 ),
+ .C( net69 ),
+ .p( net29 ),
+ .c( net64 )
 );
+
+
+carry
+x62 ( 
+ .g( net67 ),
+ .C( cout ),
+ .p( net68 ),
+ .c( net61 )
+);
+
+
+sum
+x63 ( 
+ .P( net57 ),
+ .S( s1 ),
+ .C( net1 )
+);
+
+
+sum
+x64 ( 
+ .P( net58 ),
+ .S( s2 ),
+ .C( net3 )
+);
+
+
+sum
+x65 ( 
+ .P( net75 ),
+ .S( s3 ),
+ .C( net5 )
+);
+
+
+sum
+x66 ( 
+ .P( net59 ),
+ .S( s4 ),
+ .C( net7 )
+);
+
+
+sum
+x67 ( 
+ .P( net74 ),
+ .S( s5 ),
+ .C( net9 )
+);
+
+
+sum
+x68 ( 
+ .P( net60 ),
+ .S( s6 ),
+ .C( net11 )
+);
+
+
+sum
+x69 ( 
+ .P( net73 ),
+ .S( s7 ),
+ .C( net13 )
+);
+
+
+sum
+x70 ( 
+ .P( net61 ),
+ .S( s8 ),
+ .C( net15 )
+);
+
+
+sum
+x71 ( 
+ .P( net72 ),
+ .S( s9 ),
+ .C( net17 )
+);
+
+
+sum
+x72 ( 
+ .P( net62 ),
+ .S( s10 ),
+ .C( net19 )
+);
+
+
+sum
+x73 ( 
+ .P( net71 ),
+ .S( s11 ),
+ .C( net21 )
+);
+
+
+sum
+x74 ( 
+ .P( net63 ),
+ .S( s12 ),
+ .C( net23 )
+);
+
+
+sum
+x75 ( 
+ .P( net70 ),
+ .S( s13 ),
+ .C( net25 )
+);
+
+
+sum
+x76 ( 
+ .P( net64 ),
+ .S( s14 ),
+ .C( net27 )
+);
+
+
+sum
+x77 ( 
+ .P( net69 ),
+ .S( s15 ),
+ .C( net29 )
+);
+
+
+sum
+x78 ( 
+ .P( cout ),
+ .S( s16 ),
+ .C( net31 )
+);
+
+endmodule
+
+// expanding   symbol:  dot.sym # of pins=6
+// sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/dot.sym
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/dot.sch
+module dot
+(
+  input wire g1,
+  output wire G,
+  input wire p1,
+  output wire P,
+  input wire g2,
+  input wire p2
+);
+// noconn G
+// noconn P
+// noconn g1
+// noconn p1
+// noconn g2
+// noconn p2
+assign G = g2 | (p2 & g1);
+assign P = p1 & p2;
 
 endmodule
 
@@ -854,44 +864,6 @@ assign P = A ^ B;
 // noconn B
 endmodule
 
-// expanding   symbol:  sum.sym # of pins=3
-// sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/sum.sym
-// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/sum.sch
-module sum
-(
-  input wire P,
-  output wire S,
-  input wire C
-);
-assign S = P ^ C;
-// noconn S
-// noconn P
-// noconn C
-endmodule
-
-// expanding   symbol:  dot.sym # of pins=6
-// sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/dot.sym
-// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/dot.sch
-module dot
-(
-  input wire g1,
-  output wire G,
-  input wire p1,
-  output wire P,
-  input wire g2,
-  input wire p2
-);
-// noconn G
-// noconn P
-// noconn g1
-// noconn p1
-// noconn g2
-// noconn p2
-assign G = g2 | (p2 & g1);
-assign P = p1 & p2;
-
-endmodule
-
 // expanding   symbol:  carry.sym # of pins=4
 // sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/carry.sym
 // sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/carry.sch
@@ -907,4 +879,19 @@ assign C = g | (p & c);
 // noconn g
 // noconn p
 // noconn c
+endmodule
+
+// expanding   symbol:  sum.sym # of pins=3
+// sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/sum.sym
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/sum.sch
+module sum
+(
+  input wire P,
+  output wire S,
+  input wire C
+);
+assign S = P ^ C;
+// noconn S
+// noconn P
+// noconn C
 endmodule
