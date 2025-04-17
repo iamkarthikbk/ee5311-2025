@@ -51,7 +51,7 @@ module adder
   input wire b1,
   input wire a1,
   input wire cin,
-  input wire clk
+  input clk
 );
 // Internal wires for combinational logic
 wire net10 ;
@@ -862,7 +862,7 @@ x57 (
 carry
 x58 ( 
  .g( net69 ),
- .C( cout ),
+ .C( carry_out ),
  .p( net68 ),
  .c( net64 )
 );

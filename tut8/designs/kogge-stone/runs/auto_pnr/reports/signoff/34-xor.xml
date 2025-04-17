@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
- <description>XOR /openlane/designs/adder/runs/auto_pnr/results/signoff/adder.gds vs. /openlane/designs/adder/runs/auto_pnr/results/signoff/adder.klayout.gds</description>
+ <description>XOR /openlane/designs/kogge-stone/runs/auto_pnr/results/signoff/adder.gds vs. /openlane/designs/kogge-stone/runs/auto_pnr/results/signoff/adder.klayout.gds</description>
  <original-file/>
  <generator>drc: script='/openlane/scripts/klayout/xor.drc'</generator>
  <top-cell>adder</top-cell>

@@ -1,19 +1,19 @@
 Design Name: adder
-Run Directory: /openlane/designs/adder/runs/auto_pnr
+Run Directory: /openlane/designs/kogge-stone/runs/auto_pnr
 ----------------------------------------
 
 Magic DRC Summary:
-Source: /openlane/designs/adder/runs/auto_pnr/reports/signoff/drc.rpt
+Source: /openlane/designs/kogge-stone/runs/auto_pnr/reports/signoff/drc.rpt
 Total Magic DRC violations is 0
 ----------------------------------------
 
 LVS Summary:
-Source: /openlane/designs/adder/runs/auto_pnr/logs/signoff/38-adder.lef.lvs.log
-Number of nets: 236                        |Number of nets: 236                        
+Source: /openlane/designs/kogge-stone/runs/auto_pnr/logs/signoff/38-adder.lef.lvs.log
+Number of nets: 298                        |Number of nets: 298                        
 Design is LVS clean.
 ----------------------------------------
 
 Antenna Summary:
-Source: /openlane/designs/adder/runs/auto_pnr/logs/signoff/41-arc.log
+Source: /openlane/designs/kogge-stone/runs/auto_pnr/logs/signoff/41-arc.log
 Pin violations: 0
 Net violations: 0

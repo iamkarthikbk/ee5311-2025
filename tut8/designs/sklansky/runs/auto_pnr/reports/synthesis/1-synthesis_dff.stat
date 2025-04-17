@@ -3,21 +3,21 @@
 
 === adder ===
 
-   Number of wires:                105
-   Number of wire bits:            197
-   Number of public wires:           9
+   Number of wires:                206
+   Number of wire bits:            206
+   Number of public wires:         101
    Number of public wire bits:     101
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                163
-     $_ANDNOT_                      23
-     $_AND_                          8
-     $_NAND_                         8
-     $_NOR_                         17
-     $_ORNOT_                        1
-     $_OR_                          24
-     $_XNOR_                        20
-     $_XOR_                         12
+   Number of cells:                172
+     $_ANDNOT_                      45
+     $_AND_                          4
+     $_NAND_                        15
+     $_NOR_                         16
+     $_ORNOT_                        3
+     $_OR_                           7
+     $_XNOR_                        15
+     $_XOR_                         17
      sky130_fd_sc_hd__dfxtp_2       50
 

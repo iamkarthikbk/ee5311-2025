@@ -1,6 +1,0 @@
-%Warning-WIDTHEXPAND: /openlane/designs/adder/src/adder.v:5:30: Operator ADD expects 17 bits on the RHS, but RHS's VARREF 'cin_q' generates 1 bits.
-                                                              : ... note: In instance 'adder'
-    5 |     assign sum_d = a_q + b_q + cin_q;
-      |                              ^
-                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.018
-                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.

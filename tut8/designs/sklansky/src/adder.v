@@ -119,8 +119,6 @@ wire net72 ;
 wire net73 ;
 wire net74 ;
 wire net75 ;
-wire net76 ;
-wire net77 ;
 wire net1 ;
 wire net2 ;
 wire net3 ;

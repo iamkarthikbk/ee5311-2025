@@ -658,14 +658,14 @@ Mapping DFF cells in module `\adder':
 
 56. Executing ABC pass (technology mapping using ABC).
 
-56.1. Extracting gate netlist of module `\adder' to `/tmp/yosys-abc-FIp5tN/input.blif'..
+56.1. Extracting gate netlist of module `\adder' to `/tmp/yosys-abc-ZJICQw/input.blif'..
 Extracted 113 gates and 146 wires to a netlist network with 33 inputs and 17 outputs.
 
 56.1.1. Executing ABC.
-Running ABC command: "/nix/store/wq2q0njg3sx8wvj2akz7x1qxwyrv9xlr-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-FIp5tN/abc.script 2>&1
-ABC: ABC command line: "source /tmp/yosys-abc-FIp5tN/abc.script".
+Running ABC command: "/nix/store/wq2q0njg3sx8wvj2akz7x1qxwyrv9xlr-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-ZJICQw/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-ZJICQw/abc.script".
 ABC: 
-ABC: + read_blif /tmp/yosys-abc-FIp5tN/input.blif 
+ABC: + read_blif /tmp/yosys-abc-ZJICQw/input.blif 
 ABC: + read_lib -w /openlane/designs/adder/runs/auto_pnr/tmp/synthesis/trimmed.lib 
 ABC: Parsing finished successfully.  Parsing time =     0.02 sec
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
@@ -685,8 +685,8 @@ ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
 ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
 ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
 ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
-ABC: Library "sky130A_merged" from "/openlane/designs/adder/runs/auto_pnr/tmp/synthesis/trimmed.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use).  Time =     0.03 sec
-ABC: Memory =    9.54 MB. Time =     0.03 sec
+ABC: Library "sky130A_merged" from "/openlane/designs/adder/runs/auto_pnr/tmp/synthesis/trimmed.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use).  Time =     0.04 sec
+ABC: Memory =    9.54 MB. Time =     0.04 sec
 ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
 ABC: + read_constr -v /openlane/designs/adder/runs/auto_pnr/tmp/synthesis/synthesis.sdc 
 ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_2".
@@ -772,7 +772,7 @@ ABC: Path  9 --     142 : 3    1 sky130_fd_sc_hd__o21ai_2  A =   8.76  Df =2390.
 ABC: Start-point = pi3 (\a_q [0]).  End-point = po16 (\sum_d [16]).
 ABC: + print_stats -m 
 ABC: netlist                       : i/o =   33/   17  lat =    0  nd =    92  edge =    218  area =869.85  delay = 9.00  lev = 9
-ABC: + write_blif /tmp/yosys-abc-FIp5tN/output.blif 
+ABC: + write_blif /tmp/yosys-abc-ZJICQw/output.blif 
 
 56.1.2. Re-integrating ABC results.
 ABC RESULTS:   sky130_fd_sc_hd__a21bo_2 cells:        1
@@ -860,6 +860,6 @@ Dumping module `\adder'.
 
 65. Executing JSON backend.
 
-End of script. Logfile hash: 837ff36870, CPU: user 0.23s system 0.01s, MEM: 42.19 MB peak
+End of script. Logfile hash: ee00e61233, CPU: user 0.24s system 0.02s, MEM: 42.56 MB peak
 Yosys 0.38 (git sha1 543faed9c8c, clang++ 17.0.6 -fPIC -Os)
 Time spent: 33% 2x abc (0 sec), 24% 2x read_liberty (0 sec), ...

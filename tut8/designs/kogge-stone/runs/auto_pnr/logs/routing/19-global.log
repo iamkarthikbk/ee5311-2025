@@ -11,11 +11,11 @@ Using 1e+00 for voltage...
 Using 1e-03 for current...
 Using 1e-09 for power...
 Using 1e-06 for distance...
-[INFO]: Reading ODB at '/openlane/designs/adder/runs/auto_pnr/tmp/17-adder.odb'…
-Reading design constraints file at '/openlane/designs/adder/src/adder.sdc'…
+[INFO]: Reading ODB at '/openlane/designs/kogge-stone/runs/auto_pnr/tmp/17-adder.odb'…
+Reading design constraints file at '/openlane/designs/kogge-stone/src/adder.sdc'…
 [INFO]: Setting signal min routing layer to: met1 and clock min routing layer to met3. 
 [INFO]: Setting signal max routing layer to: met5 and clock max routing layer to met5. 
--congestion_iterations 50 -verbose -congestion_report_file /openlane/designs/adder/runs/auto_pnr/tmp/routing/groute-congestion.rpt
+-congestion_iterations 50 -verbose -congestion_report_file /openlane/designs/kogge-stone/runs/auto_pnr/tmp/routing/groute-congestion.rpt
 [INFO GRT-0020] Min routing layer: met1
 [INFO GRT-0021] Max routing layer: met5
 [INFO GRT-0022] Global adjustment: 30%
@@ -32,40 +32,40 @@ Reading design constraints file at '/openlane/designs/adder/src/adder.sdc'…
 [INFO GRT-0002] Maximum degree: 18
 [INFO GRT-0003] Macros: 0
 [INFO GRT-0043] No OR_DEFAULT vias defined.
-[INFO GRT-0004] Blockages: 700
+[INFO GRT-0004] Blockages: 710
 
 [INFO GRT-0053] Routing resources analysis:
           Routing      Original      Derated      Resource
 Layer     Direction    Resources     Resources    Reduction (%)
 ---------------------------------------------------------------
 li1        Vertical            0             0          0.00%
-met1       Horizontal       2390          1154          51.72%
-met2       Vertical         1938          1152          40.56%
-met3       Horizontal       1190           715          39.92%
-met4       Vertical          804           358          55.47%
-met5       Horizontal        236            90          61.86%
+met1       Horizontal       2818          1365          51.56%
+met2       Vertical         2055          1224          40.44%
+met3       Horizontal       1409           853          39.46%
+met4       Vertical          846           377          55.44%
+met5       Horizontal        273           110          59.71%
 ---------------------------------------------------------------
 
-[INFO GRT-0197] Via related to pin nodes: 982
-[INFO GRT-0198] Via related Steiner nodes: 3
+[INFO GRT-0197] Via related to pin nodes: 1360
+[INFO GRT-0198] Via related Steiner nodes: 12
 [INFO GRT-0199] Via filling finished.
-[INFO GRT-0111] Final number of vias: 1220
-[INFO GRT-0112] Final usage 3D: 4150
+[INFO GRT-0111] Final number of vias: 1678
+[INFO GRT-0112] Final usage 3D: 5731
 
 [INFO GRT-0096] Final congestion report:
 Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
 ---------------------------------------------------------------------------------------
 li1                  0             0            0.00%             0 /  0 /  0
-met1              1154           192           16.64%             0 /  0 /  0
-met2              1152           280           24.31%             0 /  0 /  0
-met3               715            11            1.54%             0 /  0 /  0
-met4               358             7            1.96%             0 /  0 /  0
-met5                90             0            0.00%             0 /  0 /  0
+met1              1365           300           21.98%             0 /  0 /  0
+met2              1224           363           29.66%             0 /  0 /  0
+met3               853            19            2.23%             0 /  0 /  0
+met4               377            15            3.98%             0 /  0 /  0
+met5               110             0            0.00%             0 /  0 /  0
 ---------------------------------------------------------------------------------------
-Total             3469           490           14.13%             0 /  0 /  0
+Total             3929           697           17.74%             0 /  0 /  0
 
-[INFO GRT-0018] Total wirelength: 6078 um
-[INFO GRT-0014] Routed nets: 231
+[INFO GRT-0018] Total wirelength: 8894 um
+[INFO GRT-0014] Routed nets: 293
 [INFO GRT-0006] Repairing antennas, iteration 1.
 [INFO GRT-0043] No OR_DEFAULT vias defined.
 [INFO GRT-0012] Found 0 antenna violations.
@@ -74,17 +74,17 @@ Placement Analysis
 total displacement          0.0 u
 average displacement        0.0 u
 max displacement            0.0 u
-original HPWL            3390.5 u
-legalized HPWL           3675.3 u
-delta HPWL                    8 %
+original HPWL            4819.2 u
+legalized HPWL           5168.9 u
+delta HPWL                    7 %
 
-[INFO DPL-0020] Mirrored 95 instances
-[INFO DPL-0021] HPWL before            3675.3 u
-[INFO DPL-0022] HPWL after             3390.5 u
-[INFO DPL-0023] HPWL delta               -7.7 %
+[INFO DPL-0020] Mirrored 134 instances
+[INFO DPL-0021] HPWL before            5168.9 u
+[INFO DPL-0022] HPWL after             4819.2 u
+[INFO DPL-0023] HPWL delta               -6.8 %
 [INFO]: Setting signal min routing layer to: met1 and clock min routing layer to met3. 
 [INFO]: Setting signal max routing layer to: met5 and clock max routing layer to met5. 
--congestion_iterations 50 -verbose -congestion_report_file /openlane/designs/adder/runs/auto_pnr/tmp/routing/groute-congestion.rpt
+-congestion_iterations 50 -verbose -congestion_report_file /openlane/designs/kogge-stone/runs/auto_pnr/tmp/routing/groute-congestion.rpt
 [INFO GRT-0020] Min routing layer: met1
 [INFO GRT-0021] Max routing layer: met5
 [INFO GRT-0022] Global adjustment: 30%
@@ -101,41 +101,41 @@ delta HPWL                    8 %
 [INFO GRT-0002] Maximum degree: 18
 [INFO GRT-0003] Macros: 0
 [INFO GRT-0043] No OR_DEFAULT vias defined.
-[INFO GRT-0004] Blockages: 700
+[INFO GRT-0004] Blockages: 710
 
 [INFO GRT-0053] Routing resources analysis:
           Routing      Original      Derated      Resource
 Layer     Direction    Resources     Resources    Reduction (%)
 ---------------------------------------------------------------
 li1        Vertical            0             0          0.00%
-met1       Horizontal       2390          1154          51.72%
-met2       Vertical         1938          1152          40.56%
-met3       Horizontal       1190           715          39.92%
-met4       Vertical          804           358          55.47%
-met5       Horizontal        236            90          61.86%
+met1       Horizontal       2818          1365          51.56%
+met2       Vertical         2055          1224          40.44%
+met3       Horizontal       1409           853          39.46%
+met4       Vertical          846           377          55.44%
+met5       Horizontal        273           110          59.71%
 ---------------------------------------------------------------
 
-[INFO GRT-0197] Via related to pin nodes: 982
-[INFO GRT-0198] Via related Steiner nodes: 3
+[INFO GRT-0197] Via related to pin nodes: 1360
+[INFO GRT-0198] Via related Steiner nodes: 12
 [INFO GRT-0199] Via filling finished.
-[INFO GRT-0111] Final number of vias: 1220
-[INFO GRT-0112] Final usage 3D: 4150
+[INFO GRT-0111] Final number of vias: 1678
+[INFO GRT-0112] Final usage 3D: 5731
 
 [INFO GRT-0096] Final congestion report:
 Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
 ---------------------------------------------------------------------------------------
 li1                  0             0            0.00%             0 /  0 /  0
-met1              1154           192           16.64%             0 /  0 /  0
-met2              1152           280           24.31%             0 /  0 /  0
-met3               715            11            1.54%             0 /  0 /  0
-met4               358             7            1.96%             0 /  0 /  0
-met5                90             0            0.00%             0 /  0 /  0
+met1              1365           300           21.98%             0 /  0 /  0
+met2              1224           363           29.66%             0 /  0 /  0
+met3               853            19            2.23%             0 /  0 /  0
+met4               377            15            3.98%             0 /  0 /  0
+met5               110             0            0.00%             0 /  0 /  0
 ---------------------------------------------------------------------------------------
-Total             3469           490           14.13%             0 /  0 /  0
+Total             3929           697           17.74%             0 /  0 /  0
 
-[INFO GRT-0018] Total wirelength: 6078 um
-[INFO GRT-0014] Routed nets: 231
+[INFO GRT-0018] Total wirelength: 8894 um
+[INFO GRT-0014] Routed nets: 293
 Setting global connections for newly added cells…
-Writing OpenROAD database to '/openlane/designs/adder/runs/auto_pnr/tmp/routing/19-global.odb'…
-Writing layout to '/openlane/designs/adder/runs/auto_pnr/tmp/routing/19-global.def'…
-Writing routing guides to '/openlane/designs/adder/runs/auto_pnr/tmp/routing/19-global.guide'…
+Writing OpenROAD database to '/openlane/designs/kogge-stone/runs/auto_pnr/tmp/routing/19-global.odb'…
+Writing layout to '/openlane/designs/kogge-stone/runs/auto_pnr/tmp/routing/19-global.def'…
+Writing routing guides to '/openlane/designs/kogge-stone/runs/auto_pnr/tmp/routing/19-global.guide'…

@@ -1014,11 +1014,11 @@ Using 1e+00 for voltage...
 Using 1e-03 for current...
 Using 1e-09 for power...
 Using 1e-06 for distance...
-[INFO]: Reading ODB at '/openlane/designs/adder/runs/auto_pnr/tmp/cts/14-adder.resized.odb'…
-Reading design constraints file at '/openlane/designs/adder/src/adder.sdc'…
+[INFO]: Reading ODB at '/openlane/designs/brent-kung/runs/auto_pnr/tmp/cts/14-adder.resized.odb'…
+Reading design constraints file at '/openlane/designs/brent-kung/src/adder.sdc'…
 [INFO]: Setting signal min routing layer to: met1 and clock min routing layer to met3. 
 [INFO]: Setting signal max routing layer to: met5 and clock max routing layer to met5. 
--congestion_iterations 50 -verbose -congestion_report_file /openlane/designs/adder/runs/auto_pnr/tmp/routing/resizer-routing-design-congestion.rpt
+-congestion_iterations 50 -verbose -congestion_report_file /openlane/designs/brent-kung/runs/auto_pnr/tmp/routing/resizer-routing-design-congestion.rpt
 [INFO GRT-0020] Min routing layer: met1
 [INFO GRT-0021] Max routing layer: met5
 [INFO GRT-0022] Global adjustment: 30%
@@ -1032,7 +1032,7 @@ Reading design constraints file at '/openlane/designs/adder/src/adder.sdc'…
 [INFO GRT-0088] Layer met5    Track-Pitch = 3.4000  line-2-Via Pitch: 3.1100
 [INFO GRT-0019] Found 6 clock nets.
 [INFO GRT-0001] Minimum degree: 2
-[INFO GRT-0002] Maximum degree: 18
+[INFO GRT-0002] Maximum degree: 17
 [INFO GRT-0003] Macros: 0
 [INFO GRT-0043] No OR_DEFAULT vias defined.
 [INFO GRT-0004] Blockages: 700
@@ -1042,33 +1042,33 @@ Reading design constraints file at '/openlane/designs/adder/src/adder.sdc'…
 Layer     Direction    Resources     Resources    Reduction (%)
 ---------------------------------------------------------------
 li1        Vertical            0             0          0.00%
-met1       Horizontal       2390          1154          51.72%
-met2       Vertical         1938          1152          40.56%
-met3       Horizontal       1190           715          39.92%
-met4       Vertical          804           358          55.47%
-met5       Horizontal        236            90          61.86%
+met1       Horizontal       2350          1121          52.30%
+met2       Vertical         1709          1008          41.02%
+met3       Horizontal       1170           715          38.89%
+met4       Vertical          699           294          57.94%
+met5       Horizontal        228            90          60.53%
 ---------------------------------------------------------------
 
-[INFO GRT-0197] Via related to pin nodes: 982
-[INFO GRT-0198] Via related Steiner nodes: 3
+[INFO GRT-0197] Via related to pin nodes: 1049
+[INFO GRT-0198] Via related Steiner nodes: 4
 [INFO GRT-0199] Via filling finished.
-[INFO GRT-0111] Final number of vias: 1220
-[INFO GRT-0112] Final usage 3D: 4150
+[INFO GRT-0111] Final number of vias: 1301
+[INFO GRT-0112] Final usage 3D: 4445
 
 [INFO GRT-0096] Final congestion report:
 Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
 ---------------------------------------------------------------------------------------
 li1                  0             0            0.00%             0 /  0 /  0
-met1              1154           192           16.64%             0 /  0 /  0
-met2              1152           280           24.31%             0 /  0 /  0
-met3               715            11            1.54%             0 /  0 /  0
-met4               358             7            1.96%             0 /  0 /  0
+met1              1121           231           20.61%             0 /  0 /  0
+met2              1008           293           29.07%             0 /  0 /  0
+met3               715             9            1.26%             0 /  0 /  0
+met4               294             9            3.06%             0 /  0 /  0
 met5                90             0            0.00%             0 /  0 /  0
 ---------------------------------------------------------------------------------------
-Total             3469           490           14.13%             0 /  0 /  0
+Total             3228           542           16.79%             0 /  0 /  0
 
-[INFO GRT-0018] Total wirelength: 6078 um
-[INFO GRT-0014] Routed nets: 231
+[INFO GRT-0018] Total wirelength: 6768 um
+[INFO GRT-0014] Routed nets: 232
 [INFO]: Setting RC values...
 [INFO RSZ-0058] Using max wire length 4508um.
 Placement Analysis
@@ -1076,24 +1076,24 @@ Placement Analysis
 total displacement          0.0 u
 average displacement        0.0 u
 max displacement            0.0 u
-original HPWL            3390.5 u
-legalized HPWL           3675.3 u
+original HPWL            3747.6 u
+legalized HPWL           4041.6 u
 delta HPWL                    8 %
 
-[INFO DPL-0020] Mirrored 95 instances
-[INFO DPL-0021] HPWL before            3675.3 u
-[INFO DPL-0022] HPWL after             3390.5 u
-[INFO DPL-0023] HPWL delta               -7.7 %
+[INFO DPL-0020] Mirrored 100 instances
+[INFO DPL-0021] HPWL before            4041.6 u
+[INFO DPL-0022] HPWL after             3747.6 u
+[INFO DPL-0023] HPWL delta               -7.3 %
 Setting global connections for newly added cells…
-Writing OpenROAD database to '/openlane/designs/adder/runs/auto_pnr/tmp/15-adder.odb'…
-Writing netlist to '/openlane/designs/adder/runs/auto_pnr/tmp/15-adder.nl.v'…
-Writing powered netlist to '/openlane/designs/adder/runs/auto_pnr/tmp/15-adder.pnl.v'…
-Writing layout to '/openlane/designs/adder/runs/auto_pnr/tmp/15-adder.def'…
-Writing timing constraints to '/openlane/designs/adder/runs/auto_pnr/tmp/15-adder.sdc'…
+Writing OpenROAD database to '/openlane/designs/brent-kung/runs/auto_pnr/tmp/15-adder.odb'…
+Writing netlist to '/openlane/designs/brent-kung/runs/auto_pnr/tmp/15-adder.nl.v'…
+Writing powered netlist to '/openlane/designs/brent-kung/runs/auto_pnr/tmp/15-adder.pnl.v'…
+Writing layout to '/openlane/designs/brent-kung/runs/auto_pnr/tmp/15-adder.def'…
+Writing timing constraints to '/openlane/designs/brent-kung/runs/auto_pnr/tmp/15-adder.sdc'…
 area_report
 
 ===========================================================================
 report_design_area
 ============================================================================
-Design area 2017 u^2 54% utilization.
+Design area 2110 u^2 59% utilization.
 area_report_end

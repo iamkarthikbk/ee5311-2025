@@ -4,8 +4,8 @@ report_checks -unconstrained
 ===========================================================================
 ======================= Typical Corner ===================================
 
-Startpoint: _172_ (rising edge-triggered flip-flop clocked by core_clock)
-Endpoint: _170_ (rising edge-triggered flip-flop clocked by core_clock)
+Startpoint: _176_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _168_ (rising edge-triggered flip-flop clocked by core_clock)
 Path Group: core_clock
 Path Type: max
 
@@ -13,50 +13,44 @@ Fanout     Cap    Slew   Delay    Time   Description
 -----------------------------------------------------------------------------
                   0.00    0.00    0.00   clock core_clock (rise edge)
                           0.00    0.00   clock network delay (ideal)
-                  0.00    0.00    0.00 ^ _172_/CLK (sky130_fd_sc_hd__dfxtp_2)
-     2    0.01    0.05    0.30    0.30 ^ _172_/Q (sky130_fd_sc_hd__dfxtp_2)
-                                         a_q[0] (net)
-                  0.05    0.00    0.30 ^ _075_/A (sky130_fd_sc_hd__or2_2)
-     2    0.01    0.05    0.11    0.42 ^ _075_/X (sky130_fd_sc_hd__or2_2)
-                                         _034_ (net)
-                  0.05    0.00    0.42 ^ _079_/A2 (sky130_fd_sc_hd__a21bo_2)
-     2    0.01    0.09    0.16    0.58 ^ _079_/X (sky130_fd_sc_hd__a21bo_2)
-                                         _037_ (net)
-                  0.09    0.00    0.58 ^ _084_/A1 (sky130_fd_sc_hd__a21boi_2)
-     3    0.01    0.07    0.08    0.67 v _084_/Y (sky130_fd_sc_hd__a21boi_2)
-                                         _041_ (net)
-                  0.07    0.00    0.67 v _100_/A1 (sky130_fd_sc_hd__o31a_2)
-     4    0.02    0.08    0.39    1.06 v _100_/X (sky130_fd_sc_hd__o31a_2)
+                  0.00    0.00    0.00 ^ _176_/CLK (sky130_fd_sc_hd__dfxtp_2)
+     4    0.01    0.04    0.31    0.31 v _176_/Q (sky130_fd_sc_hd__dfxtp_2)
+                                         x10.A (net)
+                  0.04    0.00    0.31 v _092_/A2 (sky130_fd_sc_hd__a22o_2)
+     4    0.01    0.06    0.27    0.58 v _092_/X (sky130_fd_sc_hd__a22o_2)
+                                         _048_ (net)
+                  0.06    0.00    0.58 v _101_/A (sky130_fd_sc_hd__or4b_2)
+     3    0.01    0.11    0.69    1.27 v _101_/X (sky130_fd_sc_hd__or4b_2)
                                          _055_ (net)
-                  0.08    0.00    1.06 v _121_/A1 (sky130_fd_sc_hd__o31a_2)
-     4    0.02    0.09    0.41    1.47 v _121_/X (sky130_fd_sc_hd__o31a_2)
-                                         _072_ (net)
-                  0.09    0.00    1.47 v _145_/A1 (sky130_fd_sc_hd__o31ai_2)
-     3    0.02    0.41    0.42    1.89 ^ _145_/Y (sky130_fd_sc_hd__o31ai_2)
-                                         _017_ (net)
-                  0.41    0.00    1.89 ^ _158_/A1 (sky130_fd_sc_hd__a211oi_2)
-     2    0.01    0.11    0.14    2.03 v _158_/Y (sky130_fd_sc_hd__a211oi_2)
-                                         _028_ (net)
-                  0.11    0.00    2.03 v _164_/A3 (sky130_fd_sc_hd__o31a_2)
-     2    0.01    0.08    0.34    2.38 v _164_/X (sky130_fd_sc_hd__o31a_2)
-                                         _033_ (net)
-                  0.08    0.00    2.38 v _165_/B (sky130_fd_sc_hd__xor2_2)
-     1    0.00    0.04    0.14    2.52 v _165_/X (sky130_fd_sc_hd__xor2_2)
-                                         sum_d[15] (net)
-                  0.04    0.00    2.52 v _170_/D (sky130_fd_sc_hd__dfxtp_2)
-                                  2.52   data arrival time
+                  0.11    0.00    1.27 v _108_/D (sky130_fd_sc_hd__or4_2)
+     2    0.01    0.12    0.58    1.85 v _108_/X (sky130_fd_sc_hd__or4_2)
+                                         _061_ (net)
+                  0.12    0.00    1.85 v _127_/A3 (sky130_fd_sc_hd__a31o_2)
+     3    0.01    0.05    0.29    2.14 v _127_/X (sky130_fd_sc_hd__a31o_2)
+                                         _008_ (net)
+                  0.05    0.00    2.14 v _135_/A2 (sky130_fd_sc_hd__a21o_2)
+     2    0.00    0.04    0.21    2.35 v _135_/X (sky130_fd_sc_hd__a21o_2)
+                                         _014_ (net)
+                  0.04    0.00    2.35 v _137_/A (sky130_fd_sc_hd__and2_2)
+     1    0.00    0.04    0.16    2.51 v _137_/X (sky130_fd_sc_hd__and2_2)
+                                         _016_ (net)
+                  0.04    0.00    2.51 v _138_/A (sky130_fd_sc_hd__buf_1)
+     1    0.00    0.02    0.08    2.59 v _138_/X (sky130_fd_sc_hd__buf_1)
+                                         x76.S (net)
+                  0.02    0.00    2.59 v _168_/D (sky130_fd_sc_hd__dfxtp_2)
+                                  2.59   data arrival time
 
-                  0.00    5.00    5.00   clock core_clock (rise edge)
-                          0.00    5.00   clock network delay (ideal)
-                          0.00    5.00   clock reconvergence pessimism
-                                  5.00 ^ _170_/CLK (sky130_fd_sc_hd__dfxtp_2)
-                         -0.12    4.88   library setup time
-                                  4.88   data required time
+                  0.00    2.67    2.67   clock core_clock (rise edge)
+                          0.00    2.67   clock network delay (ideal)
+                          0.00    2.67   clock reconvergence pessimism
+                                  2.67 ^ _168_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                         -0.11    2.56   library setup time
+                                  2.56   data required time
 -----------------------------------------------------------------------------
-                                  4.88   data required time
-                                 -2.52   data arrival time
+                                  2.56   data required time
+                                 -2.59   data arrival time
 -----------------------------------------------------------------------------
-                                  2.36   slack (MET)
+                                 -0.04   slack (VIOLATED)
 
 
 
@@ -66,7 +60,55 @@ report_checks --slack_max -0.01
 ============================================================================
 ======================= Typical Corner ===================================
 
-No paths found.
+Startpoint: _176_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _168_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _176_/CLK (sky130_fd_sc_hd__dfxtp_2)
+     4    0.01    0.04    0.31    0.31 v _176_/Q (sky130_fd_sc_hd__dfxtp_2)
+                                         x10.A (net)
+                  0.04    0.00    0.31 v _092_/A2 (sky130_fd_sc_hd__a22o_2)
+     4    0.01    0.06    0.27    0.58 v _092_/X (sky130_fd_sc_hd__a22o_2)
+                                         _048_ (net)
+                  0.06    0.00    0.58 v _101_/A (sky130_fd_sc_hd__or4b_2)
+     3    0.01    0.11    0.69    1.27 v _101_/X (sky130_fd_sc_hd__or4b_2)
+                                         _055_ (net)
+                  0.11    0.00    1.27 v _108_/D (sky130_fd_sc_hd__or4_2)
+     2    0.01    0.12    0.58    1.85 v _108_/X (sky130_fd_sc_hd__or4_2)
+                                         _061_ (net)
+                  0.12    0.00    1.85 v _127_/A3 (sky130_fd_sc_hd__a31o_2)
+     3    0.01    0.05    0.29    2.14 v _127_/X (sky130_fd_sc_hd__a31o_2)
+                                         _008_ (net)
+                  0.05    0.00    2.14 v _135_/A2 (sky130_fd_sc_hd__a21o_2)
+     2    0.00    0.04    0.21    2.35 v _135_/X (sky130_fd_sc_hd__a21o_2)
+                                         _014_ (net)
+                  0.04    0.00    2.35 v _137_/A (sky130_fd_sc_hd__and2_2)
+     1    0.00    0.04    0.16    2.51 v _137_/X (sky130_fd_sc_hd__and2_2)
+                                         _016_ (net)
+                  0.04    0.00    2.51 v _138_/A (sky130_fd_sc_hd__buf_1)
+     1    0.00    0.02    0.08    2.59 v _138_/X (sky130_fd_sc_hd__buf_1)
+                                         x76.S (net)
+                  0.02    0.00    2.59 v _168_/D (sky130_fd_sc_hd__dfxtp_2)
+                                  2.59   data arrival time
+
+                  0.00    2.67    2.67   clock core_clock (rise edge)
+                          0.00    2.67   clock network delay (ideal)
+                          0.00    2.67   clock reconvergence pessimism
+                                  2.67 ^ _168_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                         -0.11    2.56   library setup time
+                                  2.56   data required time
+-----------------------------------------------------------------------------
+                                  2.56   data required time
+                                 -2.59   data arrival time
+-----------------------------------------------------------------------------
+                                 -0.04   slack (VIOLATED)
+
+
 
 
 ===========================================================================
@@ -96,57 +138,57 @@ max cap violation count 0
 check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
 ===========================================================================
 Warning: There are 33 input ports missing set_input_delay.
-  a[0]
-  a[10]
-  a[11]
-  a[12]
-  a[13]
-  a[14]
-  a[15]
-  a[1]
-  a[2]
-  a[3]
-  a[4]
-  a[5]
-  a[6]
-  a[7]
-  a[8]
-  a[9]
-  b[0]
-  b[10]
-  b[11]
-  b[12]
-  b[13]
-  b[14]
-  b[15]
-  b[1]
-  b[2]
-  b[3]
-  b[4]
-  b[5]
-  b[6]
-  b[7]
-  b[8]
-  b[9]
+  a1
+  a10
+  a11
+  a12
+  a13
+  a14
+  a15
+  a16
+  a2
+  a3
+  a4
+  a5
+  a6
+  a7
+  a8
+  a9
+  b1
+  b10
+  b11
+  b12
+  b13
+  b14
+  b15
+  b16
+  b2
+  b3
+  b4
+  b5
+  b6
+  b7
+  b8
+  b9
   cin
 Warning: There are 50 unconstrained endpoints.
-  sum[0]
-  sum[10]
-  sum[11]
-  sum[12]
-  sum[13]
-  sum[14]
-  sum[15]
-  sum[16]
-  sum[1]
-  sum[2]
-  sum[3]
-  sum[4]
-  sum[5]
-  sum[6]
-  sum[7]
-  sum[8]
-  sum[9]
+  cout
+  s1
+  s10
+  s11
+  s12
+  s13
+  s14
+  s15
+  s16
+  s2
+  s3
+  s4
+  s5
+  s6
+  s7
+  s8
+  s9
   _172_/D
   _173_/D
   _174_/D
