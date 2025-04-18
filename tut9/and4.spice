@@ -1,0 +1,14 @@
+** sch_path: /home/ee24s053/ee5311-2025/tut9/and4.sch
+**.subckt and4 p0 p1 bypass p2 p3
+*.ipin p0
+*.ipin p1
+*.ipin p2
+*.ipin p3
+*.opin bypass
+* noconn bypass
+* noconn p0
+* noconn p1
+* noconn p2
+* noconn p3
+**.ends
+.end
