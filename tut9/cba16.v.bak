@@ -1,7 +1,6 @@
 // sch_path: /home/ee24s053/ee5311-2025/tut9/cba16.sch
 module cba16
 (
-  input wire clk,
   output wire s1,
   output wire s2,
   output wire s3,
@@ -53,34 +52,6 @@ module cba16
   input wire b16,
   input wire cin
 );
-
-// Input registers
-reg rg_a1, rg_b1, rg_a2, rg_b2, rg_a3, rg_b3, rg_a4, rg_b4, rg_a5, rg_b5, rg_a6, rg_b6, rg_a7, rg_b7, rg_a8, rg_b8;
-reg rg_a9, rg_b9, rg_a10, rg_b10, rg_a11, rg_b11, rg_a12, rg_b12, rg_a13, rg_b13, rg_a14, rg_b14, rg_a15, rg_b15, rg_a16, rg_b16;
-reg rg_cin;
-// Output registers
-reg rg_s1, rg_s2, rg_s3, rg_s4, rg_s5, rg_s6, rg_s7, rg_s8, rg_s9, rg_s10, rg_s11, rg_s12, rg_s13, rg_s14, rg_s15, rg_s16;
-reg rg_cout;
-
-// Assign outputs from output registers
-assign s1 = rg_s1;
-assign s2 = rg_s2;
-assign s3 = rg_s3;
-assign s4 = rg_s4;
-assign s5 = rg_s5;
-assign s6 = rg_s6;
-assign s7 = rg_s7;
-assign s8 = rg_s8;
-assign s9 = rg_s9;
-assign s10 = rg_s10;
-assign s11 = rg_s11;
-assign s12 = rg_s12;
-assign s13 = rg_s13;
-assign s14 = rg_s14;
-assign s15 = rg_s15;
-assign s16 = rg_s16;
-assign cout = rg_cout;
-
 wire net10 ;
 wire net11 ;
 wire net12 ;
@@ -121,59 +92,44 @@ wire net7 ;
 wire net8 ;
 wire net9 ;
 
-// Register all inputs and outputs on clk
-always @(posedge clk) begin
-  rg_a1 <= a1; rg_b1 <= b1; rg_a2 <= a2; rg_b2 <= b2; rg_a3 <= a3; rg_b3 <= b3; rg_a4 <= a4; rg_b4 <= b4;
-  rg_a5 <= a5; rg_b5 <= b5; rg_a6 <= a6; rg_b6 <= b6; rg_a7 <= a7; rg_b7 <= b7; rg_a8 <= a8; rg_b8 <= b8;
-  rg_a9 <= a9; rg_b9 <= b9; rg_a10 <= a10; rg_b10 <= b10; rg_a11 <= a11; rg_b11 <= b11;
-  rg_a12 <= a12; rg_b12 <= b12; rg_a13 <= a13; rg_b13 <= b13; rg_a14 <= a14; rg_b14 <= b14;
-  rg_a15 <= a15; rg_b15 <= b15; rg_a16 <= a16; rg_b16 <= b16;
-  rg_cin <= cin;
-  rg_s1 <= wr_s1; rg_s2 <= wr_s2; rg_s3 <= wr_s3; rg_s4 <= wr_s4; rg_s5 <= wr_s5; rg_s6 <= wr_s6; rg_s7 <= wr_s7; rg_s8 <= wr_s8;
-  rg_s9 <= wr_s9; rg_s10 <= wr_s10; rg_s11 <= wr_s11; rg_s12 <= wr_s12; rg_s13 <= wr_s13; rg_s14 <= wr_s14; rg_s15 <= wr_s15; rg_s16 <= wr_s16;
-  rg_cout <= wr_cout;
-end
-
-// Wires for combinational outputs
-wire wr_s1, wr_s2, wr_s3, wr_s4, wr_s5, wr_s6, wr_s7, wr_s8, wr_s9, wr_s10, wr_s11, wr_s12, wr_s13, wr_s14, wr_s15, wr_s16, wr_cout;
-
-
 fa
-x1 (
- .a( rg_a1 ),
- .sum( wr_s1 ),
- .b( rg_b1 ),
+x1 ( 
+ .a( a1 ),
+ .sum( s1 ),
+ .b( b1 ),
  .cout( net4 ),
- .cin( rg_cin )
+ .cin( cin )
 );
 
+
 fa
-x2 (
- .a( rg_a2 ),
- .sum( wr_s2 ),
- .b( rg_b2 ),
+x2 ( 
+ .a( a2 ),
+ .sum( s2 ),
+ .b( b2 ),
  .cout( net3 ),
  .cin( net4 )
 );
 
+
 fa
-x3 (
- .a( rg_a3 ),
- .sum( wr_s3 ),
- .b( rg_b3 ),
+x3 ( 
+ .a( a3 ),
+ .sum( s3 ),
+ .b( b3 ),
  .cout( net2 ),
  .cin( net3 )
 );
 
+
 fa
-x4 (
- .a( rg_a4 ),
- .sum( wr_s4 ),
- .b( rg_b4 ),
+x4 ( 
+ .a( a4 ),
+ .sum( s4 ),
+ .b( b4 ),
  .cout( net1 ),
  .cin( net2 )
 );
-
 
 
 mux21
@@ -186,41 +142,43 @@ x5 (
 
 
 fa
-x6 (
- .a( rg_a5 ),
- .sum( wr_s5 ),
- .b( rg_b5 ),
+x6 ( 
+ .a( a5 ),
+ .sum( s5 ),
+ .b( b5 ),
  .cout( net9 ),
  .cin( net5 )
 );
 
+
 fa
-x7 (
- .a( rg_a6 ),
- .sum( wr_s6 ),
- .b( rg_b6 ),
+x7 ( 
+ .a( a6 ),
+ .sum( s6 ),
+ .b( b6 ),
  .cout( net8 ),
  .cin( net9 )
 );
 
+
 fa
-x8 (
- .a( rg_a7 ),
- .sum( wr_s7 ),
- .b( rg_b7 ),
+x8 ( 
+ .a( a7 ),
+ .sum( s7 ),
+ .b( b7 ),
  .cout( net7 ),
  .cin( net8 )
 );
 
+
 fa
-x9 (
- .a( rg_a8 ),
- .sum( wr_s8 ),
- .b( rg_b8 ),
+x9 ( 
+ .a( a8 ),
+ .sum( s8 ),
+ .b( b8 ),
  .cout( net6 ),
  .cin( net7 )
 );
-
 
 
 mux21
@@ -233,41 +191,43 @@ x10 (
 
 
 fa
-x11 (
- .a( rg_a9 ),
- .sum( wr_s9 ),
- .b( rg_b9 ),
+x11 ( 
+ .a( a9 ),
+ .sum( s9 ),
+ .b( b9 ),
  .cout( net14 ),
  .cin( net10 )
 );
 
+
 fa
-x12 (
- .a( rg_a10 ),
- .sum( wr_s10 ),
- .b( rg_b10 ),
+x12 ( 
+ .a( a10 ),
+ .sum( s10 ),
+ .b( b10 ),
  .cout( net13 ),
  .cin( net14 )
 );
 
+
 fa
-x13 (
- .a( rg_a11 ),
- .sum( wr_s11 ),
- .b( rg_b11 ),
+x13 ( 
+ .a( a11 ),
+ .sum( s11 ),
+ .b( b11 ),
  .cout( net12 ),
  .cin( net13 )
 );
 
+
 fa
-x14 (
- .a( rg_a12 ),
- .sum( wr_s12 ),
- .b( rg_b12 ),
+x14 ( 
+ .a( a12 ),
+ .sum( s12 ),
+ .b( b12 ),
  .cout( net11 ),
  .cin( net12 )
 );
-
 
 
 mux21
@@ -280,178 +240,179 @@ x15 (
 
 
 fa
-x16 (
- .a( rg_a13 ),
- .sum( wr_s13 ),
- .b( rg_b13 ),
+x16 ( 
+ .a( a13 ),
+ .sum( s13 ),
+ .b( b13 ),
  .cout( net19 ),
  .cin( net15 )
 );
 
+
 fa
-x17 (
- .a( rg_a14 ),
- .sum( wr_s14 ),
- .b( rg_b14 ),
+x17 ( 
+ .a( a14 ),
+ .sum( s14 ),
+ .b( b14 ),
  .cout( net18 ),
  .cin( net19 )
 );
 
+
 fa
-x18 (
- .a( rg_a15 ),
- .sum( wr_s15 ),
- .b( rg_b15 ),
+x18 ( 
+ .a( a15 ),
+ .sum( s15 ),
+ .b( b15 ),
  .cout( net17 ),
  .cin( net18 )
 );
 
+
 fa
-x19 (
- .a( rg_a16 ),
- .sum( wr_s16 ),
- .b( rg_b16 ),
+x19 ( 
+ .a( a16 ),
+ .sum( s16 ),
+ .b( b16 ),
  .cout( net16 ),
  .cin( net17 )
 );
 
 
-
 mux21
-x20 (
+x20 ( 
  .in0( net16 ),
  .in1( net15 ),
- .out( wr_cout ),
+ .out( cout ),
  .select_high( net35 )
 );
 
 
-
 P
 x21 ( 
- .A( rg_a1 ),
+ .A( a1 ),
  .P( net21 ),
- .B( rg_b1 )
+ .B( b1 )
 );
 
 
 P
 x22 ( 
- .A( rg_a2 ),
+ .A( a2 ),
  .P( net22 ),
- .B( rg_b2 )
+ .B( b2 )
 );
 
 
 P
 x23 ( 
- .A( rg_a3 ),
+ .A( a3 ),
  .P( net23 ),
- .B( rg_b3 )
+ .B( b3 )
 );
 
 
 P
 x24 ( 
- .A( rg_a4 ),
+ .A( a4 ),
  .P( net24 ),
- .B( rg_b4 )
+ .B( b4 )
 );
 
 
 P
 x25 ( 
- .A( rg_a5 ),
+ .A( a5 ),
  .P( net26 ),
- .B( rg_b5 )
+ .B( b5 )
 );
 
 
 P
 x26 ( 
- .A( rg_a6 ),
+ .A( a6 ),
  .P( net27 ),
- .B( rg_b6 )
+ .B( b6 )
 );
 
 
 P
 x27 ( 
- .A( rg_a7 ),
+ .A( a7 ),
  .P( net28 ),
- .B( rg_b7 )
+ .B( b7 )
 );
 
 
 P
 x28 ( 
- .A( rg_a8 ),
+ .A( a8 ),
  .P( net29 ),
- .B( rg_b8 )
+ .B( b8 )
 );
 
 
 P
 x29 ( 
- .A( rg_a9 ),
+ .A( a9 ),
  .P( net31 ),
- .B( rg_b9 )
+ .B( b9 )
 );
 
 
 P
 x30 ( 
- .A( rg_a10 ),
+ .A( a10 ),
  .P( net32 ),
- .B( rg_b10 )
+ .B( b10 )
 );
 
 
 P
 x31 ( 
- .A( rg_a11 ),
+ .A( a11 ),
  .P( net33 ),
- .B( rg_b11 )
+ .B( b11 )
 );
 
 
 P
 x32 ( 
- .A( rg_a12 ),
+ .A( a12 ),
  .P( net34 ),
- .B( rg_b12 )
+ .B( b12 )
 );
 
 
 P
 x33 ( 
- .A( rg_a13 ),
+ .A( a13 ),
  .P( net36 ),
- .B( rg_b13 )
+ .B( b13 )
 );
 
 
 P
 x34 ( 
- .A( rg_a14 ),
+ .A( a14 ),
  .P( net37 ),
- .B( rg_b14 )
+ .B( b14 )
 );
 
 
 P
 x35 ( 
- .A( rg_a15 ),
+ .A( a15 ),
  .P( net38 ),
- .B( rg_b15 )
+ .B( b15 )
 );
 
 
 P
 x36 ( 
- .A( rg_a16 ),
+ .A( a16 ),
  .P( net39 ),
- .B( rg_b16 )
+ .B( b16 )
 );
 
 
