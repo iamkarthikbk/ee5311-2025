@@ -1,7 +1,7 @@
 %--------------------
 % Packages
 % -------------------
-\documentclass[12pt,a4paper]{article}
+\documentclass[10pt,a4paper]{article}
 % \usepackage[a4paper, left=15mm, right=15mm, top=15mm, bottom=15mm]{geometry}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
@@ -23,7 +23,7 @@
 
 \frenchspacing % No double spacing between sentences
 \linespread{1.2} % Set linespace
-\usepackage[a4paper, lmargin=0.08\paperwidth, rmargin=0.08\paperwidth, tmargin=0.08\paperheight, bmargin=0.08\paperheight]{geometry} %margins
+\usepackage[a4paper, landscape, lmargin=0.02\paperwidth, rmargin=0.02\paperwidth, tmargin=0.08\paperheight, bmargin=0.08\paperheight]{geometry} %margins
 %\usepackage{parskip}
 % \usepackage[all]{nowidow} % Tries to remove widows
 \usepackage[protrusion=true,expansion=true]{microtype} % Improves typography, load after fontpackage is selected
@@ -42,7 +42,7 @@
 %-----------------------
 \hypersetup{ 	
 pdfsubject = {},
-pdftitle = {ee5311-2025-ee24s053-pwc-report-tut5},
+pdftitle = {ee5311-2025-ee24s053-pwc-report-tut8},
 pdfauthor = {Karthik B K <ee24s053@smail.iitm.ac.in>}
 }
 
@@ -55,106 +55,3425 @@ pdfauthor = {Karthik B K <ee24s053@smail.iitm.ac.in>}
 \author{Karthik B K ee24s053}
 \maketitle
 
-Path reported before adding false paths:
+\section{Summary}
 
+\begin{table}[ht]
+\centering
+\caption{Synthesis and PnR Metrics for 16-bit Adders}
+\begin{tabular}{lcccccccc}
+\hline
+Design & Die Area (mm$^2$) & Cell Count & Wire Length & Vias & Util (\%) & Crit. Path (ns) & Power ($\mu$W) & Freq (MHz) \\
+\hline
+Reference   & 0.00615 & 142 & 3606 & 1147 & 56.77 & 1.47 & 1.39 & 238.1 \\
+Brent-Kung  & 0.00579 & 136 & 4066 & 1260 & 59.37 & 1.57 & 1.34 & 216.9 \\
+Sklansky    & 0.00559 & 130 & 3630 & 1135 & 59.02 & 1.51 & 1.27 & 226.2 \\
+Kogge-Stone & 0.00697 & 193 & 5229 & 1694 & 58.25 & 1.32 & 1.69 & 267.4 \\
+\hline
+\end{tabular}
+\label{tab:adders-pnr}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Detailed Metrics from PnR Reports}
+\begin{tabular}{lcccccccccccccccc}
+\hline
+Design & Clk (ns) & AND & DFF & NAND & NOR & OR & XOR & XNOR & Pwr Int. & Pwr Sw. & Pwr Leak. & L2 (\%) & L3 (\%) & L4 (\%) & L5 (\%) \\
+\hline
+Reference   & 2.60 & 8  & 50 & 8  & 17 & 24 & 12 & 20 & 0.00139 & 0.000388 & 1.3e-09 & 16.64 & 24.39 & 1.54 & 1.96 \\
+Brent-Kung  & 2.67 & 16 & 50 & 0  & 2  & 33 & 10 & 22 & 0.00134 & 0.000353 & 1.25e-09 & 20.79 & 29.37 & 1.4  & 3.06 \\
+Sklansky    & 2.60 & 4  & 50 & 15 & 16 & 7  & 17 & 15 & 0.00127 & 0.000361 & 1.21e-09 & 17.87 & 26.46 & 1.46 & 2.41 \\
+Kogge-Stone & 2.19 & 15 & 50 & 1  & 0  & 85 & 7  & 25 & 0.00169 & 0.000522 & 1.61e-09 & 21.98 & 29.66 & 2.23 & 3.98 \\
+\hline
+\end{tabular}
+\label{tab:adders-detailed}
+\end{table}
+
+\section{Verilog HDL for all three tree adders.}
+\noindent Verilog HDL for the Brent-Kung Tree Adder.
 \begin{verbatim}
-     Startpoint: _01_ (rising edge-triggered flip-flop clocked by clk)
-     Endpoint: _49_ (rising edge-triggered flip-flop clocked by clk)
-     Path Group: clk
-     Path Type: max
-     
-       Delay    Time   Description
-     ---------------------------------------------------------
-        0.00    0.00   clock clk (rise edge)
-        0.00    0.00   clock network delay (ideal)
-        0.00    0.00 ^ _01_/CLK (sky130_fd_sc_hd__dfxtp_1)
-        0.31    0.31 v _01_/Q (sky130_fd_sc_hd__dfxtp_1)
-        0.37    0.67 v x1/_9_/X (sky130_fd_sc_hd__maj3_1)
-        0.37    1.04 v x2/_9_/X (sky130_fd_sc_hd__maj3_1)
-        0.37    1.41 v x3/_9_/X (sky130_fd_sc_hd__maj3_1)
-        0.34    1.75 v x4/_9_/X (sky130_fd_sc_hd__maj3_1)
-        0.31    2.06 v x5/_4_/X (sky130_fd_sc_hd__mux2_1)
-        0.37    2.43 v x6/_9_/X (sky130_fd_sc_hd__maj3_1)
-        0.37    2.80 v x7/_9_/X (sky130_fd_sc_hd__maj3_1)
-        0.37    3.16 v x8/_9_/X (sky130_fd_sc_hd__maj3_1)
-        0.34    3.50 v x9/_9_/X (sky130_fd_sc_hd__maj3_1)
-        0.31    3.81 v x10/_4_/X (sky130_fd_sc_hd__mux2_1)
-        0.37    4.18 v x11/_9_/X (sky130_fd_sc_hd__maj3_1)
-        0.37    4.55 v x12/_9_/X (sky130_fd_sc_hd__maj3_1)
-        0.37    4.92 v x13/_9_/X (sky130_fd_sc_hd__maj3_1)
-        0.34    5.26 v x14/_9_/X (sky130_fd_sc_hd__maj3_1)
-        0.31    5.57 v x15/_4_/X (sky130_fd_sc_hd__mux2_1)
-        0.37    5.94 v x16/_9_/X (sky130_fd_sc_hd__maj3_1)
-        0.37    6.30 v x17/_9_/X (sky130_fd_sc_hd__maj3_1)
-        0.37    6.67 v x18/_9_/X (sky130_fd_sc_hd__maj3_1)
-        0.34    7.01 v x19/_9_/X (sky130_fd_sc_hd__maj3_1)
-        0.27    7.28 v x20/_4_/X (sky130_fd_sc_hd__mux2_1)
-        0.00    7.28 v _49_/D (sky130_fd_sc_hd__dfxtp_1)
-                7.28   data arrival time
-     
-        5.66    5.66   clock clk (rise edge)
-        0.00    5.66   clock network delay (ideal)
-        0.00    5.66   clock reconvergence pessimism
-                5.66 ^ _49_/CLK (sky130_fd_sc_hd__dfxtp_1)
-       -0.12    5.54   library setup time
-                5.54   data required time
-     ---------------------------------------------------------
-                5.54   data required time
-               -7.28   data arrival time
-     ---------------------------------------------------------
-               -1.75   slack (VIOLATED)
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/brent-kung/adder.sch
+module adder
+(
+  output reg s1,
+  output reg s2,
+  output reg s3,
+  output reg s4,
+  output reg s5,
+  output reg s6,
+  output reg s7,
+  output reg s8,
+  output reg s9,
+  output reg s10,
+  output reg s11,
+  output reg s12,
+  output reg s13,
+  output reg s14,
+  output reg s15,
+  output reg s16,
+  output reg cout,
+  input wire b16,
+  input wire a16,
+  input wire b15,
+  input wire a15,
+  input wire b14,
+  input wire a14,
+  input wire b13,
+  input wire a13,
+  input wire b12,
+  input wire a12,
+  input wire b11,
+  input wire a11,
+  input wire b10,
+  input wire a10,
+  input wire b9,
+  input wire a9,
+  input wire b8,
+  input wire a8,
+  input wire b7,
+  input wire a7,
+  input wire b6,
+  input wire a6,
+  input wire b5,
+  input wire a5,
+  input wire b4,
+  input wire a4,
+  input wire b3,
+  input wire a3,
+  input wire b2,
+  input wire a2,
+  input wire b1,
+  input wire a1,
+  input wire cin,
+  input clk
+);
+// Internal wires for combinational logic
+wire net10 ;
+wire net11 ;
+wire net12 ;
+wire net13 ;
+wire net14 ;
+wire net15 ;
+wire net16 ;
+wire net17 ;
+wire net18 ;
+wire net19 ;
+wire net20 ;
+wire net21 ;
+wire net22 ;
+wire net23 ;
+wire net24 ;
+wire net25 ;
+wire net26 ;
+wire net27 ;
+wire net28 ;
+wire net29 ;
+wire net30 ;
+wire net31 ;
+wire net32 ;
+wire net33 ;
+wire net34 ;
+wire net35 ;
+wire net36 ;
+wire net37 ;
+wire net38 ;
+wire net39 ;
+wire net40 ;
+wire net41 ;
+wire net42 ;
+wire net43 ;
+wire net44 ;
+wire net45 ;
+wire net46 ;
+wire net47 ;
+wire net48 ;
+wire net49 ;
+wire net50 ;
+wire net51 ;
+wire net52 ;
+wire net53 ;
+wire net54 ;
+wire net55 ;
+wire net56 ;
+wire net57 ;
+wire net58 ;
+wire net59 ;
+wire net60 ;
+wire net61 ;
+wire net62 ;
+wire net63 ;
+wire net64 ;
+wire net65 ;
+wire net66 ;
+wire net67 ;
+wire net68 ;
+wire net69 ;
+wire net70 ;
+wire net71 ;
+wire net72 ;
+wire net73 ;
+wire net74 ;
+wire net75 ;
+wire net76 ;
+wire net77 ;
+wire net1 ;
+wire net2 ;
+wire net3 ;
+wire net4 ;
+wire net5 ;
+wire net6 ;
+wire net7 ;
+wire net8 ;
+wire net9 ;
+
+// Registered input signals
+reg reg_a1, reg_a2, reg_a3, reg_a4, reg_a5, reg_a6, reg_a7, reg_a8, reg_a9, reg_a10, reg_a11, reg_a12, reg_a13, reg_a14, reg_a15, reg_a16;
+reg reg_b1, reg_b2, reg_b3, reg_b4, reg_b5, reg_b6, reg_b7, reg_b8, reg_b9, reg_b10, reg_b11, reg_b12, reg_b13, reg_b14, reg_b15, reg_b16;
+reg reg_cin;
+
+// Wires for sum outputs from combinational logic
+wire sum1, sum2, sum3, sum4, sum5, sum6, sum7, sum8, sum9, sum10, sum11, sum12, sum13, sum14, sum15, sum16;
+wire carry_out;
+
+// Register all inputs at the positive edge of the clock
+always @(posedge clk) begin
+  reg_a1 <= a1;
+  reg_a2 <= a2;
+  reg_a3 <= a3;
+  reg_a4 <= a4;
+  reg_a5 <= a5;
+  reg_a6 <= a6;
+  reg_a7 <= a7;
+  reg_a8 <= a8;
+  reg_a9 <= a9;
+  reg_a10 <= a10;
+  reg_a11 <= a11;
+  reg_a12 <= a12;
+  reg_a13 <= a13;
+  reg_a14 <= a14;
+  reg_a15 <= a15;
+  reg_a16 <= a16;
+  
+  reg_b1 <= b1;
+  reg_b2 <= b2;
+  reg_b3 <= b3;
+  reg_b4 <= b4;
+  reg_b5 <= b5;
+  reg_b6 <= b6;
+  reg_b7 <= b7;
+  reg_b8 <= b8;
+  reg_b9 <= b9;
+  reg_b10 <= b10;
+  reg_b11 <= b11;
+  reg_b12 <= b12;
+  reg_b13 <= b13;
+  reg_b14 <= b14;
+  reg_b15 <= b15;
+  reg_b16 <= b16;
+  
+  reg_cin <= cin;
+end
+
+// Connect registered inputs to the adder logic
+G
+x2 ( 
+ .A( reg_a1 ),
+ .G( net4 ),
+ .B( reg_b1 )
+);
+
+
+P
+x3 ( 
+ .A( reg_a1 ),
+ .P( net3 ),
+ .B( reg_b1 )
+);
+
+
+G
+x4 ( 
+ .A( reg_a2 ),
+ .G( net2 ),
+ .B( reg_b2 )
+);
+
+
+P
+x5 ( 
+ .A( reg_a2 ),
+ .P( net1 ),
+ .B( reg_b2 )
+);
+
+
+G
+x6 ( 
+ .A( reg_a3 ),
+ .G( net8 ),
+ .B( reg_b3 )
+);
+
+
+P
+x7 ( 
+ .A( reg_a3 ),
+ .P( net7 ),
+ .B( reg_b3 )
+);
+
+
+G
+x8 ( 
+ .A( reg_a4 ),
+ .G( net6 ),
+ .B( reg_b4 )
+);
+
+
+P
+x9 ( 
+ .A( reg_a4 ),
+ .P( net5 ),
+ .B( reg_b4 )
+);
+
+
+G
+x10 ( 
+ .A( reg_a5 ),
+ .G( net12 ),
+ .B( reg_b5 )
+);
+
+
+P
+x11 ( 
+ .A( reg_a5 ),
+ .P( net11 ),
+ .B( reg_b5 )
+);
+
+
+G
+x12 ( 
+ .A( reg_a6 ),
+ .G( net10 ),
+ .B( reg_b6 )
+);
+
+
+P
+x13 ( 
+ .A( reg_a6 ),
+ .P( net9 ),
+ .B( reg_b6 )
+);
+
+
+G
+x14 ( 
+ .A( reg_a7 ),
+ .G( net16 ),
+ .B( reg_b7 )
+);
+
+
+P
+x15 ( 
+ .A( reg_a7 ),
+ .P( net15 ),
+ .B( reg_b7 )
+);
+
+
+G
+x16 ( 
+ .A( reg_a8 ),
+ .G( net14 ),
+ .B( reg_b8 )
+);
+
+
+P
+x17 ( 
+ .A( reg_a8 ),
+ .P( net13 ),
+ .B( reg_b8 )
+);
+
+
+G
+x18 ( 
+ .A( reg_a9 ),
+ .G( net20 ),
+ .B( reg_b9 )
+);
+
+
+P
+x19 ( 
+ .A( reg_a9 ),
+ .P( net19 ),
+ .B( reg_b9 )
+);
+
+
+G
+x20 ( 
+ .A( reg_a10 ),
+ .G( net18 ),
+ .B( reg_b10 )
+);
+
+
+P
+x21 ( 
+ .A( reg_a10 ),
+ .P( net17 ),
+ .B( reg_b10 )
+);
+
+
+G
+x22 ( 
+ .A( reg_a11 ),
+ .G( net24 ),
+ .B( reg_b11 )
+);
+
+
+P
+x23 ( 
+ .A( reg_a11 ),
+ .P( net23 ),
+ .B( reg_b11 )
+);
+
+
+G
+x24 ( 
+ .A( reg_a12 ),
+ .G( net22 ),
+ .B( reg_b12 )
+);
+
+
+P
+x25 ( 
+ .A( reg_a12 ),
+ .P( net21 ),
+ .B( reg_b12 )
+);
+
+
+G
+x26 ( 
+ .A( reg_a13 ),
+ .G( net28 ),
+ .B( reg_b13 )
+);
+
+
+P
+x27 ( 
+ .A( reg_a13 ),
+ .P( net27 ),
+ .B( reg_b13 )
+);
+
+
+G
+x28 ( 
+ .A( reg_a14 ),
+ .G( net26 ),
+ .B( reg_b14 )
+);
+
+
+P
+x29 ( 
+ .A( reg_a14 ),
+ .P( net25 ),
+ .B( reg_b14 )
+);
+
+
+G
+x30 ( 
+ .A( reg_a15 ),
+ .G( net32 ),
+ .B( reg_b15 )
+);
+
+
+P
+x31 ( 
+ .A( reg_a15 ),
+ .P( net31 ),
+ .B( reg_b15 )
+);
+
+
+G
+x32 ( 
+ .A( reg_a16 ),
+ .G( net30 ),
+ .B( reg_b16 )
+);
+
+
+P
+x33 ( 
+ .A( reg_a16 ),
+ .P( net29 ),
+ .B( reg_b16 )
+);
+
+
+sum
+x63 ( 
+ .P( net3 ),
+ .S( sum1 ),
+ .C( net77 )
+);
+
+
+sum
+x64 ( 
+ .P( net35 ),
+ .S( sum2 ),
+ .C( net61 )
+);
+
+
+sum
+x65 ( 
+ .P( net7 ),
+ .S( sum3 ),
+ .C( net76 )
+);
+
+
+sum
+x66 ( 
+ .P( net51 ),
+ .S( sum4 ),
+ .C( net62 )
+);
+
+
+sum
+x67 ( 
+ .P( net11 ),
+ .S( sum5 ),
+ .C( net75 )
+);
+
+
+sum
+x68 ( 
+ .P( net39 ),
+ .S( sum6 ),
+ .C( net63 )
+);
+
+
+sum
+x69 ( 
+ .P( net15 ),
+ .S( sum7 ),
+ .C( net74 )
+);
+
+
+sum
+x70 ( 
+ .P( net59 ),
+ .S( sum8 ),
+ .C( net64 )
+);
+
+
+sum
+x71 ( 
+ .P( net19 ),
+ .S( sum9 ),
+ .C( net73 )
+);
+
+
+sum
+x72 ( 
+ .P( net43 ),
+ .S( sum10 ),
+ .C( net65 )
+);
+
+
+sum
+x73 ( 
+ .P( net23 ),
+ .S( sum11 ),
+ .C( net72 )
+);
+
+
+sum
+x74 ( 
+ .P( net55 ),
+ .S( sum12 ),
+ .C( net66 )
+);
+
+
+sum
+x75 ( 
+ .P( net27 ),
+ .S( sum13 ),
+ .C( net71 )
+);
+
+
+sum
+x76 ( 
+ .P( net47 ),
+ .S( sum14 ),
+ .C( net67 )
+);
+
+
+sum
+x77 ( 
+ .P( net31 ),
+ .S( sum15 ),
+ .C( net70 )
+);
+
+
+sum
+x78 ( 
+ .P( net68 ),
+ .S( sum16 ),
+ .C( carry_out )
+);
+
+// Register all outputs at the positive edge of the clock
+always @(posedge clk) begin
+  s1 <= sum1;
+  s2 <= sum2;
+  s3 <= sum3;
+  s4 <= sum4;
+  s5 <= sum5;
+  s6 <= sum6;
+  s7 <= sum7;
+  s8 <= sum8;
+  s9 <= sum9;
+  s10 <= sum10;
+  s11 <= sum11;
+  s12 <= sum12;
+  s13 <= sum13;
+  s14 <= sum14;
+  s15 <= sum15;
+  s16 <= sum16;
+  cout <= carry_out;
+end
+
+
+dot
+x79 ( 
+ .g1( net4 ),
+ .G( net36 ),
+ .p1( net3 ),
+ .P( net35 ),
+ .g2( net2 ),
+ .p2( net1 )
+);
+
+
+carry
+x80 ( 
+ .g( net4 ),
+ .C( net77 ),
+ .p( net3 ),
+ .c( reg_cin )
+);
+
+
+dot
+x1 ( 
+ .g1( net8 ),
+ .G( net34 ),
+ .p1( net7 ),
+ .P( net33 ),
+ .g2( net6 ),
+ .p2( net5 )
+);
+
+
+dot
+x34 ( 
+ .g1( net12 ),
+ .G( net40 ),
+ .p1( net11 ),
+ .P( net39 ),
+ .g2( net10 ),
+ .p2( net9 )
+);
+
+
+dot
+x35 ( 
+ .g1( net16 ),
+ .G( net38 ),
+ .p1( net15 ),
+ .P( net37 ),
+ .g2( net14 ),
+ .p2( net13 )
+);
+
+
+dot
+x36 ( 
+ .g1( net20 ),
+ .G( net44 ),
+ .p1( net19 ),
+ .P( net43 ),
+ .g2( net18 ),
+ .p2( net17 )
+);
+
+
+dot
+x37 ( 
+ .g1( net24 ),
+ .G( net42 ),
+ .p1( net23 ),
+ .P( net41 ),
+ .g2( net22 ),
+ .p2( net21 )
+);
+
+
+dot
+x38 ( 
+ .g1( net28 ),
+ .G( net48 ),
+ .p1( net27 ),
+ .P( net47 ),
+ .g2( net26 ),
+ .p2( net25 )
+);
+
+
+dot
+x39 ( 
+ .g1( net32 ),
+ .G( net46 ),
+ .p1( net31 ),
+ .P( net45 ),
+ .g2( net30 ),
+ .p2( net29 )
+);
+
+
+dot
+x40 ( 
+ .g1( net36 ),
+ .G( net52 ),
+ .p1( net35 ),
+ .P( net51 ),
+ .g2( net34 ),
+ .p2( net33 )
+);
+
+
+dot
+x41 ( 
+ .g1( net40 ),
+ .G( net50 ),
+ .p1( net39 ),
+ .P( net49 ),
+ .g2( net38 ),
+ .p2( net37 )
+);
+
+
+dot
+x42 ( 
+ .g1( net44 ),
+ .G( net56 ),
+ .p1( net43 ),
+ .P( net55 ),
+ .g2( net42 ),
+ .p2( net41 )
+);
+
+
+dot
+x43 ( 
+ .g1( net48 ),
+ .G( net54 ),
+ .p1( net47 ),
+ .P( net53 ),
+ .g2( net46 ),
+ .p2( net45 )
+);
+
+
+dot
+x44 ( 
+ .g1( net52 ),
+ .G( net60 ),
+ .p1( net51 ),
+ .P( net59 ),
+ .g2( net50 ),
+ .p2( net49 )
+);
+
+
+dot
+x45 ( 
+ .g1( net56 ),
+ .G( net58 ),
+ .p1( net55 ),
+ .P( net57 ),
+ .g2( net54 ),
+ .p2( net53 )
+);
+
+
+dot
+x46 ( 
+ .g1( net60 ),
+ .G( net69 ),
+ .p1( net59 ),
+ .P( net68 ),
+ .g2( net58 ),
+ .p2( net57 )
+);
+
+
+carry
+x47 ( 
+ .g( net36 ),
+ .C( net61 ),
+ .p( net35 ),
+ .c( reg_cin )
+);
+
+
+carry
+x48 ( 
+ .g( net8 ),
+ .C( net76 ),
+ .p( net7 ),
+ .c( net61 )
+);
+
+
+carry
+x49 ( 
+ .g( net52 ),
+ .C( net62 ),
+ .p( net51 ),
+ .c( reg_cin )
+);
+
+
+carry
+x50 ( 
+ .g( net12 ),
+ .C( net75 ),
+ .p( net11 ),
+ .c( net62 )
+);
+
+
+carry
+x51 ( 
+ .g( net40 ),
+ .C( net63 ),
+ .p( net39 ),
+ .c( net62 )
+);
+
+
+carry
+x52 ( 
+ .g( net16 ),
+ .C( net74 ),
+ .p( net15 ),
+ .c( net63 )
+);
+
+
+carry
+x53 ( 
+ .g( net60 ),
+ .C( net64 ),
+ .p( net59 ),
+ .c( reg_cin )
+);
+
+
+carry
+x54 ( 
+ .g( net20 ),
+ .C( net73 ),
+ .p( net19 ),
+ .c( net64 )
+);
+
+
+carry
+x55 ( 
+ .g( net44 ),
+ .C( net65 ),
+ .p( net43 ),
+ .c( net64 )
+);
+
+
+carry
+x56 ( 
+ .g( net24 ),
+ .C( net72 ),
+ .p( net23 ),
+ .c( net65 )
+);
+
+
+carry
+x57 ( 
+ .g( net56 ),
+ .C( net66 ),
+ .p( net55 ),
+ .c( net64 )
+);
+
+
+carry
+x58 ( 
+ .g( net69 ),
+ .C( carry_out ),
+ .p( net68 ),
+ .c( net64 )
+);
+
+
+carry
+x59 ( 
+ .g( net28 ),
+ .C( net71 ),
+ .p( net27 ),
+ .c( net66 )
+);
+
+
+carry
+x60 ( 
+ .g( net48 ),
+ .C( net67 ),
+ .p( net47 ),
+ .c( net66 )
+);
+
+
+carry
+x61 ( 
+ .g( net32 ),
+ .C( net70 ),
+ .p( net31 ),
+ .c( net67 )
+);
+
+endmodule
+
+// expanding   symbol:  G.sym # of pins=3
+// sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/G.sym
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/G.sch
+module G
+(
+  input wire A,
+  output wire G,
+  input wire B
+);
+assign G = A & B;
+// noconn G
+// noconn A
+// noconn B
+endmodule
+
+// expanding   symbol:  P.sym # of pins=3
+// sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/P.sym
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/P.sch
+module P
+(
+  input wire A,
+  output wire P,
+  input wire B
+);
+assign P = A ^ B;
+// noconn P
+// noconn A
+// noconn B
+endmodule
+
+// expanding   symbol:  sum.sym # of pins=3
+// sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/sum.sym
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/sum.sch
+module sum
+(
+  input wire P,
+  output wire S,
+  input wire C
+);
+assign S = P ^ C;
+// noconn S
+// noconn P
+// noconn C
+endmodule
+
+// expanding   symbol:  dot.sym # of pins=6
+// sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/dot.sym
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/dot.sch
+module dot
+(
+  input wire g1,
+  output wire G,
+  input wire p1,
+  output wire P,
+  input wire g2,
+  input wire p2
+);
+// noconn G
+// noconn P
+// noconn g1
+// noconn p1
+// noconn g2
+// noconn p2
+assign G = g2 | (p2 & g1);
+assign P = p1 & p2;
+
+endmodule
+
+// expanding   symbol:  carry.sym # of pins=4
+// sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/carry.sym
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/carry.sch
+module carry
+(
+  input wire g,
+  output wire C,
+  input wire p,
+  input wire c
+);
+assign C = g | (p & c);
+// noconn C
+// noconn g
+// noconn p
+// noconn c
+endmodule
 \end{verbatim}
 
-Added False paths using:
+\noindent Verilog HDL for the Sklansky Tree Adder
+
 \begin{verbatim}
-     set_false_path -through [get_pins -of_objects [get_nets net5]] -through [get_pins -of_objects [get_nets net10]] -through [get_pins -of_objects [get_nets net15]]
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/brent-kung/adder.sch
+module adder
+(
+  output reg s1,
+  output reg s2,
+  output reg s3,
+  output reg s4,
+  output reg s5,
+  output reg s6,
+  output reg s7,
+  output reg s8,
+  output reg s9,
+  output reg s10,
+  output reg s11,
+  output reg s12,
+  output reg s13,
+  output reg s14,
+  output reg s15,
+  output reg s16,
+  output reg cout,
+  input wire b16,
+  input wire a16,
+  input wire b15,
+  input wire a15,
+  input wire b14,
+  input wire a14,
+  input wire b13,
+  input wire a13,
+  input wire b12,
+  input wire a12,
+  input wire b11,
+  input wire a11,
+  input wire b10,
+  input wire a10,
+  input wire b9,
+  input wire a9,
+  input wire b8,
+  input wire a8,
+  input wire b7,
+  input wire a7,
+  input wire b6,
+  input wire a6,
+  input wire b5,
+  input wire a5,
+  input wire b4,
+  input wire a4,
+  input wire b3,
+  input wire a3,
+  input wire b2,
+  input wire a2,
+  input wire b1,
+  input wire a1,
+  input wire cin,
+  input wire clk
+);
+wire net10 ;
+wire net11 ;
+wire net12 ;
+wire net13 ;
+wire net14 ;
+wire net15 ;
+wire net16 ;
+wire net17 ;
+wire net18 ;
+wire net19 ;
+wire net20 ;
+wire net21 ;
+wire net22 ;
+wire net23 ;
+wire net24 ;
+wire net25 ;
+wire net26 ;
+wire net27 ;
+wire net28 ;
+wire net29 ;
+wire net30 ;
+wire net31 ;
+wire net32 ;
+wire net33 ;
+wire net34 ;
+wire net35 ;
+wire net36 ;
+wire net37 ;
+wire net38 ;
+wire net39 ;
+wire net40 ;
+wire net41 ;
+wire net42 ;
+wire net43 ;
+wire net44 ;
+wire net45 ;
+wire net46 ;
+wire net47 ;
+wire net48 ;
+wire net49 ;
+wire net50 ;
+wire net51 ;
+wire net52 ;
+wire net53 ;
+wire net54 ;
+wire net55 ;
+wire net56 ;
+wire net57 ;
+wire net58 ;
+wire net59 ;
+wire net60 ;
+wire net61 ;
+wire net62 ;
+wire net63 ;
+wire net64 ;
+wire net65 ;
+wire net66 ;
+wire net67 ;
+wire net68 ;
+wire net69 ;
+wire net70 ;
+wire net71 ;
+wire net72 ;
+wire net73 ;
+wire net74 ;
+wire net75 ;
+wire net1 ;
+wire net2 ;
+wire net3 ;
+wire net4 ;
+wire net5 ;
+wire net6 ;
+wire net7 ;
+wire net8 ;
+wire net9 ;
+
+// Registered input signals
+reg reg_a1, reg_a2, reg_a3, reg_a4, reg_a5, reg_a6, reg_a7, reg_a8, reg_a9, reg_a10, reg_a11, reg_a12, reg_a13, reg_a14, reg_a15, reg_a16;
+reg reg_b1, reg_b2, reg_b3, reg_b4, reg_b5, reg_b6, reg_b7, reg_b8, reg_b9, reg_b10, reg_b11, reg_b12, reg_b13, reg_b14, reg_b15, reg_b16;
+reg reg_cin;
+
+// Wires for sum outputs from combinational logic
+wire sum1, sum2, sum3, sum4, sum5, sum6, sum7, sum8, sum9, sum10, sum11, sum12, sum13, sum14, sum15, sum16;
+wire carry_out;
+
+// Register all inputs at the positive edge of the clock
+always @(posedge clk) begin
+  reg_a1 <= a1;
+  reg_a2 <= a2;
+  reg_a3 <= a3;
+  reg_a4 <= a4;
+  reg_a5 <= a5;
+  reg_a6 <= a6;
+  reg_a7 <= a7;
+  reg_a8 <= a8;
+  reg_a9 <= a9;
+  reg_a10 <= a10;
+  reg_a11 <= a11;
+  reg_a12 <= a12;
+  reg_a13 <= a13;
+  reg_a14 <= a14;
+  reg_a15 <= a15;
+  reg_a16 <= a16;
+  
+  reg_b1 <= b1;
+  reg_b2 <= b2;
+  reg_b3 <= b3;
+  reg_b4 <= b4;
+  reg_b5 <= b5;
+  reg_b6 <= b6;
+  reg_b7 <= b7;
+  reg_b8 <= b8;
+  reg_b9 <= b9;
+  reg_b10 <= b10;
+  reg_b11 <= b11;
+  reg_b12 <= b12;
+  reg_b13 <= b13;
+  reg_b14 <= b14;
+  reg_b15 <= b15;
+  reg_b16 <= b16;
+  
+  reg_cin <= cin;
+end
+
+dot
+x1 ( 
+ .g1( net2 ),
+ .G( net36 ),
+ .p1( net1 ),
+ .P( net35 ),
+ .g2( net4 ),
+ .p2( net3 )
+);
+
+
+G
+x2 ( 
+ .A( reg_a1 ),
+ .G( net2 ),
+ .B( reg_b1 )
+);
+
+
+P
+x3 ( 
+ .A( reg_a1 ),
+ .P( net1 ),
+ .B( reg_b1 )
+);
+
+
+G
+x4 ( 
+ .A( reg_a2 ),
+ .G( net4 ),
+ .B( reg_b2 )
+);
+
+
+P
+x5 ( 
+ .A( reg_a2 ),
+ .P( net3 ),
+ .B( reg_b2 )
+);
+
+
+G
+x6 ( 
+ .A( reg_a3 ),
+ .G( net6 ),
+ .B( reg_b3 )
+);
+
+
+P
+x7 ( 
+ .A( reg_a3 ),
+ .P( net5 ),
+ .B( reg_b3 )
+);
+
+
+G
+x8 ( 
+ .A( reg_a4 ),
+ .G( net8 ),
+ .B( reg_b4 )
+);
+
+
+P
+x9 ( 
+ .A( reg_a4 ),
+ .P( net7 ),
+ .B( reg_b4 )
+);
+
+
+G
+x10 ( 
+ .A( reg_a5 ),
+ .G( net10 ),
+ .B( reg_b5 )
+);
+
+
+P
+x11 ( 
+ .A( reg_a5 ),
+ .P( net9 ),
+ .B( reg_b5 )
+);
+
+
+G
+x12 ( 
+ .A( reg_a6 ),
+ .G( net12 ),
+ .B( reg_b6 )
+);
+
+
+P
+x13 ( 
+ .A( reg_a6 ),
+ .P( net11 ),
+ .B( reg_b6 )
+);
+
+
+G
+x14 ( 
+ .A( reg_a7 ),
+ .G( net14 ),
+ .B( reg_b7 )
+);
+
+
+P
+x15 ( 
+ .A( reg_a7 ),
+ .P( net13 ),
+ .B( reg_b7 )
+);
+
+
+G
+x16 ( 
+ .A( reg_a8 ),
+ .G( net16 ),
+ .B( reg_b8 )
+);
+
+
+P
+x17 ( 
+ .A( reg_a8 ),
+ .P( net15 ),
+ .B( reg_b8 )
+);
+
+
+G
+x18 ( 
+ .A( reg_a9 ),
+ .G( net18 ),
+ .B( reg_b9 )
+);
+
+
+P
+x19 ( 
+ .A( reg_a9 ),
+ .P( net17 ),
+ .B( reg_b9 )
+);
+
+
+G
+x20 ( 
+ .A( reg_a10 ),
+ .G( net20 ),
+ .B( reg_b10 )
+);
+
+
+P
+x21 ( 
+ .A( reg_a10 ),
+ .P( net19 ),
+ .B( reg_b10 )
+);
+
+
+G
+x22 ( 
+ .A( reg_a11 ),
+ .G( net22 ),
+ .B( reg_b11 )
+);
+
+
+P
+x23 ( 
+ .A( reg_a11 ),
+ .P( net21 ),
+ .B( reg_b11 )
+);
+
+
+G
+x24 ( 
+ .A( reg_a12 ),
+ .G( net24 ),
+ .B( reg_b12 )
+);
+
+
+P
+x25 ( 
+ .A( reg_a12 ),
+ .P( net23 ),
+ .B( reg_b12 )
+);
+
+
+G
+x26 ( 
+ .A( reg_a13 ),
+ .G( net26 ),
+ .B( reg_b13 )
+);
+
+
+P
+x27 ( 
+ .A( reg_a13 ),
+ .P( net25 ),
+ .B( reg_b13 )
+);
+
+
+G
+x28 ( 
+ .A( reg_a14 ),
+ .G( net28 ),
+ .B( reg_b14 )
+);
+
+
+P
+x29 ( 
+ .A( reg_a14 ),
+ .P( net27 ),
+ .B( reg_b14 )
+);
+
+
+G
+x30 ( 
+ .A( reg_a15 ),
+ .G( net30 ),
+ .B( reg_b15 )
+);
+
+
+P
+x31 ( 
+ .A( reg_a15 ),
+ .P( net29 ),
+ .B( reg_b15 )
+);
+
+
+G
+x32 ( 
+ .A( reg_a16 ),
+ .G( net32 ),
+ .B( reg_b16 )
+);
+
+
+P
+x33 ( 
+ .A( reg_a16 ),
+ .P( net31 ),
+ .B( reg_b16 )
+);
+
+
+dot
+x34 ( 
+ .g1( net6 ),
+ .G( net34 ),
+ .p1( net5 ),
+ .P( net33 ),
+ .g2( net8 ),
+ .p2( net7 )
+);
+
+
+dot
+x35 ( 
+ .g1( net10 ),
+ .G( net40 ),
+ .p1( net9 ),
+ .P( net39 ),
+ .g2( net12 ),
+ .p2( net11 )
+);
+
+
+dot
+x36 ( 
+ .g1( net14 ),
+ .G( net38 ),
+ .p1( net13 ),
+ .P( net37 ),
+ .g2( net16 ),
+ .p2( net15 )
+);
+
+
+dot
+x37 ( 
+ .g1( net18 ),
+ .G( net44 ),
+ .p1( net17 ),
+ .P( net43 ),
+ .g2( net20 ),
+ .p2( net19 )
+);
+
+
+dot
+x38 ( 
+ .g1( net22 ),
+ .G( net42 ),
+ .p1( net21 ),
+ .P( net41 ),
+ .g2( net24 ),
+ .p2( net23 )
+);
+
+
+dot
+x39 ( 
+ .g1( net26 ),
+ .G( net48 ),
+ .p1( net25 ),
+ .P( net47 ),
+ .g2( net28 ),
+ .p2( net27 )
+);
+
+
+dot
+x40 ( 
+ .g1( net30 ),
+ .G( net46 ),
+ .p1( net29 ),
+ .P( net45 ),
+ .g2( net32 ),
+ .p2( net31 )
+);
+
+
+dot
+x41 ( 
+ .g1( net36 ),
+ .G( net56 ),
+ .p1( net35 ),
+ .P( net55 ),
+ .g2( net34 ),
+ .p2( net33 )
+);
+
+
+dot
+x42 ( 
+ .g1( net40 ),
+ .G( net54 ),
+ .p1( net39 ),
+ .P( net53 ),
+ .g2( net38 ),
+ .p2( net37 )
+);
+
+
+dot
+x43 ( 
+ .g1( net44 ),
+ .G( net52 ),
+ .p1( net43 ),
+ .P( net51 ),
+ .g2( net42 ),
+ .p2( net41 )
+);
+
+
+dot
+x44 ( 
+ .g1( net48 ),
+ .G( net50 ),
+ .p1( net47 ),
+ .P( net49 ),
+ .g2( net46 ),
+ .p2( net45 )
+);
+
+
+dot
+x45 ( 
+ .g1( net56 ),
+ .G( net66 ),
+ .p1( net55 ),
+ .P( net65 ),
+ .g2( net54 ),
+ .p2( net53 )
+);
+
+
+dot
+x46 ( 
+ .g1( net52 ),
+ .G( net67 ),
+ .p1( net51 ),
+ .P( net68 ),
+ .g2( net50 ),
+ .p2( net49 )
+);
+
+
+carry
+x47 ( 
+ .g( net2 ),
+ .C( net57 ),
+ .p( net1 ),
+ .c( reg_cin )
+);
+
+
+carry
+x48 ( 
+ .g( net36 ),
+ .C( net58 ),
+ .p( net35 ),
+ .c( net57 )
+);
+
+
+carry
+x49 ( 
+ .g( net6 ),
+ .C( net75 ),
+ .p( net5 ),
+ .c( net58 )
+);
+
+
+carry
+x50 ( 
+ .g( net56 ),
+ .C( net59 ),
+ .p( net55 ),
+ .c( reg_cin )
+);
+
+
+carry
+x51 ( 
+ .g( net10 ),
+ .C( net74 ),
+ .p( net9 ),
+ .c( net59 )
+);
+
+
+carry
+x52 ( 
+ .g( net40 ),
+ .C( net60 ),
+ .p( net39 ),
+ .c( net59 )
+);
+
+
+carry
+x53 ( 
+ .g( net14 ),
+ .C( net73 ),
+ .p( net13 ),
+ .c( net60 )
+);
+
+
+carry
+x54 ( 
+ .g( net66 ),
+ .C( net61 ),
+ .p( net65 ),
+ .c( reg_cin )
+);
+
+
+carry
+x55 ( 
+ .g( net18 ),
+ .C( net72 ),
+ .p( net17 ),
+ .c( net61 )
+);
+
+
+carry
+x56 ( 
+ .g( net44 ),
+ .C( net62 ),
+ .p( net43 ),
+ .c( net61 )
+);
+
+
+carry
+x57 ( 
+ .g( net22 ),
+ .C( net71 ),
+ .p( net21 ),
+ .c( net62 )
+);
+
+
+carry
+x58 ( 
+ .g( net52 ),
+ .C( net63 ),
+ .p( net51 ),
+ .c( net61 )
+);
+
+
+carry
+x59 ( 
+ .g( net26 ),
+ .C( net70 ),
+ .p( net25 ),
+ .c( net63 )
+);
+
+
+carry
+x60 ( 
+ .g( net48 ),
+ .C( net64 ),
+ .p( net47 ),
+ .c( net63 )
+);
+
+
+carry
+x61 ( 
+ .g( net30 ),
+ .C( net69 ),
+ .p( net29 ),
+ .c( net64 )
+);
+
+
+carry
+x62 ( 
+ .g( net67 ),
+ .C( carry_out ),
+ .p( net68 ),
+ .c( net61 )
+);
+
+
+sum
+x63 ( 
+ .P( net57 ),
+ .S( sum1 ),
+ .C( net1 )
+);
+
+
+sum
+x64 ( 
+ .P( net58 ),
+ .S( sum2 ),
+ .C( net3 )
+);
+
+
+sum
+x65 ( 
+ .P( net75 ),
+ .S( sum3 ),
+ .C( net5 )
+);
+
+
+sum
+x66 ( 
+ .P( net59 ),
+ .S( sum4 ),
+ .C( net7 )
+);
+
+
+sum
+x67 ( 
+ .P( net74 ),
+ .S( sum5 ),
+ .C( net9 )
+);
+
+
+sum
+x68 ( 
+ .P( net60 ),
+ .S( sum6 ),
+ .C( net11 )
+);
+
+
+sum
+x69 ( 
+ .P( net73 ),
+ .S( sum7 ),
+ .C( net13 )
+);
+
+
+sum
+x70 ( 
+ .P( net61 ),
+ .S( sum8 ),
+ .C( net15 )
+);
+
+
+sum
+x71 ( 
+ .P( net72 ),
+ .S( sum9 ),
+ .C( net17 )
+);
+
+
+sum
+x72 ( 
+ .P( net62 ),
+ .S( sum10 ),
+ .C( net19 )
+);
+
+
+sum
+x73 ( 
+ .P( net71 ),
+ .S( sum11 ),
+ .C( net21 )
+);
+
+
+sum
+x74 ( 
+ .P( net63 ),
+ .S( sum12 ),
+ .C( net23 )
+);
+
+
+sum
+x75 ( 
+ .P( net70 ),
+ .S( sum13 ),
+ .C( net25 )
+);
+
+
+sum
+x76 ( 
+ .P( net64 ),
+ .S( sum14 ),
+ .C( net27 )
+);
+
+
+sum
+x77 ( 
+ .P( net69 ),
+ .S( sum15 ),
+ .C( net29 )
+);
+
+
+sum
+x78 ( 
+ .P( carry_out ),
+ .S( sum16 ),
+ .C( net31 )
+);
+
+// Register all outputs at the positive edge of the clock
+always @(posedge clk) begin
+  s1 <= sum1;
+  s2 <= sum2;
+  s3 <= sum3;
+  s4 <= sum4;
+  s5 <= sum5;
+  s6 <= sum6;
+  s7 <= sum7;
+  s8 <= sum8;
+  s9 <= sum9;
+  s10 <= sum10;
+  s11 <= sum11;
+  s12 <= sum12;
+  s13 <= sum13;
+  s14 <= sum14;
+  s15 <= sum15;
+  s16 <= sum16;
+  cout <= carry_out;
+end
+
+endmodule
+
+// expanding   symbol:  dot.sym # of pins=6
+// sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/dot.sym
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/dot.sch
+module dot
+(
+  input wire g1,
+  output wire G,
+  input wire p1,
+  output wire P,
+  input wire g2,
+  input wire p2
+);
+// noconn G
+// noconn P
+// noconn g1
+// noconn p1
+// noconn g2
+// noconn p2
+assign G = g2 | (p2 & g1);
+assign P = p1 & p2;
+
+endmodule
+
+// expanding   symbol:  G.sym # of pins=3
+// sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/G.sym
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/G.sch
+module G
+(
+  input wire A,
+  output wire G,
+  input wire B
+);
+assign G = A & B;
+// noconn G
+// noconn A
+// noconn B
+endmodule
+
+// expanding   symbol:  P.sym # of pins=3
+// sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/P.sym
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/P.sch
+module P
+(
+  input wire A,
+  output wire P,
+  input wire B
+);
+assign P = A ^ B;
+// noconn P
+// noconn A
+// noconn B
+endmodule
+
+// expanding   symbol:  carry.sym # of pins=4
+// sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/carry.sym
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/carry.sch
+module carry
+(
+  input wire g,
+  output wire C,
+  input wire p,
+  input wire c
+);
+assign C = g | (p & c);
+// noconn C
+// noconn g
+// noconn p
+// noconn c
+endmodule
+
+// expanding   symbol:  sum.sym # of pins=3
+// sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/sum.sym
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/sum.sch
+module sum
+(
+  input wire P,
+  output wire S,
+  input wire C
+);
+assign S = P ^ C;
+// noconn S
+// noconn P
+// noconn C
+endmodule
 \end{verbatim}
 
-\noindent the net names were taken from the schematic.
-
-Path reported after adding false paths:
-
+\noindent Verilog HDL for the Kogge-Stone Tree Adder
 \begin{verbatim}
-     Startpoint: _09_ (rising edge-triggered flip-flop clocked by clk)
-Endpoint: _49_ (rising edge-triggered flip-flop clocked by clk)
-Path Group: clk
-Path Type: max
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/kogge-stone/adder.sch
+module adder
+(
+  output reg s1,
+  output reg s2,
+  output reg s3,
+  output reg s4,
+  output reg s5,
+  output reg s6,
+  output reg s7,
+  output reg s8,
+  output reg s9,
+  output reg s10,
+  output reg s11,
+  output reg s12,
+  output reg s13,
+  output reg s14,
+  output reg s15,
+  output reg s16,
+  output reg cout,
+  input wire b16,
+  input wire a16,
+  input wire b15,
+  input wire a15,
+  input wire b14,
+  input wire a14,
+  input wire b13,
+  input wire a13,
+  input wire b12,
+  input wire a12,
+  input wire b11,
+  input wire a11,
+  input wire b10,
+  input wire a10,
+  input wire b9,
+  input wire a9,
+  input wire b8,
+  input wire a8,
+  input wire b7,
+  input wire a7,
+  input wire b6,
+  input wire a6,
+  input wire b5,
+  input wire a5,
+  input wire b4,
+  input wire a4,
+  input wire b3,
+  input wire a3,
+  input wire b2,
+  input wire a2,
+  input wire b1,
+  input wire a1,
+  input wire cin,
+  input wire clk
+);
+// Internal wires for combinational logic
+wire net10 ;
+wire net11 ;
+wire net12 ;
+wire net13 ;
+wire net14 ;
+wire net15 ;
+wire net16 ;
+wire net17 ;
+wire net18 ;
+wire net19 ;
+wire net20 ;
+wire net21 ;
+wire net22 ;
+wire net23 ;
+wire net24 ;
+wire net25 ;
+wire net26 ;
+wire net27 ;
+wire net28 ;
+wire net29 ;
+wire net30 ;
+wire net31 ;
+wire net32 ;
+wire net33 ;
+wire net34 ;
+wire net35 ;
+wire net36 ;
+wire net37 ;
+wire net38 ;
+wire net39 ;
+wire net40 ;
+wire net41 ;
+wire net42 ;
+wire net43 ;
+wire net44 ;
+wire net45 ;
+wire net46 ;
+wire net47 ;
+wire net48 ;
+wire net49 ;
+wire net50 ;
+wire net51 ;
+wire net52 ;
+wire net53 ;
+wire net54 ;
+wire net55 ;
+wire net56 ;
 
-  Delay    Time   Description
----------------------------------------------------------
-   0.00    0.00   clock clk (rise edge)
-   0.00    0.00   clock network delay (ideal)
-   0.00    0.00 ^ _09_/CLK (sky130_fd_sc_hd__dfxtp_1)
-   0.31    0.31 v _09_/Q (sky130_fd_sc_hd__dfxtp_1)
-   0.37    0.67 v x6/_9_/X (sky130_fd_sc_hd__maj3_1)
-   0.37    1.04 v x7/_9_/X (sky130_fd_sc_hd__maj3_1)
-   0.37    1.41 v x8/_9_/X (sky130_fd_sc_hd__maj3_1)
-   0.34    1.75 v x9/_9_/X (sky130_fd_sc_hd__maj3_1)
-   0.31    2.06 v x10/_4_/X (sky130_fd_sc_hd__mux2_1)
-   0.37    2.43 v x11/_9_/X (sky130_fd_sc_hd__maj3_1)
-   0.37    2.80 v x12/_9_/X (sky130_fd_sc_hd__maj3_1)
-   0.37    3.16 v x13/_9_/X (sky130_fd_sc_hd__maj3_1)
-   0.34    3.50 v x14/_9_/X (sky130_fd_sc_hd__maj3_1)
-   0.31    3.81 v x15/_4_/X (sky130_fd_sc_hd__mux2_1)
-   0.37    4.18 v x16/_9_/X (sky130_fd_sc_hd__maj3_1)
-   0.37    4.55 v x17/_9_/X (sky130_fd_sc_hd__maj3_1)
-   0.37    4.92 v x18/_9_/X (sky130_fd_sc_hd__maj3_1)
-   0.34    5.26 v x19/_9_/X (sky130_fd_sc_hd__maj3_1)
-   0.27    5.53 v x20/_4_/X (sky130_fd_sc_hd__mux2_1)
-   0.00    5.53 v _49_/D (sky130_fd_sc_hd__dfxtp_1)
-           5.53   data arrival time
+// Registered input signals
+reg reg_a1, reg_a2, reg_a3, reg_a4, reg_a5, reg_a6, reg_a7, reg_a8, reg_a9, reg_a10, reg_a11, reg_a12, reg_a13, reg_a14, reg_a15, reg_a16;
+reg reg_b1, reg_b2, reg_b3, reg_b4, reg_b5, reg_b6, reg_b7, reg_b8, reg_b9, reg_b10, reg_b11, reg_b12, reg_b13, reg_b14, reg_b15, reg_b16;
+reg reg_cin;
 
-   5.66    5.66   clock clk (rise edge)
-   0.00    5.66   clock network delay (ideal)
-   0.00    5.66   clock reconvergence pessimism
-           5.66 ^ _49_/CLK (sky130_fd_sc_hd__dfxtp_1)
-  -0.12    5.54   library setup time
-           5.54   data required time
----------------------------------------------------------
-           5.54   data required time
-          -5.53   data arrival time
----------------------------------------------------------
-           0.01   slack (MET)
+// Wires for sum outputs from combinational logic
+wire sum1, sum2, sum3, sum4, sum5, sum6, sum7, sum8, sum9, sum10, sum11, sum12, sum13, sum14, sum15, sum16;
+wire carry_out;
+
+// Register all inputs at the positive edge of the clock
+always @(posedge clk) begin
+  reg_a1 <= a1;
+  reg_a2 <= a2;
+  reg_a3 <= a3;
+  reg_a4 <= a4;
+  reg_a5 <= a5;
+  reg_a6 <= a6;
+  reg_a7 <= a7;
+  reg_a8 <= a8;
+  reg_a9 <= a9;
+  reg_a10 <= a10;
+  reg_a11 <= a11;
+  reg_a12 <= a12;
+  reg_a13 <= a13;
+  reg_a14 <= a14;
+  reg_a15 <= a15;
+  reg_a16 <= a16;
+  
+  reg_b1 <= b1;
+  reg_b2 <= b2;
+  reg_b3 <= b3;
+  reg_b4 <= b4;
+  reg_b5 <= b5;
+  reg_b6 <= b6;
+  reg_b7 <= b7;
+  reg_b8 <= b8;
+  reg_b9 <= b9;
+  reg_b10 <= b10;
+  reg_b11 <= b11;
+  reg_b12 <= b12;
+  reg_b13 <= b13;
+  reg_b14 <= b14;
+  reg_b15 <= b15;
+  reg_b16 <= b16;
+  
+  reg_cin <= cin;
+end
+wire net57 ;
+wire net58 ;
+wire net59 ;
+wire net60 ;
+wire net61 ;
+wire net62 ;
+wire net63 ;
+wire net64 ;
+wire net65 ;
+wire net66 ;
+wire net67 ;
+wire net68 ;
+wire net69 ;
+wire net70 ;
+wire net71 ;
+wire net72 ;
+wire net73 ;
+wire net74 ;
+wire net75 ;
+wire net76 ;
+wire net77 ;
+wire net78 ;
+wire net79 ;
+wire net80 ;
+wire net81 ;
+wire net82 ;
+wire net83 ;
+wire net84 ;
+wire net85 ;
+wire net86 ;
+wire net87 ;
+wire net88 ;
+wire net89 ;
+wire net90 ;
+wire net91 ;
+wire net92 ;
+wire net93 ;
+wire net94 ;
+wire net95 ;
+wire net96 ;
+wire net97 ;
+wire net98 ;
+wire net99 ;
+wire net1 ;
+wire net2 ;
+wire net3 ;
+wire net4 ;
+wire net5 ;
+wire net6 ;
+wire net7 ;
+wire net8 ;
+wire net9 ;
+wire net100 ;
+wire net101 ;
+wire net102 ;
+wire net103 ;
+wire net104 ;
+wire net105 ;
+wire net106 ;
+wire net107 ;
+wire net108 ;
+wire net109 ;
+wire net110 ;
+wire net111 ;
+wire net112 ;
+wire net113 ;
+wire net114 ;
+wire net115 ;
+wire net116 ;
+wire net117 ;
+wire net118 ;
+wire net119 ;
+wire net120 ;
+wire net121 ;
+wire net122 ;
+wire net123 ;
+wire net124 ;
+wire net125 ;
+wire net126 ;
+wire net127 ;
+wire net128 ;
+wire net129 ;
+wire net130 ;
+wire net131 ;
+wire net132 ;
+wire net133 ;
+wire net134 ;
+wire net135 ;
+wire net136 ;
+wire net137 ;
+wire net138 ;
+wire net139 ;
+wire net140 ;
+wire net141 ;
+wire net142 ;
+wire net143 ;
+wire net144 ;
+wire net145 ;
+
+G
+x2 ( 
+ .A( reg_a1 ),
+ .G( net4 ),
+ .B( reg_b1 )
+);
+
+
+P
+x3 ( 
+ .A( reg_a1 ),
+ .P( net3 ),
+ .B( reg_b1 )
+);
+
+
+G
+x4 ( 
+ .A( reg_a2 ),
+ .G( net2 ),
+ .B( reg_b2 )
+);
+
+
+P
+x5 ( 
+ .A( reg_a2 ),
+ .P( net1 ),
+ .B( reg_b2 )
+);
+
+
+G
+x6 ( 
+ .A( reg_a3 ),
+ .G( net6 ),
+ .B( reg_b3 )
+);
+
+
+P
+x7 ( 
+ .A( reg_a3 ),
+ .P( net5 ),
+ .B( reg_b3 )
+);
+
+
+G
+x8 ( 
+ .A( reg_a4 ),
+ .G( net8 ),
+ .B( reg_b4 )
+);
+
+
+P
+x9 ( 
+ .A( reg_a4 ),
+ .P( net7 ),
+ .B( reg_b4 )
+);
+
+
+G
+x10 ( 
+ .A( reg_a5 ),
+ .G( net10 ),
+ .B( reg_b5 )
+);
+
+
+P
+x11 ( 
+ .A( reg_a5 ),
+ .P( net9 ),
+ .B( reg_b5 )
+);
+
+
+G
+x12 ( 
+ .A( reg_a6 ),
+ .G( net12 ),
+ .B( reg_b6 )
+);
+
+
+P
+x13 ( 
+ .A( reg_a6 ),
+ .P( net11 ),
+ .B( reg_b6 )
+);
+
+
+G
+x14 ( 
+ .A( reg_a7 ),
+ .G( net14 ),
+ .B( reg_b7 )
+);
+
+
+P
+x15 ( 
+ .A( reg_a7 ),
+ .P( net13 ),
+ .B( reg_b7 )
+);
+
+
+G
+x16 ( 
+ .A( reg_a8 ),
+ .G( net16 ),
+ .B( reg_b8 )
+);
+
+
+P
+x17 ( 
+ .A( reg_a8 ),
+ .P( net15 ),
+ .B( reg_b8 )
+);
+
+
+G
+x18 ( 
+ .A( reg_a9 ),
+ .G( net20 ),
+ .B( reg_b9 )
+);
+
+
+P
+x19 ( 
+ .A( reg_a9 ),
+ .P( net19 ),
+ .B( reg_b9 )
+);
+
+
+G
+x20 ( 
+ .A( reg_a10 ),
+ .G( net18 ),
+ .B( reg_b10 )
+);
+
+
+P
+x21 ( 
+ .A( reg_a10 ),
+ .P( net17 ),
+ .B( reg_b10 )
+);
+
+
+G
+x22 ( 
+ .A( reg_a11 ),
+ .G( net22 ),
+ .B( reg_b11 )
+);
+
+
+P
+x23 ( 
+ .A( reg_a11 ),
+ .P( net21 ),
+ .B( reg_b11 )
+);
+
+
+G
+x24 ( 
+ .A( reg_a12 ),
+ .G( net24 ),
+ .B( reg_b12 )
+);
+
+
+P
+x25 ( 
+ .A( reg_a12 ),
+ .P( net23 ),
+ .B( reg_b12 )
+);
+
+
+G
+x26 ( 
+ .A( reg_a13 ),
+ .G( net26 ),
+ .B( reg_b13 )
+);
+
+
+P
+x27 ( 
+ .A( reg_a13 ),
+ .P( net25 ),
+ .B( reg_b13 )
+);
+
+
+G
+x28 ( 
+ .A( reg_a14 ),
+ .G( net28 ),
+ .B( reg_b14 )
+);
+
+
+P
+x29 ( 
+ .A( reg_a14 ),
+ .P( net27 ),
+ .B( reg_b14 )
+);
+
+
+G
+x30 ( 
+ .A( reg_a15 ),
+ .G( net56 ),
+ .B( reg_b15 )
+);
+
+
+P
+x31 ( 
+ .A( reg_a15 ),
+ .P( net55 ),
+ .B( reg_b15 )
+);
+
+
+G
+x32 ( 
+ .A( reg_a16 ),
+ .G( net58 ),
+ .B( reg_b16 )
+);
+
+
+P
+x33 ( 
+ .A( reg_a16 ),
+ .P( net57 ),
+ .B( reg_b16 )
+);
+
+
+sum
+x63 ( 
+ .P( net3 ),
+ .S( sum1 ),
+ .C( net116 )
+);
+
+
+sum
+x64 ( 
+ .P( net33 ),
+ .S( sum2 ),
+ .C( net117 )
+);
+
+
+sum
+x65 ( 
+ .P( net67 ),
+ .S( sum3 ),
+ .C( net118 )
+);
+
+
+sum
+x66 ( 
+ .P( net71 ),
+ .S( sum4 ),
+ .C( net115 )
+);
+
+
+sum
+x67 ( 
+ .P( net101 ),
+ .S( sum5 ),
+ .C( net119 )
+);
+
+
+sum
+x68 ( 
+ .P( net105 ),
+ .S( sum6 ),
+ .C( net120 )
+);
+
+
+sum
+x69 ( 
+ .P( net109 ),
+ .S( sum7 ),
+ .C( net121 )
+);
+
+
+sum
+x70 ( 
+ .P( net113 ),
+ .S( sum8 ),
+ .C( net122 )
+);
+
+
+sum
+x71 ( 
+ .P( net138 ),
+ .S( sum9 ),
+ .C( net145 )
+);
+
+
+sum
+x72 ( 
+ .P( net136 ),
+ .S( sum10 ),
+ .C( net144 )
+);
+
+
+sum
+x73 ( 
+ .P( net133 ),
+ .S( sum11 ),
+ .C( net143 )
+);
+
+
+sum
+x74 ( 
+ .P( net131 ),
+ .S( sum12 ),
+ .C( net142 )
+);
+
+
+sum
+x75 ( 
+ .P( net129 ),
+ .S( sum13 ),
+ .C( net141 )
+);
+
+
+sum
+x76 ( 
+ .P( net127 ),
+ .S( sum14 ),
+ .C( net140 )
+);
+
+
+sum
+x77 ( 
+ .P( net125 ),
+ .S( sum15 ),
+ .C( net139 )
+);
+
+
+sum
+x78 ( 
+ .P( net123 ),
+ .S( sum16 ),
+ .C( carry_out )
+);
+
+
+dot
+x49 ( 
+ .g1( net4 ),
+ .G( net34 ),
+ .p1( net3 ),
+ .P( net33 ),
+ .g2( net2 ),
+ .p2( net1 )
+);
+
+
+dot
+x1 ( 
+ .g1( net2 ),
+ .G( net29 ),
+ .p1( net1 ),
+ .P( net30 ),
+ .g2( net6 ),
+ .p2( net5 )
+);
+
+
+dot
+x34 ( 
+ .g1( net6 ),
+ .G( net32 ),
+ .p1( net5 ),
+ .P( net31 ),
+ .g2( net8 ),
+ .p2( net7 )
+);
+
+
+dot
+x35 ( 
+ .g1( net8 ),
+ .G( net36 ),
+ .p1( net7 ),
+ .P( net35 ),
+ .g2( net10 ),
+ .p2( net9 )
+);
+
+
+dot
+x36 ( 
+ .g1( net10 ),
+ .G( net38 ),
+ .p1( net9 ),
+ .P( net37 ),
+ .g2( net12 ),
+ .p2( net11 )
+);
+
+
+dot
+x37 ( 
+ .g1( net12 ),
+ .G( net40 ),
+ .p1( net11 ),
+ .P( net39 ),
+ .g2( net14 ),
+ .p2( net13 )
+);
+
+
+dot
+x38 ( 
+ .g1( net14 ),
+ .G( net42 ),
+ .p1( net13 ),
+ .P( net41 ),
+ .g2( net16 ),
+ .p2( net15 )
+);
+
+
+dot
+x39 ( 
+ .g1( net20 ),
+ .G( net46 ),
+ .p1( net19 ),
+ .P( net45 ),
+ .g2( net18 ),
+ .p2( net17 )
+);
+
+
+dot
+x40 ( 
+ .g1( net16 ),
+ .G( net44 ),
+ .p1( net15 ),
+ .P( net43 ),
+ .g2( net20 ),
+ .p2( net19 )
+);
+
+
+dot
+x41 ( 
+ .g1( net18 ),
+ .G( net48 ),
+ .p1( net17 ),
+ .P( net47 ),
+ .g2( net22 ),
+ .p2( net21 )
+);
+
+
+dot
+x42 ( 
+ .g1( net22 ),
+ .G( net50 ),
+ .p1( net21 ),
+ .P( net49 ),
+ .g2( net24 ),
+ .p2( net23 )
+);
+
+
+dot
+x43 ( 
+ .g1( net24 ),
+ .G( net52 ),
+ .p1( net23 ),
+ .P( net51 ),
+ .g2( net26 ),
+ .p2( net25 )
+);
+
+
+dot
+x44 ( 
+ .g1( net26 ),
+ .G( net54 ),
+ .p1( net25 ),
+ .P( net53 ),
+ .g2( net28 ),
+ .p2( net27 )
+);
+
+
+dot
+x45 ( 
+ .g1( net4 ),
+ .G( net68 ),
+ .p1( net3 ),
+ .P( net67 ),
+ .g2( net29 ),
+ .p2( net30 )
+);
+
+
+dot
+x46 ( 
+ .g1( net34 ),
+ .G( net72 ),
+ .p1( net33 ),
+ .P( net71 ),
+ .g2( net32 ),
+ .p2( net31 )
+);
+
+
+dot
+x47 ( 
+ .g1( net29 ),
+ .G( net63 ),
+ .p1( net30 ),
+ .P( net64 ),
+ .g2( net36 ),
+ .p2( net35 )
+);
+
+
+dot
+x48 ( 
+ .g1( net32 ),
+ .G( net66 ),
+ .p1( net31 ),
+ .P( net65 ),
+ .g2( net38 ),
+ .p2( net37 )
+);
+
+
+dot
+x50 ( 
+ .g1( net36 ),
+ .G( net70 ),
+ .p1( net35 ),
+ .P( net69 ),
+ .g2( net40 ),
+ .p2( net39 )
+);
+
+
+dot
+x51 ( 
+ .g1( net38 ),
+ .G( net74 ),
+ .p1( net37 ),
+ .P( net73 ),
+ .g2( net42 ),
+ .p2( net41 )
+);
+
+
+dot
+x52 ( 
+ .g1( net40 ),
+ .G( net76 ),
+ .p1( net39 ),
+ .P( net75 ),
+ .g2( net44 ),
+ .p2( net43 )
+);
+
+
+dot
+x53 ( 
+ .g1( net42 ),
+ .G( net78 ),
+ .p1( net41 ),
+ .P( net77 ),
+ .g2( net46 ),
+ .p2( net45 )
+);
+
+
+dot
+x54 ( 
+ .g1( net44 ),
+ .G( net80 ),
+ .p1( net43 ),
+ .P( net79 ),
+ .g2( net48 ),
+ .p2( net47 )
+);
+
+
+dot
+x55 ( 
+ .g1( net46 ),
+ .G( net82 ),
+ .p1( net45 ),
+ .P( net81 ),
+ .g2( net50 ),
+ .p2( net49 )
+);
+
+
+dot
+x56 ( 
+ .g1( net48 ),
+ .G( net84 ),
+ .p1( net47 ),
+ .P( net83 ),
+ .g2( net52 ),
+ .p2( net51 )
+);
+
+
+dot
+x57 ( 
+ .g1( net50 ),
+ .G( net86 ),
+ .p1( net49 ),
+ .P( net85 ),
+ .g2( net54 ),
+ .p2( net53 )
+);
+
+
+dot
+x58 ( 
+ .g1( net28 ),
+ .G( net60 ),
+ .p1( net27 ),
+ .P( net59 ),
+ .g2( net56 ),
+ .p2( net55 )
+);
+
+
+dot
+x59 ( 
+ .g1( net56 ),
+ .G( net62 ),
+ .p1( net55 ),
+ .P( net61 ),
+ .g2( net58 ),
+ .p2( net57 )
+);
+
+
+dot
+x60 ( 
+ .g1( net52 ),
+ .G( net88 ),
+ .p1( net51 ),
+ .P( net87 ),
+ .g2( net60 ),
+ .p2( net59 )
+);
+
+
+dot
+x61 ( 
+ .g1( net54 ),
+ .G( net90 ),
+ .p1( net53 ),
+ .P( net89 ),
+ .g2( net62 ),
+ .p2( net61 )
+);
+
+
+dot
+x62 ( 
+ .g1( net4 ),
+ .G( net102 ),
+ .p1( net3 ),
+ .P( net101 ),
+ .g2( net63 ),
+ .p2( net64 )
+);
+
+
+dot
+x79 ( 
+ .g1( net68 ),
+ .G( net106 ),
+ .p1( net67 ),
+ .P( net105 ),
+ .g2( net66 ),
+ .p2( net65 )
+);
+
+
+dot
+x80 ( 
+ .g1( net72 ),
+ .G( net110 ),
+ .p1( net71 ),
+ .P( net109 ),
+ .g2( net70 ),
+ .p2( net69 )
+);
+
+
+dot
+x81 ( 
+ .g1( net63 ),
+ .G( net114 ),
+ .p1( net64 ),
+ .P( net113 ),
+ .g2( net74 ),
+ .p2( net73 )
+);
+
+
+dot
+x82 ( 
+ .g1( net66 ),
+ .G( net92 ),
+ .p1( net65 ),
+ .P( net91 ),
+ .g2( net76 ),
+ .p2( net75 )
+);
+
+
+dot
+x83 ( 
+ .g1( net70 ),
+ .G( net94 ),
+ .p1( net69 ),
+ .P( net93 ),
+ .g2( net78 ),
+ .p2( net77 )
+);
+
+
+dot
+x84 ( 
+ .g1( net74 ),
+ .G( net96 ),
+ .p1( net73 ),
+ .P( net95 ),
+ .g2( net80 ),
+ .p2( net79 )
+);
+
+
+dot
+x85 ( 
+ .g1( net76 ),
+ .G( net98 ),
+ .p1( net75 ),
+ .P( net97 ),
+ .g2( net82 ),
+ .p2( net81 )
+);
+
+
+dot
+x86 ( 
+ .g1( net78 ),
+ .G( net100 ),
+ .p1( net77 ),
+ .P( net99 ),
+ .g2( net84 ),
+ .p2( net83 )
+);
+
+
+dot
+x87 ( 
+ .g1( net80 ),
+ .G( net104 ),
+ .p1( net79 ),
+ .P( net103 ),
+ .g2( net86 ),
+ .p2( net85 )
+);
+
+
+dot
+x88 ( 
+ .g1( net82 ),
+ .G( net108 ),
+ .p1( net81 ),
+ .P( net107 ),
+ .g2( net88 ),
+ .p2( net87 )
+);
+
+
+dot
+x89 ( 
+ .g1( net84 ),
+ .G( net112 ),
+ .p1( net83 ),
+ .P( net111 ),
+ .g2( net90 ),
+ .p2( net89 )
+);
+
+
+carry
+x90 ( 
+ .g( net4 ),
+ .C( net116 ),
+ .p( net3 ),
+ .c( reg_cin )
+);
+
+
+dot
+x91 ( 
+ .g1( net4 ),
+ .G( net137 ),
+ .p1( net3 ),
+ .P( net138 ),
+ .g2( net92 ),
+ .p2( net91 )
+);
+
+
+dot
+x92 ( 
+ .g1( net34 ),
+ .G( net135 ),
+ .p1( net33 ),
+ .P( net136 ),
+ .g2( net94 ),
+ .p2( net93 )
+);
+
+
+dot
+x93 ( 
+ .g1( net68 ),
+ .G( net134 ),
+ .p1( net67 ),
+ .P( net133 ),
+ .g2( net96 ),
+ .p2( net95 )
+);
+
+
+dot
+x94 ( 
+ .g1( net72 ),
+ .G( net132 ),
+ .p1( net71 ),
+ .P( net131 ),
+ .g2( net98 ),
+ .p2( net97 )
+);
+
+
+dot
+x95 ( 
+ .g1( net102 ),
+ .G( net130 ),
+ .p1( net101 ),
+ .P( net129 ),
+ .g2( net100 ),
+ .p2( net99 )
+);
+
+
+dot
+x96 ( 
+ .g1( net106 ),
+ .G( net128 ),
+ .p1( net105 ),
+ .P( net127 ),
+ .g2( net104 ),
+ .p2( net103 )
+);
+
+
+dot
+x97 ( 
+ .g1( net110 ),
+ .G( net126 ),
+ .p1( net109 ),
+ .P( net125 ),
+ .g2( net108 ),
+ .p2( net107 )
+);
+
+
+dot
+x98 ( 
+ .g1( net114 ),
+ .G( net124 ),
+ .p1( net113 ),
+ .P( net123 ),
+ .g2( net112 ),
+ .p2( net111 )
+);
+
+
+carry
+x99 ( 
+ .g( net34 ),
+ .C( net117 ),
+ .p( net33 ),
+ .c( reg_cin )
+);
+
+
+carry
+x100 ( 
+ .g( net68 ),
+ .C( net118 ),
+ .p( net67 ),
+ .c( net116 )
+);
+
+
+carry
+x101 ( 
+ .g( net72 ),
+ .C( net115 ),
+ .p( net71 ),
+ .c( reg_cin )
+);
+
+
+carry
+x102 ( 
+ .g( net102 ),
+ .C( net119 ),
+ .p( net101 ),
+ .c( net115 )
+);
+
+
+carry
+x103 ( 
+ .g( net106 ),
+ .C( net120 ),
+ .p( net105 ),
+ .c( net116 )
+);
+
+
+carry
+x104 ( 
+ .g( net110 ),
+ .C( net121 ),
+ .p( net109 ),
+ .c( net117 )
+);
+
+
+carry
+x105 ( 
+ .g( net114 ),
+ .C( net122 ),
+ .p( net113 ),
+ .c( net118 )
+);
+
+
+carry
+x106 ( 
+ .g( net137 ),
+ .C( net145 ),
+ .p( net138 ),
+ .c( reg_cin )
+);
+
+
+carry
+x107 ( 
+ .g( net135 ),
+ .C( net144 ),
+ .p( net136 ),
+ .c( net116 )
+);
+
+
+carry
+x108 ( 
+ .g( net134 ),
+ .C( net143 ),
+ .p( net133 ),
+ .c( net117 )
+);
+
+
+carry
+x109 ( 
+ .g( net132 ),
+ .C( net142 ),
+ .p( net131 ),
+ .c( net118 )
+);
+
+
+carry
+x110 ( 
+ .g( net130 ),
+ .C( net141 ),
+ .p( net129 ),
+ .c( net119 )
+);
+
+
+carry
+x111 ( 
+ .g( net128 ),
+ .C( net140 ),
+ .p( net127 ),
+ .c( net120 )
+);
+
+
+carry
+x112 ( 
+ .g( net126 ),
+ .C( net139 ),
+ .p( net125 ),
+ .c( net121 )
+);
+
+
+carry
+x113 ( 
+ .g( net124 ),
+ .C( carry_out ),
+ .p( net123 ),
+ .c( net122 )
+);
+
+// Register all outputs at the positive edge of the clock
+always @(posedge clk) begin
+  s1 <= sum1;
+  s2 <= sum2;
+  s3 <= sum3;
+  s4 <= sum4;
+  s5 <= sum5;
+  s6 <= sum6;
+  s7 <= sum7;
+  s8 <= sum8;
+  s9 <= sum9;
+  s10 <= sum10;
+  s11 <= sum11;
+  s12 <= sum12;
+  s13 <= sum13;
+  s14 <= sum14;
+  s15 <= sum15;
+  s16 <= sum16;
+  cout <= carry_out;
+end
+
+endmodule
+
+// expanding   symbol:  G.sym # of pins=3
+// sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/G.sym
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/G.sch
+module G
+(
+  input wire A,
+  output wire G,
+  input wire B
+);
+assign G = A & B;
+// noconn G
+// noconn A
+// noconn B
+endmodule
+
+// expanding   symbol:  P.sym # of pins=3
+// sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/P.sym
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/P.sch
+module P
+(
+  input wire A,
+  output wire P,
+  input wire B
+);
+assign P = A ^ B;
+// noconn P
+// noconn A
+// noconn B
+endmodule
+
+// expanding   symbol:  sum.sym # of pins=3
+// sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/sum.sym
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/sum.sch
+module sum
+(
+  input wire P,
+  output wire S,
+  input wire C
+);
+assign S = P ^ C;
+// noconn S
+// noconn P
+// noconn C
+endmodule
+
+// expanding   symbol:  dot.sym # of pins=6
+// sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/dot.sym
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/dot.sch
+module dot
+(
+  input wire g1,
+  output wire G,
+  input wire p1,
+  output wire P,
+  input wire g2,
+  input wire p2
+);
+// noconn G
+// noconn P
+// noconn g1
+// noconn p1
+// noconn g2
+// noconn p2
+assign G = g2 | (p2 & g1);
+assign P = p1 & p2;
+
+endmodule
+
+// expanding   symbol:  carry.sym # of pins=4
+// sym_path: /home/ee24s053/ee5311-2025/tut7/trees/common/carry.sym
+// sch_path: /home/ee24s053/ee5311-2025/tut7/trees/common/carry.sch
+module carry
+(
+  input wire g,
+  output wire C,
+  input wire p,
+  input wire c
+);
+assign C = g | (p & c);
+// noconn C
+// noconn g
+// noconn p
+// noconn c
+endmodule
+
 \end{verbatim}
 
 \section{Declarations}
