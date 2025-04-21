@@ -8,6 +8,6 @@ link_design cba16
 create_clock -name clk -period 1 {clk}
 # Report critical paths for setup and hold violations
 report_checks -path_delay max > before.path
-set_false_path -through net5 -through net10 -through net15
+set_false_path -through [get_pins -of_objects [get_nets net5]] -through [get_pins -of_objects [get_nets net10]] -through [get_pins -of_objects [get_nets net15]]
 report_checks -path_delay max > after.path
 exit
