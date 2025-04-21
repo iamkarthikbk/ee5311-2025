@@ -269,7 +269,6 @@ module adder (a1,
  wire net51;
  wire net52;
  wire net53;
- wire net54;
 
  sky130_fd_sc_hd__inv_2 _060_ (.A(\x16.b ),
     .Y(_012_));
@@ -306,7 +305,7 @@ module adder (a1,
     .A2(\x23.B ),
     .B1(_021_),
     .X(_022_));
- sky130_fd_sc_hd__xor2_2 _071_ (.A(\x24.A ),
+ sky130_fd_sc_hd__xor2_1 _071_ (.A(\x24.A ),
     .B(_022_),
     .X(_023_));
  sky130_fd_sc_hd__xnor2_1 _072_ (.A(\x2.a ),
@@ -326,8 +325,8 @@ module adder (a1,
     .C(_026_),
     .D(_027_),
     .X(_028_));
- sky130_fd_sc_hd__a21bo_1 _077_ (.A1(_022_),
-    .A2(\x24.A ),
+ sky130_fd_sc_hd__a21bo_1 _077_ (.A1(\x24.A ),
+    .A2(_022_),
     .B1_N(_028_),
     .X(_029_));
  sky130_fd_sc_hd__a21o_1 _078_ (.A1(_023_),
@@ -423,7 +422,7 @@ module adder (a1,
     .B(\x16.a ),
     .Y(_056_));
  sky130_fd_sc_hd__nand2_1 _105_ (.A(\x16.a ),
-    .B(net54),
+    .B(_055_),
     .Y(_057_));
  sky130_fd_sc_hd__o21a_1 _106_ (.A1(_056_),
     .A2(_012_),
@@ -483,7 +482,7 @@ module adder (a1,
     .B(_023_),
     .X(\x4.sum ));
  sky130_fd_sc_hd__xnor2_1 _124_ (.A(\x16.b ),
-    .B(net53),
+    .B(net52),
     .Y(\x16.sum ));
  sky130_fd_sc_hd__xor2_1 _125_ (.A(\x17.b ),
     .B(_059_),
@@ -492,7 +491,7 @@ module adder (a1,
     .B(_002_),
     .X(\x18.sum ));
  sky130_fd_sc_hd__xnor2_1 _127_ (.A(\x11.b ),
-    .B(net52),
+    .B(net53),
     .Y(\x11.sum ));
  sky130_fd_sc_hd__xor2_1 _128_ (.A(\x12.b ),
     .B(_047_),
@@ -635,7 +634,7 @@ module adder (a1,
  sky130_fd_sc_hd__dfxtp_1 _174_ (.CLK(clknet_2_0__leaf_clk),
     .D(\x6.sum ),
     .Q(net46));
- sky130_fd_sc_hd__dfxtp_1 _175_ (.CLK(clknet_2_0__leaf_clk),
+ sky130_fd_sc_hd__dfxtp_1 _175_ (.CLK(clknet_2_2__leaf_clk),
     .D(\x7.sum ),
     .Q(net47));
  sky130_fd_sc_hd__dfxtp_1 _176_ (.CLK(clknet_2_2__leaf_clk),
@@ -653,7 +652,7 @@ module adder (a1,
  sky130_fd_sc_hd__dfxtp_1 _180_ (.CLK(clknet_2_1__leaf_clk),
     .D(\x13.sum ),
     .Q(net37));
- sky130_fd_sc_hd__dfxtp_1 _181_ (.CLK(clknet_2_1__leaf_clk),
+ sky130_fd_sc_hd__dfxtp_1 _181_ (.CLK(clknet_2_3__leaf_clk),
     .D(\x14.sum ),
     .Q(net38));
  sky130_fd_sc_hd__dfxtp_1 _182_ (.CLK(clknet_2_3__leaf_clk),
@@ -668,7 +667,7 @@ module adder (a1,
  sky130_fd_sc_hd__dfxtp_1 _185_ (.CLK(clknet_2_1__leaf_clk),
     .D(\x19.sum ),
     .Q(net42));
- sky130_fd_sc_hd__dfxtp_1 _186_ (.CLK(clknet_2_3__leaf_clk),
+ sky130_fd_sc_hd__dfxtp_1 _186_ (.CLK(clknet_2_1__leaf_clk),
     .D(\x20.out ),
     .Q(net34));
  sky130_fd_sc_hd__decap_3 PHY_EDGE_ROW_0_Right_0 ();
@@ -877,15 +876,13 @@ module adder (a1,
     .X(clknet_2_2__leaf_clk));
  sky130_fd_sc_hd__clkbuf_16 clkbuf_2_3__f_clk (.A(clknet_0_clk),
     .X(clknet_2_3__leaf_clk));
- sky130_fd_sc_hd__clkinv_1 clkload0 (.A(clknet_2_0__leaf_clk));
- sky130_fd_sc_hd__bufinv_16 clkload1 (.A(clknet_2_2__leaf_clk));
+ sky130_fd_sc_hd__clkinvlp_2 clkload0 (.A(clknet_2_0__leaf_clk));
+ sky130_fd_sc_hd__clkinvlp_2 clkload1 (.A(clknet_2_2__leaf_clk));
  sky130_fd_sc_hd__bufinv_16 clkload2 (.A(clknet_2_3__leaf_clk));
  sky130_fd_sc_hd__dlygate4sd1_1 rebuffer1 (.A(_050_),
     .X(net51));
- sky130_fd_sc_hd__dlygate4sd1_1 rebuffer2 (.A(_044_),
+ sky130_fd_sc_hd__dlygate4sd1_1 rebuffer2 (.A(_056_),
     .X(net52));
- sky130_fd_sc_hd__dlygate4sd1_1 rebuffer3 (.A(_056_),
+ sky130_fd_sc_hd__dlygate4sd1_1 rebuffer3 (.A(_044_),
     .X(net53));
- sky130_fd_sc_hd__clkbuf_1 rebuffer4 (.A(_055_),
-    .X(net54));
 endmodule

@@ -1,16 +1,20 @@
 ###############################################################################
 # Created by write_sdc
-# Fri Apr 18 08:45:48 2025
+# Mon Apr 21 04:43:55 2025
 ###############################################################################
 current_design adder
 ###############################################################################
 # Timing Constraints
 ###############################################################################
-create_clock -name core_clock -period 3.0000 [get_ports {clk}]
+create_clock -name core_clock -period 5.6500 [get_ports {clk}]
 set_propagated_clock [get_clocks {core_clock}]
 set_false_path\
-    -through [list [get_nets {x25.A}]\
-           [get_nets {x25.B}]]
+    -through [list [get_pins {_161_/D}]\
+           [get_pins {input5/X}]]\
+    -through [list [get_pins {_141_/D}]\
+           [get_pins {input10/X}]]\
+    -through [list [get_pins {_151_/D}]\
+           [get_pins {input15/X}]]
 ###############################################################################
 # Environment
 ###############################################################################

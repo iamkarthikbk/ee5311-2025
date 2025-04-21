@@ -57,9 +57,8 @@ Cell sky130_fd_sc_hd__clkinvlp_2 read from path /volare/sky130A/libs.ref/sky130_
 Cell sky130_fd_sc_hd__or2_4 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
 Cell sky130_fd_sc_hd__nand2_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
 Cell sky130_fd_sc_hd__a21bo_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
-Cell sky130_fd_sc_hd__xor2_2 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
-Cell sky130_fd_sc_hd__nand2_2 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
-Cell sky130_fd_sc_hd__nand3b_4 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
+Cell sky130_fd_sc_hd__xor2_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
+Cell sky130_fd_sc_hd__nand3b_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
 Cell sky130_fd_sc_hd__a21boi_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
 Cell sky130_fd_sc_hd__a21o_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
 Cell sky130_fd_sc_hd__xnor2_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
@@ -72,67 +71,56 @@ Cell sky130_fd_sc_hd__xnor2_2 read from path /volare/sky130A/libs.ref/sky130_fd_
 Cell sky130_fd_sc_hd__o21a_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
 Cell sky130_fd_sc_hd__and2_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
 Cell sky130_fd_sc_hd__clkbuf_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
-Cell sky130_fd_sc_hd__xor2_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
 Cell sky130_fd_sc_hd__nand2b_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
 Cell sky130_fd_sc_hd__dfxtp_2 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
 Cell sky130_fd_sc_hd__dfxtp_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
 Cell sky130_fd_sc_hd__clkbuf_16 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
-Cell sky130_fd_sc_hd__clkinv_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
 Cell sky130_fd_sc_hd__bufinv_16 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
 Cell sky130_fd_sc_hd__buf_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
 Cell sky130_fd_sc_hd__dlygate4sd1_1 read from path /volare/sky130A/libs.ref/sky130_fd_sc_hd/maglef
-  Processed 547 subcell instances total.
+  Processed 534 subcell instances total.
   Processed 53 pins total.
   Processed 2 special nets total.
-  Processed 220 nets total.
-DEF read: Processed 3533 lines.
-Moving label "_019_" from metal2 to via1 in cell adder.
-Moving label "_032_" from metal1 to via1 in cell adder.
-Moving label "_049_" from metal1 to via1 in cell adder.
-Moving label "net15" from metal1 to via1 in cell adder.
-Moving label "net19" from metal1 to via1 in cell adder.
-Moving label "net27" from metal1 to via1 in cell adder.
-Moving label "net33" from metal1 to via1 in cell adder.
-Moving label "net9" from metal1 to via1 in cell adder.
-Moving label "x11.sum" from metal1 to via1 in cell adder.
-Moving label "x3.sum" from metal1 to via1 in cell adder.
+  Processed 219 nets total.
+DEF read: Processed 3534 lines.
+Moving label "clknet_0_clk" from metal2 to via2 in cell adder.
+Moving label "net13" from metal1 to via1 in cell adder.
+Moving label "net14" from metal1 to via1 in cell adder.
+Moving label "net3" from metal1 to via1 in cell adder.
 Moving label "x6.sum" from metal1 to via1 in cell adder.
 Processing adder
 Extracting sky130_fd_sc_hd__buf_1 into sky130_fd_sc_hd__buf_1.ext:
 Extracting sky130_fd_sc_hd__clkbuf_1 into sky130_fd_sc_hd__clkbuf_1.ext:
 Extracting sky130_fd_sc_hd__decap_3 into sky130_fd_sc_hd__decap_3.ext:
-Extracting sky130_fd_sc_hd__fill_2 into sky130_fd_sc_hd__fill_2.ext:
 Extracting sky130_fd_sc_hd__fill_1 into sky130_fd_sc_hd__fill_1.ext:
 Extracting sky130_fd_sc_hd__decap_6 into sky130_fd_sc_hd__decap_6.ext:
 Extracting sky130_fd_sc_hd__dfxtp_1 into sky130_fd_sc_hd__dfxtp_1.ext:
+Extracting sky130_ef_sc_hd__decap_12 into sky130_ef_sc_hd__decap_12.ext:
 Extracting sky130_fd_sc_hd__tapvpwrvgnd_1 into sky130_fd_sc_hd__tapvpwrvgnd_1.ext:
 Extracting sky130_fd_sc_hd__decap_8 into sky130_fd_sc_hd__decap_8.ext:
 Extracting sky130_fd_sc_hd__decap_4 into sky130_fd_sc_hd__decap_4.ext:
-Extracting sky130_ef_sc_hd__decap_12 into sky130_ef_sc_hd__decap_12.ext:
-Extracting sky130_fd_sc_hd__xor2_1 into sky130_fd_sc_hd__xor2_1.ext:
+Extracting sky130_fd_sc_hd__fill_2 into sky130_fd_sc_hd__fill_2.ext:
 Extracting sky130_fd_sc_hd__xnor2_1 into sky130_fd_sc_hd__xnor2_1.ext:
+Extracting sky130_fd_sc_hd__xor2_1 into sky130_fd_sc_hd__xor2_1.ext:
 Extracting sky130_fd_sc_hd__a21oi_2 into sky130_fd_sc_hd__a21oi_2.ext:
-Extracting sky130_fd_sc_hd__and2b_1 into sky130_fd_sc_hd__and2b_1.ext:
-Extracting sky130_fd_sc_hd__a21o_1 into sky130_fd_sc_hd__a21o_1.ext:
-Extracting sky130_fd_sc_hd__bufinv_16 into sky130_fd_sc_hd__bufinv_16.ext:
-Extracting sky130_fd_sc_hd__clkbuf_16 into sky130_fd_sc_hd__clkbuf_16.ext:
-Extracting sky130_fd_sc_hd__and3_1 into sky130_fd_sc_hd__and3_1.ext:
 Extracting sky130_fd_sc_hd__nand2b_1 into sky130_fd_sc_hd__nand2b_1.ext:
-Extracting sky130_fd_sc_hd__clkinv_1 into sky130_fd_sc_hd__clkinv_1.ext:
+Extracting sky130_fd_sc_hd__and2b_1 into sky130_fd_sc_hd__and2b_1.ext:
+Extracting sky130_fd_sc_hd__xnor2_2 into sky130_fd_sc_hd__xnor2_2.ext:
+Extracting sky130_fd_sc_hd__a21o_1 into sky130_fd_sc_hd__a21o_1.ext:
+Extracting sky130_fd_sc_hd__clkbuf_16 into sky130_fd_sc_hd__clkbuf_16.ext:
+Extracting sky130_fd_sc_hd__clkinvlp_2 into sky130_fd_sc_hd__clkinvlp_2.ext:
+Extracting sky130_fd_sc_hd__and3_1 into sky130_fd_sc_hd__and3_1.ext:
 Extracting sky130_fd_sc_hd__nand2_1 into sky130_fd_sc_hd__nand2_1.ext:
+Extracting sky130_fd_sc_hd__nand3b_1 into sky130_fd_sc_hd__nand3b_1.ext:
+Extracting sky130_fd_sc_hd__a21boi_1 into sky130_fd_sc_hd__a21boi_1.ext:
+Extracting sky130_fd_sc_hd__and2_1 into sky130_fd_sc_hd__and2_1.ext:
+Extracting sky130_fd_sc_hd__a21bo_1 into sky130_fd_sc_hd__a21bo_1.ext:
 Extracting sky130_fd_sc_hd__o21a_1 into sky130_fd_sc_hd__o21a_1.ext:
 Extracting sky130_fd_sc_hd__dlygate4sd1_1 into sky130_fd_sc_hd__dlygate4sd1_1.ext:
-Extracting sky130_fd_sc_hd__or2_1 into sky130_fd_sc_hd__or2_1.ext:
-Extracting sky130_fd_sc_hd__and2_1 into sky130_fd_sc_hd__and2_1.ext:
-Extracting sky130_fd_sc_hd__xnor2_2 into sky130_fd_sc_hd__xnor2_2.ext:
 Extracting sky130_fd_sc_hd__inv_2 into sky130_fd_sc_hd__inv_2.ext:
-Extracting sky130_fd_sc_hd__nand2_2 into sky130_fd_sc_hd__nand2_2.ext:
-Extracting sky130_fd_sc_hd__nand3b_4 into sky130_fd_sc_hd__nand3b_4.ext:
-Extracting sky130_fd_sc_hd__a21boi_1 into sky130_fd_sc_hd__a21boi_1.ext:
-Extracting sky130_fd_sc_hd__xor2_2 into sky130_fd_sc_hd__xor2_2.ext:
-Extracting sky130_fd_sc_hd__clkinvlp_2 into sky130_fd_sc_hd__clkinvlp_2.ext:
+Extracting sky130_fd_sc_hd__or2_1 into sky130_fd_sc_hd__or2_1.ext:
 Extracting sky130_fd_sc_hd__or4_1 into sky130_fd_sc_hd__or4_1.ext:
-Extracting sky130_fd_sc_hd__a21bo_1 into sky130_fd_sc_hd__a21bo_1.ext:
+Extracting sky130_fd_sc_hd__bufinv_16 into sky130_fd_sc_hd__bufinv_16.ext:
 Extracting sky130_fd_sc_hd__or2_4 into sky130_fd_sc_hd__or2_4.ext:
 Extracting sky130_fd_sc_hd__dfxtp_2 into sky130_fd_sc_hd__dfxtp_2.ext:
 Extracting adder into adder.ext:

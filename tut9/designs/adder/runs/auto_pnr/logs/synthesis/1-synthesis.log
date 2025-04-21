@@ -889,14 +889,14 @@ Mapping DFF cells in module `\adder':
 
 56. Executing ABC pass (technology mapping using ABC).
 
-56.1. Extracting gate netlist of module `\adder' to `/tmp/yosys-abc-ocBept/input.blif'..
+56.1. Extracting gate netlist of module `\adder' to `/tmp/yosys-abc-CR14Pw/input.blif'..
 Extracted 114 gates and 148 wires to a netlist network with 34 inputs and 17 outputs.
 
 56.1.1. Executing ABC.
-Running ABC command: "/nix/store/wq2q0njg3sx8wvj2akz7x1qxwyrv9xlr-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-ocBept/abc.script 2>&1
-ABC: ABC command line: "source /tmp/yosys-abc-ocBept/abc.script".
+Running ABC command: "/nix/store/wq2q0njg3sx8wvj2akz7x1qxwyrv9xlr-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-CR14Pw/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-CR14Pw/abc.script".
 ABC: 
-ABC: + read_blif /tmp/yosys-abc-ocBept/input.blif 
+ABC: + read_blif /tmp/yosys-abc-CR14Pw/input.blif 
 ABC: + read_lib -w /openlane/designs/adder/runs/auto_pnr/tmp/synthesis/trimmed.lib 
 ABC: Parsing finished successfully.  Parsing time =     0.03 sec
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
@@ -1025,7 +1025,7 @@ ABC: Path 32 --     107 : 3    1 sky130_fd_sc_hd__a21o_4   A =  15.01  Df =6030.
 ABC: Start-point = pi1 (\x1.a).  End-point = po0 (\x20.out).
 ABC: + print_stats -m 
 ABC: netlist                       : i/o =   34/   17  lat =    0  nd =    77  edge =    173  area =993.62  delay =32.00  lev = 32
-ABC: + write_blif /tmp/yosys-abc-ocBept/output.blif 
+ABC: + write_blif /tmp/yosys-abc-CR14Pw/output.blif 
 
 56.1.2. Re-integrating ABC results.
 ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:        1
@@ -1117,6 +1117,6 @@ Dumping module `\adder'.
 
 65. Executing JSON backend.
 
-End of script. Logfile hash: 58d7838991, CPU: user 0.28s system 0.01s, MEM: 42.19 MB peak
+End of script. Logfile hash: 711a6d8997, CPU: user 0.28s system 0.01s, MEM: 42.38 MB peak
 Yosys 0.38 (git sha1 543faed9c8c, clang++ 17.0.6 -fPIC -Os)
 Time spent: 32% 2x abc (0 sec), 22% 2x read_liberty (0 sec), ...

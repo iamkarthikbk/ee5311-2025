@@ -1,3 +1,9 @@
+Warning: adder.sdc line 3, net 'net5' not found.
+Warning: adder.sdc line 3, net 'net10' not found.
+Warning: adder.sdc line 3, net 'net15' not found.
+Warning: adder.sdc line 3, no valid objects specified for -through
+Warning: adder.sdc line 3, no valid objects specified for -through
+Warning: adder.sdc line 3, no valid objects specified for -through
 Warning: There are 33 input ports missing set_input_delay.
 Warning: There are 50 unconstrained endpoints.
 [WARNING] Did not save OpenROAD database!

@@ -5,7 +5,7 @@ read_verilog cba16_synth.v
 # Set the top module
 link_design cba16
 # Create a clock with the required time period
-create_clock -name clk -period 1 {clk}
+create_clock -name clk -period 5.66 {clk}
 # Report critical paths for setup and hold violations
 report_checks -path_delay max > before.path
 set_false_path -through [get_pins -of_objects [get_nets net5]] -through [get_pins -of_objects [get_nets net10]] -through [get_pins -of_objects [get_nets net15]]

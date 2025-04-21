@@ -6,9 +6,9 @@ Components of this program may be licensed under more restrictive licenses which
 [INFO ODB-0127] Reading DEF file: /openlane/designs/adder/runs/auto_pnr/results/routing/adder.def
 [INFO ODB-0128] Design: adder
 [INFO ODB-0130]     Created 53 pins.
-[INFO ODB-0131]     Created 547 components and 2612 component-terminals.
-[INFO ODB-0132]     Created 2 special nets and 2088 connections.
-[INFO ODB-0133]     Created 220 nets and 521 connections.
+[INFO ODB-0131]     Created 534 components and 2558 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 2036 connections.
+[INFO ODB-0133]     Created 219 nets and 519 connections.
 [INFO ODB-0134] Finished DEF file: /openlane/designs/adder/runs/auto_pnr/results/routing/adder.def
 define_corners Typical
 read_liberty -corner Typical /volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -25,18 +25,18 @@ Using RCX ruleset '/volare/sky130A/libs.tech/openlane/rules.openrcx.sky130A.max.
 [INFO RCX-0008] extracting parasitics of adder ...
 [INFO RCX-0435] Reading extraction model file /volare/sky130A/libs.tech/openlane/rules.openrcx.sky130A.max.calibre ...
 [INFO RCX-0436] RC segment generation adder (max_merge_res 50.0) ...
-[INFO RCX-0040] Final 703 rc segments
+[INFO RCX-0040] Final 701 rc segments
 [INFO RCX-0439] Coupling Cap extraction adder ...
 [INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
-[INFO RCX-0043] 1138 wires to be extracted
-[INFO RCX-0442] 61% completion -- 704 wires have been extracted
-[INFO RCX-0442] 100% completion -- 1138 wires have been extracted
-[INFO RCX-0045] Extract 220 nets, 923 rsegs, 923 caps, 768 ccs
+[INFO RCX-0043] 1178 wires to be extracted
+[INFO RCX-0442] 61% completion -- 720 wires have been extracted
+[INFO RCX-0442] 100% completion -- 1178 wires have been extracted
+[INFO RCX-0045] Extract 219 nets, 920 rsegs, 920 caps, 785 ccs
 [INFO RCX-0015] Finished extracting adder.
 Writing result to /openlane/designs/adder/runs/auto_pnr/results/routing/mca/process_corner_max/adder.spef...
 Setting global connections for newly added cells…
 [WARNING] Did not save OpenROAD database!
 Writing extracted parasitics to '/openlane/designs/adder/runs/auto_pnr/results/routing/mca/process_corner_max/adder.spef'…
 [INFO RCX-0016] Writing SPEF ...
-[INFO RCX-0443] 220 nets finished
+[INFO RCX-0443] 219 nets finished
 [INFO RCX-0017] Finished writing SPEF ...

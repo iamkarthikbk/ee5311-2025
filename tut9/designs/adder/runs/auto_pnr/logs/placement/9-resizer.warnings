@@ -999,3 +999,9 @@
 [WARNING STA-1256] /volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib line 13576, table template ccsn_ovrf not found.
 [WARNING STA-1256] /volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib line 13582, table template ccsn_ovrf not found.
 [WARNING STA-1256] message limit reached, this message will no longer print
+[WARNING STA-0361] net 'net5' not found.
+[WARNING STA-0361] net 'net10' not found.
+[WARNING STA-0361] net 'net15' not found.
+[WARNING STA-0472] no valid objects specified for -through
+[WARNING STA-0472] no valid objects specified for -through
+[WARNING STA-0472] no valid objects specified for -through

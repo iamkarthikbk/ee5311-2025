@@ -1035,69 +1035,83 @@ Reading design constraints file at '/openlane/designs/adder/src/adder.sdc'…
 [INFO GRT-0002] Maximum degree: 16
 [INFO GRT-0003] Macros: 0
 [INFO GRT-0043] No OR_DEFAULT vias defined.
-[INFO GRT-0004] Blockages: 725
+[INFO GRT-0004] Blockages: 720
 
 [INFO GRT-0053] Routing resources analysis:
           Routing      Original      Derated      Resource
 Layer     Direction    Resources     Resources    Reduction (%)
 ---------------------------------------------------------------
 li1        Vertical            0             0          0.00%
-met1       Horizontal       2450          1178          51.92%
-met2       Vertical         1986          1195          39.83%
-met3       Horizontal       1220           724          40.66%
+met1       Horizontal       2450          1184          51.67%
+met2       Vertical         1986          1193          39.93%
+met3       Horizontal       1220           728          40.33%
 met4       Vertical          828           360          56.52%
 met5       Horizontal        236            81          65.68%
 ---------------------------------------------------------------
 
-[INFO GRT-0197] Via related to pin nodes: 985
-[INFO GRT-0198] Via related Steiner nodes: 4
+[INFO GRT-0197] Via related to pin nodes: 933
+[INFO GRT-0198] Via related Steiner nodes: 3
 [INFO GRT-0199] Via filling finished.
-[INFO GRT-0111] Final number of vias: 1243
-[INFO GRT-0112] Final usage 3D: 4204
+[INFO GRT-0111] Final number of vias: 1160
+[INFO GRT-0112] Final usage 3D: 3953
 
 [INFO GRT-0096] Final congestion report:
 Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
 ---------------------------------------------------------------------------------------
 li1                  0             0            0.00%             0 /  0 /  0
-met1              1178           177           15.03%             0 /  0 /  0
-met2              1195           281           23.51%             0 /  0 /  0
-met3               724             8            1.10%             0 /  0 /  0
-met4               360             9            2.50%             0 /  0 /  0
+met1              1184           196           16.55%             0 /  0 /  0
+met2              1193           260           21.79%             0 /  0 /  0
+met3               728            10            1.37%             0 /  0 /  0
+met4               360             7            1.94%             0 /  0 /  0
 met5                81             0            0.00%             0 /  0 /  0
 ---------------------------------------------------------------------------------------
-Total             3538           475           13.43%             0 /  0 /  0
+Total             3546           473           13.34%             0 /  0 /  0
 
-[INFO GRT-0018] Total wirelength: 5699 um
-[INFO GRT-0014] Routed nets: 220
+[INFO GRT-0018] Total wirelength: 5644 um
+[INFO GRT-0014] Routed nets: 219
 [INFO]: Setting RC values...
-[INFO RSZ-0094] Found 15 endpoints with setup violations.
-[WARNING RSZ-0073] driver pin _078_/X not found in global routes
-[WARNING RSZ-0075] makeBufferedNet failed for driver _078_/X
-[WARNING RSZ-0073] driver pin _078_/X not found in global routes
-[WARNING RSZ-0075] makeBufferedNet failed for driver _078_/X
-[WARNING RSZ-0073] driver pin _078_/X not found in global routes
-[WARNING RSZ-0075] makeBufferedNet failed for driver _078_/X
-[WARNING RSZ-0073] driver pin _078_/X not found in global routes
-[WARNING RSZ-0075] makeBufferedNet failed for driver _078_/X
-[WARNING RSZ-0073] driver pin _078_/X not found in global routes
-[WARNING RSZ-0075] makeBufferedNet failed for driver _078_/X
-[INFO RSZ-0041] Resized 3 instances.
+[INFO RSZ-0094] Found 10 endpoints with setup violations.
+[WARNING RSZ-0073] driver pin _088_/Y not found in global routes
+[WARNING RSZ-0075] makeBufferedNet failed for driver _088_/Y
+[WARNING RSZ-0073] driver pin _088_/Y not found in global routes
+[WARNING RSZ-0075] makeBufferedNet failed for driver _088_/Y
+[WARNING RSZ-0073] driver pin _088_/Y not found in global routes
+[WARNING RSZ-0075] makeBufferedNet failed for driver _088_/Y
+[WARNING RSZ-0073] driver pin _088_/Y not found in global routes
+[WARNING RSZ-0075] makeBufferedNet failed for driver _088_/Y
+[WARNING RSZ-0073] driver pin _088_/Y not found in global routes
+[WARNING RSZ-0075] makeBufferedNet failed for driver _088_/Y
+[WARNING RSZ-0073] driver pin _071_/X not found in global routes
+[WARNING RSZ-0075] makeBufferedNet failed for driver _071_/X
+[WARNING RSZ-0073] driver pin _088_/Y not found in global routes
+[WARNING RSZ-0075] makeBufferedNet failed for driver _088_/Y
+[WARNING RSZ-0073] driver pin _071_/X not found in global routes
+[WARNING RSZ-0075] makeBufferedNet failed for driver _071_/X
+[WARNING RSZ-0073] driver pin _088_/Y not found in global routes
+[WARNING RSZ-0075] makeBufferedNet failed for driver _088_/Y
+[WARNING RSZ-0073] driver pin _071_/X not found in global routes
+[WARNING RSZ-0075] makeBufferedNet failed for driver _071_/X
+[WARNING RSZ-0073] driver pin _088_/Y not found in global routes
+[WARNING RSZ-0075] makeBufferedNet failed for driver _088_/Y
+[WARNING RSZ-0073] driver pin _071_/X not found in global routes
+[WARNING RSZ-0075] makeBufferedNet failed for driver _071_/X
+[INFO RSZ-0041] Resized 1 instances.
 [INFO RSZ-0043] Swapped pins on 13 instances.
 [WARNING RSZ-0062] Unable to repair all setup violations.
 [INFO RSZ-0033] No hold violations found.
 Placement Analysis
 ---------------------------------
-total displacement         13.7 u
+total displacement         13.8 u
 average displacement        0.0 u
-max displacement            2.7 u
-original HPWL            3390.6 u
-legalized HPWL           3697.8 u
-delta HPWL                    9 %
+max displacement            4.1 u
+original HPWL            3390.0 u
+legalized HPWL           3715.2 u
+delta HPWL                   10 %
 
-[INFO DPL-0020] Mirrored 94 instances
-[INFO DPL-0021] HPWL before            3697.8 u
-[INFO DPL-0022] HPWL after             3400.7 u
-[INFO DPL-0023] HPWL delta               -8.0 %
+[INFO DPL-0020] Mirrored 92 instances
+[INFO DPL-0021] HPWL before            3715.2 u
+[INFO DPL-0022] HPWL after             3413.1 u
+[INFO DPL-0023] HPWL delta               -8.1 %
 Setting global connections for newly added cells…
 Writing OpenROAD database to '/openlane/designs/adder/runs/auto_pnr/tmp/17-adder.odb'…
 Writing netlist to '/openlane/designs/adder/runs/auto_pnr/tmp/17-adder.nl.v'…
@@ -1109,5 +1123,5 @@ area_report
 ===========================================================================
 report_design_area
 ============================================================================
-Design area 2126 u^2 53% utilization.
+Design area 2076 u^2 52% utilization.
 area_report_end

@@ -13,6 +13,12 @@ Using 1e-09 for power...
 Using 1e-06 for distance...
 [INFO]: Reading ODB at '/openlane/designs/adder/runs/auto_pnr/results/floorplan/adder.odb'…
 Reading design constraints file at '/openlane/designs/adder/src/adder.sdc'…
+[WARNING STA-0361] net 'net5' not found.
+[WARNING STA-0361] net 'net10' not found.
+[WARNING STA-0361] net 'net15' not found.
+[WARNING STA-0472] no valid objects specified for -through
+[WARNING STA-0472] no valid objects specified for -through
+[WARNING STA-0472] no valid objects specified for -through
 [INFO]: Setting RC values...
 [INFO]: Setting signal min routing layer to: met1 and clock min routing layer to met3. 
 [INFO]: Setting signal max routing layer to: met5 and clock max routing layer to met5. 
@@ -50,39 +56,39 @@ Reading design constraints file at '/openlane/designs/adder/src/adder.sdc'…
 [INFO GPL-0029] BinSize: (  7.993  7.820 )
 [INFO GPL-0030] NumBins: 64
 [NesterovSolve] Iter:    1 overflow: 0.295 HPWL: 2889303
-[INFO GPL-0100] worst slack -3e-09
-[INFO GPL-0103] Weighted 14 nets.
+[INFO GPL-0100] worst slack -3.47e-10
+[INFO GPL-0103] Weighted 0 nets.
 [NesterovSolve] Snapshot saved at iter = 0
-[NesterovSolve] Iter:   10 overflow: 0.334 HPWL: 3005722
-[NesterovSolve] Iter:   20 overflow: 0.326 HPWL: 3064620
-[NesterovSolve] Iter:   30 overflow: 0.320 HPWL: 3059049
-[NesterovSolve] Iter:   40 overflow: 0.322 HPWL: 3049347
-[NesterovSolve] Iter:   50 overflow: 0.323 HPWL: 3049817
-[NesterovSolve] Iter:   60 overflow: 0.324 HPWL: 3052648
-[NesterovSolve] Iter:   70 overflow: 0.323 HPWL: 3052696
-[NesterovSolve] Iter:   80 overflow: 0.322 HPWL: 3050814
-[NesterovSolve] Iter:   90 overflow: 0.323 HPWL: 3050062
-[NesterovSolve] Iter:  100 overflow: 0.323 HPWL: 3051713
-[NesterovSolve] Iter:  110 overflow: 0.323 HPWL: 3051927
-[NesterovSolve] Iter:  120 overflow: 0.322 HPWL: 3050058
-[NesterovSolve] Iter:  130 overflow: 0.322 HPWL: 3049073
-[NesterovSolve] Iter:  140 overflow: 0.322 HPWL: 3049287
-[NesterovSolve] Iter:  150 overflow: 0.322 HPWL: 3049110
-[NesterovSolve] Iter:  160 overflow: 0.321 HPWL: 3047704
-[NesterovSolve] Iter:  170 overflow: 0.320 HPWL: 3046083
-[NesterovSolve] Iter:  180 overflow: 0.319 HPWL: 3043168
-[NesterovSolve] Iter:  190 overflow: 0.317 HPWL: 3038144
-[NesterovSolve] Iter:  200 overflow: 0.311 HPWL: 3031060
-[NesterovSolve] Iter:  210 overflow: 0.301 HPWL: 3014788
-[NesterovSolve] Iter:  220 overflow: 0.288 HPWL: 2997021
-[INFO GPL-0100] worst slack -3.03e-09
-[INFO GPL-0103] Weighted 11 nets.
-[NesterovSolve] Iter:  230 overflow: 0.277 HPWL: 2992465
-[NesterovSolve] Iter:  240 overflow: 0.251 HPWL: 2970666
-[NesterovSolve] Iter:  250 overflow: 0.218 HPWL: 2942688
-[NesterovSolve] Iter:  260 overflow: 0.204 HPWL: 2937526
-[INFO GPL-0100] worst slack -3.01e-09
-[INFO GPL-0103] Weighted 11 nets.
+[NesterovSolve] Iter:   10 overflow: 0.334 HPWL: 3034150
+[NesterovSolve] Iter:   20 overflow: 0.322 HPWL: 3077011
+[NesterovSolve] Iter:   30 overflow: 0.320 HPWL: 3064497
+[NesterovSolve] Iter:   40 overflow: 0.322 HPWL: 3058353
+[NesterovSolve] Iter:   50 overflow: 0.324 HPWL: 3063551
+[NesterovSolve] Iter:   60 overflow: 0.322 HPWL: 3064576
+[NesterovSolve] Iter:   70 overflow: 0.322 HPWL: 3061439
+[NesterovSolve] Iter:   80 overflow: 0.323 HPWL: 3061714
+[NesterovSolve] Iter:   90 overflow: 0.323 HPWL: 3064290
+[NesterovSolve] Iter:  100 overflow: 0.322 HPWL: 3062621
+[NesterovSolve] Iter:  110 overflow: 0.322 HPWL: 3060379
+[NesterovSolve] Iter:  120 overflow: 0.322 HPWL: 3061720
+[NesterovSolve] Iter:  130 overflow: 0.322 HPWL: 3062275
+[NesterovSolve] Iter:  140 overflow: 0.321 HPWL: 3060410
+[NesterovSolve] Iter:  150 overflow: 0.321 HPWL: 3059040
+[NesterovSolve] Iter:  160 overflow: 0.321 HPWL: 3059231
+[NesterovSolve] Iter:  170 overflow: 0.320 HPWL: 3057334
+[NesterovSolve] Iter:  180 overflow: 0.319 HPWL: 3053926
+[NesterovSolve] Iter:  190 overflow: 0.317 HPWL: 3050391
+[NesterovSolve] Iter:  200 overflow: 0.311 HPWL: 3040285
+[NesterovSolve] Iter:  210 overflow: 0.300 HPWL: 3022803
+[NesterovSolve] Iter:  220 overflow: 0.286 HPWL: 3002211
+[INFO GPL-0100] worst slack -3.9e-10
+[INFO GPL-0103] Weighted 10 nets.
+[NesterovSolve] Iter:  230 overflow: 0.275 HPWL: 2989705
+[NesterovSolve] Iter:  240 overflow: 0.250 HPWL: 2968470
+[NesterovSolve] Iter:  250 overflow: 0.223 HPWL: 2948954
+[NesterovSolve] Iter:  260 overflow: 0.203 HPWL: 2942029
+[INFO GPL-0100] worst slack -3.61e-10
+[INFO GPL-0103] Weighted 7 nets.
 [INFO GPL-0075] Routability numCall: 1 inflationIterCnt: 1 bloatIterCnt: 0
 [INFO GPL-0036] TileBBox: (    0    0 ) ( 6900 6900 ) DBU
 [INFO GPL-0038] TileCnt:      10   12
@@ -91,24 +97,24 @@ Reading design constraints file at '/openlane/designs/adder/src/adder.sdc'…
 [INFO GPL-0063] TotalRouteOverflowH2: 0
 [INFO GPL-0064] TotalRouteOverflowV2: 0
 [INFO GPL-0065] OverflowTileCnt2: 0
-[INFO GPL-0066] 0.5%RC: 1.0000
-[INFO GPL-0067] 1.0%RC: 0.9750
-[INFO GPL-0068] 2.0%RC: 0.9429
-[INFO GPL-0069] 5.0%RC: 0.8706
+[INFO GPL-0066] 0.5%RC: 0.9750
+[INFO GPL-0067] 1.0%RC: 0.9625
+[INFO GPL-0068] 2.0%RC: 0.9357
+[INFO GPL-0069] 5.0%RC: 0.8813
 [INFO GPL-0070] 0.5rcK: 1
 [INFO GPL-0071] 1.0rcK: 1
 [INFO GPL-0072] 2.0rcK: 0
 [INFO GPL-0073] 5.0rcK: 0
-[INFO GPL-0074] FinalRC: 0.9875
+[INFO GPL-0074] FinalRC: 0.9688
 [INFO GPL-0077] FinalRC lower than targetRC(1), routability not needed.
-[NesterovSolve] Iter:  270 overflow: 0.175 HPWL: 2931379
-[NesterovSolve] Iter:  280 overflow: 0.163 HPWL: 2946913
-[INFO GPL-0100] worst slack -3.02e-09
-[INFO GPL-0103] Weighted 14 nets.
-[NesterovSolve] Iter:  290 overflow: 0.140 HPWL: 2951344
-[NesterovSolve] Iter:  300 overflow: 0.125 HPWL: 2965459
-[NesterovSolve] Iter:  310 overflow: 0.103 HPWL: 2962863
-[NesterovSolve] Finished with Overflow: 0.098144
+[NesterovSolve] Iter:  270 overflow: 0.184 HPWL: 2940082
+[NesterovSolve] Iter:  280 overflow: 0.166 HPWL: 2953131
+[INFO GPL-0100] worst slack -3.61e-10
+[INFO GPL-0103] Weighted 12 nets.
+[NesterovSolve] Iter:  290 overflow: 0.140 HPWL: 2946106
+[NesterovSolve] Iter:  300 overflow: 0.122 HPWL: 2951950
+[NesterovSolve] Iter:  310 overflow: 0.109 HPWL: 2950803
+[NesterovSolve] Finished with Overflow: 0.098212
 Setting global connections for newly added cells…
 Writing OpenROAD database to '/openlane/designs/adder/runs/auto_pnr/tmp/placement/7-global.odb'…
 Writing netlist to '/openlane/designs/adder/runs/auto_pnr/tmp/placement/7-global.nl.v'…

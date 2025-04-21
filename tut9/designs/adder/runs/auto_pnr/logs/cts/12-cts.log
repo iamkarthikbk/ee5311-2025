@@ -1038,19 +1038,19 @@ Reading design constraints file at '/openlane/designs/adder/src/adder.sdc'…
 [INFO CTS-0029]  Sinks will be clustered in groups of up to 25 and with maximum cluster diameter of 50.0 um.
 [INFO CTS-0030]  Number of static layers: 0.
 [INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
-[INFO CTS-0023]  Original sink region: [(7625, 15020), (66895, 69420)].
-[INFO CTS-0024]  Normalized sink region: [(0.560662, 1.10441), (4.91875, 5.10441)].
+[INFO CTS-0023]  Original sink region: [(7625, 15020), (66895, 72020)].
+[INFO CTS-0024]  Normalized sink region: [(0.560662, 1.10441), (4.91875, 5.29559)].
 [INFO CTS-0025]     Width:  4.3581.
-[INFO CTS-0026]     Height: 4.0000.
+[INFO CTS-0026]     Height: 4.1912.
  Level 1
     Direction: Horizontal
     Sinks per sub-region: 25
-    Sub-region size: 2.1790 X 4.0000
+    Sub-region size: 2.1790 X 4.1912
 [INFO CTS-0034]     Segment length (rounded): 1.
  Level 2
     Direction: Vertical
     Sinks per sub-region: 13
-    Sub-region size: 2.1790 X 2.0000
+    Sub-region size: 2.1790 X 2.0956
 [INFO CTS-0034]     Segment length (rounded): 1.
 [INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
 [INFO CTS-0035]  Number of sinks covered: 50.
@@ -1058,12 +1058,12 @@ Reading design constraints file at '/openlane/designs/adder/src/adder.sdc'…
 [INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
 [INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
 [INFO CTS-0015]     Created 5 clock nets.
-[INFO CTS-0016]     Fanout distribution for the current clock = 11:2, 13:1, 15:1..
+[INFO CTS-0016]     Fanout distribution for the current clock = 11:1, 12:2, 15:1..
 [INFO CTS-0017]     Max level of the clock tree: 2.
 [INFO CTS-0098] Clock net "clk"
 [INFO CTS-0099]  Sinks 53
 [INFO CTS-0100]  Leaf buffers 0
-[INFO CTS-0101]  Average sink wire length 100.76 um
+[INFO CTS-0101]  Average sink wire length 102.27 um
 [INFO CTS-0102]  Path depth 2 - 2
 [INFO CTS-0207]  Leaf load cells 3
 [INFO]: Repairing long wires on clock nets...
@@ -1075,17 +1075,17 @@ Writing timing constraints to '/openlane/designs/adder/runs/auto_pnr/results/cts
 [INFO]: Legalizing...
 Placement Analysis
 ---------------------------------
-total displacement         80.0 u
-average displacement        0.3 u
-max displacement            6.9 u
-original HPWL            3270.9 u
-legalized HPWL           3620.3 u
-delta HPWL                   11 %
+total displacement         65.3 u
+average displacement        0.2 u
+max displacement            6.8 u
+original HPWL            3276.4 u
+legalized HPWL           3594.3 u
+delta HPWL                   10 %
 
-[INFO DPL-0020] Mirrored 97 instances
-[INFO DPL-0021] HPWL before            3620.3 u
-[INFO DPL-0022] HPWL after             3324.4 u
-[INFO DPL-0023] HPWL delta               -8.2 %
+[INFO DPL-0020] Mirrored 96 instances
+[INFO DPL-0021] HPWL before            3594.3 u
+[INFO DPL-0022] HPWL after             3293.2 u
+[INFO DPL-0023] HPWL delta               -8.4 %
 Setting global connections for newly added cells…
 Writing OpenROAD database to '/openlane/designs/adder/runs/auto_pnr/results/cts/adder.odb'…
 Writing layout to '/openlane/designs/adder/runs/auto_pnr/results/cts/adder.def'…

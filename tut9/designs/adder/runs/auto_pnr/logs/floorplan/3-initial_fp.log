@@ -14,6 +14,12 @@ Using 1e-06 for distance...
 [INFO ODB-0227] LEF file: /openlane/designs/adder/runs/auto_pnr/tmp/merged.nom.lef, created 13 layers, 25 vias, 441 library cells
 Reading netlist '/openlane/designs/adder/runs/auto_pnr/results/synthesis/adder.v'…
 Reading design constraints file at '/openlane/designs/adder/src/adder.sdc'…
+[WARNING STA-0361] net 'net5' not found.
+[WARNING STA-0361] net 'net10' not found.
+[WARNING STA-0361] net 'net15' not found.
+[WARNING STA-0472] no valid objects specified for -through
+[WARNING STA-0472] no valid objects specified for -through
+[WARNING STA-0472] no valid objects specified for -through
 [INFO IFP-0001] Added 23 rows of 139 site unithd.
 [INFO IFP-0030] Inserted 0 tiecells using sky130_fd_sc_hd__conb_1/LO.
 [INFO IFP-0030] Inserted 0 tiecells using sky130_fd_sc_hd__conb_1/HI.

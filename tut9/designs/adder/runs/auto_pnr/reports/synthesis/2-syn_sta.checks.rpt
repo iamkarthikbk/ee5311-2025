@@ -115,17 +115,17 @@ Fanout     Cap    Slew   Delay    Time   Description
                   0.03    0.00    6.27 v _186_/D (sky130_fd_sc_hd__dfxtp_2)
                                   6.27   data arrival time
 
-                  0.00    3.00    3.00   clock core_clock (rise edge)
-                          0.00    3.00   clock network delay (ideal)
-                          0.00    3.00   clock reconvergence pessimism
-                                  3.00 ^ _186_/CLK (sky130_fd_sc_hd__dfxtp_2)
-                         -0.12    2.88   library setup time
-                                  2.88   data required time
+                  0.00    5.65    5.65   clock core_clock (rise edge)
+                          0.00    5.65   clock network delay (ideal)
+                          0.00    5.65   clock reconvergence pessimism
+                                  5.65 ^ _186_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                         -0.12    5.53   library setup time
+                                  5.53   data required time
 -----------------------------------------------------------------------------
-                                  2.88   data required time
+                                  5.53   data required time
                                  -6.27   data arrival time
 -----------------------------------------------------------------------------
-                                 -3.39   slack (VIOLATED)
+                                 -0.74   slack (VIOLATED)
 
 
 
@@ -246,17 +246,17 @@ Fanout     Cap    Slew   Delay    Time   Description
                   0.03    0.00    6.27 v _186_/D (sky130_fd_sc_hd__dfxtp_2)
                                   6.27   data arrival time
 
-                  0.00    3.00    3.00   clock core_clock (rise edge)
-                          0.00    3.00   clock network delay (ideal)
-                          0.00    3.00   clock reconvergence pessimism
-                                  3.00 ^ _186_/CLK (sky130_fd_sc_hd__dfxtp_2)
-                         -0.12    2.88   library setup time
-                                  2.88   data required time
+                  0.00    5.65    5.65   clock core_clock (rise edge)
+                          0.00    5.65   clock network delay (ideal)
+                          0.00    5.65   clock reconvergence pessimism
+                                  5.65 ^ _186_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                         -0.12    5.53   library setup time
+                                  5.53   data required time
 -----------------------------------------------------------------------------
-                                  2.88   data required time
+                                  5.53   data required time
                                  -6.27   data arrival time
 -----------------------------------------------------------------------------
-                                 -3.39   slack (VIOLATED)
+                                 -0.74   slack (VIOLATED)
 
 
 

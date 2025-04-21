@@ -14,5 +14,5 @@ Loading sky130A Device Generator Menu ...
 Using technology "sky130A", version 1.0.466-0-gbdc9412
 Reading LEF data from file /openlane/designs/adder/runs/auto_pnr/results/signoff/adder.lef.
 This action cannot be undone.
-LEF read: Processed 620 lines.
+LEF read: Processed 622 lines.
 [INFO]: DONE GENERATING MAGLEF VIEW

@@ -15,9 +15,9 @@ Using 1e-06 for distance...
 [INFO ODB-0127] Reading DEF file: /openlane/designs/adder/runs/auto_pnr/tmp/signoff/35-adder.p.def
 [INFO ODB-0128] Design: adder
 [INFO ODB-0130]     Created 53 pins.
-[INFO ODB-0131]     Created 547 components and 2612 component-terminals.
-[INFO ODB-0132]     Created 2 special nets and 2088 connections.
-[INFO ODB-0133]     Created 220 nets and 521 connections.
+[INFO ODB-0131]     Created 534 components and 2558 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 2036 connections.
+[INFO ODB-0133]     Created 219 nets and 519 connections.
 [INFO ODB-0134] Finished DEF file: /openlane/designs/adder/runs/auto_pnr/tmp/signoff/35-adder.p.def
 Reading design constraints file at '/openlane/designs/adder/src/adder.sdc'…
 [WARNING] Did not save OpenROAD database!

@@ -1016,6 +1016,12 @@ Using 1e-09 for power...
 Using 1e-06 for distance...
 [INFO]: Reading ODB at '/openlane/designs/adder/runs/auto_pnr/tmp/placement/7-global.odb'…
 Reading design constraints file at '/openlane/designs/adder/src/adder.sdc'…
+[WARNING STA-0361] net 'net5' not found.
+[WARNING STA-0361] net 'net10' not found.
+[WARNING STA-0361] net 'net15' not found.
+[WARNING STA-0472] no valid objects specified for -through
+[WARNING STA-0472] no valid objects specified for -through
+[WARNING STA-0472] no valid objects specified for -through
 [INFO]: Setting RC values...
 [INFO RSZ-0027] Inserted 33 input buffers.
 [INFO RSZ-0028] Inserted 17 output buffers.
@@ -1023,17 +1029,17 @@ Reading design constraints file at '/openlane/designs/adder/src/adder.sdc'…
 [INFO RSZ-0039] Resized 158 instances.
 Placement Analysis
 ---------------------------------
-total displacement        425.9 u
+total displacement        431.4 u
 average displacement        1.6 u
-max displacement            8.3 u
-original HPWL            3040.5 u
-legalized HPWL           3367.6 u
+max displacement           13.3 u
+original HPWL            3031.4 u
+legalized HPWL           3366.9 u
 delta HPWL                   11 %
 
 [INFO DPL-0020] Mirrored 91 instances
-[INFO DPL-0021] HPWL before            3367.6 u
-[INFO DPL-0022] HPWL after             3075.9 u
-[INFO DPL-0023] HPWL delta               -8.7 %
+[INFO DPL-0021] HPWL before            3366.9 u
+[INFO DPL-0022] HPWL after             3086.5 u
+[INFO DPL-0023] HPWL delta               -8.3 %
 Setting global connections for newly added cells…
 Writing OpenROAD database to '/openlane/designs/adder/runs/auto_pnr/tmp/placement/9-resizer.odb'…
 Writing netlist to '/openlane/designs/adder/runs/auto_pnr/tmp/placement/9-resizer.nl.v'…

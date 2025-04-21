@@ -5,7 +5,7 @@ report_clock_skew
 Clock core_clock
 Latency      CRPR       Skew
 _162_/CLK ^
-   0.47
+   0.48
 _186_/CLK ^
-   0.48      0.00      -0.01
+   0.48      0.00      -0.00
 

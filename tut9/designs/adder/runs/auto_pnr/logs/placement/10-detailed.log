@@ -18,14 +18,14 @@ Placement Analysis
 total displacement          0.0 u
 average displacement        0.0 u
 max displacement            0.0 u
-original HPWL            3075.9 u
-legalized HPWL           3367.6 u
+original HPWL            3086.5 u
+legalized HPWL           3366.9 u
 delta HPWL                    9 %
 
 [INFO DPL-0020] Mirrored 91 instances
-[INFO DPL-0021] HPWL before            3367.6 u
-[INFO DPL-0022] HPWL after             3075.9 u
-[INFO DPL-0023] HPWL delta               -8.7 %
+[INFO DPL-0021] HPWL before            3366.9 u
+[INFO DPL-0022] HPWL after             3086.5 u
+[INFO DPL-0023] HPWL delta               -8.3 %
 Setting global connections for newly added cells…
 Writing OpenROAD database to '/openlane/designs/adder/runs/auto_pnr/results/placement/adder.odb'…
 Writing netlist to '/openlane/designs/adder/runs/auto_pnr/results/placement/adder.nl.v'…
