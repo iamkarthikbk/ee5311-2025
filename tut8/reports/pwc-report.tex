@@ -89,6 +89,23 @@ Kogge-Stone & 2.19 & 15 & 50 & 1  & 0  & 85 & 7  & 25 & 0.00169 & 0.000522 & 1.6
 \label{tab:adders-detailed}
 \end{table}
 
+\section{Design}
+\noindent The following schematics were drawn using xschem, for Brent-Kung, Sklansky, and Kogge-Stone respectively.
+\begin{center}
+    \includegraphics[scale=0.29]{brentkung.png}
+    \includegraphics[scale=0.29]{sklanskly.png}
+    \includegraphics[scale=0.29]{koggestone.png}
+\end{center}
+
+\noindent The test-bench provided exhaustive stimulus and the following waveforms are generated for all three adders. The waveforms are identical for all three adders.
+
+\begin{center}
+    \includegraphics[scale=0.29]{waveforms1.png}
+    \includegraphics[scale=0.29]{waveforms2.png}
+\end{center}
+
+\noindent The following verilog code and waveforms shown above may not be providing much information in their present form in the pdf, but they are present in the repository that is linked in the declaration section.
+
 \section{Verilog HDL for all three tree adders.}
 \noindent Verilog HDL for the Brent-Kung Tree Adder.
 \begin{verbatim}

@@ -55,6 +55,25 @@ pdfauthor = {Karthik B K <ee24s053@smail.iitm.ac.in>}
 \author{Karthik B K ee24s053}
 \maketitle
 
+\section{Design}
+\noindent The following schematic was drawn using \emph{xschem}.
+\begin{center}
+\includegraphics[scale=0.29]{schematic.png}
+\end{center}
+
+\noindent The following visualization was obtained from \emph{Yosys}.
+\begin{center}
+\includegraphics[scale=0.29]{visualization.png}
+\end{center}
+
+\noindent The following difference in paths was obtained after adding false paths through the circuit during timing analysis. More explanation about what is done in the timing analysis is present in section 2.
+\begin{center}
+\includegraphics[scale=0.29]{paths.png}
+\end{center}
+
+\noindent These results can be reproduced by cloning the repository described in section 3, and then running the run.sh script in tut9/manual directory.
+
+\section{Timing Analysis}
 Path reported before adding false paths:
 
 \begin{verbatim}
